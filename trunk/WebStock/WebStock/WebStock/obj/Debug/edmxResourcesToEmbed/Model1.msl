@@ -1,0 +1,1361 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="MWTSModelStoreContainer" CdmEntityContainer="MWTSEntities">
+    <FunctionImportMapping FunctionImportName="getThisMonthLastUpandDownHoleStats" FunctionName="MWTSModel.Store.getThisMonthLastUpandDownHoleStats">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="MWTSModel.getThisMonthLastUpandDownHoleStats_Result">
+          <ScalarProperty Name="Number" ColumnName="Number" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="JobNumber" ColumnName="JobNumber" />
+          <ScalarProperty Name="WorkerType" ColumnName="WorkerType" />
+          <ScalarProperty Name="SpecialType" ColumnName="SpecialType" />
+          <ScalarProperty Name="departmentName" ColumnName="departmentName" />
+          <ScalarProperty Name="JobtitleName" ColumnName="JobtitleName" />
+          <ScalarProperty Name="teamName" ColumnName="teamName" />
+          <ScalarProperty Name="InHole" ColumnName="InHole" />
+          <ScalarProperty Name="OutHole" ColumnName="OutHole" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="getBaseStationRealData" FunctionName="MWTSModel.Store.getBaseStationRealData">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="MWTSModel.getBaseStationRealData_Result">
+          <ScalarProperty Name="GasSaturation" ColumnName="GasSaturation" />
+          <ScalarProperty Name="Number" ColumnName="Number" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Datetime" ColumnName="Datetime" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="workercount" ColumnName="workercount" />
+          <ScalarProperty Name="DataRadioNumber" ColumnName="DataRadioNumber" />
+          <ScalarProperty Name="DataRadioName" ColumnName="DataRadioName" />
+          <ScalarProperty Name="DataRadioStatus" ColumnName="DataRadioStatus" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="getZoneRealData" FunctionName="MWTSModel.Store.getZoneRealData">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="MWTSModel.getZoneRealData_Result">
+          <ScalarProperty Name="ZoneNumber" ColumnName="ZoneNumber" />
+          <ScalarProperty Name="zoneName" ColumnName="zoneName" />
+          <ScalarProperty Name="ZoneType" ColumnName="ZoneType" />
+          <ScalarProperty Name="UpperLimitOfWoringPeple" ColumnName="UpperLimitOfWoringPeple" />
+          <ScalarProperty Name="UpperLimitOfWorkingTime" ColumnName="UpperLimitOfWorkingTime" />
+          <ScalarProperty Name="zoneWorkerCount" ColumnName="zoneWorkerCount" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetHelpStas" FunctionName="MWTSModel.Store.GetHelpStas">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="MWTSModel.GetHelpStas_Result">
+          <ScalarProperty Name="BaseStationNumber" ColumnName="BaseStationNumber" />
+          <ScalarProperty Name="cardNumber" ColumnName="cardNumber" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="JobNumber" ColumnName="JobNumber" />
+          <ScalarProperty Name="lightid" ColumnName="lightid" />
+          <ScalarProperty Name="TimecardCode" ColumnName="TimecardCode" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="WorkerType" ColumnName="WorkerType" />
+          <ScalarProperty Name="SpecialType" ColumnName="SpecialType" />
+          <ScalarProperty Name="departmentName" ColumnName="departmentName" />
+          <ScalarProperty Name="JobtitleName" ColumnName="JobtitleName" />
+          <ScalarProperty Name="Datetime" ColumnName="Datetime" />
+          <ScalarProperty Name="IsNoticed" ColumnName="IsNoticed" />
+          <ScalarProperty Name="NoticedDateTime" ColumnName="NoticedDateTime" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="getZoneStas" FunctionName="MWTSModel.Store.getZoneStas">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="MWTSModel.getZoneStas_Result">
+          <ScalarProperty Name="zoneName" ColumnName="zoneName" />
+          <ScalarProperty Name="ZoneNumber" ColumnName="ZoneNumber" />
+          <ScalarProperty Name="ZoneType" ColumnName="ZoneType" />
+          <ScalarProperty Name="BaseStationNumber" ColumnName="BaseStationNumber" />
+          <ScalarProperty Name="CardNumber" ColumnName="CardNumber" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="JobNumber" ColumnName="JobNumber" />
+          <ScalarProperty Name="WorkerType" ColumnName="WorkerType" />
+          <ScalarProperty Name="SpecialType" ColumnName="SpecialType" />
+          <ScalarProperty Name="departmentName" ColumnName="departmentName" />
+          <ScalarProperty Name="JobtitleName" ColumnName="JobtitleName" />
+          <ScalarProperty Name="teamName" ColumnName="teamName" />
+          <ScalarProperty Name="StartTime" ColumnName="StartTime" />
+          <ScalarProperty Name="EndTime" ColumnName="EndTime" />
+          <ScalarProperty Name="IntoPosition" ColumnName="IntoPosition" />
+          <ScalarProperty Name="LeftPosition" ColumnName="LeftPosition" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="BaseStationLogs">
+      <EntityTypeMapping TypeName="MWTSModel.BaseStationLog">
+        <MappingFragment StoreEntitySet="BaseStationLog">
+          <ScalarProperty Name="RowVersion" ColumnName="RowVersion" />
+          <ScalarProperty Name="Datetime" ColumnName="Datetime" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="BaseStationNumber" ColumnName="BaseStationNumber" />
+          <ScalarProperty Name="Action" ColumnName="Action" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BaseStationPathLines">
+      <EntityTypeMapping TypeName="MWTSModel.BaseStationPathLine">
+        <MappingFragment StoreEntitySet="BaseStationPathLine">
+          <ScalarProperty Name="RowVersion" ColumnName="RowVersion" />
+          <ScalarProperty Name="Latitude" ColumnName="Latitude" />
+          <ScalarProperty Name="Longitude" ColumnName="Longitude" />
+          <ScalarProperty Name="BaseStationNumberII" ColumnName="BaseStationNumberII" />
+          <ScalarProperty Name="BaseStationNumberI" ColumnName="BaseStationNumberI" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CallHistories">
+      <EntityTypeMapping TypeName="MWTSModel.CallHistory">
+        <MappingFragment StoreEntitySet="CallHistory">
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="CallStopDateTime" ColumnName="CallStopDateTime" />
+          <ScalarProperty Name="CallType" ColumnName="CallType" />
+          <ScalarProperty Name="CallStartDateTime" ColumnName="CallStartDateTime" />
+          <ScalarProperty Name="CallObjects" ColumnName="CallObjects" />
+          <ScalarProperty Name="CallScope" ColumnName="CallScope" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CallStates">
+      <EntityTypeMapping TypeName="MWTSModel.CallState">
+        <MappingFragment StoreEntitySet="CallState">
+          <ScalarProperty Name="CallBaseStationList" ColumnName="CallBaseStationList" />
+          <ScalarProperty Name="CallCardList" ColumnName="CallCardList" />
+          <ScalarProperty Name="CallScope" ColumnName="CallScope" />
+          <ScalarProperty Name="CallType" ColumnName="CallType" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Cards">
+      <EntityTypeMapping TypeName="MWTSModel.Card">
+        <MappingFragment StoreEntitySet="Card">
+          <ScalarProperty Name="RowVersion" ColumnName="RowVersion" />
+          <ScalarProperty Name="Datetime" ColumnName="Datetime" />
+          <ScalarProperty Name="Position" ColumnName="Position" />
+          <ScalarProperty Name="PushButtonState" ColumnName="PushButtonState" />
+          <ScalarProperty Name="BaseStationNumber" ColumnName="BaseStationNumber" />
+          <ScalarProperty Name="IsInTheHole" ColumnName="IsInTheHole" />
+          <ScalarProperty Name="IsAlive" ColumnName="IsAlive" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="BatteryLevel" ColumnName="BatteryLevel" />
+          <ScalarProperty Name="IsEnable" ColumnName="IsEnable" />
+          <ScalarProperty Name="Number" ColumnName="Number" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CheckingInLogs">
+      <EntityTypeMapping TypeName="MWTSModel.CheckingInLog">
+        <MappingFragment StoreEntitySet="CheckingInLog">
+          <ScalarProperty Name="RowVersion" ColumnName="RowVersion" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="UpWellTime" ColumnName="UpWellTime" />
+          <ScalarProperty Name="DownWellTime" ColumnName="DownWellTime" />
+          <ScalarProperty Name="CardNumber" ColumnName="CardNumber" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CommandLogs">
+      <EntityTypeMapping TypeName="MWTSModel.CommandLog">
+        <MappingFragment StoreEntitySet="CommandLog">
+          <ScalarProperty Name="DateTime" ColumnName="DateTime" />
+          <ScalarProperty Name="RowVersion" ColumnName="RowVersion" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Command" ColumnName="Command" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DataPackets">
+      <EntityTypeMapping TypeName="MWTSModel.DataPacket">
+        <MappingFragment StoreEntitySet="DataPacket">
+          <ScalarProperty Name="CostTime" ColumnName="CostTime" />
+          <ScalarProperty Name="RatioOfAcceptedData" ColumnName="RatioOfAcceptedData" />
+          <ScalarProperty Name="LengthOfAcceptedData" ColumnName="LengthOfAcceptedData" />
+          <ScalarProperty Name="LengthOfData" ColumnName="LengthOfData" />
+          <ScalarProperty Name="ErrorFrameCount" ColumnName="ErrorFrameCount" />
+          <ScalarProperty Name="NormalFrameCount" ColumnName="NormalFrameCount" />
+          <ScalarProperty Name="ActualFrameCount" ColumnName="ActualFrameCount" />
+          <ScalarProperty Name="PlanFrameCount" ColumnName="PlanFrameCount" />
+          <ScalarProperty Name="ReceiveData" ColumnName="ReceiveData" />
+          <ScalarProperty Name="ReceiveTime" ColumnName="ReceiveTime" />
+          <ScalarProperty Name="ReactionTime" ColumnName="ReactionTime" />
+          <ScalarProperty Name="SendData" ColumnName="SendData" />
+          <ScalarProperty Name="Sendtime" ColumnName="Sendtime" />
+          <ScalarProperty Name="EndTime" ColumnName="EndTime" />
+          <ScalarProperty Name="StartTime" ColumnName="StartTime" />
+          <ScalarProperty Name="DataRadioNumber" ColumnName="DataRadioNumber" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DataRadios">
+      <EntityTypeMapping TypeName="MWTSModel.DataRadio">
+        <MappingFragment StoreEntitySet="DataRadio">
+          <ScalarProperty Name="RowVersion" ColumnName="RowVersion" />
+          <ScalarProperty Name="LowerLeft_Y" ColumnName="LowerLeft_Y" />
+          <ScalarProperty Name="LowerRight_Y" ColumnName="LowerRight_Y" />
+          <ScalarProperty Name="UpperRight_Y" ColumnName="UpperRight_Y" />
+          <ScalarProperty Name="UpperLeft_Y" ColumnName="UpperLeft_Y" />
+          <ScalarProperty Name="LowerLeft_X" ColumnName="LowerLeft_X" />
+          <ScalarProperty Name="LowerRight_X" ColumnName="LowerRight_X" />
+          <ScalarProperty Name="UpperRight_X" ColumnName="UpperRight_X" />
+          <ScalarProperty Name="UpperLeft_X" ColumnName="UpperLeft_X" />
+          <ScalarProperty Name="IsShowing" ColumnName="IsShowing" />
+          <ScalarProperty Name="Datetime" ColumnName="Datetime" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Number" ColumnName="Number" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DataRadioLogs">
+      <EntityTypeMapping TypeName="MWTSModel.DataRadioLog">
+        <MappingFragment StoreEntitySet="DataRadioLog">
+          <ScalarProperty Name="RowVersion" ColumnName="RowVersion" />
+          <ScalarProperty Name="Datetime" ColumnName="Datetime" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Action" ColumnName="Action" />
+          <ScalarProperty Name="DataRadioNumber" ColumnName="DataRadioNumber" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Departments">
+      <EntityTypeMapping TypeName="MWTSModel.Department">
+        <MappingFragment StoreEntitySet="Department">
+          <ScalarProperty Name="RowVersion" ColumnName="RowVersion" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EventRecords">
+      <EntityTypeMapping TypeName="MWTSModel.EventRecord">
+        <MappingFragment StoreEntitySet="EventRecord">
+          <ScalarProperty Name="IsTimeout" ColumnName="IsTimeout" />
+          <ScalarProperty Name="LocalDatetime" ColumnName="LocalDatetime" />
+          <ScalarProperty Name="ReceivedFrameId" ColumnName="ReceivedFrameId" />
+          <ScalarProperty Name="Datetime" ColumnName="Datetime" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Parameters" ColumnName="Parameters" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="RelatedObject" ColumnName="RelatedObject" />
+          <ScalarProperty Name="Source" ColumnName="Source" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="JobShifts">
+      <EntityTypeMapping TypeName="MWTSModel.JobShift">
+        <MappingFragment StoreEntitySet="JobShift">
+          <ScalarProperty Name="RowVersion" ColumnName="RowVersion" />
+          <ScalarProperty Name="RuleCount" ColumnName="RuleCount" />
+          <ScalarProperty Name="RuleHours" ColumnName="RuleHours" />
+          <ScalarProperty Name="EndTime" ColumnName="EndTime" />
+          <ScalarProperty Name="StartTime" ColumnName="StartTime" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="JobTitles">
+      <EntityTypeMapping TypeName="MWTSModel.JobTitle">
+        <MappingFragment StoreEntitySet="JobTitle">
+          <ScalarProperty Name="RowVersion" ColumnName="RowVersion" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OverstaffLogs">
+      <EntityTypeMapping TypeName="MWTSModel.OverstaffLog">
+        <MappingFragment StoreEntitySet="OverstaffLog">
+          <ScalarProperty Name="NoticedDateTime" ColumnName="NoticedDateTime" />
+          <ScalarProperty Name="IsNoticed" ColumnName="IsNoticed" />
+          <ScalarProperty Name="RowVersion" ColumnName="RowVersion" />
+          <ScalarProperty Name="Decription" ColumnName="Decription" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="MaxCountOfCard" ColumnName="MaxCountOfCard" />
+          <ScalarProperty Name="UpperLimitOfWoringPeple" ColumnName="UpperLimitOfWoringPeple" />
+          <ScalarProperty Name="EndTime" ColumnName="EndTime" />
+          <ScalarProperty Name="StartTime" ColumnName="StartTime" />
+          <ScalarProperty Name="ZoneId" ColumnName="ZoneId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PushButtonStateEvents">
+      <EntityTypeMapping TypeName="MWTSModel.PushButtonStateEvent">
+        <MappingFragment StoreEntitySet="PushButtonStateEvent">
+          <ScalarProperty Name="RowVersion" ColumnName="RowVersion" />
+          <ScalarProperty Name="NoticedDateTime" ColumnName="NoticedDateTime" />
+          <ScalarProperty Name="IsNoticed" ColumnName="IsNoticed" />
+          <ScalarProperty Name="Datetime" ColumnName="Datetime" />
+          <ScalarProperty Name="BaseStationNumber" ColumnName="BaseStationNumber" />
+          <ScalarProperty Name="CardNumber" ColumnName="CardNumber" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ReceivedFrames">
+      <EntityTypeMapping TypeName="MWTSModel.ReceivedFrame">
+        <MappingFragment StoreEntitySet="ReceivedFrame">
+          <ScalarProperty Name="FrameDatetime" ColumnName="FrameDatetime" />
+          <ScalarProperty Name="Frame" ColumnName="Frame" />
+          <ScalarProperty Name="DataPacketId" ColumnName="DataPacketId" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="IsValide" ColumnName="IsValide" />
+          <ScalarProperty Name="Datetime" ColumnName="Datetime" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ServerInfoes">
+      <EntityTypeMapping TypeName="MWTSModel.ServerInfo">
+        <MappingFragment StoreEntitySet="ServerInfo">
+          <ScalarProperty Name="Mode" ColumnName="Mode" />
+          <ScalarProperty Name="Interval" ColumnName="Interval" />
+          <ScalarProperty Name="LastRuntime" ColumnName="LastRuntime" />
+          <ScalarProperty Name="IsAccept" ColumnName="IsAccept" />
+          <ScalarProperty Name="CommandId" ColumnName="CommandId" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SynchroRemoteDataBases">
+      <EntityTypeMapping TypeName="MWTSModel.SynchroRemoteDataBase">
+        <MappingFragment StoreEntitySet="SynchroRemoteDataBase">
+          <ScalarProperty Name="DateTme" ColumnName="DateTme" />
+          <ScalarProperty Name="LastRowVersion" ColumnName="LastRowVersion" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SysConfigs">
+      <EntityTypeMapping TypeName="MWTSModel.SysConfig">
+        <MappingFragment StoreEntitySet="SysConfig">
+          <ScalarProperty Name="RowVersion" ColumnName="RowVersion" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Value" ColumnName="Value" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Key" ColumnName="Key" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="MWTSModel.sysdiagram">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="definition" ColumnName="definition" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SystemLogs">
+      <EntityTypeMapping TypeName="MWTSModel.SystemLog">
+        <MappingFragment StoreEntitySet="SystemLog">
+          <ScalarProperty Name="RowVersion" ColumnName="RowVersion" />
+          <ScalarProperty Name="User" ColumnName="User" />
+          <ScalarProperty Name="Source" ColumnName="Source" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Message" ColumnName="Message" />
+          <ScalarProperty Name="Datetime" ColumnName="Datetime" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Teams">
+      <EntityTypeMapping TypeName="MWTSModel.Team">
+        <MappingFragment StoreEntitySet="Team">
+          <ScalarProperty Name="DepartmentId" ColumnName="DepartmentId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TimeoutLogs">
+      <EntityTypeMapping TypeName="MWTSModel.TimeoutLog">
+        <MappingFragment StoreEntitySet="TimeoutLog">
+          <ScalarProperty Name="NoticedDateTime" ColumnName="NoticedDateTime" />
+          <ScalarProperty Name="IsNoticed" ColumnName="IsNoticed" />
+          <ScalarProperty Name="RowVersion" ColumnName="RowVersion" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="MaxTimeoutCard" ColumnName="MaxTimeoutCard" />
+          <ScalarProperty Name="MaxTimeout" ColumnName="MaxTimeout" />
+          <ScalarProperty Name="MaxCountOfCard" ColumnName="MaxCountOfCard" />
+          <ScalarProperty Name="UpperLimitOfWorkingTime" ColumnName="UpperLimitOfWorkingTime" />
+          <ScalarProperty Name="EndTime" ColumnName="EndTime" />
+          <ScalarProperty Name="StartTime" ColumnName="StartTime" />
+          <ScalarProperty Name="ZoneId" ColumnName="ZoneId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UserOperationLogs">
+      <EntityTypeMapping TypeName="MWTSModel.UserOperationLog">
+        <MappingFragment StoreEntitySet="UserOperationLog">
+          <ScalarProperty Name="RowVersion" ColumnName="RowVersion" />
+          <ScalarProperty Name="Ip" ColumnName="Ip" />
+          <ScalarProperty Name="Operator" ColumnName="Operator" />
+          <ScalarProperty Name="Datetime" ColumnName="Datetime" />
+          <ScalarProperty Name="NewObject" ColumnName="NewObject" />
+          <ScalarProperty Name="OldObject" ColumnName="OldObject" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Operation" ColumnName="Operation" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Workers">
+      <EntityTypeMapping TypeName="MWTSModel.Worker">
+        <MappingFragment StoreEntitySet="Worker">
+          <ScalarProperty Name="RowVersion" ColumnName="RowVersion" />
+          <ScalarProperty Name="SpecialType" ColumnName="SpecialType" />
+          <ScalarProperty Name="WorkerType" ColumnName="WorkerType" />
+          <ScalarProperty Name="Photo" ColumnName="Photo" />
+          <ScalarProperty Name="ContactAddress" ColumnName="ContactAddress" />
+          <ScalarProperty Name="IdentityNumber" ColumnName="IdentityNumber" />
+          <ScalarProperty Name="ContactNumber" ColumnName="ContactNumber" />
+          <ScalarProperty Name="Birthday" ColumnName="Birthday" />
+          <ScalarProperty Name="JobTitleId" ColumnName="JobTitleId" />
+          <ScalarProperty Name="TeamId" ColumnName="TeamId" />
+          <ScalarProperty Name="DepartmentId" ColumnName="DepartmentId" />
+          <ScalarProperty Name="WorkPlace" ColumnName="WorkPlace" />
+          <ScalarProperty Name="TimecardCode" ColumnName="TimecardCode" />
+          <ScalarProperty Name="LightId" ColumnName="LightId" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="JobNumber" ColumnName="JobNumber" />
+          <ScalarProperty Name="CardNumber" ColumnName="CardNumber" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Zones">
+      <EntityTypeMapping TypeName="MWTSModel.Zone">
+        <MappingFragment StoreEntitySet="Zone">
+          <ScalarProperty Name="IsAuthorizedPersonalOnly" ColumnName="IsAuthorizedPersonalOnly" />
+          <ScalarProperty Name="IsInUse" ColumnName="IsInUse" />
+          <ScalarProperty Name="RowVersion" ColumnName="RowVersion" />
+          <ScalarProperty Name="IsShowing" ColumnName="IsShowing" />
+          <ScalarProperty Name="LowerLeft_Y" ColumnName="LowerLeft_Y" />
+          <ScalarProperty Name="LowerRight_Y" ColumnName="LowerRight_Y" />
+          <ScalarProperty Name="UpperRight_Y" ColumnName="UpperRight_Y" />
+          <ScalarProperty Name="UpperLeft_Y" ColumnName="UpperLeft_Y" />
+          <ScalarProperty Name="LowerLeft_X" ColumnName="LowerLeft_X" />
+          <ScalarProperty Name="LowerRight_X" ColumnName="LowerRight_X" />
+          <ScalarProperty Name="UpperRight_X" ColumnName="UpperRight_X" />
+          <ScalarProperty Name="UpperLeft_X" ColumnName="UpperLeft_X" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="CoverageType" ColumnName="CoverageType" />
+          <ScalarProperty Name="UpperLimitOfWorkingTime" ColumnName="UpperLimitOfWorkingTime" />
+          <ScalarProperty Name="UpperLimitOfWoringPeple" ColumnName="UpperLimitOfWoringPeple" />
+          <ScalarProperty Name="ZoneType" ColumnName="ZoneType" />
+          <ScalarProperty Name="Number" ColumnName="Number" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ZoneAndBaseStationLinks">
+      <EntityTypeMapping TypeName="MWTSModel.ZoneAndBaseStationLink">
+        <MappingFragment StoreEntitySet="ZoneAndBaseStationLink">
+          <ScalarProperty Name="Position" ColumnName="Position" />
+          <ScalarProperty Name="BaseStationId" ColumnName="BaseStationId" />
+          <ScalarProperty Name="ZoneId" ColumnName="ZoneId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="View_BaseStationAndZone_ForGis">
+      <EntityTypeMapping TypeName="MWTSModel.View_BaseStationAndZone_ForGis">
+        <MappingFragment StoreEntitySet="View_BaseStationAndZone_ForGis">
+          <ScalarProperty Name="Position" ColumnName="Position" />
+          <ScalarProperty Name="ZoneIsShowing" ColumnName="ZoneIsShowing" />
+          <ScalarProperty Name="LowerLeft_Y" ColumnName="LowerLeft_Y" />
+          <ScalarProperty Name="LowerRight_Y" ColumnName="LowerRight_Y" />
+          <ScalarProperty Name="UpperRight_Y" ColumnName="UpperRight_Y" />
+          <ScalarProperty Name="UpperLeft_Y" ColumnName="UpperLeft_Y" />
+          <ScalarProperty Name="LowerLeft_X" ColumnName="LowerLeft_X" />
+          <ScalarProperty Name="LowerRight_X" ColumnName="LowerRight_X" />
+          <ScalarProperty Name="UpperRight_X" ColumnName="UpperRight_X" />
+          <ScalarProperty Name="UpperLeft_X" ColumnName="UpperLeft_X" />
+          <ScalarProperty Name="ZoneDescription" ColumnName="ZoneDescription" />
+          <ScalarProperty Name="ZoneRemark" ColumnName="ZoneRemark" />
+          <ScalarProperty Name="ZoneCoverageType" ColumnName="ZoneCoverageType" />
+          <ScalarProperty Name="UpperLimitOfWorkingTime" ColumnName="UpperLimitOfWorkingTime" />
+          <ScalarProperty Name="UpperLimitOfWoringPeple" ColumnName="UpperLimitOfWoringPeple" />
+          <ScalarProperty Name="ZoneType" ColumnName="ZoneType" />
+          <ScalarProperty Name="ZoneNumber" ColumnName="ZoneNumber" />
+          <ScalarProperty Name="ZoneName" ColumnName="ZoneName" />
+          <ScalarProperty Name="IsShowing" ColumnName="IsShowing" />
+          <ScalarProperty Name="Y" ColumnName="Y" />
+          <ScalarProperty Name="X" ColumnName="X" />
+          <ScalarProperty Name="Datetime" ColumnName="Datetime" />
+          <ScalarProperty Name="PowerSupplyState" ColumnName="PowerSupplyState" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="GasSaturation" ColumnName="GasSaturation" />
+          <ScalarProperty Name="IsWellhead" ColumnName="IsWellhead" />
+          <ScalarProperty Name="ElectricalBoxPositioning" ColumnName="ElectricalBoxPositioning" />
+          <ScalarProperty Name="IfFeedbackSignal" ColumnName="IfFeedbackSignal" />
+          <ScalarProperty Name="Direction" ColumnName="Direction" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="DataRadioNumber" ColumnName="DataRadioNumber" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Number" ColumnName="Number" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="View_BaseStationLeftjoinZone">
+      <EntityTypeMapping TypeName="MWTSModel.View_BaseStationLeftjoinZone">
+        <MappingFragment StoreEntitySet="View_BaseStationLeftjoinZone">
+          <ScalarProperty Name="ZoneType" ColumnName="ZoneType" />
+          <ScalarProperty Name="UpperLimitOfWorkingTime" ColumnName="UpperLimitOfWorkingTime" />
+          <ScalarProperty Name="UpperLimitOfWoringPeple" ColumnName="UpperLimitOfWoringPeple" />
+          <ScalarProperty Name="CoverageType" ColumnName="CoverageType" />
+          <ScalarProperty Name="Position" ColumnName="Position" />
+          <ScalarProperty Name="zoneName" ColumnName="zoneName" />
+          <ScalarProperty Name="ZoneNumber" ColumnName="ZoneNumber" />
+          <ScalarProperty Name="ZoneId" ColumnName="ZoneId" />
+          <ScalarProperty Name="RowVersion" ColumnName="RowVersion" />
+          <ScalarProperty Name="IsShowing" ColumnName="IsShowing" />
+          <ScalarProperty Name="Y" ColumnName="Y" />
+          <ScalarProperty Name="X" ColumnName="X" />
+          <ScalarProperty Name="Datetime" ColumnName="Datetime" />
+          <ScalarProperty Name="PowerSupplyState" ColumnName="PowerSupplyState" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="GasSaturation" ColumnName="GasSaturation" />
+          <ScalarProperty Name="IsWellhead" ColumnName="IsWellhead" />
+          <ScalarProperty Name="ElectricalBoxPositioning" ColumnName="ElectricalBoxPositioning" />
+          <ScalarProperty Name="IfFeedbackSignal" ColumnName="IfFeedbackSignal" />
+          <ScalarProperty Name="Direction" ColumnName="Direction" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="DataRadioNumber" ColumnName="DataRadioNumber" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Number" ColumnName="Number" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="View_CardAndWorker_ForGis">
+      <EntityTypeMapping TypeName="MWTSModel.View_CardAndWorker_ForGis">
+        <MappingFragment StoreEntitySet="View_CardAndWorker_ForGis">
+          <ScalarProperty Name="Team_Name" ColumnName="Team_Name" />
+          <ScalarProperty Name="JobTitle_Name" ColumnName="JobTitle_Name" />
+          <ScalarProperty Name="Department_Name" ColumnName="Department_Name" />
+          <ScalarProperty Name="Worker_SpecialType" ColumnName="Worker_SpecialType" />
+          <ScalarProperty Name="Worker_WorkerType" ColumnName="Worker_WorkerType" />
+          <ScalarProperty Name="Worker_Photo" ColumnName="Worker_Photo" />
+          <ScalarProperty Name="Worker_ContactAddress" ColumnName="Worker_ContactAddress" />
+          <ScalarProperty Name="Worker_IdentityNumber" ColumnName="Worker_IdentityNumber" />
+          <ScalarProperty Name="Worker_ContactNumber" ColumnName="Worker_ContactNumber" />
+          <ScalarProperty Name="Worker_Birthday" ColumnName="Worker_Birthday" />
+          <ScalarProperty Name="Worker_JobTitleId" ColumnName="Worker_JobTitleId" />
+          <ScalarProperty Name="Worker_TeamId" ColumnName="Worker_TeamId" />
+          <ScalarProperty Name="Worker_DepartmentId" ColumnName="Worker_DepartmentId" />
+          <ScalarProperty Name="Worker_WorkPlace" ColumnName="Worker_WorkPlace" />
+          <ScalarProperty Name="Worker_TimecardCode" ColumnName="Worker_TimecardCode" />
+          <ScalarProperty Name="Worker_LightId" ColumnName="Worker_LightId" />
+          <ScalarProperty Name="Worker_Gender" ColumnName="Worker_Gender" />
+          <ScalarProperty Name="Worker_Name" ColumnName="Worker_Name" />
+          <ScalarProperty Name="Worker_JobNumber" ColumnName="Worker_JobNumber" />
+          <ScalarProperty Name="Worker_CardNumber" ColumnName="Worker_CardNumber" />
+          <ScalarProperty Name="Worker_Id" ColumnName="Worker_Id" />
+          <ScalarProperty Name="Card_Datetime" ColumnName="Card_Datetime" />
+          <ScalarProperty Name="Card_Position" ColumnName="Card_Position" />
+          <ScalarProperty Name="Card_PushButtonState" ColumnName="Card_PushButtonState" />
+          <ScalarProperty Name="Card_BaseStationNumber" ColumnName="Card_BaseStationNumber" />
+          <ScalarProperty Name="Card_IsInTheHole" ColumnName="Card_IsInTheHole" />
+          <ScalarProperty Name="Card_IsAlive" ColumnName="Card_IsAlive" />
+          <ScalarProperty Name="Card_Description" ColumnName="Card_Description" />
+          <ScalarProperty Name="Card_Remark" ColumnName="Card_Remark" />
+          <ScalarProperty Name="Card_BatteryLevel" ColumnName="Card_BatteryLevel" />
+          <ScalarProperty Name="Card_IsEnable" ColumnName="Card_IsEnable" />
+          <ScalarProperty Name="Card_Number" ColumnName="Card_Number" />
+          <ScalarProperty Name="Card_Id" ColumnName="Card_Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="View_CardInBaseStation_ForGis">
+      <EntityTypeMapping TypeName="MWTSModel.View_CardInBaseStation_ForGis">
+        <MappingFragment StoreEntitySet="View_CardInBaseStation_ForGis">
+          <ScalarProperty Name="StartTime" ColumnName="StartTime" />
+          <ScalarProperty Name="Team_Name" ColumnName="Team_Name" />
+          <ScalarProperty Name="JobTitle_Name" ColumnName="JobTitle_Name" />
+          <ScalarProperty Name="Department_Name" ColumnName="Department_Name" />
+          <ScalarProperty Name="Worker_SpecialType" ColumnName="Worker_SpecialType" />
+          <ScalarProperty Name="Worker_WorkerType" ColumnName="Worker_WorkerType" />
+          <ScalarProperty Name="Worker_Photo" ColumnName="Worker_Photo" />
+          <ScalarProperty Name="Worker_ContactAddress" ColumnName="Worker_ContactAddress" />
+          <ScalarProperty Name="Worker_IdentityNumber" ColumnName="Worker_IdentityNumber" />
+          <ScalarProperty Name="Worker_ContactNumber" ColumnName="Worker_ContactNumber" />
+          <ScalarProperty Name="Worker_Birthday" ColumnName="Worker_Birthday" />
+          <ScalarProperty Name="Worker_JobTitleId" ColumnName="Worker_JobTitleId" />
+          <ScalarProperty Name="Worker_TeamId" ColumnName="Worker_TeamId" />
+          <ScalarProperty Name="Worker_DepartmentId" ColumnName="Worker_DepartmentId" />
+          <ScalarProperty Name="Worker_WorkPlace" ColumnName="Worker_WorkPlace" />
+          <ScalarProperty Name="Worker_TimecardCode" ColumnName="Worker_TimecardCode" />
+          <ScalarProperty Name="Worker_LightId" ColumnName="Worker_LightId" />
+          <ScalarProperty Name="Worker_Gender" ColumnName="Worker_Gender" />
+          <ScalarProperty Name="Worker_Name" ColumnName="Worker_Name" />
+          <ScalarProperty Name="Worker_JobNumber" ColumnName="Worker_JobNumber" />
+          <ScalarProperty Name="Worker_CardNumber" ColumnName="Worker_CardNumber" />
+          <ScalarProperty Name="Worker_Id" ColumnName="Worker_Id" />
+          <ScalarProperty Name="Card_Datetime" ColumnName="Card_Datetime" />
+          <ScalarProperty Name="Card_Position" ColumnName="Card_Position" />
+          <ScalarProperty Name="Card_PushButtonState" ColumnName="Card_PushButtonState" />
+          <ScalarProperty Name="Card_BaseStationNumber" ColumnName="Card_BaseStationNumber" />
+          <ScalarProperty Name="Card_IsInTheHole" ColumnName="Card_IsInTheHole" />
+          <ScalarProperty Name="Card_IsAlive" ColumnName="Card_IsAlive" />
+          <ScalarProperty Name="Card_Description" ColumnName="Card_Description" />
+          <ScalarProperty Name="Card_Remark" ColumnName="Card_Remark" />
+          <ScalarProperty Name="Card_BatteryLevel" ColumnName="Card_BatteryLevel" />
+          <ScalarProperty Name="Card_IsEnable" ColumnName="Card_IsEnable" />
+          <ScalarProperty Name="Card_Number" ColumnName="Card_Number" />
+          <ScalarProperty Name="Card_Id" ColumnName="Card_Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="View_CardInZone_ForGis">
+      <EntityTypeMapping TypeName="MWTSModel.View_CardInZone_ForGis">
+        <MappingFragment StoreEntitySet="View_CardInZone_ForGis">
+          <ScalarProperty Name="ZoneNumber" ColumnName="ZoneNumber" />
+          <ScalarProperty Name="StartTime" ColumnName="StartTime" />
+          <ScalarProperty Name="Team_Name" ColumnName="Team_Name" />
+          <ScalarProperty Name="JobTitle_Name" ColumnName="JobTitle_Name" />
+          <ScalarProperty Name="Department_Name" ColumnName="Department_Name" />
+          <ScalarProperty Name="Worker_SpecialType" ColumnName="Worker_SpecialType" />
+          <ScalarProperty Name="Worker_WorkerType" ColumnName="Worker_WorkerType" />
+          <ScalarProperty Name="Worker_Photo" ColumnName="Worker_Photo" />
+          <ScalarProperty Name="Worker_ContactAddress" ColumnName="Worker_ContactAddress" />
+          <ScalarProperty Name="Worker_IdentityNumber" ColumnName="Worker_IdentityNumber" />
+          <ScalarProperty Name="Worker_ContactNumber" ColumnName="Worker_ContactNumber" />
+          <ScalarProperty Name="Worker_Birthday" ColumnName="Worker_Birthday" />
+          <ScalarProperty Name="Worker_JobTitleId" ColumnName="Worker_JobTitleId" />
+          <ScalarProperty Name="Worker_TeamId" ColumnName="Worker_TeamId" />
+          <ScalarProperty Name="Worker_DepartmentId" ColumnName="Worker_DepartmentId" />
+          <ScalarProperty Name="Worker_WorkPlace" ColumnName="Worker_WorkPlace" />
+          <ScalarProperty Name="Worker_TimecardCode" ColumnName="Worker_TimecardCode" />
+          <ScalarProperty Name="Worker_LightId" ColumnName="Worker_LightId" />
+          <ScalarProperty Name="Worker_Gender" ColumnName="Worker_Gender" />
+          <ScalarProperty Name="Worker_Name" ColumnName="Worker_Name" />
+          <ScalarProperty Name="Worker_JobNumber" ColumnName="Worker_JobNumber" />
+          <ScalarProperty Name="Worker_CardNumber" ColumnName="Worker_CardNumber" />
+          <ScalarProperty Name="Worker_Id" ColumnName="Worker_Id" />
+          <ScalarProperty Name="Card_Datetime" ColumnName="Card_Datetime" />
+          <ScalarProperty Name="Card_Position" ColumnName="Card_Position" />
+          <ScalarProperty Name="Card_PushButtonState" ColumnName="Card_PushButtonState" />
+          <ScalarProperty Name="Card_BaseStationNumber" ColumnName="Card_BaseStationNumber" />
+          <ScalarProperty Name="Card_IsInTheHole" ColumnName="Card_IsInTheHole" />
+          <ScalarProperty Name="Card_IsAlive" ColumnName="Card_IsAlive" />
+          <ScalarProperty Name="Card_Description" ColumnName="Card_Description" />
+          <ScalarProperty Name="Card_Remark" ColumnName="Card_Remark" />
+          <ScalarProperty Name="Card_BatteryLevel" ColumnName="Card_BatteryLevel" />
+          <ScalarProperty Name="Card_IsEnable" ColumnName="Card_IsEnable" />
+          <ScalarProperty Name="Card_Number" ColumnName="Card_Number" />
+          <ScalarProperty Name="Card_Id" ColumnName="Card_Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="View_CardsInZone">
+      <EntityTypeMapping TypeName="MWTSModel.View_CardsInZone">
+        <MappingFragment StoreEntitySet="View_CardsInZone">
+          <ScalarProperty Name="BaseStationNumber" ColumnName="BaseStationNumber" />
+          <ScalarProperty Name="UpperLimitOfWoringPeple" ColumnName="UpperLimitOfWoringPeple" />
+          <ScalarProperty Name="UpperLimitOfWorkingTime" ColumnName="UpperLimitOfWorkingTime" />
+          <ScalarProperty Name="ZoneId" ColumnName="ZoneId" />
+          <ScalarProperty Name="ZoneNumber" ColumnName="ZoneNumber" />
+          <ScalarProperty Name="CardNumber" ColumnName="CardNumber" />
+          <ScalarProperty Name="DateTime" ColumnName="DateTime" />
+          <ScalarProperty Name="Number" ColumnName="Number" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="View_CardTrackForZoneByPosition">
+      <EntityTypeMapping TypeName="MWTSModel.View_CardTrackForZoneByPosition">
+        <MappingFragment StoreEntitySet="View_CardTrackForZoneByPosition">
+          <ScalarProperty Name="Position" ColumnName="Position" />
+          <ScalarProperty Name="ZoneId" ColumnName="ZoneId" />
+          <ScalarProperty Name="Expr3" ColumnName="Expr3" />
+          <ScalarProperty Name="IsShowing" ColumnName="IsShowing" />
+          <ScalarProperty Name="Y" ColumnName="Y" />
+          <ScalarProperty Name="X" ColumnName="X" />
+          <ScalarProperty Name="Datetime" ColumnName="Datetime" />
+          <ScalarProperty Name="PowerSupplyState" ColumnName="PowerSupplyState" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Expr2" ColumnName="Expr2" />
+          <ScalarProperty Name="GasSaturation" ColumnName="GasSaturation" />
+          <ScalarProperty Name="IsWellhead" ColumnName="IsWellhead" />
+          <ScalarProperty Name="ElectricalBoxPositioning" ColumnName="ElectricalBoxPositioning" />
+          <ScalarProperty Name="IfFeedbackSignal" ColumnName="IfFeedbackSignal" />
+          <ScalarProperty Name="Direction" ColumnName="Direction" />
+          <ScalarProperty Name="DataRadioNumber" ColumnName="DataRadioNumber" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Number" ColumnName="Number" />
+          <ScalarProperty Name="Expr1" ColumnName="Expr1" />
+          <ScalarProperty Name="RowVersion" ColumnName="RowVersion" />
+          <ScalarProperty Name="LeftPosition" ColumnName="LeftPosition" />
+          <ScalarProperty Name="IntoPosition" ColumnName="IntoPosition" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="LastBaseStationNumber" ColumnName="LastBaseStationNumber" />
+          <ScalarProperty Name="EndTime" ColumnName="EndTime" />
+          <ScalarProperty Name="StartTime" ColumnName="StartTime" />
+          <ScalarProperty Name="BaseStationNumber" ColumnName="BaseStationNumber" />
+          <ScalarProperty Name="CardNumber" ColumnName="CardNumber" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="View_CardTrackForZoneNotByPosition">
+      <EntityTypeMapping TypeName="MWTSModel.View_CardTrackForZoneNotByPosition">
+        <MappingFragment StoreEntitySet="View_CardTrackForZoneNotByPosition">
+          <ScalarProperty Name="RowVersion" ColumnName="RowVersion" />
+          <ScalarProperty Name="LeftPosition" ColumnName="LeftPosition" />
+          <ScalarProperty Name="IntoPosition" ColumnName="IntoPosition" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="ResidenceTime" ColumnName="ResidenceTime" />
+          <ScalarProperty Name="LastBaseStationNumber" ColumnName="LastBaseStationNumber" />
+          <ScalarProperty Name="EndTime" ColumnName="EndTime" />
+          <ScalarProperty Name="StartTime" ColumnName="StartTime" />
+          <ScalarProperty Name="BaseStationNumber" ColumnName="BaseStationNumber" />
+          <ScalarProperty Name="CardNumber" ColumnName="CardNumber" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="View_getCheckingLogs">
+      <EntityTypeMapping TypeName="MWTSModel.View_getCheckingLogs">
+        <MappingFragment StoreEntitySet="View_getCheckingLogs">
+          <ScalarProperty Name="JobShiftName" ColumnName="JobShiftName" />
+          <ScalarProperty Name="WorkCount" ColumnName="WorkCount" />
+          <ScalarProperty Name="UpWellTime" ColumnName="UpWellTime" />
+          <ScalarProperty Name="DownWellTime" ColumnName="DownWellTime" />
+          <ScalarProperty Name="CardNumber" ColumnName="CardNumber" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="View_HelpStas">
+      <EntityTypeMapping TypeName="MWTSModel.View_HelpStas">
+        <MappingFragment StoreEntitySet="View_HelpStas">
+          <ScalarProperty Name="NoticedDateTime" ColumnName="NoticedDateTime" />
+          <ScalarProperty Name="IsNoticed" ColumnName="IsNoticed" />
+          <ScalarProperty Name="Datetime" ColumnName="Datetime" />
+          <ScalarProperty Name="JobtitleName" ColumnName="JobtitleName" />
+          <ScalarProperty Name="departmentName" ColumnName="departmentName" />
+          <ScalarProperty Name="SpecialType" ColumnName="SpecialType" />
+          <ScalarProperty Name="WorkerType" ColumnName="WorkerType" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="TimecardCode" ColumnName="TimecardCode" />
+          <ScalarProperty Name="LightId" ColumnName="LightId" />
+          <ScalarProperty Name="JobNumber" ColumnName="JobNumber" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="CardNumber" ColumnName="CardNumber" />
+          <ScalarProperty Name="BaseStationNumber" ColumnName="BaseStationNumber" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="View_LastCardTrack">
+      <EntityTypeMapping TypeName="MWTSModel.View_LastCardTrack">
+        <MappingFragment StoreEntitySet="View_LastCardTrack">
+          <ScalarProperty Name="Action" ColumnName="Action" />
+          <ScalarProperty Name="RowVersion" ColumnName="RowVersion" />
+          <ScalarProperty Name="TimeoutLogIdForHole" ColumnName="TimeoutLogIdForHole" />
+          <ScalarProperty Name="OverstaffLogIdForHole" ColumnName="OverstaffLogIdForHole" />
+          <ScalarProperty Name="TimeoutLogIdForZone" ColumnName="TimeoutLogIdForZone" />
+          <ScalarProperty Name="OverstaffLogIdForZone" ColumnName="OverstaffLogIdForZone" />
+          <ScalarProperty Name="LeftPosition" ColumnName="LeftPosition" />
+          <ScalarProperty Name="IntoPosition" ColumnName="IntoPosition" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="LastBaseStationNumber" ColumnName="LastBaseStationNumber" />
+          <ScalarProperty Name="EndTime" ColumnName="EndTime" />
+          <ScalarProperty Name="StartTime" ColumnName="StartTime" />
+          <ScalarProperty Name="BaseStationNumber" ColumnName="BaseStationNumber" />
+          <ScalarProperty Name="CardNumber" ColumnName="CardNumber" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="View_WorkerjoinDepartment">
+      <EntityTypeMapping TypeName="MWTSModel.View_WorkerjoinDepartment">
+        <MappingFragment StoreEntitySet="View_WorkerjoinDepartment">
+          <ScalarProperty Name="teamName" ColumnName="teamName" />
+          <ScalarProperty Name="JobtitleName" ColumnName="JobtitleName" />
+          <ScalarProperty Name="departmentName" ColumnName="departmentName" />
+          <ScalarProperty Name="RowVersion" ColumnName="RowVersion" />
+          <ScalarProperty Name="SpecialType" ColumnName="SpecialType" />
+          <ScalarProperty Name="WorkerType" ColumnName="WorkerType" />
+          <ScalarProperty Name="photo" ColumnName="photo" />
+          <ScalarProperty Name="ContactAddress" ColumnName="ContactAddress" />
+          <ScalarProperty Name="IdentityNumber" ColumnName="IdentityNumber" />
+          <ScalarProperty Name="ContactNumber" ColumnName="ContactNumber" />
+          <ScalarProperty Name="Birthday" ColumnName="Birthday" />
+          <ScalarProperty Name="JobTitleId" ColumnName="JobTitleId" />
+          <ScalarProperty Name="TeamId" ColumnName="TeamId" />
+          <ScalarProperty Name="DepartmentId" ColumnName="DepartmentId" />
+          <ScalarProperty Name="WorkPlace" ColumnName="WorkPlace" />
+          <ScalarProperty Name="TimecardCode" ColumnName="TimecardCode" />
+          <ScalarProperty Name="LightId" ColumnName="LightId" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="JobNumber" ColumnName="JobNumber" />
+          <ScalarProperty Name="CardNumber" ColumnName="CardNumber" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="View_ZoneAndBaseStation_ForGis">
+      <EntityTypeMapping TypeName="MWTSModel.View_ZoneAndBaseStation_ForGis">
+        <MappingFragment StoreEntitySet="View_ZoneAndBaseStation_ForGis">
+          <ScalarProperty Name="Position" ColumnName="Position" />
+          <ScalarProperty Name="ZoneIsShowing" ColumnName="ZoneIsShowing" />
+          <ScalarProperty Name="LowerLeft_Y" ColumnName="LowerLeft_Y" />
+          <ScalarProperty Name="LowerRight_Y" ColumnName="LowerRight_Y" />
+          <ScalarProperty Name="UpperRight_Y" ColumnName="UpperRight_Y" />
+          <ScalarProperty Name="UpperLeft_Y" ColumnName="UpperLeft_Y" />
+          <ScalarProperty Name="LowerLeft_X" ColumnName="LowerLeft_X" />
+          <ScalarProperty Name="LowerRight_X" ColumnName="LowerRight_X" />
+          <ScalarProperty Name="UpperRight_X" ColumnName="UpperRight_X" />
+          <ScalarProperty Name="UpperLeft_X" ColumnName="UpperLeft_X" />
+          <ScalarProperty Name="ZoneDescription" ColumnName="ZoneDescription" />
+          <ScalarProperty Name="ZoneRemark" ColumnName="ZoneRemark" />
+          <ScalarProperty Name="ZoneCoverageType" ColumnName="ZoneCoverageType" />
+          <ScalarProperty Name="UpperLimitOfWorkingTime" ColumnName="UpperLimitOfWorkingTime" />
+          <ScalarProperty Name="UpperLimitOfWoringPeple" ColumnName="UpperLimitOfWoringPeple" />
+          <ScalarProperty Name="ZoneType" ColumnName="ZoneType" />
+          <ScalarProperty Name="ZoneNumber" ColumnName="ZoneNumber" />
+          <ScalarProperty Name="ZoneName" ColumnName="ZoneName" />
+          <ScalarProperty Name="IsShowing" ColumnName="IsShowing" />
+          <ScalarProperty Name="Y" ColumnName="Y" />
+          <ScalarProperty Name="X" ColumnName="X" />
+          <ScalarProperty Name="Datetime" ColumnName="Datetime" />
+          <ScalarProperty Name="PowerSupplyState" ColumnName="PowerSupplyState" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="GasSaturation" ColumnName="GasSaturation" />
+          <ScalarProperty Name="IsWellhead" ColumnName="IsWellhead" />
+          <ScalarProperty Name="ElectricalBoxPositioning" ColumnName="ElectricalBoxPositioning" />
+          <ScalarProperty Name="IfFeedbackSignal" ColumnName="IfFeedbackSignal" />
+          <ScalarProperty Name="Direction" ColumnName="Direction" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="DataRadioNumber" ColumnName="DataRadioNumber" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Number" ColumnName="Number" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="View_ZoneInfo_ForGis">
+      <EntityTypeMapping TypeName="MWTSModel.View_ZoneInfo_ForGis">
+        <MappingFragment StoreEntitySet="View_ZoneInfo_ForGis">
+          <ScalarProperty Name="LowerLeft_Y" ColumnName="LowerLeft_Y" />
+          <ScalarProperty Name="LowerLeft_X" ColumnName="LowerLeft_X" />
+          <ScalarProperty Name="LowerRight_Y" ColumnName="LowerRight_Y" />
+          <ScalarProperty Name="LowerRight_X" ColumnName="LowerRight_X" />
+          <ScalarProperty Name="UpperRight_Y" ColumnName="UpperRight_Y" />
+          <ScalarProperty Name="UpperRight_X" ColumnName="UpperRight_X" />
+          <ScalarProperty Name="UpperLeft_Y" ColumnName="UpperLeft_Y" />
+          <ScalarProperty Name="UpperLeft_X" ColumnName="UpperLeft_X" />
+          <ScalarProperty Name="IsShowing" ColumnName="IsShowing" />
+          <ScalarProperty Name="PCount" ColumnName="PCount" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Number" ColumnName="Number" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="View_ZoneOverstaffAndTimeout_ForGis">
+      <EntityTypeMapping TypeName="MWTSModel.View_ZoneOverstaffAndTimeout_ForGis">
+        <MappingFragment StoreEntitySet="View_ZoneOverstaffAndTimeout_ForGis">
+          <ScalarProperty Name="IsTimeout" ColumnName="IsTimeout" />
+          <ScalarProperty Name="IsOverstaff" ColumnName="IsOverstaff" />
+          <ScalarProperty Name="Number" ColumnName="Number" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CardTracks">
+      <EntityTypeMapping TypeName="MWTSModel.CardTrack">
+        <MappingFragment StoreEntitySet="CardTrack">
+          <ScalarProperty Name="leaveTime" ColumnName="leaveTime" />
+          <ScalarProperty Name="Action" ColumnName="Action" />
+          <ScalarProperty Name="RowVersion" ColumnName="RowVersion" />
+          <ScalarProperty Name="TimeoutLogIdForHole" ColumnName="TimeoutLogIdForHole" />
+          <ScalarProperty Name="OverstaffLogIdForHole" ColumnName="OverstaffLogIdForHole" />
+          <ScalarProperty Name="TimeoutLogIdForZone" ColumnName="TimeoutLogIdForZone" />
+          <ScalarProperty Name="OverstaffLogIdForZone" ColumnName="OverstaffLogIdForZone" />
+          <ScalarProperty Name="LeftPosition" ColumnName="LeftPosition" />
+          <ScalarProperty Name="IntoPosition" ColumnName="IntoPosition" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="LastBaseStationNumber" ColumnName="LastBaseStationNumber" />
+          <ScalarProperty Name="EndTime" ColumnName="EndTime" />
+          <ScalarProperty Name="StartTime" ColumnName="StartTime" />
+          <ScalarProperty Name="BaseStationNumber" ColumnName="BaseStationNumber" />
+          <ScalarProperty Name="CardNumber" ColumnName="CardNumber" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="getCheckInLogs_Result" FunctionName="MWTSModel.Store.getCheckInLogs">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="MWTSModel.getCheckInLogs_Result">
+          <ScalarProperty Name="CardNumber" ColumnName="CardNumber" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="JobNumber" ColumnName="JobNumber" />
+          <ScalarProperty Name="lightid" ColumnName="lightid" />
+          <ScalarProperty Name="TimecardCode" ColumnName="TimecardCode" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="WorkerType" ColumnName="WorkerType" />
+          <ScalarProperty Name="SpecialType" ColumnName="SpecialType" />
+          <ScalarProperty Name="departmentName" ColumnName="departmentName" />
+          <ScalarProperty Name="JobtitleName" ColumnName="JobtitleName" />
+          <ScalarProperty Name="workerCount" ColumnName="workerCount" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="getCheckInLogsStas_Result" FunctionName="MWTSModel.Store.getCheckInLogsStas">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="MWTSModel.getCheckInLogsStas_Result">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="CardNumber" ColumnName="CardNumber" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="JobNumber" ColumnName="JobNumber" />
+          <ScalarProperty Name="lightid" ColumnName="lightid" />
+          <ScalarProperty Name="TimecardCode" ColumnName="TimecardCode" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="WorkerType" ColumnName="WorkerType" />
+          <ScalarProperty Name="SpecialType" ColumnName="SpecialType" />
+          <ScalarProperty Name="departmentName" ColumnName="departmentName" />
+          <ScalarProperty Name="JobtitleName" ColumnName="JobtitleName" />
+          <ScalarProperty Name="DownWellTime" ColumnName="DownWellTime" />
+          <ScalarProperty Name="UpWellTime" ColumnName="UpWellTime" />
+          <ScalarProperty Name="WorkCount" ColumnName="WorkCount" />
+          <ScalarProperty Name="JobShiftName" ColumnName="JobShiftName" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="getAllWorkertrack" FunctionName="MWTSModel.Store.getAllWorkertrack">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="MWTSModel.getAllWorkertrack_Result">
+          <ScalarProperty Name="CardNumber" ColumnName="CardNumber" />
+          <ScalarProperty Name="StartTime" ColumnName="StartTime" />
+          <ScalarProperty Name="EndTime" ColumnName="EndTime" />
+          <ScalarProperty Name="BaseStationNumber" ColumnName="BaseStationNumber" />
+          <ScalarProperty Name="BaseStationName" ColumnName="BaseStationName" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="JobNumber" ColumnName="JobNumber" />
+          <ScalarProperty Name="WorkerType" ColumnName="WorkerType" />
+          <ScalarProperty Name="SpecialType" ColumnName="SpecialType" />
+          <ScalarProperty Name="departmentName" ColumnName="departmentName" />
+          <ScalarProperty Name="JobtitleName" ColumnName="JobtitleName" />
+          <ScalarProperty Name="teamName" ColumnName="teamName" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="View_WorkerCountInZone">
+      <EntityTypeMapping TypeName="MWTSModel.View_WorkerCountInZone">
+        <MappingFragment StoreEntitySet="View_WorkerCountInZone">
+          <ScalarProperty Name="RowVersion" ColumnName="RowVersion" />
+          <ScalarProperty Name="WorkerCount" ColumnName="WorkerCount" />
+          <ScalarProperty Name="ZoneName" ColumnName="ZoneName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="View_WorkersCardTrack">
+      <EntityTypeMapping TypeName="MWTSModel.View_WorkersCardTrack">
+        <MappingFragment StoreEntitySet="View_WorkersCardTrack">
+          <ScalarProperty Name="EndTime" ColumnName="EndTime" />
+          <ScalarProperty Name="StartTime" ColumnName="StartTime" />
+          <ScalarProperty Name="CardNumber" ColumnName="CardNumber" />
+          <ScalarProperty Name="Team_Name" ColumnName="Team_Name" />
+          <ScalarProperty Name="JobTitle_Name" ColumnName="JobTitle_Name" />
+          <ScalarProperty Name="Department_Name" ColumnName="Department_Name" />
+          <ScalarProperty Name="Worker_SpecialType" ColumnName="Worker_SpecialType" />
+          <ScalarProperty Name="Worker_WorkerType" ColumnName="Worker_WorkerType" />
+          <ScalarProperty Name="Worker_Photo" ColumnName="Worker_Photo" />
+          <ScalarProperty Name="Worker_ContactAddress" ColumnName="Worker_ContactAddress" />
+          <ScalarProperty Name="Worker_IdentityNumber" ColumnName="Worker_IdentityNumber" />
+          <ScalarProperty Name="Worker_ContactNumber" ColumnName="Worker_ContactNumber" />
+          <ScalarProperty Name="Worker_Birthday" ColumnName="Worker_Birthday" />
+          <ScalarProperty Name="Worker_JobTitleId" ColumnName="Worker_JobTitleId" />
+          <ScalarProperty Name="Worker_TeamId" ColumnName="Worker_TeamId" />
+          <ScalarProperty Name="Worker_DepartmentId" ColumnName="Worker_DepartmentId" />
+          <ScalarProperty Name="Worker_WorkPlace" ColumnName="Worker_WorkPlace" />
+          <ScalarProperty Name="Worker_TimecardCode" ColumnName="Worker_TimecardCode" />
+          <ScalarProperty Name="Worker_LightId" ColumnName="Worker_LightId" />
+          <ScalarProperty Name="Worker_Gender" ColumnName="Worker_Gender" />
+          <ScalarProperty Name="Worker_Name" ColumnName="Worker_Name" />
+          <ScalarProperty Name="Worker_JobNumber" ColumnName="Worker_JobNumber" />
+          <ScalarProperty Name="Worker_CardNumber" ColumnName="Worker_CardNumber" />
+          <ScalarProperty Name="Worker_Id" ColumnName="Worker_Id" />
+          <ScalarProperty Name="Card_Datetime" ColumnName="Card_Datetime" />
+          <ScalarProperty Name="Card_Position" ColumnName="Card_Position" />
+          <ScalarProperty Name="Card_PushButtonState" ColumnName="Card_PushButtonState" />
+          <ScalarProperty Name="Card_BaseStationNumber" ColumnName="Card_BaseStationNumber" />
+          <ScalarProperty Name="Card_IsInTheHole" ColumnName="Card_IsInTheHole" />
+          <ScalarProperty Name="Card_IsAlive" ColumnName="Card_IsAlive" />
+          <ScalarProperty Name="Card_Description" ColumnName="Card_Description" />
+          <ScalarProperty Name="Card_Remark" ColumnName="Card_Remark" />
+          <ScalarProperty Name="Card_BatteryLevel" ColumnName="Card_BatteryLevel" />
+          <ScalarProperty Name="Card_IsEnable" ColumnName="Card_IsEnable" />
+          <ScalarProperty Name="Card_Number" ColumnName="Card_Number" />
+          <ScalarProperty Name="Card_Id" ColumnName="Card_Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="getCurrentCardNunmberCardTrack_ForGis" FunctionName="MWTSModel.Store.getCurrentCardNunmberCardTrack_ForGis">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="MWTSModel.getCurrentCardNunmberCardTrack_ForGis_Result">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="CardNumber" ColumnName="CardNumber" />
+          <ScalarProperty Name="BaseStationNumber" ColumnName="BaseStationNumber" />
+          <ScalarProperty Name="StartTime" ColumnName="StartTime" />
+          <ScalarProperty Name="EndTime" ColumnName="EndTime" />
+          <ScalarProperty Name="LastBaseStationNumber" ColumnName="LastBaseStationNumber" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="BaseStationName" ColumnName="BaseStationName" />
+          <ScalarProperty Name="IntoPosition" ColumnName="IntoPosition" />
+          <ScalarProperty Name="LeftPosition" ColumnName="LeftPosition" />
+          <ScalarProperty Name="OverstaffLogIdForZone" ColumnName="OverstaffLogIdForZone" />
+          <ScalarProperty Name="TimeoutLogIdForZone" ColumnName="TimeoutLogIdForZone" />
+          <ScalarProperty Name="OverstaffLogIdForHole" ColumnName="OverstaffLogIdForHole" />
+          <ScalarProperty Name="TimeoutLogIdForHole" ColumnName="TimeoutLogIdForHole" />
+          <ScalarProperty Name="Action" ColumnName="Action" />
+          <ScalarProperty Name="Worker_JobNumber" ColumnName="Worker_JobNumber" />
+          <ScalarProperty Name="Worker_Name" ColumnName="Worker_Name" />
+          <ScalarProperty Name="Department_Name" ColumnName="Department_Name" />
+          <ScalarProperty Name="JobTitle_Name" ColumnName="JobTitle_Name" />
+          <ScalarProperty Name="Worker_WorkerType" ColumnName="Worker_WorkerType" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="getWorkerTracker_ForGis" FunctionName="MWTSModel.Store.getWorkerTracker_ForGis">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="MWTSModel.getWorkerTracker_ForGis_Result">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="CardNumber" ColumnName="CardNumber" />
+          <ScalarProperty Name="BaseStationNumber" ColumnName="BaseStationNumber" />
+          <ScalarProperty Name="StartTime" ColumnName="StartTime" />
+          <ScalarProperty Name="EndTime" ColumnName="EndTime" />
+          <ScalarProperty Name="LastBaseStationNumber" ColumnName="LastBaseStationNumber" />
+          <ScalarProperty Name="BaseStationName" ColumnName="BaseStationName" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="IntoPosition" ColumnName="IntoPosition" />
+          <ScalarProperty Name="LeftPosition" ColumnName="LeftPosition" />
+          <ScalarProperty Name="OverstaffLogIdForZone" ColumnName="OverstaffLogIdForZone" />
+          <ScalarProperty Name="TimeoutLogIdForZone" ColumnName="TimeoutLogIdForZone" />
+          <ScalarProperty Name="OverstaffLogIdForHole" ColumnName="OverstaffLogIdForHole" />
+          <ScalarProperty Name="TimeoutLogIdForHole" ColumnName="TimeoutLogIdForHole" />
+          <ScalarProperty Name="Action" ColumnName="Action" />
+          <ScalarProperty Name="Worker_JobNumber" ColumnName="Worker_JobNumber" />
+          <ScalarProperty Name="Worker_Name" ColumnName="Worker_Name" />
+          <ScalarProperty Name="Department_Name" ColumnName="Department_Name" />
+          <ScalarProperty Name="JobTitle_Name" ColumnName="JobTitle_Name" />
+          <ScalarProperty Name="Worker_WorkerType" ColumnName="Worker_WorkerType" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="getWorkertrack" FunctionName="MWTSModel.Store.getWorkertrack">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="MWTSModel.getWorkertrack_Result">
+          <ScalarProperty Name="CardNumber" ColumnName="CardNumber" />
+          <ScalarProperty Name="StartTime" ColumnName="StartTime" />
+          <ScalarProperty Name="EndTime" ColumnName="EndTime" />
+          <ScalarProperty Name="BaseStationNumber" ColumnName="BaseStationNumber" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="JobNumber" ColumnName="JobNumber" />
+          <ScalarProperty Name="WorkerType" ColumnName="WorkerType" />
+          <ScalarProperty Name="SpecialType" ColumnName="SpecialType" />
+          <ScalarProperty Name="departmentName" ColumnName="departmentName" />
+          <ScalarProperty Name="JobtitleName" ColumnName="JobtitleName" />
+          <ScalarProperty Name="teamName" ColumnName="teamName" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="getCardsRealData" FunctionName="MWTSModel.Store.getCardsRealData">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="MWTSModel.getCardsRealData_Result">
+          <ScalarProperty Name="Number" ColumnName="Number" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="JobNumber" ColumnName="JobNumber" />
+          <ScalarProperty Name="lightid" ColumnName="lightid" />
+          <ScalarProperty Name="TimecardCode" ColumnName="TimecardCode" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="WorkerType" ColumnName="WorkerType" />
+          <ScalarProperty Name="SpecialType" ColumnName="SpecialType" />
+          <ScalarProperty Name="departmentName" ColumnName="departmentName" />
+          <ScalarProperty Name="JobtitleName" ColumnName="JobtitleName" />
+          <ScalarProperty Name="teamName" ColumnName="teamName" />
+          <ScalarProperty Name="BaseStationNumber" ColumnName="BaseStationNumber" />
+          <ScalarProperty Name="BaseStationName" ColumnName="BaseStationName" />
+          <ScalarProperty Name="Datetime" ColumnName="Datetime" />
+          <ScalarProperty Name="Position" ColumnName="Position" />
+          <ScalarProperty Name="BatteryLevel" ColumnName="BatteryLevel" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="getDataRadioLogs" FunctionName="MWTSModel.Store.getDataRadioLogs">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="MWTSModel.getDataRadioLogs_Result">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Action" ColumnName="Action" />
+          <ScalarProperty Name="DataRadioNumber" ColumnName="DataRadioNumber" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="StartTime" ColumnName="StartTime" />
+          <ScalarProperty Name="EndTime" ColumnName="EndTime" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="getCheckInLogs" FunctionName="MWTSModel.Store.getCheckInLogs">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="MWTSModel.getCheckInLogs_Result1">
+          <ScalarProperty Name="CardNumber" ColumnName="CardNumber" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="JobNumber" ColumnName="JobNumber" />
+          <ScalarProperty Name="lightid" ColumnName="lightid" />
+          <ScalarProperty Name="TimecardCode" ColumnName="TimecardCode" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="WorkerType" ColumnName="WorkerType" />
+          <ScalarProperty Name="SpecialType" ColumnName="SpecialType" />
+          <ScalarProperty Name="departmentName" ColumnName="departmentName" />
+          <ScalarProperty Name="JobtitleName" ColumnName="JobtitleName" />
+          <ScalarProperty Name="workerCount" ColumnName="workerCount" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="getBaseationLogs" FunctionName="MWTSModel.Store.getBaseationLogs">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="MWTSModel.getBaseationLogs_Result1">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Action" ColumnName="Action" />
+          <ScalarProperty Name="BaseStationNumber" ColumnName="BaseStationNumber" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="StartTime" ColumnName="StartTime" />
+          <ScalarProperty Name="EndTime" ColumnName="EndTime" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="View_getAllWorkerTrack">
+      <EntityTypeMapping TypeName="MWTSModel.View_getAllWorkerTrack">
+        <MappingFragment StoreEntitySet="View_getAllWorkerTrack">
+          <ScalarProperty Name="Action" ColumnName="Action" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="teamName" ColumnName="teamName" />
+          <ScalarProperty Name="JobtitleName" ColumnName="JobtitleName" />
+          <ScalarProperty Name="departmentName" ColumnName="departmentName" />
+          <ScalarProperty Name="SpecialType" ColumnName="SpecialType" />
+          <ScalarProperty Name="WorkerType" ColumnName="WorkerType" />
+          <ScalarProperty Name="BaseStationName" ColumnName="BaseStationName" />
+          <ScalarProperty Name="JobNumber" ColumnName="JobNumber" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="BaseStationNumber" ColumnName="BaseStationNumber" />
+          <ScalarProperty Name="EndTime" ColumnName="EndTime" />
+          <ScalarProperty Name="StartTime" ColumnName="StartTime" />
+          <ScalarProperty Name="CardNumber" ColumnName="CardNumber" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Managers">
+      <EntityTypeMapping TypeName="MWTSModel.Manager">
+        <MappingFragment StoreEntitySet="Manager">
+          <ScalarProperty Name="RowVersion" ColumnName="RowVersion" />
+          <ScalarProperty Name="Popedom" ColumnName="Popedom" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Username" ColumnName="Username" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="View_BaseStationInfo_ForGis">
+      <EntityTypeMapping TypeName="MWTSModel.View_BaseStationInfo_ForGis">
+        <MappingFragment StoreEntitySet="View_BaseStationInfo_ForGis">
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="IsShowing" ColumnName="IsShowing" />
+          <ScalarProperty Name="IsWellhead" ColumnName="IsWellhead" />
+          <ScalarProperty Name="Y" ColumnName="Y" />
+          <ScalarProperty Name="X" ColumnName="X" />
+          <ScalarProperty Name="PCount" ColumnName="PCount" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Number" ColumnName="Number" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BaseStations">
+      <EntityTypeMapping TypeName="MWTSModel.BaseStation">
+        <MappingFragment StoreEntitySet="BaseStation">
+          <ScalarProperty Name="RowVersion" ColumnName="RowVersion" />
+          <ScalarProperty Name="IsShowing" ColumnName="IsShowing" />
+          <ScalarProperty Name="Y" ColumnName="Y" />
+          <ScalarProperty Name="X" ColumnName="X" />
+          <ScalarProperty Name="Datetime" ColumnName="Datetime" />
+          <ScalarProperty Name="PowerSupplyState" ColumnName="PowerSupplyState" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="GasSaturation" ColumnName="GasSaturation" />
+          <ScalarProperty Name="IsWellhead" ColumnName="IsWellhead" />
+          <ScalarProperty Name="ElectricalBoxPositioning" ColumnName="ElectricalBoxPositioning" />
+          <ScalarProperty Name="IfFeedbackSignal" ColumnName="IfFeedbackSignal" />
+          <ScalarProperty Name="Direction" ColumnName="Direction" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="DataRadioNumber" ColumnName="DataRadioNumber" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Number" ColumnName="Number" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="getBasesationStats_Result" FunctionName="MWTSModel.Store.getBasesationStats">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="MWTSModel.getBasesationStats_Result">
+          <ScalarProperty Name="BaseStationNumber" ColumnName="BaseStationNumber" />
+          <ScalarProperty Name="Action" ColumnName="Action" />
+          <ScalarProperty Name="CardNumber" ColumnName="CardNumber" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="JobNumber" ColumnName="JobNumber" />
+          <ScalarProperty Name="WorkerType" ColumnName="WorkerType" />
+          <ScalarProperty Name="SpecialType" ColumnName="SpecialType" />
+          <ScalarProperty Name="departmentName" ColumnName="departmentName" />
+          <ScalarProperty Name="JobtitleName" ColumnName="JobtitleName" />
+          <ScalarProperty Name="teamName" ColumnName="teamName" />
+          <ScalarProperty Name="StartTime" ColumnName="StartTime" />
+          <ScalarProperty Name="EndTime" ColumnName="EndTime" />
+          <ScalarProperty Name="IntoPosition" ColumnName="IntoPosition" />
+          <ScalarProperty Name="LeftPosition" ColumnName="LeftPosition" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="getAllInandOuntHoleStats" FunctionName="MWTSModel.Store.getAllInandOuntHoleStats">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="MWTSModel.getAllInandOuntHoleStats_Result">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="CardNumber" ColumnName="CardNumber" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="JobNumber" ColumnName="JobNumber" />
+          <ScalarProperty Name="WorkerType" ColumnName="WorkerType" />
+          <ScalarProperty Name="SpecialType" ColumnName="SpecialType" />
+          <ScalarProperty Name="departmentName" ColumnName="departmentName" />
+          <ScalarProperty Name="JobtitleName" ColumnName="JobtitleName" />
+          <ScalarProperty Name="teamName" ColumnName="teamName" />
+          <ScalarProperty Name="StartTime" ColumnName="StartTime" />
+          <ScalarProperty Name="OutTime" ColumnName="OutTime" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="View_BaseStationInnerjoinZone">
+      <EntityTypeMapping TypeName="MWTSModel.View_BaseStationInnerjoinZone">
+        <MappingFragment StoreEntitySet="View_BaseStationInnerjoinZone">
+          <ScalarProperty Name="ZoneType" ColumnName="ZoneType" />
+          <ScalarProperty Name="UpperLimitOfWorkingTime" ColumnName="UpperLimitOfWorkingTime" />
+          <ScalarProperty Name="UpperLimitOfWoringPeple" ColumnName="UpperLimitOfWoringPeple" />
+          <ScalarProperty Name="CoverageType" ColumnName="CoverageType" />
+          <ScalarProperty Name="Position" ColumnName="Position" />
+          <ScalarProperty Name="zoneName" ColumnName="zoneName" />
+          <ScalarProperty Name="ZoneNumber" ColumnName="ZoneNumber" />
+          <ScalarProperty Name="ZoneId" ColumnName="ZoneId" />
+          <ScalarProperty Name="RowVersion" ColumnName="RowVersion" />
+          <ScalarProperty Name="IsShowing" ColumnName="IsShowing" />
+          <ScalarProperty Name="Y" ColumnName="Y" />
+          <ScalarProperty Name="X" ColumnName="X" />
+          <ScalarProperty Name="Datetime" ColumnName="Datetime" />
+          <ScalarProperty Name="PowerSupplyState" ColumnName="PowerSupplyState" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="GasSaturation" ColumnName="GasSaturation" />
+          <ScalarProperty Name="IsWellhead" ColumnName="IsWellhead" />
+          <ScalarProperty Name="ElectricalBoxPositioning" ColumnName="ElectricalBoxPositioning" />
+          <ScalarProperty Name="IfFeedbackSignal" ColumnName="IfFeedbackSignal" />
+          <ScalarProperty Name="Direction" ColumnName="Direction" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="DataRadioNumber" ColumnName="DataRadioNumber" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Number" ColumnName="Number" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="getAllInandOuntHoleStatsNoPage" FunctionName="MWTSModel.Store.getAllInandOuntHoleStatsNoPage">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="MWTSModel.getAllInandOuntHoleStatsNoPage_Result">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="CardNumber" ColumnName="CardNumber" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="JobNumber" ColumnName="JobNumber" />
+          <ScalarProperty Name="WorkerType" ColumnName="WorkerType" />
+          <ScalarProperty Name="SpecialType" ColumnName="SpecialType" />
+          <ScalarProperty Name="departmentName" ColumnName="departmentName" />
+          <ScalarProperty Name="JobtitleName" ColumnName="JobtitleName" />
+          <ScalarProperty Name="teamName" ColumnName="teamName" />
+          <ScalarProperty Name="StartTime" ColumnName="StartTime" />
+          <ScalarProperty Name="OutTime" ColumnName="OutTime" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="getWorkTimePerDay" FunctionName="MWTSModel.Store.getWorkTimePerDay">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="MWTSModel.getWorkTimePerDay_Result">
+          <ScalarProperty Name="CardNumber" ColumnName="CardNumber" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="JobNumber" ColumnName="JobNumber" />
+          <ScalarProperty Name="lightid" ColumnName="lightid" />
+          <ScalarProperty Name="TimecardCode" ColumnName="TimecardCode" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="WorkerType" ColumnName="WorkerType" />
+          <ScalarProperty Name="SpecialType" ColumnName="SpecialType" />
+          <ScalarProperty Name="departmentName" ColumnName="departmentName" />
+          <ScalarProperty Name="JobtitleName" ColumnName="JobtitleName" />
+          <ScalarProperty Name="MinStarTime" ColumnName="MinStarTime" />
+          <ScalarProperty Name="MaxEndTime" ColumnName="MaxEndTime" />
+          <ScalarProperty Name="currentDay" ColumnName="currentDay" />
+          <ScalarProperty Name="SumSeconds" ColumnName="SumSeconds" />
+          <ScalarProperty Name="workDurationName" ColumnName="workDurationName" />
+          <ScalarProperty Name="workcount" ColumnName="workcount" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="getWorkTimePerDaybyCardNumber" FunctionName="MWTSModel.Store.getWorkTimePerDaybyCardNumber">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="MWTSModel.getWorkTimePerDaybyCardNumber_Result">
+          <ScalarProperty Name="CardNumber" ColumnName="CardNumber" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="JobNumber" ColumnName="JobNumber" />
+          <ScalarProperty Name="lightid" ColumnName="lightid" />
+          <ScalarProperty Name="TimecardCode" ColumnName="TimecardCode" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="WorkerType" ColumnName="WorkerType" />
+          <ScalarProperty Name="SpecialType" ColumnName="SpecialType" />
+          <ScalarProperty Name="departmentName" ColumnName="departmentName" />
+          <ScalarProperty Name="JobtitleName" ColumnName="JobtitleName" />
+          <ScalarProperty Name="MinStarTime" ColumnName="MinStarTime" />
+          <ScalarProperty Name="MaxEndTime" ColumnName="MaxEndTime" />
+          <ScalarProperty Name="currentDay" ColumnName="currentDay" />
+          <ScalarProperty Name="SumSeconds" ColumnName="SumSeconds" />
+          <ScalarProperty Name="workDurationName" ColumnName="workDurationName" />
+          <ScalarProperty Name="workcount" ColumnName="workcount" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+  </EntityContainerMapping>
+</Mapping>

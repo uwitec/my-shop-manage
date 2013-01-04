@@ -1,0 +1,232 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>DevExpress.Web.v10.2.Linq</name>
+    </assembly>
+    <members>
+        <member name="T:DevExpress.Data.Linq.LinqServerModeDataSourceSelectEventArgs">
+
+            <summary>
+                <para>Provides data for the <see cref="E:DevExpress.Data.Linq.LinqServerModeDataSource.Selecting"/> event.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.Data.Linq.LinqServerModeDataSourceSelectEventArgs.#ctor">
+            <summary>
+                <para>Initializes a new instance of the LinqServerModeDataSourceSelectEventArgs class.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="P:DevExpress.Data.Linq.LinqServerModeDataSourceSelectEventArgs.KeyExpression">
+            <summary>
+                <para>Gets or sets the key expression.
+</para>
+            </summary>
+            <value>A <see cref="T:System.String"/> value that specifies the name of the key property.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Data.Linq.LinqServerModeDataSourceSelectEventArgs.QueryableSource">
+            <summary>
+                <para>Gets or sets the queryable data source.
+</para>
+            </summary>
+            <value>An object that implements the <b>IQueryable</b> interface.
+</value>
+
+
+        </member>
+        <member name="T:DevExpress.Data.Linq.LinqServerModeDataSource">
+
+            <summary>
+                <para>Represents the ASPxGridView's data source that can be associated with any queryable source.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.Data.Linq.LinqServerModeDataSource.#ctor">
+            <summary>
+                <para>Initializes a new instance of the LinqServerModeDataSource class.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="P:DevExpress.Data.Linq.LinqServerModeDataSource.ContextTypeName">
+            <summary>
+                <para>Gets or sets the type name of objects retrieved from a data source.
+</para>
+            </summary>
+            <value>A <see cref="T:System.String"/> value that specifies the type name of objects retrieved from a data source.
+</value>
+
+
+        </member>
+        <member name="E:DevExpress.Data.Linq.LinqServerModeDataSource.Deleting">
+            <summary>
+                <para>Occurs before a delete operation.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="P:DevExpress.Data.Linq.LinqServerModeDataSource.EnableDelete">
+            <summary>
+                <para>Gets or sets whether a delete operation is allowed.
+</para>
+            </summary>
+            <value><b>true</b> to allow delete operations; otherwise, <b>false</b>.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Data.Linq.LinqServerModeDataSource.EnableInsert">
+            <summary>
+                <para>Gets or sets whether an insert operation is allowed.
+</para>
+            </summary>
+            <value><b>true</b> if an insert operation is allowed; otherwise, <b>false</b>.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Data.Linq.LinqServerModeDataSource.EnableUpdate">
+            <summary>
+                <para>Gets or sets whether an update operation is enabled.
+</para>
+            </summary>
+            <value><b>true</b> to enable update operations; otherwise, <b>false</b>.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Data.Linq.LinqServerModeDataSource.EnableViewState">
+            <summary>
+                <para>This property isn't used.
+</para>
+            </summary>
+            <value>@nbsp;
+</value>
+
+
+        </member>
+        <member name="E:DevExpress.Data.Linq.LinqServerModeDataSource.ExceptionThrown">
+            <summary>
+                <para> [To be supplied] </para>
+            </summary>
+
+
+        </member>
+        <member name="E:DevExpress.Data.Linq.LinqServerModeDataSource.InconsistencyDetected">
+            <summary>
+                <para> [To be supplied] </para>
+            </summary>
+
+
+        </member>
+        <member name="E:DevExpress.Data.Linq.LinqServerModeDataSource.Inserting">
+            <summary>
+                <para>Occurs before an insert operation.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="E:DevExpress.Data.Linq.LinqServerModeDataSource.Selecting">
+            <summary>
+                <para>Enables you to provide a custom data source.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="P:DevExpress.Data.Linq.LinqServerModeDataSource.TableName">
+            <summary>
+                <para>Gets or sets the data table name.
+</para>
+            </summary>
+            <value>A <see cref="T:System.String"/> value that specifies the data table name.
+</value>
+
+
+        </member>
+        <member name="E:DevExpress.Data.Linq.LinqServerModeDataSource.Updating">
+            <summary>
+                <para>Occurs before an update operation.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="T:DevExpress.Data.Linq.LinqServerModeDataSourceEditEventArgs">
+
+            <summary>
+                <para> [To be supplied] </para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.Data.Linq.LinqServerModeDataSourceEditEventArgs.#ctor(System.Collections.IDictionary,System.Collections.IDictionary,System.Collections.IDictionary,System.Web.UI.DataSourceViewOperationCallback)">
+            <summary>
+                <para>Initializes a new instance of the LinqServerModeDataSourceEditEventArgs class.
+</para>
+            </summary>
+            <param name="keys">
+		An <see cref="T:System.Collections.IDictionary"/> object representing a collection of key/value pairs that represent the primary key of the object to process.
+
+            </param>
+            <param name="values">
+		An <see cref="T:System.Collections.IDictionary"/> object representing a collection of the non-key field key/value pairs for the object to process.
+
+
+            </param>
+            <param name="oldValues">
+		An <see cref="T:System.Collections.IDictionary"/> object representing a collection of the original field key/value pairs for the object to process.
+
+            </param>
+            <param name="callback">
+		A <see cref="T:System.Web.UI.DataSourceViewOperationCallback"/> object represents the asynchronous callback method that a data-bound control supplies to a data source view for asynchronous insert, update, or delete data operations. 
+
+
+
+            </param>
+
+
+        </member>
+        <member name="P:DevExpress.Data.Linq.LinqServerModeDataSourceEditEventArgs.Callback">
+            <summary>
+                <para> [To be supplied] </para>
+            </summary>
+            <value> [To be supplied] </value>
+
+
+        </member>
+        <member name="P:DevExpress.Data.Linq.LinqServerModeDataSourceEditEventArgs.Keys">
+            <summary>
+                <para> [To be supplied] </para>
+            </summary>
+            <value> [To be supplied] </value>
+
+
+        </member>
+        <member name="P:DevExpress.Data.Linq.LinqServerModeDataSourceEditEventArgs.OldValues">
+            <summary>
+                <para> [To be supplied] </para>
+            </summary>
+            <value> [To be supplied] </value>
+
+
+        </member>
+        <member name="P:DevExpress.Data.Linq.LinqServerModeDataSourceEditEventArgs.Values">
+            <summary>
+                <para> [To be supplied] </para>
+            </summary>
+            <value> [To be supplied] </value>
+
+
+        </member>
+    </members>
+</doc>

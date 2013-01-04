@@ -1,0 +1,7 @@
+<%@ Register TagPrefix="dx" Namespace="DevExpress.Data" Assembly="DevExpress.Data.v10.2, Version=10.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
+<%@ Register TagPrefix="dxxr" Namespace="DevExpress.XtraReports.Web" Assembly="DevExpress.XtraReports.v10.2.Web, Version=10.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
+<dxxr:ReportViewer runat="server" CssFilePath="~/App_Themes/PlasticBlue/{0}/styles.css" CssPostfix="PlasticBlue" SpriteCssFilePath="~/App_Themes/PlasticBlue/{0}/sprite.css">
+  <LoadingPanelStyle ForeColor="#303030"></LoadingPanelStyle>
+  <LoadingPanelImage Url="~/App_Themes/PlasticBlue/Editors/Loading.gif"></LoadingPanelImage>
+</dxxr:ReportViewer>
+

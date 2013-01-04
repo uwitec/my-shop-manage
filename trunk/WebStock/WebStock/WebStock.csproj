@@ -1,0 +1,739 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{6B22D24C-BBEB-4598-AF4B-22129C87D8A6}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WebStock</RootNamespace>
+    <AssemblyName>WebStock</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <SilverlightApplicationList>
+    </SilverlightApplicationList>
+    <UseIISExpress>false</UseIISExpress>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Data.v10.2, Version=10.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Data.v10.2.Linq, Version=10.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Web.ASPxEditors.v10.2, Version=10.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Web.ASPxGridView.v10.2, Version=10.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Web.ASPxGridView.v10.2.Export, Version=10.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Web.v10.2, Version=10.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Web.v10.2.Linq, Version=10.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Xpo.v10.2, Version=10.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Common, Version=4.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Lib\Microsoft.Practices.EnterpriseLibrary.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Data, Version=4.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Lib\Microsoft.Practices.EnterpriseLibrary.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ObjectBuilder2, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Lib\Microsoft.Practices.ObjectBuilder2.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="CommonUserControl.ascx" />
+    <Content Include="images\0.png" />
+    <Content Include="images\1.png" />
+    <Content Include="images\10.png" />
+    <Content Include="images\100.png" />
+    <Content Include="images\101.png" />
+    <Content Include="images\102.png" />
+    <Content Include="images\103.png" />
+    <Content Include="images\104.png" />
+    <Content Include="images\105.png" />
+    <Content Include="images\106.png" />
+    <Content Include="images\107.png" />
+    <Content Include="images\108.png" />
+    <Content Include="images\109.png" />
+    <Content Include="images\11.png" />
+    <Content Include="images\110.png" />
+    <Content Include="images\111.png" />
+    <Content Include="images\112.png" />
+    <Content Include="images\113.png" />
+    <Content Include="images\114.png" />
+    <Content Include="images\115.png" />
+    <Content Include="images\116.png" />
+    <Content Include="images\117.png" />
+    <Content Include="images\118.png" />
+    <Content Include="images\119.png" />
+    <Content Include="images\12.png" />
+    <Content Include="images\120.png" />
+    <Content Include="images\121.png" />
+    <Content Include="images\122.png" />
+    <Content Include="images\123.png" />
+    <Content Include="images\124.png" />
+    <Content Include="images\125.png" />
+    <Content Include="images\126.png" />
+    <Content Include="images\127.png" />
+    <Content Include="images\128.png" />
+    <Content Include="images\129.png" />
+    <Content Include="images\13.png" />
+    <Content Include="images\130.png" />
+    <Content Include="images\131.png" />
+    <Content Include="images\132.png" />
+    <Content Include="images\133.png" />
+    <Content Include="images\134.png" />
+    <Content Include="images\135.png" />
+    <Content Include="images\136.png" />
+    <Content Include="images\137.png" />
+    <Content Include="images\138.png" />
+    <Content Include="images\139.png" />
+    <Content Include="images\14.png" />
+    <Content Include="images\140.png" />
+    <Content Include="images\141.png" />
+    <Content Include="images\142.png" />
+    <Content Include="images\143.png" />
+    <Content Include="images\144.png" />
+    <Content Include="images\145.png" />
+    <Content Include="images\146.png" />
+    <Content Include="images\147.png" />
+    <Content Include="images\148.png" />
+    <Content Include="images\149.png" />
+    <Content Include="images\15.png" />
+    <Content Include="images\150.png" />
+    <Content Include="images\151.png" />
+    <Content Include="images\152.png" />
+    <Content Include="images\153.png" />
+    <Content Include="images\154.png" />
+    <Content Include="images\155.png" />
+    <Content Include="images\156.png" />
+    <Content Include="images\157.png" />
+    <Content Include="images\158.png" />
+    <Content Include="images\159.png" />
+    <Content Include="images\16.png" />
+    <Content Include="images\160.png" />
+    <Content Include="images\161.png" />
+    <Content Include="images\162.png" />
+    <Content Include="images\163.png" />
+    <Content Include="images\164.png" />
+    <Content Include="images\165.png" />
+    <Content Include="images\166.png" />
+    <Content Include="images\167.png" />
+    <Content Include="images\168.png" />
+    <Content Include="images\169.png" />
+    <Content Include="images\17.png" />
+    <Content Include="images\170.png" />
+    <Content Include="images\171.png" />
+    <Content Include="images\172.png" />
+    <Content Include="images\173.png" />
+    <Content Include="images\174.png" />
+    <Content Include="images\175.png" />
+    <Content Include="images\176.png" />
+    <Content Include="images\177.png" />
+    <Content Include="images\178.png" />
+    <Content Include="images\179.png" />
+    <Content Include="images\18.png" />
+    <Content Include="images\180.png" />
+    <Content Include="images\181.png" />
+    <Content Include="images\182.png" />
+    <Content Include="images\183.png" />
+    <Content Include="images\184.png" />
+    <Content Include="images\185.png" />
+    <Content Include="images\186.png" />
+    <Content Include="images\187.png" />
+    <Content Include="images\188.png" />
+    <Content Include="images\189.png" />
+    <Content Include="images\19.png" />
+    <Content Include="images\190.png" />
+    <Content Include="images\191.png" />
+    <Content Include="images\192.png" />
+    <Content Include="images\193.png" />
+    <Content Include="images\194.png" />
+    <Content Include="images\195.png" />
+    <Content Include="images\196.png" />
+    <Content Include="images\197.png" />
+    <Content Include="images\198.png" />
+    <Content Include="images\199.png" />
+    <Content Include="images\2.png" />
+    <Content Include="images\20.png" />
+    <Content Include="images\200.png" />
+    <Content Include="images\201.png" />
+    <Content Include="images\202.png" />
+    <Content Include="images\203.png" />
+    <Content Include="images\204.png" />
+    <Content Include="images\205.png" />
+    <Content Include="images\206.png" />
+    <Content Include="images\207.png" />
+    <Content Include="images\208.png" />
+    <Content Include="images\209.png" />
+    <Content Include="images\21.png" />
+    <Content Include="images\210.png" />
+    <Content Include="images\211.png" />
+    <Content Include="images\212.png" />
+    <Content Include="images\213.png" />
+    <Content Include="images\214.png" />
+    <Content Include="images\215.png" />
+    <Content Include="images\216.png" />
+    <Content Include="images\217.png" />
+    <Content Include="images\218.png" />
+    <Content Include="images\219.png" />
+    <Content Include="images\22.png" />
+    <Content Include="images\220.png" />
+    <Content Include="images\221.png" />
+    <Content Include="images\222.png" />
+    <Content Include="images\223.png" />
+    <Content Include="images\224.png" />
+    <Content Include="images\225.png" />
+    <Content Include="images\226.png" />
+    <Content Include="images\227.png" />
+    <Content Include="images\23.png" />
+    <Content Include="images\24.png" />
+    <Content Include="images\25.png" />
+    <Content Include="images\26.png" />
+    <Content Include="images\27.png" />
+    <Content Include="images\28.png" />
+    <Content Include="images\29.png" />
+    <Content Include="images\3.png" />
+    <Content Include="images\30.png" />
+    <Content Include="images\31.png" />
+    <Content Include="images\32.png" />
+    <Content Include="images\33.png" />
+    <Content Include="images\34.png" />
+    <Content Include="images\35.png" />
+    <Content Include="images\36.png" />
+    <Content Include="images\37.png" />
+    <Content Include="images\38.png" />
+    <Content Include="images\39.png" />
+    <Content Include="images\4.png" />
+    <Content Include="images\40.png" />
+    <Content Include="images\41.png" />
+    <Content Include="images\42.png" />
+    <Content Include="images\43.png" />
+    <Content Include="images\44.png" />
+    <Content Include="images\45.png" />
+    <Content Include="images\46.png" />
+    <Content Include="images\47.png" />
+    <Content Include="images\48.png" />
+    <Content Include="images\49.png" />
+    <Content Include="images\5.png" />
+    <Content Include="images\50.png" />
+    <Content Include="images\51.png" />
+    <Content Include="images\52.png" />
+    <Content Include="images\53.png" />
+    <Content Include="images\54.png" />
+    <Content Include="images\55.png" />
+    <Content Include="images\56.png" />
+    <Content Include="images\57.png" />
+    <Content Include="images\58.png" />
+    <Content Include="images\59.png" />
+    <Content Include="images\6.png" />
+    <Content Include="images\60.png" />
+    <Content Include="images\61.png" />
+    <Content Include="images\62.png" />
+    <Content Include="images\63.png" />
+    <Content Include="images\64.png" />
+    <Content Include="images\65.png" />
+    <Content Include="images\66.png" />
+    <Content Include="images\67.png" />
+    <Content Include="images\68.png" />
+    <Content Include="images\69.png" />
+    <Content Include="images\7.png" />
+    <Content Include="images\70.png" />
+    <Content Include="images\71.png" />
+    <Content Include="images\72.png" />
+    <Content Include="images\73.png" />
+    <Content Include="images\74.png" />
+    <Content Include="images\75.png" />
+    <Content Include="images\76.png" />
+    <Content Include="images\77.png" />
+    <Content Include="images\78.png" />
+    <Content Include="images\79.png" />
+    <Content Include="images\8.png" />
+    <Content Include="images\80.png" />
+    <Content Include="images\81.png" />
+    <Content Include="images\82.png" />
+    <Content Include="images\83.png" />
+    <Content Include="images\84.png" />
+    <Content Include="images\85.png" />
+    <Content Include="images\86.png" />
+    <Content Include="images\87.png" />
+    <Content Include="images\88.png" />
+    <Content Include="images\89.png" />
+    <Content Include="images\9.png" />
+    <Content Include="images\90.png" />
+    <Content Include="images\91.png" />
+    <Content Include="images\92.png" />
+    <Content Include="images\93.png" />
+    <Content Include="images\94.png" />
+    <Content Include="images\95.png" />
+    <Content Include="images\96.png" />
+    <Content Include="images\97.png" />
+    <Content Include="images\98.png" />
+    <Content Include="images\99.png" />
+    <Content Include="images\ea.gif" />
+    <Content Include="images\hbg.gif" />
+    <Content Include="images\images.xml" />
+    <Content Include="images\join01.gif" />
+    <Content Include="images\join02.gif" />
+    <Content Include="images\join03.gif" />
+    <Content Include="images\join04.gif" />
+    <Content Include="images\login_01.gif" />
+    <Content Include="images\login_02.gif" />
+    <Content Include="images\login_03.gif" />
+    <Content Include="images\login_04.gif" />
+    <Content Include="images\login_05.gif" />
+    <Content Include="images\login_06.gif" />
+    <Content Include="images\login_07.gif" />
+    <Content Include="images\login_08.gif" />
+    <Content Include="images\login_09.gif" />
+    <Content Include="images\login_10.gif" />
+    <Content Include="images\login_11.gif" />
+    <Content Include="images\login_12.gif" />
+    <Content Include="images\login_13.gif" />
+    <Content Include="images\login_14.gif" />
+    <Content Include="images\login_15.gif" />
+    <Content Include="images\login_16.gif" />
+    <Content Include="images\login_17.gif" />
+    <Content Include="images\login_18.gif" />
+    <Content Include="images\logo.gif" />
+    <Content Include="images\logo.png" />
+    <Content Include="images\minus01.gif" />
+    <Content Include="images\minus02.gif" />
+    <Content Include="images\minus03.gif" />
+    <Content Include="images\passwordbg.gif" />
+    <Content Include="images\plus01.gif" />
+    <Content Include="images\plus02.gif" />
+    <Content Include="images\plus03.gif" />
+    <Content Include="images\spacer.gif" />
+    <Content Include="images\userbg.gif" />
+    <Content Include="Lib\Microsoft.Practices.EnterpriseLibrary.Common.dll" />
+    <Content Include="Lib\Microsoft.Practices.EnterpriseLibrary.Data.dll" />
+    <Content Include="Lib\Microsoft.Practices.ObjectBuilder2.dll" />
+    <Content Include="Login.aspx" />
+    <Content Include="Record.txt" />
+    <Content Include="Scripts\jquery-latest.js" />
+    <Content Include="Scripts\loadingAnimation.gif" />
+    <Content Include="Scripts\thickbox.css" />
+    <Content Include="Scripts\thickbox.js" />
+    <Content Include="Styles\BackgroundHeader.gif" />
+    <Content Include="Styles\BannerBottomEdge.gif" />
+    <Content Include="Styles\BannerBottomLeftCorner.png" />
+    <Content Include="Styles\BannerBottomRightCorner.png" />
+    <Content Include="Styles\BannerContent.gif" />
+    <Content Include="Styles\BannerLeftEdge.gif" />
+    <Content Include="Styles\BannerRightEdge.gif" />
+    <Content Include="Styles\BannerTopEdge.gif" />
+    <Content Include="Styles\BannerTopLeftCorner.png" />
+    <Content Include="Styles\BannerTopRightCorner.png" />
+    <Content Include="Styles\BottomLeftCorner.png" />
+    <Content Include="Styles\BottomRightCorner.png" />
+    <Content Include="Styles\ContentHeader.png" />
+    <Content Include="Styles\Copyright.png" />
+    <Content Include="Styles\Gradient.jpg" />
+    <Content Include="Styles\Logotype.png" />
+    <Content Include="Styles\Logotype_ASPxEditors.png" />
+    <Content Include="Styles\Logotype_ASPxGridView.png" />
+    <Content Include="Styles\Logotype_ASPxHtmlEditor.png" />
+    <Content Include="Styles\Logotype_ASPxPivotGrid.png" />
+    <Content Include="Styles\Logotype_ASPxScheduler.png" />
+    <Content Include="Styles\Logotype_ASPxSpellChecker.png" />
+    <Content Include="Styles\Logotype_ASPxTreeList.png" />
+    <Content Include="Styles\Logotype_ChartsWebDemo.png" />
+    <Content Include="Styles\Logotype_GaugesWebDemo.png" />
+    <Content Include="Styles\Logotype_ReportWebDemo.png" />
+    <Content Include="Styles\NavBarNavigation\nbBullet.gif" />
+    <Content Include="Styles\NavBarNavigation\nbCollapse.png" />
+    <Content Include="Styles\NavBarNavigation\nbExpand.gif" />
+    <Content Include="Styles\NavBarNavigation\nbHeaderGroup.gif" />
+    <Content Include="Styles\NavBarNavigation\nbHeaderGroupHover.gif" />
+    <Content Include="Styles\NavBarNavigation\styles.css" />
+    <Content Include="Styles\RoundPanelNavigation\rpBottomLeftCorner.png" />
+    <Content Include="Styles\RoundPanelNavigation\rpBottomRightCorner.png" />
+    <Content Include="Styles\RoundPanelNavigation\rpContentBottomEdge.gif" />
+    <Content Include="Styles\RoundPanelNavigation\rpContentLeftEdge.gif" />
+    <Content Include="Styles\RoundPanelNavigation\rpContentRightEdge.gif" />
+    <Content Include="Styles\RoundPanelNavigation\rpNoHeaderTopEdge.gif" />
+    <Content Include="Styles\RoundPanelNavigation\rpNoHeaderTopLeftCorner.png" />
+    <Content Include="Styles\RoundPanelNavigation\rpNoHeaderTopRightCorner.png" />
+    <Content Include="Styles\Site.css" />
+    <Content Include="Global.asax" />
+    <Content Include="Scripts\jquery-1.4.1-vsdoc.js" />
+    <Content Include="Scripts\jquery-1.4.1.js" />
+    <Content Include="Scripts\jquery-1.4.1.min.js" />
+    <Content Include="Styles\styles.css" />
+    <Content Include="Styles\TopLeftCorner.png" />
+    <Content Include="Styles\TopRightCorner.png" />
+    <Content Include="SysInfo.aspx" />
+    <Content Include="WebForm1.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CommonUserControl.ascx.cs">
+      <DependentUpon>CommonUserControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CommonUserControl.ascx.designer.cs">
+      <DependentUpon>CommonUserControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Model1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Site.Master.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Master.designer.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+    <Compile Include="SysInfo.aspx.cs">
+      <DependentUpon>SysInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SysInfo.aspx.designer.cs">
+      <DependentUpon>SysInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Themes\Office2003Blue\ASPxButton.skin" />
+    <Content Include="App_Themes\Office2003Blue\ASPxButtonEdit.skin" />
+    <Content Include="App_Themes\Office2003Blue\ASPxCalendar.skin" />
+    <Content Include="App_Themes\Office2003Blue\ASPxCallbackPanel.skin" />
+    <Content Include="App_Themes\Office2003Blue\ASPxCheckBox.skin" />
+    <Content Include="App_Themes\Office2003Blue\ASPxCloudControl.skin" />
+    <Content Include="App_Themes\Office2003Blue\ASPxColorEdit.skin" />
+    <Content Include="App_Themes\Office2003Blue\ASPxComboBox.skin" />
+    <Content Include="App_Themes\Office2003Blue\ASPxDataView.skin" />
+    <Content Include="App_Themes\Office2003Blue\ASPxDateEdit.skin" />
+    <Content Include="App_Themes\Office2003Blue\ASPxDropDownEdit.skin" />
+    <Content Include="App_Themes\Office2003Blue\ASPxFilterControl.skin" />
+    <Content Include="App_Themes\Office2003Blue\ASPxGridView.skin" />
+    <Content Include="App_Themes\Office2003Blue\ASPxHeadline.skin" />
+    <Content Include="App_Themes\Office2003Blue\ASPxHyperLink.skin" />
+    <Content Include="App_Themes\Office2003Blue\ASPxLabel.skin" />
+    <Content Include="App_Themes\Office2003Blue\ASPxListBox.skin" />
+    <Content Include="App_Themes\Office2003Blue\ASPxLoadingPanel.skin" />
+    <Content Include="App_Themes\Office2003Blue\ASPxMemo.skin" />
+    <Content Include="App_Themes\Office2003Blue\ASPxMenu.skin" />
+    <Content Include="App_Themes\Office2003Blue\ASPxNavBar.skin" />
+    <Content Include="App_Themes\Office2003Blue\ASPxNewsControl.skin" />
+    <Content Include="App_Themes\Office2003Blue\ASPxPageControl.skin" />
+    <Content Include="App_Themes\Office2003Blue\ASPxPager.skin" />
+    <Content Include="App_Themes\Office2003Blue\ASPxPopupControl.skin" />
+    <Content Include="App_Themes\Office2003Blue\ASPxPopupMenu.skin" />
+    <Content Include="App_Themes\Office2003Blue\ASPxProgressBar.skin" />
+    <Content Include="App_Themes\Office2003Blue\ASPxRadioButton.skin" />
+    <Content Include="App_Themes\Office2003Blue\ASPxRadioButtonList.skin" />
+    <Content Include="App_Themes\Office2003Blue\ASPxRatingControl.skin" />
+    <Content Include="App_Themes\Office2003Blue\ASPxRoundPanel.skin" />
+    <Content Include="App_Themes\Office2003Blue\ASPxSiteMapControl.skin" />
+    <Content Include="App_Themes\Office2003Blue\ASPxSpinEdit.skin" />
+    <Content Include="App_Themes\Office2003Blue\ASPxSplitter.skin" />
+    <Content Include="App_Themes\Office2003Blue\ASPxTabControl.skin" />
+    <Content Include="App_Themes\Office2003Blue\ASPxTextBox.skin" />
+    <Content Include="App_Themes\Office2003Blue\ASPxTitleIndex.skin" />
+    <Content Include="App_Themes\PlasticBlue\ASPxButton.skin" />
+    <Content Include="App_Themes\PlasticBlue\ASPxButtonEdit.skin" />
+    <Content Include="App_Themes\PlasticBlue\ASPxCalendar.skin" />
+    <Content Include="App_Themes\PlasticBlue\ASPxCallbackPanel.skin" />
+    <Content Include="App_Themes\PlasticBlue\ASPxCheckBox.skin" />
+    <Content Include="App_Themes\PlasticBlue\ASPxCloudControl.skin" />
+    <Content Include="App_Themes\PlasticBlue\ASPxColorEdit.skin" />
+    <Content Include="App_Themes\PlasticBlue\ASPxComboBox.skin" />
+    <Content Include="App_Themes\PlasticBlue\ASPxDataView.skin" />
+    <Content Include="App_Themes\PlasticBlue\ASPxDateEdit.skin" />
+    <Content Include="App_Themes\PlasticBlue\ASPxDateNavigator.skin" />
+    <Content Include="App_Themes\PlasticBlue\ASPxDropDownEdit.skin" />
+    <Content Include="App_Themes\PlasticBlue\ASPxFilterControl.skin" />
+    <Content Include="App_Themes\PlasticBlue\ASPxGridView.skin" />
+    <Content Include="App_Themes\PlasticBlue\ASPxHeadline.skin" />
+    <Content Include="App_Themes\PlasticBlue\ASPxHtmlEditor.skin" />
+    <Content Include="App_Themes\PlasticBlue\ASPxHyperLink.skin" />
+    <Content Include="App_Themes\PlasticBlue\ASPxLabel.skin" />
+    <Content Include="App_Themes\PlasticBlue\ASPxListBox.skin" />
+    <Content Include="App_Themes\PlasticBlue\ASPxLoadingPanel.skin" />
+    <Content Include="App_Themes\PlasticBlue\ASPxMemo.skin" />
+    <Content Include="App_Themes\PlasticBlue\ASPxMenu.skin" />
+    <Content Include="App_Themes\PlasticBlue\ASPxNavBar.skin" />
+    <Content Include="App_Themes\PlasticBlue\ASPxNewsControl.skin" />
+    <Content Include="App_Themes\PlasticBlue\ASPxPageControl.skin" />
+    <Content Include="App_Themes\PlasticBlue\ASPxPager.skin" />
+    <Content Include="App_Themes\PlasticBlue\ASPxPivotGrid.skin" />
+    <Content Include="App_Themes\PlasticBlue\ASPxPopupControl.skin" />
+    <Content Include="App_Themes\PlasticBlue\ASPxPopupMenu.skin" />
+    <Content Include="App_Themes\PlasticBlue\ASPxProgressBar.skin" />
+    <Content Include="App_Themes\PlasticBlue\ASPxRadioButton.skin" />
+    <Content Include="App_Themes\PlasticBlue\ASPxRadioButtonList.skin" />
+    <Content Include="App_Themes\PlasticBlue\ASPxRatingControl.skin" />
+    <Content Include="App_Themes\PlasticBlue\ASPxRoundPanel.skin" />
+    <Content Include="App_Themes\PlasticBlue\ASPxScheduler.skin" />
+    <Content Include="App_Themes\PlasticBlue\ASPxSiteMapControl.skin" />
+    <Content Include="App_Themes\PlasticBlue\ASPxSpellChecker.skin" />
+    <Content Include="App_Themes\PlasticBlue\ASPxSpinEdit.skin" />
+    <Content Include="App_Themes\PlasticBlue\ASPxSplitter.skin" />
+    <Content Include="App_Themes\PlasticBlue\ASPxTabControl.skin" />
+    <Content Include="App_Themes\PlasticBlue\ASPxTextBox.skin" />
+    <Content Include="App_Themes\PlasticBlue\ASPxTitleIndex.skin" />
+    <Content Include="App_Themes\PlasticBlue\ASPxTreeList.skin" />
+    <Content Include="App_Themes\PlasticBlue\MonthEdit.skin" />
+    <Content Include="App_Themes\PlasticBlue\ReportToolbar.skin" />
+    <Content Include="App_Themes\PlasticBlue\ReportViewer.skin" />
+    <Content Include="App_Themes\PlasticBlue\WeekDaysEdit.skin" />
+    <Content Include="App_Themes\PlasticBlue\WeekOfMonthEdit.skin" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Themes\Office2010Blue\ASPxButton.skin" />
+    <Content Include="App_Themes\Office2010Blue\ASPxButtonEdit.skin" />
+    <Content Include="App_Themes\Office2010Blue\ASPxCalendar.skin" />
+    <Content Include="App_Themes\Office2010Blue\ASPxCallbackPanel.skin" />
+    <Content Include="App_Themes\Office2010Blue\ASPxCaptcha.skin" />
+    <Content Include="App_Themes\Office2010Blue\ASPxCheckBox.skin" />
+    <Content Include="App_Themes\Office2010Blue\ASPxCloudControl.skin" />
+    <Content Include="App_Themes\Office2010Blue\ASPxColorEdit.skin" />
+    <Content Include="App_Themes\Office2010Blue\ASPxComboBox.skin" />
+    <Content Include="App_Themes\Office2010Blue\ASPxDataView.skin" />
+    <Content Include="App_Themes\Office2010Blue\ASPxDateEdit.skin" />
+    <Content Include="App_Themes\Office2010Blue\ASPxDropDownEdit.skin" />
+    <Content Include="App_Themes\Office2010Blue\ASPxFilterControl.skin" />
+    <Content Include="App_Themes\Office2010Blue\ASPxGridLookup.skin" />
+    <Content Include="App_Themes\Office2010Blue\ASPxGridView.skin" />
+    <Content Include="App_Themes\Office2010Blue\ASPxHeadline.skin" />
+    <Content Include="App_Themes\Office2010Blue\ASPxHyperLink.skin" />
+    <Content Include="App_Themes\Office2010Blue\ASPxLabel.skin" />
+    <Content Include="App_Themes\Office2010Blue\ASPxListBox.skin" />
+    <Content Include="App_Themes\Office2010Blue\ASPxLoadingPanel.skin" />
+    <Content Include="App_Themes\Office2010Blue\ASPxMemo.skin" />
+    <Content Include="App_Themes\Office2010Blue\ASPxMenu.skin" />
+    <Content Include="App_Themes\Office2010Blue\ASPxNavBar.skin" />
+    <Content Include="App_Themes\Office2010Blue\ASPxNewsControl.skin" />
+    <Content Include="App_Themes\Office2010Blue\ASPxPageControl.skin" />
+    <Content Include="App_Themes\Office2010Blue\ASPxPager.skin" />
+    <Content Include="App_Themes\Office2010Blue\ASPxPopupControl.skin" />
+    <Content Include="App_Themes\Office2010Blue\ASPxPopupMenu.skin" />
+    <Content Include="App_Themes\Office2010Blue\ASPxProgressBar.skin" />
+    <Content Include="App_Themes\Office2010Blue\ASPxRadioButton.skin" />
+    <Content Include="App_Themes\Office2010Blue\ASPxRadioButtonList.skin" />
+    <Content Include="App_Themes\Office2010Blue\ASPxRatingControl.skin" />
+    <Content Include="App_Themes\Office2010Blue\ASPxRoundPanel.skin" />
+    <Content Include="App_Themes\Office2010Blue\ASPxSiteMapControl.skin" />
+    <Content Include="App_Themes\Office2010Blue\ASPxSpinEdit.skin" />
+    <Content Include="App_Themes\Office2010Blue\ASPxSplitter.skin" />
+    <Content Include="App_Themes\Office2010Blue\ASPxTabControl.skin" />
+    <Content Include="App_Themes\Office2010Blue\ASPxTextBox.skin" />
+    <Content Include="App_Themes\Office2010Blue\ASPxTimeEdit.skin" />
+    <Content Include="App_Themes\Office2010Blue\ASPxTitleIndex.skin" />
+    <Content Include="App_Themes\Office2010Blue\ASPxTreeView.skin" />
+    <Content Include="App_Themes\Office2010Blue\ASPxUploadControl.skin" />
+    <Content Include="App_Themes\Aqua\ASPxButton.skin" />
+    <Content Include="App_Themes\Aqua\ASPxButtonEdit.skin" />
+    <Content Include="App_Themes\Aqua\ASPxCalendar.skin" />
+    <Content Include="App_Themes\Aqua\ASPxCallbackPanel.skin" />
+    <Content Include="App_Themes\Aqua\ASPxCaptcha.skin" />
+    <Content Include="App_Themes\Aqua\ASPxCheckBox.skin" />
+    <Content Include="App_Themes\Aqua\ASPxCloudControl.skin" />
+    <Content Include="App_Themes\Aqua\ASPxColorEdit.skin" />
+    <Content Include="App_Themes\Aqua\ASPxComboBox.skin" />
+    <Content Include="App_Themes\Aqua\ASPxDataView.skin" />
+    <Content Include="App_Themes\Aqua\ASPxDateEdit.skin" />
+    <Content Include="App_Themes\Aqua\ASPxDropDownEdit.skin" />
+    <Content Include="App_Themes\Aqua\ASPxFilterControl.skin" />
+    <Content Include="App_Themes\Aqua\ASPxGridLookup.skin" />
+    <Content Include="App_Themes\Aqua\ASPxGridView.skin" />
+    <Content Include="App_Themes\Aqua\ASPxHeadline.skin" />
+    <Content Include="App_Themes\Aqua\ASPxHyperLink.skin" />
+    <Content Include="App_Themes\Aqua\ASPxLabel.skin" />
+    <Content Include="App_Themes\Aqua\ASPxListBox.skin" />
+    <Content Include="App_Themes\Aqua\ASPxLoadingPanel.skin" />
+    <Content Include="App_Themes\Aqua\ASPxMemo.skin" />
+    <Content Include="App_Themes\Aqua\ASPxMenu.skin" />
+    <Content Include="App_Themes\Aqua\ASPxNavBar.skin" />
+    <Content Include="App_Themes\Aqua\ASPxNewsControl.skin" />
+    <Content Include="App_Themes\Aqua\ASPxPageControl.skin" />
+    <Content Include="App_Themes\Aqua\ASPxPager.skin" />
+    <Content Include="App_Themes\Aqua\ASPxPopupControl.skin" />
+    <Content Include="App_Themes\Aqua\ASPxPopupMenu.skin" />
+    <Content Include="App_Themes\Aqua\ASPxProgressBar.skin" />
+    <Content Include="App_Themes\Aqua\ASPxRadioButton.skin" />
+    <Content Include="App_Themes\Aqua\ASPxRadioButtonList.skin" />
+    <Content Include="App_Themes\Aqua\ASPxRatingControl.skin" />
+    <Content Include="App_Themes\Aqua\ASPxRoundPanel.skin" />
+    <Content Include="App_Themes\Aqua\ASPxSiteMapControl.skin" />
+    <Content Include="App_Themes\Aqua\ASPxSpinEdit.skin" />
+    <Content Include="App_Themes\Aqua\ASPxSplitter.skin" />
+    <Content Include="App_Themes\Aqua\ASPxTabControl.skin" />
+    <Content Include="App_Themes\Aqua\ASPxTextBox.skin" />
+    <Content Include="App_Themes\Aqua\ASPxTimeEdit.skin" />
+    <Content Include="App_Themes\Aqua\ASPxTitleIndex.skin" />
+    <Content Include="App_Themes\Aqua\ASPxTreeView.skin" />
+    <Content Include="App_Themes\Aqua\ASPxUploadControl.skin" />
+    <Content Include="DevEx\ASPxButton.skin" />
+    <Content Include="DevEx\ASPxButtonEdit.skin" />
+    <Content Include="DevEx\ASPxCalendar.skin" />
+    <Content Include="DevEx\ASPxCallbackPanel.skin" />
+    <Content Include="DevEx\ASPxCaptcha.skin" />
+    <Content Include="DevEx\ASPxCheckBox.skin" />
+    <Content Include="DevEx\ASPxCloudControl.skin" />
+    <Content Include="DevEx\ASPxColorEdit.skin" />
+    <Content Include="DevEx\ASPxComboBox.skin" />
+    <Content Include="DevEx\ASPxDataView.skin" />
+    <Content Include="DevEx\ASPxDateEdit.skin" />
+    <Content Include="DevEx\ASPxDropDownEdit.skin" />
+    <Content Include="DevEx\ASPxFilterControl.skin" />
+    <Content Include="DevEx\ASPxGridLookup.skin" />
+    <Content Include="DevEx\ASPxGridView.skin" />
+    <Content Include="DevEx\ASPxHeadline.skin" />
+    <Content Include="DevEx\ASPxHyperLink.skin" />
+    <Content Include="DevEx\ASPxLabel.skin" />
+    <Content Include="DevEx\ASPxListBox.skin" />
+    <Content Include="DevEx\ASPxLoadingPanel.skin" />
+    <Content Include="DevEx\ASPxMemo.skin" />
+    <Content Include="DevEx\ASPxMenu.skin" />
+    <Content Include="DevEx\ASPxNavBar.skin" />
+    <Content Include="DevEx\ASPxNewsControl.skin" />
+    <Content Include="DevEx\ASPxPageControl.skin" />
+    <Content Include="DevEx\ASPxPager.skin" />
+    <Content Include="DevEx\ASPxPopupControl.skin" />
+    <Content Include="DevEx\ASPxPopupMenu.skin" />
+    <Content Include="DevEx\ASPxProgressBar.skin" />
+    <Content Include="DevEx\ASPxRadioButton.skin" />
+    <Content Include="DevEx\ASPxRadioButtonList.skin" />
+    <Content Include="DevEx\ASPxRatingControl.skin" />
+    <Content Include="DevEx\ASPxRoundPanel.skin" />
+    <Content Include="DevEx\ASPxSiteMapControl.skin" />
+    <Content Include="DevEx\ASPxSpinEdit.skin" />
+    <Content Include="DevEx\ASPxSplitter.skin" />
+    <Content Include="DevEx\ASPxTabControl.skin" />
+    <Content Include="DevEx\ASPxTextBox.skin" />
+    <Content Include="DevEx\ASPxTimeEdit.skin" />
+    <Content Include="DevEx\ASPxTitleIndex.skin" />
+    <Content Include="DevEx\ASPxTreeView.skin" />
+    <Content Include="DevEx\ASPxUploadControl.skin" />
+    <None Include="images\Login.psd" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <EntityDeploy Include="Model1.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Model1.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Site.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>2796</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost/WebStock</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

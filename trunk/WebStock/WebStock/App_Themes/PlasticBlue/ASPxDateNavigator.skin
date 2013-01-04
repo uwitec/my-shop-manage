@@ -1,0 +1,12 @@
+<%@ Register TagPrefix="dx" Namespace="DevExpress.Data" Assembly="DevExpress.Data.v10.2, Version=10.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
+<%@ Register TagPrefix="dxwschs" Namespace="DevExpress.Web.ASPxScheduler" Assembly="DevExpress.Web.ASPxScheduler.v10.2, Version=10.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
+<dxwschs:ASPxDateNavigator runat="server" 
+    CssFilePath="~/App_Themes/PlasticBlue/{0}/styles.css" CssPostfix="PlasticBlue" 
+    SpriteCssFilePath="~/App_Themes/PlasticBlue/{0}/sprite.css" >
+    <Properties>
+    	<FooterStyle Spacing="4px" />
+		<HeaderStyle Spacing="11px" />
+		<FastNavStyle MonthYearSpacing="12px" ImageSpacing="12px" />
+		<FastNavFooterStyle Spacing="4px" />
+    </Properties>
+</dxwschs:ASPxDateNavigator>

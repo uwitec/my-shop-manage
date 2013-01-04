@@ -1,0 +1,116 @@
+﻿<%@ Register Assembly="DevExpress.Web.v10.2, Version=10.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a"
+    Namespace="DevExpress.Web.ASPxNavBar" TagPrefix="dx" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title></title>
+    <style type="text/css">
+        .style1
+        {
+            width: 10%;
+        }
+        .style2
+        {
+            width: 147%;
+        }
+    </style>
+    <link href="~/Styles/styles.css" rel="stylesheet" type="text/css" />
+    <link href="Scripts/thickbox.css" rel="stylesheet" type="text/css" />
+    <script src="Scripts/jquery-latest.js" type="text/javascript"></script>
+    <script src="Scripts/thickbox.js" type="text/javascript" charset="utf-8"></script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div style="margin: 10px;">
+        <table width="100%">
+            <tr>
+                <td class="style1" valign="top">
+                    <dx:ASPxNavBar ID="ASPxNavBar2" runat="server" Width="67px" Height="5051px">
+                        <Groups>
+                            <dx:NavBarGroup Text="系统参数" Expanded="False">
+                                <Items>
+                                    <dx:NavBarItem Text="系统信息" NavigateUrl="~/SysInfo.aspx">
+                                    </dx:NavBarItem>
+                                    <dx:NavBarItem Text="退出系统" NavigateUrl="~/Login.aspx?type=exit">
+                                    </dx:NavBarItem>
+                                </Items>
+                            </dx:NavBarGroup>
+                            <dx:NavBarGroup Text="设备维护">
+                                <Items>
+                                    <dx:NavBarItem Text="数传接口信息" NavigateUrl="EquipmentMaintain/WebFormDataRadio.aspx">
+                                    </dx:NavBarItem>
+                                    <dx:NavBarItem Text="识别卡信息" NavigateUrl="EquipmentMaintain/WebFormCard.aspx">
+                                    </dx:NavBarItem>
+                                    <dx:NavBarItem Text="基站信息" NavigateUrl="EquipmentMaintain/WebFormBaseStation.aspx">
+                                    </dx:NavBarItem>
+                                    <dx:NavBarItem Text="区域信息" NavigateUrl="EquipmentMaintain/WebFormZone.aspx">
+                                    </dx:NavBarItem>
+                                </Items>
+                            </dx:NavBarGroup>
+                            <dx:NavBarGroup Text="组织机构">
+                                <Items>
+                                    <dx:NavBarItem Text="部门信息" NavigateUrl="Organization/WebFormDepartment.aspx">
+                                    </dx:NavBarItem>
+                                    <dx:NavBarItem Text="班组信息">
+                                    </dx:NavBarItem>
+                                    <dx:NavBarItem Text="职务信息">
+                                    </dx:NavBarItem>
+                                    <dx:NavBarItem Text="人员信息">
+                                    </dx:NavBarItem>
+                                </Items>
+                            </dx:NavBarGroup>
+                            <dx:NavBarGroup Text="考勤信息">
+                                <Items>
+                                    <dx:NavBarItem Text="考勤报表">
+                                    </dx:NavBarItem>
+                                    <dx:NavBarItem Text="考勤设定">
+                                    </dx:NavBarItem>
+                                </Items>
+                            </dx:NavBarGroup>
+                            <dx:NavBarGroup Text="系统报警">
+                                <Items>
+                                    <dx:NavBarItem Text="超时报警" NavigateUrl="">
+                                    </dx:NavBarItem>
+                                    <dx:NavBarItem Text="超员报警" NavigateUrl="">
+                                    </dx:NavBarItem>
+                                </Items>
+                            </dx:NavBarGroup>
+                            <dx:NavBarGroup Text="信息查询">
+                                <Items>
+                                    <dx:NavBarItem Text="上下井统计">
+                                    </dx:NavBarItem>
+                                    <dx:NavBarItem Text="区域基站信息查询">
+                                    </dx:NavBarItem>
+                                </Items>
+                            </dx:NavBarGroup>
+                            <dx:NavBarGroup Text="呼叫求救记录">
+                                <Items>
+                                    <dx:NavBarItem Text="呼叫求救记录">
+                                    </dx:NavBarItem>
+                                </Items>
+                            </dx:NavBarGroup>
+                        </Groups>
+                    </dx:ASPxNavBar>
+                </td>
+                <td class="style2" valign="top">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                        <img src="images/logo.png" height="60" style="margin: 10px 50px;" />
+                    </asp:ContentPlaceHolder>
+                </td>
+            </tr>
+        </table>
+    </div>
+    </form>
+</body>
+</html>
+
+
+ <add name="MWTSEntities" connectionString="metadata=res://*/Model1.csdl|res://*/Model1.ssdl|res://*/Model1.msl;provider=System.Data.SqlClient;provider connection string=&quot;Data Source=PC-200912051452\SQL2008;Initial Catalog=MWTS2.3;Persist Security Info=True;User ID=sa;Password=zkhw@2010;MultipleActiveResultSets=True&quot;" providerName="System.Data.EntityClient" />
+
+ =====================
+ <dxrp:ASPxRoundPanel runat="server" CssPostfix="PlasticBlue" SpriteCssFilePath="~/App_Themes/PlasticBlue/{0}/sprite.css" 
+    CssFilePath="~/App_Themes/PlasticBlue/{0}/styles.css" GroupBoxCaptionOffsetY="-18">
+    <ContentPaddings PaddingBottom="8px" />
+</dxrp:ASPxRoundPanel>

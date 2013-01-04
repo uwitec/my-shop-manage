@@ -1,0 +1,24 @@
+<%@ Register TagPrefix="dx" Namespace="DevExpress.Data" Assembly="DevExpress.Data.v10.2, Version=10.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
+<%@ Register TagPrefix="dxe" Namespace="DevExpress.Web.ASPxEditors" Assembly="DevExpress.Web.ASPxEditors.v10.2, Version=10.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
+<%@ Register TagPrefix="dxgv" Namespace="DevExpress.Web.ASPxGridLookup" Assembly="DevExpress.Web.ASPxGridView.v10.2, Version=10.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %> 
+<dxgv:ASPxGridLookup runat="server" CssFilePath="~/App_Themes/DevEx/{0}/styles.css" CssPostfix="DevEx"
+	SpriteCssFilePath="~/App_Themes/DevEx/{0}/sprite.css" Spacing="0">
+	<ButtonStyle Width="13" />
+    <GridViewImages SpriteCssFilePath="~/App_Themes/DevEx/{0}/sprite.css">
+        <LoadingPanel Url="~/App_Themes/DevEx/GridView/Loading.gif" />
+        <LoadingPanelOnStatusBar Url="~/App_Themes/DevEx/GridView/StatusBarLoading.gif" />
+	</GridViewImages>	
+    <GridViewImagesFilterControl>
+        <LoadingPanel Url="~/App_Themes/DevEx/GridView/Loading.gif" />
+    </GridViewImagesFilterControl>
+    <GridViewProperties>
+        <SettingsPager CurrentPageNumberFormat="{0}" />
+    </GridViewProperties>
+    <GridViewStyles>
+        <Header SortingImageSpacing="5" />
+	    <LoadingPanel ImageSpacing="5" />
+    </GridViewStyles>	
+    <GridViewStylesEditors ButtonEditCellSpacing="0">
+        <ProgressBar Height="21" />
+    </GridViewStylesEditors>
+</dxgv:ASPxGridLookup>

@@ -1,0 +1,20 @@
+<%@ Register TagPrefix="dx" Namespace="DevExpress.Data" Assembly="DevExpress.Data.v10.2, Version=10.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
+<%@ Register TagPrefix="dxwpg" Namespace="DevExpress.Web.ASPxPivotGrid" Assembly="DevExpress.Web.ASPxPivotGrid.v10.2, Version=10.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
+<%@ Register Assembly="DevExpress.PivotGrid.v10.2.Core, Version=10.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" Namespace="DevExpress.XtraPivotGrid" TagPrefix="temp" %>
+<dxwpg:ASPxPivotGrid runat="server">
+	<Images SpriteCssFilePath="~/App_Themes/PlasticBlue/{0}/sprite.css">
+        <CustomizationFieldsBackground Url="~/App_Themes/PlasticBlue/PivotGrid/pgCustomizationFormBackground.gif" />
+        <LoadingPanel Url="~/App_Themes/PlasticBlue/PivotGrid/Loading.gif" />
+	</Images>
+    <Styles CssPostfix="PlasticBlue" CssFilePath="~/App_Themes/PlasticBlue/{0}/styles.css">
+        <CustomizationFieldsCloseButtonStyle>
+            <Paddings Padding="0px"></Paddings>
+        </CustomizationFieldsCloseButtonStyle>
+        <MenuStyle GutterWidth="0px"></MenuStyle>
+    </Styles>
+    <OptionsPager ShowDefaultImages="False">
+        <NextPageButton Text="Next &gt;"></NextPageButton>
+        <PrevPageButton Text="&lt; Prev"></PrevPageButton>
+    </OptionsPager>
+</dxwpg:ASPxPivotGrid>
+

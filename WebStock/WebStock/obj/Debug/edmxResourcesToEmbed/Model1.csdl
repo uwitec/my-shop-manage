@@ -1,0 +1,1462 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="MWTSModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityContainer Name="MWTSEntities" annotation:LazyLoadingEnabled="true">
+    <FunctionImport Name="getThisMonthLastUpandDownHoleStats" ReturnType="Collection(MWTSModel.getThisMonthLastUpandDownHoleStats_Result)" />
+    <FunctionImport Name="getBaseStationRealData" ReturnType="Collection(MWTSModel.getBaseStationRealData_Result)" />
+    <FunctionImport Name="getZoneRealData" ReturnType="Collection(MWTSModel.getZoneRealData_Result)" />
+    <FunctionImport Name="GetHelpStas" ReturnType="Collection(MWTSModel.GetHelpStas_Result)" />
+    <FunctionImport Name="getZoneStas" ReturnType="Collection(MWTSModel.getZoneStas_Result)">
+      <Parameter Name="tableName" Mode="In" Type="String" />
+      <Parameter Name="ZoneNumber" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="getBasesationStats">
+      <Parameter Name="tableName" Mode="In" Type="String" />
+      <Parameter Name="BastionNumber" Mode="In" Type="String" />
+    </FunctionImport>
+    <EntitySet Name="BaseStationLogs" EntityType="MWTSModel.BaseStationLog" />
+    <EntitySet Name="BaseStationPathLines" EntityType="MWTSModel.BaseStationPathLine" />
+    <EntitySet Name="CallHistories" EntityType="MWTSModel.CallHistory" />
+    <EntitySet Name="CallStates" EntityType="MWTSModel.CallState" />
+    <EntitySet Name="Cards" EntityType="MWTSModel.Card" />
+    <EntitySet Name="CheckingInLogs" EntityType="MWTSModel.CheckingInLog" />
+    <EntitySet Name="CommandLogs" EntityType="MWTSModel.CommandLog" />
+    <EntitySet Name="DataPackets" EntityType="MWTSModel.DataPacket" />
+    <EntitySet Name="DataRadios" EntityType="MWTSModel.DataRadio" />
+    <EntitySet Name="DataRadioLogs" EntityType="MWTSModel.DataRadioLog" />
+    <EntitySet Name="Departments" EntityType="MWTSModel.Department" />
+    <EntitySet Name="EventRecords" EntityType="MWTSModel.EventRecord" />
+    <EntitySet Name="JobShifts" EntityType="MWTSModel.JobShift" />
+    <EntitySet Name="JobTitles" EntityType="MWTSModel.JobTitle" />
+    <EntitySet Name="OverstaffLogs" EntityType="MWTSModel.OverstaffLog" />
+    <EntitySet Name="PushButtonStateEvents" EntityType="MWTSModel.PushButtonStateEvent" />
+    <EntitySet Name="ReceivedFrames" EntityType="MWTSModel.ReceivedFrame" />
+    <EntitySet Name="ServerInfoes" EntityType="MWTSModel.ServerInfo" />
+    <EntitySet Name="SynchroRemoteDataBases" EntityType="MWTSModel.SynchroRemoteDataBase" />
+    <EntitySet Name="SysConfigs" EntityType="MWTSModel.SysConfig" />
+    <EntitySet Name="sysdiagrams" EntityType="MWTSModel.sysdiagram" />
+    <EntitySet Name="SystemLogs" EntityType="MWTSModel.SystemLog" />
+    <EntitySet Name="Teams" EntityType="MWTSModel.Team" />
+    <EntitySet Name="TimeoutLogs" EntityType="MWTSModel.TimeoutLog" />
+    <EntitySet Name="UserOperationLogs" EntityType="MWTSModel.UserOperationLog" />
+    <EntitySet Name="Workers" EntityType="MWTSModel.Worker" />
+    <EntitySet Name="Zones" EntityType="MWTSModel.Zone" />
+    <EntitySet Name="ZoneAndBaseStationLinks" EntityType="MWTSModel.ZoneAndBaseStationLink" />
+    <EntitySet Name="View_BaseStationAndZone_ForGis" EntityType="MWTSModel.View_BaseStationAndZone_ForGis" />
+    <EntitySet Name="View_BaseStationLeftjoinZone" EntityType="MWTSModel.View_BaseStationLeftjoinZone" />
+    <EntitySet Name="View_CardAndWorker_ForGis" EntityType="MWTSModel.View_CardAndWorker_ForGis" />
+    <EntitySet Name="View_CardInBaseStation_ForGis" EntityType="MWTSModel.View_CardInBaseStation_ForGis" />
+    <EntitySet Name="View_CardInZone_ForGis" EntityType="MWTSModel.View_CardInZone_ForGis" />
+    <EntitySet Name="View_CardsInZone" EntityType="MWTSModel.View_CardsInZone" />
+    <EntitySet Name="View_CardTrackForZoneByPosition" EntityType="MWTSModel.View_CardTrackForZoneByPosition" />
+    <EntitySet Name="View_CardTrackForZoneNotByPosition" EntityType="MWTSModel.View_CardTrackForZoneNotByPosition" />
+    <EntitySet Name="View_getCheckingLogs" EntityType="MWTSModel.View_getCheckingLogs" />
+    <EntitySet Name="View_HelpStas" EntityType="MWTSModel.View_HelpStas" />
+    <EntitySet Name="View_LastCardTrack" EntityType="MWTSModel.View_LastCardTrack" />
+    <EntitySet Name="View_WorkerjoinDepartment" EntityType="MWTSModel.View_WorkerjoinDepartment" />
+    <EntitySet Name="View_ZoneAndBaseStation_ForGis" EntityType="MWTSModel.View_ZoneAndBaseStation_ForGis" />
+    <EntitySet Name="View_ZoneInfo_ForGis" EntityType="MWTSModel.View_ZoneInfo_ForGis" />
+    <EntitySet Name="View_ZoneOverstaffAndTimeout_ForGis" EntityType="MWTSModel.View_ZoneOverstaffAndTimeout_ForGis" />
+    <AssociationSet Name="FK_ReceivedFrame_DataPacket" Association="MWTSModel.FK_ReceivedFrame_DataPacket">
+      <End Role="DataPacket" EntitySet="DataPackets" />
+      <End Role="ReceivedFrame" EntitySet="ReceivedFrames" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EventRecord_ReceivedFrame" Association="MWTSModel.FK_EventRecord_ReceivedFrame">
+      <End Role="ReceivedFrame" EntitySet="ReceivedFrames" />
+      <End Role="EventRecord" EntitySet="EventRecords" />
+    </AssociationSet>
+    <EntitySet Name="CardTracks" EntityType="MWTSModel.CardTrack" />
+    <FunctionImport Name="getCheckInLogs_Result" ReturnType="Collection(MWTSModel.getCheckInLogs_Result)">
+      <Parameter Name="starttime" Mode="In" Type="String" />
+      <Parameter Name="endtime" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="getCheckInLogsStas_Result" ReturnType="Collection(MWTSModel.getCheckInLogsStas_Result)">
+      <Parameter Name="starttime" Mode="In" Type="String" />
+      <Parameter Name="endtime" Mode="In" Type="String" />
+      <Parameter Name="CardNumber" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="getAllWorkertrack" ReturnType="Collection(MWTSModel.getAllWorkertrack_Result)" />
+    <EntitySet Name="View_WorkerCountInZone" EntityType="MWTSModel.View_WorkerCountInZone" />
+    <EntitySet Name="View_WorkersCardTrack" EntityType="MWTSModel.View_WorkersCardTrack" />
+    <FunctionImport Name="getCurrentCardNunmberCardTrack_ForGis" ReturnType="Collection(MWTSModel.getCurrentCardNunmberCardTrack_ForGis_Result)">
+      <Parameter Name="CardNumber" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="getWorkerTracker_ForGis" ReturnType="Collection(MWTSModel.getWorkerTracker_ForGis_Result)">
+      <Parameter Name="CardNumber" Mode="In" Type="String" />
+      <Parameter Name="StartTime" Mode="In" Type="DateTime" />
+      <Parameter Name="EndTime" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="getWorkertrack" ReturnType="Collection(MWTSModel.getWorkertrack_Result)">
+      <Parameter Name="cardNumber" Mode="In" Type="String" />
+      <Parameter Name="tableName" Mode="In" Type="String" />
+      <Parameter Name="StartTime" Mode="In" Type="DateTime" />
+      <Parameter Name="EndTime" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="getCardsRealData" ReturnType="Collection(MWTSModel.getCardsRealData_Result)" />
+    <FunctionImport Name="getDataRadioLogs" ReturnType="Collection(MWTSModel.getDataRadioLogs_Result)" />
+    <FunctionImport Name="getCheckInLogs" ReturnType="Collection(MWTSModel.getCheckInLogs_Result1)">
+      <Parameter Name="starttime" Mode="In" Type="String" />
+      <Parameter Name="endtime" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="getBaseationLogs" ReturnType="Collection(MWTSModel.getBaseationLogs_Result1)" />
+    <EntitySet Name="View_getAllWorkerTrack" EntityType="MWTSModel.View_getAllWorkerTrack" />
+    <EntitySet Name="Managers" EntityType="MWTSModel.Manager" />
+    <EntitySet Name="View_BaseStationInfo_ForGis" EntityType="MWTSModel.View_BaseStationInfo_ForGis" />
+    <EntitySet Name="BaseStations" EntityType="MWTSModel.BaseStation" />
+    <FunctionImport Name="getBasesationStats_Result" ReturnType="Collection(MWTSModel.getBasesationStats_Result)">
+      <Parameter Name="BastionNumber" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="getAllInandOuntHoleStats" ReturnType="Collection(MWTSModel.getAllInandOuntHoleStats_Result)">
+      <Parameter Name="pageIndex" Mode="In" Type="Int32" />
+      <Parameter Name="pageSize" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <EntitySet Name="View_BaseStationInnerjoinZone" EntityType="MWTSModel.View_BaseStationInnerjoinZone" />
+    <FunctionImport Name="getAllInandOuntHoleStatsNoPage" ReturnType="Collection(MWTSModel.getAllInandOuntHoleStatsNoPage_Result)" />
+    <FunctionImport Name="getWorkTimePerDay" ReturnType="Collection(MWTSModel.getWorkTimePerDay_Result)">
+      <Parameter Name="startime" Mode="In" Type="String" />
+      <Parameter Name="endtime" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="getWorkTimePerDaybyCardNumber" ReturnType="Collection(MWTSModel.getWorkTimePerDaybyCardNumber_Result)">
+      <Parameter Name="startime" Mode="In" Type="String" />
+      <Parameter Name="endtime" Mode="In" Type="String" />
+      <Parameter Name="cardnumber" Mode="In" Type="String" />
+    </FunctionImport>
+  </EntityContainer>
+  <ComplexType Name="getThisMonthLastUpandDownHoleStats_Result">
+    <Property Type="String" Name="Number" Nullable="false" MaxLength="10" />
+    <Property Type="String" Name="name" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="JobNumber" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="WorkerType" Nullable="false" MaxLength="4" />
+    <Property Type="String" Name="SpecialType" Nullable="false" MaxLength="2" />
+    <Property Type="String" Name="departmentName" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="JobtitleName" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="teamName" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="InHole" Precision="23" />
+    <Property Type="DateTime" Name="OutHole" Nullable="true" Precision="23" />
+  </ComplexType>
+  <ComplexType Name="getBaseStationRealData_Result">
+    <Property Type="Double" Name="GasSaturation" Nullable="false" />
+    <Property Type="String" Name="Number" Nullable="false" MaxLength="10" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="50" />
+    <Property Type="DateTime" Name="Datetime" Nullable="false" Precision="23" />
+    <Property Type="String" Name="Status" Nullable="true" MaxLength="4" />
+    <Property Type="Int32" Name="workercount" Nullable="true" />
+    <Property Type="String" Name="DataRadioNumber" Nullable="false" MaxLength="10" />
+    <Property Type="String" Name="DataRadioName" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="DataRadioStatus" Nullable="true" MaxLength="4" />
+  </ComplexType>
+  <ComplexType Name="getZoneRealData_Result">
+    <Property Type="String" Name="ZoneNumber" Nullable="false" MaxLength="10" />
+    <Property Type="String" Name="zoneName" Nullable="false" MaxLength="50" />
+    <Property Type="Int32" Name="ZoneType" Nullable="true" />
+    <Property Type="Int32" Name="UpperLimitOfWoringPeple" Nullable="false" />
+    <Property Type="Int32" Name="UpperLimitOfWorkingTime" Nullable="true" />
+    <Property Type="Int32" Name="zoneWorkerCount" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="GetHelpStas_Result">
+    <Property Type="String" Name="BaseStationNumber" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="cardNumber" Nullable="false" MaxLength="10" />
+    <Property Type="String" Name="Name" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="JobNumber" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="lightid" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="TimecardCode" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="Gender" Nullable="false" MaxLength="2" />
+    <Property Type="String" Name="WorkerType" Nullable="false" MaxLength="4" />
+    <Property Type="String" Name="SpecialType" Nullable="false" MaxLength="2" />
+    <Property Type="String" Name="departmentName" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="JobtitleName" Nullable="true" MaxLength="20" />
+    <Property Type="DateTime" Name="Datetime" Nullable="false" />
+    <Property Type="String" Name="IsNoticed" Nullable="true" MaxLength="2" />
+    <Property Type="DateTime" Name="NoticedDateTime" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="getWorkertrack_Result">
+    <Property Type="String" Name="CardNumber" Nullable="false" MaxLength="10" />
+    <Property Type="DateTime" Name="StartTime" Nullable="false" Precision="23" />
+    <Property Type="DateTime" Name="EndTime" Nullable="false" Precision="23" />
+    <Property Type="String" Name="BaseStationNumber" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="name" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="JobNumber" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="WorkerType" Nullable="false" MaxLength="4" />
+    <Property Type="String" Name="SpecialType" Nullable="false" MaxLength="2" />
+    <Property Type="String" Name="departmentName" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="JobtitleName" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="teamName" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Description" Nullable="true" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="getZoneStas_Result">
+    <Property Type="String" Name="zoneName" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="ZoneNumber" Nullable="false" MaxLength="10" />
+    <Property Type="String" Name="ZoneType" Nullable="true" MaxLength="8" />
+    <Property Type="String" Name="BaseStationNumber" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="CardNumber" Nullable="false" MaxLength="10" />
+    <Property Type="String" Name="name" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="JobNumber" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="WorkerType" Nullable="false" MaxLength="4" />
+    <Property Type="String" Name="SpecialType" Nullable="false" MaxLength="2" />
+    <Property Type="String" Name="departmentName" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="JobtitleName" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="teamName" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="StartTime" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="EndTime" Nullable="true" Precision="23" />
+    <Property Type="String" Name="IntoPosition" Nullable="true" MaxLength="4" />
+    <Property Type="String" Name="LeftPosition" Nullable="true" MaxLength="4" />
+  </ComplexType>
+  <EntityType Name="BaseStationLog">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="String" Name="Id" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Action" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="BaseStationNumber" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Description" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="Datetime" Nullable="false" />
+    <Property Type="Binary" Name="RowVersion" Nullable="false" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" />
+  </EntityType>
+  <EntityType Name="BaseStationPathLine">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="String" Name="Id" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="BaseStationNumberI" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="BaseStationNumberII" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Double" Name="Longitude" />
+    <Property Type="Double" Name="Latitude" />
+    <Property Type="Binary" Name="RowVersion" Nullable="false" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" />
+  </EntityType>
+  <EntityType Name="CallHistory">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="String" Name="Id" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="CallScope" Nullable="false" />
+    <Property Type="String" Name="CallObjects" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="CallStartDateTime" Nullable="false" />
+    <Property Type="Int32" Name="CallType" Nullable="false" />
+    <Property Type="DateTime" Name="CallStopDateTime" Nullable="false" />
+    <Property Type="String" Name="UserName" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="CallState">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="String" Name="Id" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="CallType" Nullable="false" />
+    <Property Type="Int32" Name="CallScope" Nullable="false" />
+    <Property Type="String" Name="CallCardList" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CallBaseStationList" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Card">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="String" Name="Id" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Number" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="Boolean" Name="IsEnable" />
+    <Property Type="Int32" Name="BatteryLevel" />
+    <Property Type="String" Name="Remark" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Description" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Boolean" Name="IsAlive" Nullable="false" />
+    <Property Type="Boolean" Name="IsInTheHole" Nullable="false" />
+    <Property Type="String" Name="BaseStationNumber" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="PushButtonState" Nullable="false" />
+    <Property Type="Int32" Name="Position" Nullable="false" />
+    <Property Type="DateTime" Name="Datetime" Nullable="false" />
+    <Property Type="Binary" Name="RowVersion" Nullable="false" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" />
+  </EntityType>
+  <EntityType Name="CheckingInLog">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="String" Name="Id" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CardNumber" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="DownWellTime" />
+    <Property Type="DateTime" Name="UpWellTime" />
+    <Property Type="String" Name="Description" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="Binary" Name="RowVersion" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" />
+  </EntityType>
+  <EntityType Name="CommandLog">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="String" Name="Id" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Command" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Description" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Binary" Name="RowVersion" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" />
+    <Property Type="DateTime" Name="DateTime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="DataPacket">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="DataRadioNumber" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="StartTime" Nullable="false" />
+    <Property Type="DateTime" Name="EndTime" Nullable="false" />
+    <Property Type="DateTime" Name="Sendtime" Nullable="false" />
+    <Property Type="String" Name="SendData" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="Double" Name="ReactionTime" Nullable="false" />
+    <Property Type="DateTime" Name="ReceiveTime" Nullable="false" />
+    <Property Type="String" Name="ReceiveData" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="PlanFrameCount" Nullable="false" />
+    <Property Type="Int32" Name="ActualFrameCount" Nullable="false" />
+    <Property Type="Int32" Name="NormalFrameCount" Nullable="false" />
+    <Property Type="Int32" Name="ErrorFrameCount" Nullable="false" />
+    <Property Type="Int32" Name="LengthOfData" Nullable="false" />
+    <Property Type="Int32" Name="LengthOfAcceptedData" Nullable="false" />
+    <Property Type="Double" Name="RatioOfAcceptedData" Nullable="false" />
+    <Property Type="Double" Name="CostTime" Nullable="false" />
+    <NavigationProperty Name="ReceivedFrames" Relationship="MWTSModel.FK_ReceivedFrame_DataPacket" FromRole="DataPacket" ToRole="ReceivedFrame" />
+  </EntityType>
+  <EntityType Name="DataRadio">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="String" Name="Id" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Number" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Name" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="Status" Nullable="false" />
+    <Property Type="DateTime" Name="Datetime" Nullable="false" />
+    <Property Type="Boolean" Name="IsShowing" />
+    <Property Type="Double" Name="UpperLeft_X" />
+    <Property Type="Double" Name="UpperRight_X" />
+    <Property Type="Double" Name="LowerRight_X" />
+    <Property Type="Double" Name="LowerLeft_X" />
+    <Property Type="Double" Name="UpperLeft_Y" />
+    <Property Type="Double" Name="UpperRight_Y" />
+    <Property Type="Double" Name="LowerRight_Y" />
+    <Property Type="Double" Name="LowerLeft_Y" />
+    <Property Type="Binary" Name="RowVersion" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" />
+  </EntityType>
+  <EntityType Name="DataRadioLog">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="String" Name="Id" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="DataRadioNumber" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Action" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Description" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="Datetime" Nullable="false" />
+    <Property Type="Binary" Name="RowVersion" Nullable="false" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" />
+  </EntityType>
+  <EntityType Name="Department">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="String" Name="Id" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Name" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Type="Binary" Name="RowVersion" Nullable="false" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" />
+  </EntityType>
+  <EntityType Name="EventRecord">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="Source" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="RelatedObject" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Name" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Parameters" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Description" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="Datetime" Nullable="false" />
+    <Property Type="Int32" Name="ReceivedFrameId" />
+    <Property Type="DateTime" Name="LocalDatetime" Nullable="false" />
+    <Property Type="Boolean" Name="IsTimeout" Nullable="false" />
+    <NavigationProperty Name="ReceivedFrame" Relationship="MWTSModel.FK_EventRecord_ReceivedFrame" FromRole="EventRecord" ToRole="ReceivedFrame" />
+  </EntityType>
+  <EntityType Name="JobShift">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="String" Name="Id" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Time" Name="StartTime" Nullable="false" />
+    <Property Type="Time" Name="EndTime" Nullable="false" />
+    <Property Type="Decimal" Name="RuleHours" Nullable="false" Precision="18" Scale="2" />
+    <Property Type="Int32" Name="RuleCount" Nullable="false" />
+    <Property Type="Binary" Name="RowVersion" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" />
+  </EntityType>
+  <EntityType Name="JobTitle">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="String" Name="Id" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Name" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Type="Binary" Name="RowVersion" Nullable="false" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" />
+  </EntityType>
+  <EntityType Name="OverstaffLog">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="String" Name="Id" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ZoneId" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="StartTime" Nullable="false" />
+    <Property Type="DateTime" Name="EndTime" Nullable="false" />
+    <Property Type="Int32" Name="UpperLimitOfWoringPeple" Nullable="false" />
+    <Property Type="Int32" Name="MaxCountOfCard" Nullable="false" />
+    <Property Type="String" Name="Remark" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Decription" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Binary" Name="RowVersion" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" />
+    <Property Type="Boolean" Name="IsNoticed" />
+    <Property Type="DateTime" Name="NoticedDateTime" />
+  </EntityType>
+  <EntityType Name="PushButtonStateEvent">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="String" Name="Id" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CardNumber" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="BaseStationNumber" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="Datetime" Nullable="false" />
+    <Property Type="Boolean" Name="IsNoticed" Nullable="false" />
+    <Property Type="DateTime" Name="NoticedDateTime" />
+    <Property Type="Binary" Name="RowVersion" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" />
+  </EntityType>
+  <EntityType Name="ReceivedFrame">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="DateTime" Name="Datetime" Nullable="false" />
+    <Property Type="Boolean" Name="IsValide" />
+    <Property Type="String" Name="Description" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="DataPacketId" />
+    <Property Type="String" Name="Frame" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="FrameDatetime" />
+    <NavigationProperty Name="DataPacket" Relationship="MWTSModel.FK_ReceivedFrame_DataPacket" FromRole="ReceivedFrame" ToRole="DataPacket" />
+    <NavigationProperty Name="EventRecords" Relationship="MWTSModel.FK_EventRecord_ReceivedFrame" FromRole="ReceivedFrame" ToRole="EventRecord" />
+  </EntityType>
+  <EntityType Name="ServerInfo">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="String" Name="Id" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="Status" Nullable="false" />
+    <Property Type="String" Name="CommandId" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Boolean" Name="IsAccept" Nullable="false" />
+    <Property Type="DateTime" Name="LastRuntime" Nullable="false" />
+    <Property Type="Int32" Name="Interval" Nullable="false" />
+    <Property Type="Int32" Name="Mode" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SynchroRemoteDataBase">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="String" Name="Id" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Binary" Name="LastRowVersion" MaxLength="50" FixedLength="false" />
+    <Property Type="DateTime" Name="DateTme" />
+  </EntityType>
+  <EntityType Name="SysConfig">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="String" Name="Id" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Key" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Type" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Value" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Description" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Binary" Name="RowVersion" Nullable="false" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" />
+  </EntityType>
+  <EntityType Name="sysdiagram">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Type="String" Name="name" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="principal_id" Nullable="false" />
+    <Property Type="Int32" Name="diagram_id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="version" />
+    <Property Type="Binary" Name="definition" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="SystemLog">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="String" Name="Id" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="Type" Nullable="false" />
+    <Property Type="DateTime" Name="Datetime" Nullable="false" />
+    <Property Type="String" Name="Message" MaxLength="300" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Description" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Source" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="User" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Binary" Name="RowVersion" Nullable="false" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" />
+  </EntityType>
+  <EntityType Name="Team">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="String" Name="Id" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Name" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="DepartmentId" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="TimeoutLog">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="String" Name="Id" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ZoneId" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="StartTime" Nullable="false" />
+    <Property Type="DateTime" Name="EndTime" Nullable="false" />
+    <Property Type="Int32" Name="UpperLimitOfWorkingTime" Nullable="false" />
+    <Property Type="Int32" Name="MaxCountOfCard" Nullable="false" />
+    <Property Type="Int32" Name="MaxTimeout" Nullable="false" />
+    <Property Type="String" Name="MaxTimeoutCard" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Remark" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Description" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Binary" Name="RowVersion" Nullable="false" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" />
+    <Property Type="Boolean" Name="IsNoticed" />
+    <Property Type="DateTime" Name="NoticedDateTime" />
+  </EntityType>
+  <EntityType Name="UserOperationLog">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="String" Name="Id" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Operation" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Description" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="OldObject" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="NewObject" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="Datetime" Nullable="false" />
+    <Property Type="String" Name="Operator" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Ip" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Binary" Name="RowVersion" Nullable="false" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" />
+  </EntityType>
+  <EntityType Name="Worker">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="String" Name="Id" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CardNumber" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="JobNumber" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Boolean" Name="Gender" Nullable="false" />
+    <Property Type="String" Name="LightId" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="TimecardCode" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="WorkPlace" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="DepartmentId" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="TeamId" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="JobTitleId" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="Birthday" />
+    <Property Type="String" Name="ContactNumber" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="IdentityNumber" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ContactAddress" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="Binary" Name="Photo" MaxLength="Max" FixedLength="false" />
+    <Property Type="Boolean" Name="WorkerType" />
+    <Property Type="Boolean" Name="SpecialType" />
+    <Property Type="Binary" Name="RowVersion" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" />
+  </EntityType>
+  <EntityType Name="Zone">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="String" Name="Id" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Number" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="ZoneType" />
+    <Property Type="Int32" Name="UpperLimitOfWoringPeple" Nullable="false" />
+    <Property Type="Int32" Name="UpperLimitOfWorkingTime" Nullable="false" />
+    <Property Type="Int32" Name="CoverageType" />
+    <Property Type="String" Name="Remark" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Description" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Type="Double" Name="UpperLeft_X" />
+    <Property Type="Double" Name="UpperRight_X" />
+    <Property Type="Double" Name="LowerRight_X" />
+    <Property Type="Double" Name="LowerLeft_X" />
+    <Property Type="Double" Name="UpperLeft_Y" />
+    <Property Type="Double" Name="UpperRight_Y" />
+    <Property Type="Double" Name="LowerRight_Y" />
+    <Property Type="Double" Name="LowerLeft_Y" />
+    <Property Type="Boolean" Name="IsShowing" />
+    <Property Type="Binary" Name="RowVersion" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" />
+    <Property Type="Boolean" Name="IsInUse" Nullable="false" />
+    <Property Type="Boolean" Name="IsAuthorizedPersonalOnly" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ZoneAndBaseStationLink">
+    <Key>
+      <PropertyRef Name="ZoneId" />
+      <PropertyRef Name="BaseStationId" />
+      <PropertyRef Name="Position" />
+    </Key>
+    <Property Type="String" Name="ZoneId" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="BaseStationId" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="Position" Nullable="false" />
+  </EntityType>
+  <EntityType Name="View_BaseStationAndZone_ForGis">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="Number" />
+      <PropertyRef Name="Name" />
+      <PropertyRef Name="DataRadioNumber" />
+    </Key>
+    <Property Type="String" Name="Id" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Number" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="DataRadioNumber" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Remark" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="Direction" />
+    <Property Type="Boolean" Name="IfFeedbackSignal" />
+    <Property Type="String" Name="ElectricalBoxPositioning" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="Boolean" Name="IsWellhead" />
+    <Property Type="Double" Name="GasSaturation" />
+    <Property Type="String" Name="Description" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="Status" />
+    <Property Type="Int32" Name="PowerSupplyState" />
+    <Property Type="DateTime" Name="Datetime" />
+    <Property Type="Double" Name="X" />
+    <Property Type="Double" Name="Y" />
+    <Property Type="Boolean" Name="IsShowing" />
+    <Property Type="String" Name="ZoneName" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ZoneNumber" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="ZoneType" />
+    <Property Type="Int32" Name="UpperLimitOfWoringPeple" />
+    <Property Type="Int32" Name="UpperLimitOfWorkingTime" />
+    <Property Type="Int32" Name="ZoneCoverageType" />
+    <Property Type="String" Name="ZoneRemark" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ZoneDescription" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Type="Double" Name="UpperLeft_X" />
+    <Property Type="Double" Name="UpperRight_X" />
+    <Property Type="Double" Name="LowerRight_X" />
+    <Property Type="Double" Name="LowerLeft_X" />
+    <Property Type="Double" Name="UpperLeft_Y" />
+    <Property Type="Double" Name="UpperRight_Y" />
+    <Property Type="Double" Name="LowerRight_Y" />
+    <Property Type="Double" Name="LowerLeft_Y" />
+    <Property Type="Boolean" Name="ZoneIsShowing" />
+    <Property Type="Int32" Name="Position" />
+  </EntityType>
+  <EntityType Name="View_BaseStationLeftjoinZone">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="Number" />
+      <PropertyRef Name="Name" />
+      <PropertyRef Name="DataRadioNumber" />
+    </Key>
+    <Property Type="String" Name="Id" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Number" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="DataRadioNumber" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Remark" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="Direction" />
+    <Property Type="Boolean" Name="IfFeedbackSignal" />
+    <Property Type="String" Name="ElectricalBoxPositioning" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="Boolean" Name="IsWellhead" />
+    <Property Type="Double" Name="GasSaturation" />
+    <Property Type="String" Name="Description" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="Status" />
+    <Property Type="Int32" Name="PowerSupplyState" />
+    <Property Type="DateTime" Name="Datetime" />
+    <Property Type="Double" Name="X" />
+    <Property Type="Double" Name="Y" />
+    <Property Type="Boolean" Name="IsShowing" />
+    <Property Type="Binary" Name="RowVersion" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" />
+    <Property Type="String" Name="ZoneId" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ZoneNumber" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="zoneName" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="Position" />
+    <Property Type="Int32" Name="CoverageType" />
+    <Property Type="Int32" Name="UpperLimitOfWoringPeple" />
+    <Property Type="Int32" Name="UpperLimitOfWorkingTime" />
+    <Property Type="Int32" Name="ZoneType" />
+  </EntityType>
+  <EntityType Name="View_CardAndWorker_ForGis">
+    <Key>
+      <PropertyRef Name="Card_Id" />
+      <PropertyRef Name="Card_Number" />
+    </Key>
+    <Property Type="String" Name="Card_Id" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Card_Number" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="Boolean" Name="Card_IsEnable" />
+    <Property Type="Int32" Name="Card_BatteryLevel" />
+    <Property Type="String" Name="Card_Remark" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Card_Description" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Boolean" Name="Card_IsAlive" />
+    <Property Type="Boolean" Name="Card_IsInTheHole" />
+    <Property Type="String" Name="Card_BaseStationNumber" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="Card_PushButtonState" />
+    <Property Type="Int32" Name="Card_Position" />
+    <Property Type="DateTime" Name="Card_Datetime" />
+    <Property Type="String" Name="Worker_Id" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Worker_CardNumber" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Worker_JobNumber" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Worker_Name" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Boolean" Name="Worker_Gender" />
+    <Property Type="String" Name="Worker_LightId" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Worker_TimecardCode" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Worker_WorkPlace" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Worker_DepartmentId" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Worker_TeamId" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Worker_JobTitleId" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="Worker_Birthday" />
+    <Property Type="String" Name="Worker_ContactNumber" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Worker_IdentityNumber" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Worker_ContactAddress" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="Binary" Name="Worker_Photo" MaxLength="Max" FixedLength="false" />
+    <Property Type="Boolean" Name="Worker_WorkerType" />
+    <Property Type="Boolean" Name="Worker_SpecialType" />
+    <Property Type="String" Name="Department_Name" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="JobTitle_Name" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Team_Name" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="View_CardInBaseStation_ForGis">
+    <Key>
+      <PropertyRef Name="Card_Id" />
+      <PropertyRef Name="Card_Number" />
+    </Key>
+    <Property Type="String" Name="Card_Id" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Card_Number" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="Boolean" Name="Card_IsEnable" />
+    <Property Type="Int32" Name="Card_BatteryLevel" />
+    <Property Type="String" Name="Card_Remark" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Card_Description" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Boolean" Name="Card_IsAlive" />
+    <Property Type="Boolean" Name="Card_IsInTheHole" />
+    <Property Type="String" Name="Card_BaseStationNumber" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="Card_PushButtonState" />
+    <Property Type="Int32" Name="Card_Position" />
+    <Property Type="DateTime" Name="Card_Datetime" />
+    <Property Type="String" Name="Worker_Id" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Worker_CardNumber" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Worker_JobNumber" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Worker_Name" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Boolean" Name="Worker_Gender" />
+    <Property Type="String" Name="Worker_LightId" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Worker_TimecardCode" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Worker_WorkPlace" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Worker_DepartmentId" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Worker_TeamId" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Worker_JobTitleId" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="Worker_Birthday" />
+    <Property Type="String" Name="Worker_ContactNumber" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Worker_IdentityNumber" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Worker_ContactAddress" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="Binary" Name="Worker_Photo" MaxLength="Max" FixedLength="false" />
+    <Property Type="Boolean" Name="Worker_WorkerType" />
+    <Property Type="Boolean" Name="Worker_SpecialType" />
+    <Property Type="String" Name="Department_Name" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="JobTitle_Name" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Team_Name" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="StartTime" />
+  </EntityType>
+  <EntityType Name="View_CardInZone_ForGis">
+    <Key>
+      <PropertyRef Name="Card_Id" />
+      <PropertyRef Name="Card_Number" />
+      <PropertyRef Name="ZoneNumber" />
+    </Key>
+    <Property Type="String" Name="Card_Id" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Card_Number" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="Boolean" Name="Card_IsEnable" />
+    <Property Type="Int32" Name="Card_BatteryLevel" />
+    <Property Type="String" Name="Card_Remark" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Card_Description" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Boolean" Name="Card_IsAlive" />
+    <Property Type="Boolean" Name="Card_IsInTheHole" />
+    <Property Type="String" Name="Card_BaseStationNumber" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="Card_PushButtonState" />
+    <Property Type="Int32" Name="Card_Position" />
+    <Property Type="DateTime" Name="Card_Datetime" />
+    <Property Type="String" Name="Worker_Id" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Worker_CardNumber" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Worker_JobNumber" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Worker_Name" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Boolean" Name="Worker_Gender" />
+    <Property Type="String" Name="Worker_LightId" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Worker_TimecardCode" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Worker_WorkPlace" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Worker_DepartmentId" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Worker_TeamId" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Worker_JobTitleId" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="Worker_Birthday" />
+    <Property Type="String" Name="Worker_ContactNumber" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Worker_IdentityNumber" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Worker_ContactAddress" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="Binary" Name="Worker_Photo" MaxLength="Max" FixedLength="false" />
+    <Property Type="Boolean" Name="Worker_WorkerType" />
+    <Property Type="Boolean" Name="Worker_SpecialType" />
+    <Property Type="String" Name="Department_Name" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="JobTitle_Name" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Team_Name" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="StartTime" />
+    <Property Type="String" Name="ZoneNumber" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="View_CardsInZone">
+    <Key>
+      <PropertyRef Name="Number" />
+      <PropertyRef Name="DateTime" />
+      <PropertyRef Name="CardNumber" />
+      <PropertyRef Name="ZoneNumber" />
+      <PropertyRef Name="ZoneId" />
+      <PropertyRef Name="UpperLimitOfWorkingTime" />
+      <PropertyRef Name="UpperLimitOfWoringPeple" />
+      <PropertyRef Name="BaseStationNumber" />
+    </Key>
+    <Property Type="String" Name="Number" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="DateTime" Nullable="false" />
+    <Property Type="String" Name="CardNumber" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ZoneNumber" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ZoneId" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="UpperLimitOfWorkingTime" Nullable="false" />
+    <Property Type="Int32" Name="UpperLimitOfWoringPeple" Nullable="false" />
+    <Property Type="String" Name="BaseStationNumber" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="View_CardTrackForZoneByPosition">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="RowVersion" />
+      <PropertyRef Name="Expr1" />
+      <PropertyRef Name="Number" />
+      <PropertyRef Name="Name" />
+      <PropertyRef Name="DataRadioNumber" />
+      <PropertyRef Name="IsWellhead" />
+      <PropertyRef Name="GasSaturation" />
+      <PropertyRef Name="Status" />
+      <PropertyRef Name="Datetime" />
+      <PropertyRef Name="ZoneId" />
+      <PropertyRef Name="Position" />
+    </Key>
+    <Property Type="String" Name="Id" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CardNumber" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="BaseStationNumber" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="StartTime" />
+    <Property Type="DateTime" Name="EndTime" />
+    <Property Type="String" Name="LastBaseStationNumber" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Description" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="IntoPosition" />
+    <Property Type="Int32" Name="LeftPosition" />
+    <Property Type="Binary" Name="RowVersion" Nullable="false" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" />
+    <Property Type="String" Name="Expr1" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Number" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="DataRadioNumber" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="Direction" />
+    <Property Type="Boolean" Name="IfFeedbackSignal" />
+    <Property Type="String" Name="ElectricalBoxPositioning" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="Boolean" Name="IsWellhead" Nullable="false" />
+    <Property Type="Double" Name="GasSaturation" Nullable="false" />
+    <Property Type="String" Name="Expr2" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="Status" Nullable="false" />
+    <Property Type="Int32" Name="PowerSupplyState" />
+    <Property Type="DateTime" Name="Datetime" Nullable="false" />
+    <Property Type="Double" Name="X" />
+    <Property Type="Double" Name="Y" />
+    <Property Type="Boolean" Name="IsShowing" />
+    <Property Type="Binary" Name="Expr3" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" />
+    <Property Type="String" Name="ZoneId" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="Position" Nullable="false" />
+  </EntityType>
+  <EntityType Name="View_CardTrackForZoneNotByPosition">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="RowVersion" />
+    </Key>
+    <Property Type="String" Name="Id" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CardNumber" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="BaseStationNumber" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="StartTime" />
+    <Property Type="DateTime" Name="EndTime" />
+    <Property Type="String" Name="LastBaseStationNumber" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="ResidenceTime" />
+    <Property Type="String" Name="Description" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="IntoPosition" />
+    <Property Type="Int32" Name="LeftPosition" />
+    <Property Type="Binary" Name="RowVersion" Nullable="false" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" />
+  </EntityType>
+  <EntityType Name="View_getCheckingLogs">
+    <Key>
+      <PropertyRef Name="CardNumber" />
+      <PropertyRef Name="WorkCount" />
+      <PropertyRef Name="JobShiftName" />
+    </Key>
+    <Property Type="String" Name="Id" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CardNumber" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="DownWellTime" />
+    <Property Type="DateTime" Name="UpWellTime" />
+    <Property Type="Int32" Name="WorkCount" Nullable="false" />
+    <Property Type="String" Name="JobShiftName" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="View_HelpStas">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="BaseStationNumber" />
+      <PropertyRef Name="CardNumber" />
+      <PropertyRef Name="SpecialType" />
+      <PropertyRef Name="Datetime" />
+    </Key>
+    <Property Type="String" Name="Id" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="BaseStationNumber" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="CardNumber" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Name" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="JobNumber" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="LightId" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="TimecardCode" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Gender" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="WorkerType" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="SpecialType" Nullable="false" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="departmentName" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="JobtitleName" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="Datetime" Nullable="false" />
+    <Property Type="String" Name="IsNoticed" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="NoticedDateTime" />
+  </EntityType>
+  <EntityType Name="View_LastCardTrack">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="RowVersion" />
+    </Key>
+    <Property Type="String" Name="Id" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CardNumber" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="BaseStationNumber" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="StartTime" />
+    <Property Type="DateTime" Name="EndTime" />
+    <Property Type="String" Name="LastBaseStationNumber" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Description" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="IntoPosition" />
+    <Property Type="Int32" Name="LeftPosition" />
+    <Property Type="String" Name="OverstaffLogIdForZone" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="TimeoutLogIdForZone" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="OverstaffLogIdForHole" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="TimeoutLogIdForHole" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Binary" Name="RowVersion" Nullable="false" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" />
+    <Property Type="Int32" Name="Action" />
+  </EntityType>
+  <EntityType Name="View_WorkerjoinDepartment">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="CardNumber" />
+      <PropertyRef Name="JobNumber" />
+      <PropertyRef Name="Name" />
+      <PropertyRef Name="Gender" />
+      <PropertyRef Name="DepartmentId" />
+      <PropertyRef Name="JobTitleId" />
+    </Key>
+    <Property Type="String" Name="Id" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CardNumber" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="JobNumber" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Boolean" Name="Gender" Nullable="false" />
+    <Property Type="String" Name="LightId" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="TimecardCode" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="WorkPlace" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="DepartmentId" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="TeamId" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="JobTitleId" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="Birthday" />
+    <Property Type="String" Name="ContactNumber" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="IdentityNumber" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ContactAddress" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="photo" />
+    <Property Type="Boolean" Name="WorkerType" />
+    <Property Type="Boolean" Name="SpecialType" />
+    <Property Type="Binary" Name="RowVersion" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" />
+    <Property Type="String" Name="departmentName" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="JobtitleName" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="teamName" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="View_ZoneAndBaseStation_ForGis">
+    <Key>
+      <PropertyRef Name="ZoneName" />
+      <PropertyRef Name="ZoneNumber" />
+      <PropertyRef Name="UpperLimitOfWoringPeple" />
+      <PropertyRef Name="UpperLimitOfWorkingTime" />
+    </Key>
+    <Property Type="String" Name="Id" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Number" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Name" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="DataRadioNumber" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Remark" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="Direction" />
+    <Property Type="Boolean" Name="IfFeedbackSignal" />
+    <Property Type="String" Name="ElectricalBoxPositioning" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="Boolean" Name="IsWellhead" />
+    <Property Type="Double" Name="GasSaturation" />
+    <Property Type="String" Name="Description" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="Status" />
+    <Property Type="Int32" Name="PowerSupplyState" />
+    <Property Type="DateTime" Name="Datetime" />
+    <Property Type="Double" Name="X" />
+    <Property Type="Double" Name="Y" />
+    <Property Type="Boolean" Name="IsShowing" />
+    <Property Type="String" Name="ZoneName" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ZoneNumber" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="ZoneType" />
+    <Property Type="Int32" Name="UpperLimitOfWoringPeple" Nullable="false" />
+    <Property Type="Int32" Name="UpperLimitOfWorkingTime" Nullable="false" />
+    <Property Type="Int32" Name="ZoneCoverageType" />
+    <Property Type="String" Name="ZoneRemark" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ZoneDescription" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Type="Double" Name="UpperLeft_X" />
+    <Property Type="Double" Name="UpperRight_X" />
+    <Property Type="Double" Name="LowerRight_X" />
+    <Property Type="Double" Name="LowerLeft_X" />
+    <Property Type="Double" Name="UpperLeft_Y" />
+    <Property Type="Double" Name="UpperRight_Y" />
+    <Property Type="Double" Name="LowerRight_Y" />
+    <Property Type="Double" Name="LowerLeft_Y" />
+    <Property Type="Boolean" Name="ZoneIsShowing" />
+    <Property Type="Int32" Name="Position" />
+  </EntityType>
+  <EntityType Name="View_ZoneInfo_ForGis">
+    <Key>
+      <PropertyRef Name="Number" />
+      <PropertyRef Name="Name" />
+    </Key>
+    <Property Type="String" Name="Number" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="PCount" />
+    <Property Type="Boolean" Name="IsShowing" />
+    <Property Type="Double" Name="UpperLeft_X" />
+    <Property Type="Double" Name="UpperLeft_Y" />
+    <Property Type="Double" Name="UpperRight_X" />
+    <Property Type="Double" Name="UpperRight_Y" />
+    <Property Type="Double" Name="LowerRight_X" />
+    <Property Type="Double" Name="LowerRight_Y" />
+    <Property Type="Double" Name="LowerLeft_X" />
+    <Property Type="Double" Name="LowerLeft_Y" />
+  </EntityType>
+  <EntityType Name="View_ZoneOverstaffAndTimeout_ForGis">
+    <Key>
+      <PropertyRef Name="Number" />
+      <PropertyRef Name="IsOverstaff" />
+      <PropertyRef Name="IsTimeout" />
+    </Key>
+    <Property Type="String" Name="Number" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="IsOverstaff" Nullable="false" />
+    <Property Type="Int32" Name="IsTimeout" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_ReceivedFrame_DataPacket">
+    <End Type="MWTSModel.DataPacket" Role="DataPacket" Multiplicity="0..1" />
+    <End Type="MWTSModel.ReceivedFrame" Role="ReceivedFrame" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DataPacket">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ReceivedFrame">
+        <PropertyRef Name="DataPacketId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EventRecord_ReceivedFrame">
+    <End Type="MWTSModel.ReceivedFrame" Role="ReceivedFrame" Multiplicity="0..1" />
+    <End Type="MWTSModel.EventRecord" Role="EventRecord" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ReceivedFrame">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="EventRecord">
+        <PropertyRef Name="ReceivedFrameId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="CardTrack">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="String" Name="Id" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CardNumber" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="BaseStationNumber" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="StartTime" Nullable="false" />
+    <Property Type="DateTime" Name="EndTime" Nullable="false" />
+    <Property Type="String" Name="LastBaseStationNumber" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Description" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="IntoPosition" />
+    <Property Type="Int32" Name="LeftPosition" />
+    <Property Type="String" Name="OverstaffLogIdForZone" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="TimeoutLogIdForZone" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="OverstaffLogIdForHole" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="TimeoutLogIdForHole" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Binary" Name="RowVersion" Nullable="false" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" />
+    <Property Type="Int32" Name="Action" />
+    <Property Type="DateTime" Name="leaveTime" />
+  </EntityType>
+  <ComplexType Name="getCheckInLogs_Result">
+    <Property Type="String" Name="CardNumber" Nullable="false" MaxLength="10" />
+    <Property Type="String" Name="name" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="JobNumber" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="lightid" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="TimecardCode" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="Gender" Nullable="false" MaxLength="2" />
+    <Property Type="String" Name="WorkerType" Nullable="false" MaxLength="4" />
+    <Property Type="String" Name="SpecialType" Nullable="false" MaxLength="2" />
+    <Property Type="String" Name="departmentName" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="JobtitleName" Nullable="true" MaxLength="20" />
+    <Property Type="Int32" Name="workerCount" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="getCheckInLogsStas_Result">
+    <Property Type="String" Name="Id" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="CardNumber" Nullable="false" MaxLength="10" />
+    <Property Type="String" Name="name" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="JobNumber" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="lightid" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="TimecardCode" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="Gender" Nullable="false" MaxLength="2" />
+    <Property Type="String" Name="WorkerType" Nullable="false" MaxLength="4" />
+    <Property Type="String" Name="SpecialType" Nullable="false" MaxLength="2" />
+    <Property Type="String" Name="departmentName" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="JobtitleName" Nullable="true" MaxLength="20" />
+    <Property Type="DateTime" Name="DownWellTime" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="UpWellTime" Nullable="true" Precision="23" />
+    <Property Type="Int32" Name="WorkCount" Nullable="false" />
+    <Property Type="String" Name="JobShiftName" Nullable="false" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="getAllWorkertrack_Result">
+    <Property Type="String" Name="CardNumber" Nullable="false" MaxLength="10" />
+    <Property Type="DateTime" Name="StartTime" Nullable="false" Precision="23" />
+    <Property Type="DateTime" Name="EndTime" Nullable="false" Precision="23" />
+    <Property Type="String" Name="BaseStationNumber" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="BaseStationName" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="name" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="JobNumber" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="WorkerType" Nullable="false" MaxLength="4" />
+    <Property Type="String" Name="SpecialType" Nullable="false" MaxLength="2" />
+    <Property Type="String" Name="departmentName" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="JobtitleName" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="teamName" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Description" Nullable="true" MaxLength="50" />
+  </ComplexType>
+  <EntityType Name="View_WorkerCountInZone">
+    <Key>
+      <PropertyRef Name="ZoneName" />
+    </Key>
+    <Property Type="String" Name="ZoneName" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="WorkerCount" />
+    <Property Type="Binary" Name="RowVersion" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" />
+  </EntityType>
+  <EntityType Name="View_WorkersCardTrack">
+    <Key>
+      <PropertyRef Name="CardNumber" />
+      <PropertyRef Name="StartTime" />
+      <PropertyRef Name="EndTime" />
+    </Key>
+    <Property Type="String" Name="Card_Id" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Card_Number" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="Boolean" Name="Card_IsEnable" />
+    <Property Type="Int32" Name="Card_BatteryLevel" />
+    <Property Type="String" Name="Card_Remark" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Card_Description" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Boolean" Name="Card_IsAlive" />
+    <Property Type="Boolean" Name="Card_IsInTheHole" />
+    <Property Type="String" Name="Card_BaseStationNumber" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="Card_PushButtonState" />
+    <Property Type="Int32" Name="Card_Position" />
+    <Property Type="DateTime" Name="Card_Datetime" />
+    <Property Type="String" Name="Worker_Id" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Worker_CardNumber" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Worker_JobNumber" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Worker_Name" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Boolean" Name="Worker_Gender" />
+    <Property Type="String" Name="Worker_LightId" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Worker_TimecardCode" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Worker_WorkPlace" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Worker_DepartmentId" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Worker_TeamId" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Worker_JobTitleId" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="Worker_Birthday" />
+    <Property Type="String" Name="Worker_ContactNumber" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Worker_IdentityNumber" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Worker_ContactAddress" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="Binary" Name="Worker_Photo" MaxLength="Max" FixedLength="false" />
+    <Property Type="Boolean" Name="Worker_WorkerType" />
+    <Property Type="Boolean" Name="Worker_SpecialType" />
+    <Property Type="String" Name="Department_Name" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="JobTitle_Name" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Team_Name" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="CardNumber" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="StartTime" Nullable="false" />
+    <Property Type="DateTime" Name="EndTime" Nullable="false" />
+  </EntityType>
+  <ComplexType Name="getCurrentCardNunmberCardTrack_ForGis_Result">
+    <Property Type="String" Name="Id" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="CardNumber" Nullable="false" MaxLength="10" />
+    <Property Type="String" Name="BaseStationNumber" Nullable="true" MaxLength="10" />
+    <Property Type="DateTime" Name="StartTime" Nullable="false" Precision="23" />
+    <Property Type="DateTime" Name="EndTime" Nullable="false" Precision="23" />
+    <Property Type="String" Name="LastBaseStationNumber" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="Description" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="BaseStationName" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="IntoPosition" Nullable="true" />
+    <Property Type="Int32" Name="LeftPosition" Nullable="true" />
+    <Property Type="String" Name="OverstaffLogIdForZone" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="TimeoutLogIdForZone" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="OverstaffLogIdForHole" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="TimeoutLogIdForHole" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="Action" Nullable="true" />
+    <Property Type="String" Name="Worker_JobNumber" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Worker_Name" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Department_Name" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="JobTitle_Name" Nullable="true" MaxLength="20" />
+    <Property Type="Boolean" Name="Worker_WorkerType" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="getWorkerTracker_ForGis_Result">
+    <Property Type="String" Name="Id" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="CardNumber" Nullable="false" MaxLength="10" />
+    <Property Type="String" Name="BaseStationNumber" Nullable="true" MaxLength="10" />
+    <Property Type="DateTime" Name="StartTime" Nullable="false" Precision="23" />
+    <Property Type="DateTime" Name="EndTime" Nullable="false" Precision="23" />
+    <Property Type="String" Name="LastBaseStationNumber" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="BaseStationName" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Description" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="IntoPosition" Nullable="true" />
+    <Property Type="Int32" Name="LeftPosition" Nullable="true" />
+    <Property Type="String" Name="OverstaffLogIdForZone" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="TimeoutLogIdForZone" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="OverstaffLogIdForHole" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="TimeoutLogIdForHole" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="Action" Nullable="true" />
+    <Property Type="String" Name="Worker_JobNumber" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Worker_Name" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Department_Name" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="JobTitle_Name" Nullable="true" MaxLength="20" />
+    <Property Type="Boolean" Name="Worker_WorkerType" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="getCardsRealData_Result">
+    <Property Type="String" Name="Number" Nullable="false" MaxLength="10" />
+    <Property Type="String" Name="name" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="JobNumber" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="lightid" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="TimecardCode" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="Gender" Nullable="false" MaxLength="2" />
+    <Property Type="String" Name="WorkerType" Nullable="false" MaxLength="4" />
+    <Property Type="String" Name="SpecialType" Nullable="false" MaxLength="2" />
+    <Property Type="String" Name="departmentName" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="JobtitleName" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="teamName" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="BaseStationNumber" Nullable="false" MaxLength="10" />
+    <Property Type="String" Name="BaseStationName" Nullable="false" MaxLength="50" />
+    <Property Type="DateTime" Name="Datetime" Nullable="false" Precision="23" />
+    <Property Type="String" Name="Position" Nullable="true" MaxLength="2" />
+    <Property Type="String" Name="BatteryLevel" Nullable="true" MaxLength="6" />
+  </ComplexType>
+  <ComplexType Name="getBaseationLogs_Result">
+    <Property Type="String" Name="Id" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="Action" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="BaseStationNumber" Nullable="false" MaxLength="10" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="50" />
+    <Property Type="DateTime" Name="StartTime" Nullable="false" Precision="23" />
+    <Property Type="String" Name="IsWellhead" Nullable="true" MaxLength="4" />
+    <Property Type="DateTime" Name="EndTime" Nullable="false" Precision="23" />
+  </ComplexType>
+  <ComplexType Name="getDataRadioLogs_Result">
+    <Property Type="String" Name="Id" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="Action" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="DataRadioNumber" Nullable="false" MaxLength="10" />
+    <Property Type="String" Name="Name" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="StartTime" Nullable="false" Precision="23" />
+    <Property Type="DateTime" Name="EndTime" Nullable="false" Precision="23" />
+  </ComplexType>
+  <ComplexType Name="getCheckInLogs_Result1">
+    <Property Type="String" Name="CardNumber" Nullable="false" MaxLength="10" />
+    <Property Type="String" Name="name" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="JobNumber" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="lightid" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="TimecardCode" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="Gender" Nullable="false" MaxLength="2" />
+    <Property Type="String" Name="WorkerType" Nullable="false" MaxLength="4" />
+    <Property Type="String" Name="SpecialType" Nullable="false" MaxLength="2" />
+    <Property Type="String" Name="departmentName" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="JobtitleName" Nullable="true" MaxLength="20" />
+    <Property Type="Int32" Name="workerCount" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="getBaseationLogs_Result1">
+    <Property Type="String" Name="Id" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="Action" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="BaseStationNumber" Nullable="false" MaxLength="10" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="50" />
+    <Property Type="DateTime" Name="StartTime" Nullable="false" Precision="23" />
+    <Property Type="DateTime" Name="EndTime" Nullable="false" Precision="23" />
+  </ComplexType>
+  <EntityType Name="View_getAllWorkerTrack">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="CardNumber" />
+      <PropertyRef Name="StartTime" />
+      <PropertyRef Name="EndTime" />
+      <PropertyRef Name="Name" />
+      <PropertyRef Name="JobNumber" />
+      <PropertyRef Name="BaseStationName" />
+      <PropertyRef Name="WorkerType" />
+      <PropertyRef Name="SpecialType" />
+    </Key>
+    <Property Type="String" Name="Id" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CardNumber" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="StartTime" Nullable="false" />
+    <Property Type="DateTime" Name="EndTime" Nullable="false" />
+    <Property Type="String" Name="BaseStationNumber" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="JobNumber" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="BaseStationName" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="WorkerType" Nullable="false" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="SpecialType" Nullable="false" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="departmentName" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="JobtitleName" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="teamName" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Description" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Action" MaxLength="4" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Manager">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="String" Name="Id" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Username" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Password" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="Popedom" />
+    <Property Type="Binary" Name="RowVersion" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" />
+  </EntityType>
+  <EntityType Name="View_BaseStationInfo_ForGis">
+    <Key>
+      <PropertyRef Name="Number" />
+      <PropertyRef Name="Name" />
+      <PropertyRef Name="IsWellhead" />
+      <PropertyRef Name="Status" />
+    </Key>
+    <Property Type="String" Name="Number" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="PCount" />
+    <Property Type="Double" Name="X" />
+    <Property Type="Double" Name="Y" />
+    <Property Type="Int32" Name="IsWellhead" Nullable="false" />
+    <Property Type="Boolean" Name="IsShowing" />
+    <Property Type="Int32" Name="Status" Nullable="false" />
+  </EntityType>
+  <EntityType Name="BaseStation">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="String" Name="Id" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Number" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="DataRadioNumber" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Remark" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="Direction" />
+    <Property Type="Boolean" Name="IfFeedbackSignal" />
+    <Property Type="String" Name="ElectricalBoxPositioning" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="IsWellhead" Nullable="false" />
+    <Property Type="Double" Name="GasSaturation" Nullable="false" />
+    <Property Type="String" Name="Description" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="Status" Nullable="false" />
+    <Property Type="Int32" Name="PowerSupplyState" />
+    <Property Type="DateTime" Name="Datetime" Nullable="false" />
+    <Property Type="Double" Name="X" />
+    <Property Type="Double" Name="Y" />
+    <Property Type="Boolean" Name="IsShowing" />
+    <Property Type="Binary" Name="RowVersion" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" />
+  </EntityType>
+  <ComplexType Name="getBasesationStats_Result">
+    <Property Type="String" Name="BaseStationNumber" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="Action" Nullable="true" MaxLength="4" />
+    <Property Type="String" Name="CardNumber" Nullable="false" MaxLength="10" />
+    <Property Type="String" Name="name" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="JobNumber" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="WorkerType" Nullable="false" MaxLength="4" />
+    <Property Type="String" Name="SpecialType" Nullable="false" MaxLength="2" />
+    <Property Type="String" Name="departmentName" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="JobtitleName" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="teamName" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="StartTime" Nullable="false" Precision="23" />
+    <Property Type="DateTime" Name="EndTime" Nullable="false" Precision="23" />
+    <Property Type="String" Name="IntoPosition" Nullable="true" MaxLength="4" />
+    <Property Type="String" Name="LeftPosition" Nullable="true" MaxLength="4" />
+  </ComplexType>
+  <ComplexType Name="getAllInandOuntHoleStats_Result">
+    <Property Type="String" Name="Id" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="CardNumber" Nullable="false" MaxLength="10" />
+    <Property Type="String" Name="name" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="JobNumber" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="WorkerType" Nullable="false" MaxLength="4" />
+    <Property Type="String" Name="SpecialType" Nullable="false" MaxLength="2" />
+    <Property Type="String" Name="departmentName" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="JobtitleName" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="teamName" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="StartTime" Nullable="false" Precision="23" />
+    <Property Type="DateTime" Name="OutTime" Nullable="false" Precision="23" />
+  </ComplexType>
+  <EntityType Name="View_BaseStationInnerjoinZone">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="Number" />
+      <PropertyRef Name="Name" />
+      <PropertyRef Name="DataRadioNumber" />
+      <PropertyRef Name="IsWellhead" />
+      <PropertyRef Name="GasSaturation" />
+      <PropertyRef Name="Status" />
+      <PropertyRef Name="Datetime" />
+      <PropertyRef Name="ZoneId" />
+      <PropertyRef Name="ZoneNumber" />
+      <PropertyRef Name="zoneName" />
+      <PropertyRef Name="Position" />
+      <PropertyRef Name="UpperLimitOfWoringPeple" />
+      <PropertyRef Name="UpperLimitOfWorkingTime" />
+    </Key>
+    <Property Type="String" Name="Id" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Number" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="DataRadioNumber" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Remark" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="Direction" />
+    <Property Type="Boolean" Name="IfFeedbackSignal" />
+    <Property Type="String" Name="ElectricalBoxPositioning" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="IsWellhead" Nullable="false" />
+    <Property Type="Double" Name="GasSaturation" Nullable="false" />
+    <Property Type="String" Name="Description" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="Status" Nullable="false" />
+    <Property Type="Int32" Name="PowerSupplyState" />
+    <Property Type="DateTime" Name="Datetime" Nullable="false" />
+    <Property Type="Double" Name="X" />
+    <Property Type="Double" Name="Y" />
+    <Property Type="Boolean" Name="IsShowing" />
+    <Property Type="Binary" Name="RowVersion" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" />
+    <Property Type="String" Name="ZoneId" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ZoneNumber" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="zoneName" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="Position" Nullable="false" />
+    <Property Type="Int32" Name="CoverageType" />
+    <Property Type="Int32" Name="UpperLimitOfWoringPeple" Nullable="false" />
+    <Property Type="Int32" Name="UpperLimitOfWorkingTime" Nullable="false" />
+    <Property Type="Int32" Name="ZoneType" />
+  </EntityType>
+  <ComplexType Name="getAllInandOuntHoleStatsNoPage_Result">
+    <Property Type="String" Name="Id" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="CardNumber" Nullable="false" MaxLength="10" />
+    <Property Type="String" Name="name" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="JobNumber" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="WorkerType" Nullable="false" MaxLength="4" />
+    <Property Type="String" Name="SpecialType" Nullable="false" MaxLength="2" />
+    <Property Type="String" Name="departmentName" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="JobtitleName" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="teamName" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="StartTime" Nullable="false" Precision="23" />
+    <Property Type="DateTime" Name="OutTime" Nullable="false" Precision="23" />
+  </ComplexType>
+  <ComplexType Name="getWorkTimePerDay_Result">
+    <Property Type="String" Name="CardNumber" Nullable="false" MaxLength="10" />
+    <Property Type="String" Name="name" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="JobNumber" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="lightid" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="TimecardCode" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="Gender" Nullable="false" MaxLength="2" />
+    <Property Type="String" Name="WorkerType" Nullable="false" MaxLength="4" />
+    <Property Type="String" Name="SpecialType" Nullable="false" MaxLength="2" />
+    <Property Type="String" Name="departmentName" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="JobtitleName" Nullable="true" MaxLength="20" />
+    <Property Type="DateTime" Name="MinStarTime" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="MaxEndTime" Nullable="true" Precision="23" />
+    <Property Type="Int32" Name="currentDay" Nullable="true" />
+    <Property Type="Int32" Name="SumSeconds" Nullable="true" />
+    <Property Type="String" Name="workDurationName" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="workcount" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="getWorkTimePerDaybyCardNumber_Result">
+    <Property Type="String" Name="CardNumber" Nullable="false" MaxLength="10" />
+    <Property Type="String" Name="name" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="JobNumber" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="lightid" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="TimecardCode" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="Gender" Nullable="false" MaxLength="2" />
+    <Property Type="String" Name="WorkerType" Nullable="false" MaxLength="4" />
+    <Property Type="String" Name="SpecialType" Nullable="false" MaxLength="2" />
+    <Property Type="String" Name="departmentName" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="JobtitleName" Nullable="true" MaxLength="20" />
+    <Property Type="DateTime" Name="MinStarTime" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="MaxEndTime" Nullable="true" Precision="23" />
+    <Property Type="Int32" Name="currentDay" Nullable="true" />
+    <Property Type="Int32" Name="SumSeconds" Nullable="true" />
+    <Property Type="String" Name="workDurationName" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="workcount" Nullable="true" />
+  </ComplexType>
+</Schema>

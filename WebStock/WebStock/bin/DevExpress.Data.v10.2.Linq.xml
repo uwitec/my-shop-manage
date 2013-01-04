@@ -1,0 +1,291 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>DevExpress.Data.v10.2.Linq</name>
+    </assembly>
+    <members>
+        <member name="T:DevExpress.Data.Linq.LinqInstantFeedbackSource">
+
+            <summary>
+                <para> [To be supplied] </para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.Data.Linq.LinqInstantFeedbackSource.#ctor(System.EventHandler`1)">
+            <summary>
+                <para> [To be supplied] </para>
+            </summary>
+            <param name="getQueryable">
+		 [To be supplied] 
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.Data.Linq.LinqInstantFeedbackSource.#ctor(System.Action`1,System.Action`1)">
+            <summary>
+                <para> [To be supplied] </para>
+            </summary>
+            <param name="getQueryable">
+		 [To be supplied] 
+            </param>
+            <param name="freeQueryable">
+		 [To be supplied] 
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.Data.Linq.LinqInstantFeedbackSource.#ctor(System.Action`1)">
+            <summary>
+                <para> [To be supplied] </para>
+            </summary>
+            <param name="getQueryable">
+		 [To be supplied] 
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.Data.Linq.LinqInstantFeedbackSource.#ctor">
+            <summary>
+                <para>Initializes a new instance of the LinqInstantFeedbackSource class with default settings.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="M:DevExpress.Data.Linq.LinqInstantFeedbackSource.#ctor(System.EventHandler`1,System.EventHandler`1)">
+            <summary>
+                <para> [To be supplied] </para>
+            </summary>
+            <param name="getQueryable">
+		 [To be supplied] 
+            </param>
+            <param name="freeQueryable">
+		 [To be supplied] 
+            </param>
+
+
+        </member>
+        <member name="P:DevExpress.Data.Linq.LinqInstantFeedbackSource.AreSourceRowsThreadSafe">
+            <summary>
+                <para> [To be supplied] </para>
+            </summary>
+            <value> [To be supplied] </value>
+
+
+        </member>
+        <member name="P:DevExpress.Data.Linq.LinqInstantFeedbackSource.DesignTimeElementType">
+            <summary>
+                <para> [To be supplied] </para>
+            </summary>
+            <value> [To be supplied] </value>
+
+
+        </member>
+        <member name="E:DevExpress.Data.Linq.LinqInstantFeedbackSource.DismissQueryable">
+            <summary>
+                <para> [To be supplied] </para>
+            </summary>
+
+
+        </member>
+        <member name="E:DevExpress.Data.Linq.LinqInstantFeedbackSource.GetQueryable">
+            <summary>
+                <para> [To be supplied] </para>
+            </summary>
+
+
+        </member>
+        <member name="P:DevExpress.Data.Linq.LinqInstantFeedbackSource.KeyExpression">
+            <summary>
+                <para> [To be supplied] </para>
+            </summary>
+            <value> [To be supplied] </value>
+
+
+        </member>
+        <member name="M:DevExpress.Data.Linq.LinqInstantFeedbackSource.Refresh">
+            <summary>
+                <para> [To be supplied] </para>
+            </summary>
+
+
+        </member>
+        <member name="T:DevExpress.Data.Linq.LinqServerModeSource">
+
+            <summary>
+                <para>Represents the XtraGrid's data source that can be associated with any queryable source.
+
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.Data.Linq.LinqServerModeSource.#ctor">
+            <summary>
+                <para>Initializes a new instance of the LinqServerModeSource class.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="P:DevExpress.Data.Linq.LinqServerModeSource.ElementType">
+            <summary>
+                <para>Gets or sets the type of objects retrieved from a data source.
+</para>
+            </summary>
+            <value>The type of objects retrieved from a data source.
+</value>
+
+
+        </member>
+        <member name="E:DevExpress.Data.Linq.LinqServerModeSource.ExceptionThrown">
+            <summary>
+                <para>Enables you to manually handle the database exception.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="E:DevExpress.Data.Linq.LinqServerModeSource.InconsistencyDetected">
+            <summary>
+                <para>Enables you to manually handle the inconsistency detected during an operation on a data source.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="P:DevExpress.Data.Linq.LinqServerModeSource.KeyExpression">
+            <summary>
+                <para>Gets or sets the key expression.
+</para>
+            </summary>
+            <value>A <see cref="T:System.String"/> value that specifies the key expression.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Data.Linq.LinqServerModeSource.QueryableSource">
+            <summary>
+                <para>Gets or sets the queryable data source.
+</para>
+            </summary>
+            <value>An object that implements the <b>IQueryable</b> interface.
+</value>
+
+
+        </member>
+        <member name="M:DevExpress.Data.Linq.LinqServerModeSource.Reload">
+            <summary>
+                <para>Forces the bound data-aware control to reload data from the data store.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="T:DevExpress.Data.Linq.LinqServerModeExceptionThrownEventArgs">
+
+            <summary>
+                <para>Provides data for the <see cref="E:DevExpress.Data.Linq.LinqServerModeSource.ExceptionThrown"/> event.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.Data.Linq.LinqServerModeExceptionThrownEventArgs.#ctor(System.Exception)">
+            <summary>
+                <para>Initialize a new instance of the LinqServerModeExceptionThrownEventArgs class.
+</para>
+            </summary>
+            <param name="exception">
+		The database exception. This value is assigned to the <see cref="P:DevExpress.Data.Linq.LinqServerModeExceptionThrownEventArgs.Exception"/> property.
+
+            </param>
+
+
+        </member>
+        <member name="P:DevExpress.Data.Linq.LinqServerModeExceptionThrownEventArgs.Exception">
+            <summary>
+                <para>Gets the database exception.
+</para>
+            </summary>
+            <value>The database exception.
+</value>
+
+
+        </member>
+        <member name="T:DevExpress.Data.Linq.LinqServerModeExceptionThrownEventHandler">
+
+            <summary>
+                <para>Represents a method that will handle the <see cref="E:DevExpress.Data.Linq.LinqServerModeSource.ExceptionThrown"/> event.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.Data.Linq.LinqServerModeExceptionThrownEventHandler.Invoke(System.Object,DevExpress.Data.Linq.LinqServerModeExceptionThrownEventArgs)">
+            <summary>
+                <para>Represents a method that will handle the <see cref="E:DevExpress.Data.Linq.LinqServerModeSource.ExceptionThrown"/> event.
+</para>
+            </summary>
+            <param name="sender">
+		The event source.
+
+            </param>
+            <param name="e">
+		A <see cref="T:DevExpress.Data.Linq.LinqServerModeExceptionThrownEventArgs"/> object that contains data related to the event.
+
+
+            </param>
+
+
+        </member>
+        <member name="T:DevExpress.Data.Linq.LinqServerModeInconsistencyDetectedEventHandler">
+
+            <summary>
+                <para>Represents a method that will handle the <see cref="E:DevExpress.Data.Linq.LinqServerModeSource.InconsistencyDetected"/> event. 
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.Data.Linq.LinqServerModeInconsistencyDetectedEventHandler.Invoke(System.Object,DevExpress.Data.Linq.LinqServerModeInconsistencyDetectedEventArgs)">
+            <summary>
+                <para>Represents a method that will handle the <see cref="E:DevExpress.Data.Linq.LinqServerModeSource.InconsistencyDetected"/> event.
+</para>
+            </summary>
+            <param name="sender">
+		The event sender.
+
+            </param>
+            <param name="e">
+		A <see cref="T:DevExpress.Data.Linq.LinqServerModeInconsistencyDetectedEventArgs"/> object that contains data related to the event.
+
+            </param>
+
+
+        </member>
+        <member name="T:DevExpress.Data.Linq.LinqServerModeInconsistencyDetectedEventArgs">
+
+            <summary>
+                <para>Provides data for the <see cref="E:DevExpress.Data.Linq.LinqServerModeSource.InconsistencyDetected"/> event.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.Data.Linq.LinqServerModeInconsistencyDetectedEventArgs.#ctor">
+            <summary>
+                <para>Initializes a new instance of the LinqServerModeInconsistencyDetectedEventArgs class.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="P:DevExpress.Data.Linq.LinqServerModeInconsistencyDetectedEventArgs.Handled">
+            <summary>
+                <para>Gets or sets whether the inconsistency detected during an operation on a data source should be handled manually.
+
+</para>
+            </summary>
+            <value><b>true</b> to manually handle the inconsistency; <b>false</b> to reload data from the data source.
+</value>
+
+
+        </member>
+    </members>
+</doc>

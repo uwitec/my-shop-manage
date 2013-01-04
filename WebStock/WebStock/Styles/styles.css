@@ -1,0 +1,88 @@
+﻿body {
+    background-color: #BED3FF;
+    color: #000000;
+
+    background-image: url('Gradient.jpg'); 
+    background-position: left top; 
+    background-repeat: no-repeat;
+}
+
+.BannerLime a { color: #C9D7F2; }
+.BannerLime { color: #C9D7F2; }
+.BannerVersion { color: #D9D1DE; }
+.Copyright { color: #697CB9; }
+
+.Features b * { font-weight: normal; color: #11377F; font-size: 16px; font-family: Tahoma; }
+.RootPage {
+    color: #000000; 
+}
+.RootPage a { color: #000000; }
+
+/* Label for Appearance combobox */
+.lblSkins { color: #405497; }
+.Title h1.h1Blue { color: #405497; }
+.ContentMargin { margin-left: 0px!important; }
+.HeaderPanel { padding-bottom: 50px!important; }
+.Slogan { color: #405497!important; }
+.MiniSlogan { color: #5F92EC!important; }
+
+/* Icon menu */
+.dxmMenu_Demo
+{
+	color: #FAFAFA;
+}
+.dxmMenuSeparator_Demo
+{
+    width: 1px!important;
+    height: 15px!important;
+	background-color: #FAFAFA;
+}
+.dxmMenu_Demo a
+{
+	color: #FAFAFA;
+	text-decoration: underline;
+}
+/* Header for TitleImage Area*/
+.Title {
+	height: 81px;
+	width: 100%;
+    background-image: url('ContentHeader.png');
+    background-position: left top;
+    background-repeat: no-repeat;
+}
+.DetailsPageHeader {
+    background-color: #4769B7;
+    padding: 0px;
+    width: 100%;
+    background-image: url('BackgroundHeader.gif');
+    background-position: left top;
+}
+.DetailsPageHeaderBottom {
+    height: 0px; 
+    background-color: White; 
+    border-left: solid 1px #778EBD;
+    border-right: solid 1px #778EBD;
+}
+.DetailsPageLeftEdgeHeader { display: none; }
+.DetailsPageRightEdgeHeader { display: none; }
+.DetailsPageLeftEdge { display: none; }
+.DetailsPageRightEdge { display: none; }
+.DetailsPageContent {
+    background-color: White;
+    border-top-width: 0px;
+    border-bottom-width: 0px;
+    padding: 30px;
+    border-left: solid 1px #778EBD;
+    border-right: solid 1px #778EBD;
+}
+.DetailsPageFooter {
+    width: 100%; 
+    background-color: White;
+    border-bottom: solid 1px #778EBD;
+}
+.DetailsSorceCodeArea {
+    width: 100%; 
+    padding-top: 21px;
+    border-left: solid 1px #778EBD;
+    border-right: solid 1px #778EBD;
+}

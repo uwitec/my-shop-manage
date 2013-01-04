@@ -1,0 +1,1706 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>DevExpress.Web.ASPxGridView.v10.2.Export</name>
+    </assembly>
+    <members>
+        <member name="T:DevExpress.Web.ASPxGridView.Export.GridViewExportOptionalAppearance">
+
+            <summary>
+                <para>Contains the style settings used to paint alternating row cells.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxGridView.Export.GridViewExportOptionalAppearance.#ctor">
+            <summary>
+                <para>Initializes a new instance of the GridViewExportOptionalAppearance class. 
+</para>
+            </summary>
+
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxGridView.Export.GridViewExportOptionalAppearance.CopyFrom(System.Web.UI.WebControls.Style)">
+            <summary>
+                <para>Duplicates the properties of the specified object into the current instance of the GridViewExportOptionalAppearance class. 
+</para>
+            </summary>
+            <param name="style">
+		A <see cref="T:System.Web.UI.WebControls.Style"/> object that represents the object from which the settings will be copied.
+
+            </param>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxGridView.Export.GridViewExportOptionalAppearance.Enabled">
+            <summary>
+                <para>Gets or sets a value that specifies whether the grid's alternating row cells should have a specific appearance within an exported report.
+</para>
+            </summary>
+            <value>One of the <see cref="T:DevExpress.Utils.DefaultBoolean"/> enumeration values.
+</value>
+
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxGridView.Export.GridViewExportOptionalAppearance.MergeWith(System.Web.UI.WebControls.Style)">
+            <summary>
+                <para>Combines the properties of the specified <see cref="T:System.Web.UI.WebControls.Style"/> with the current instance of the GridViewExportOptionalAppearance class. 
+</para>
+            </summary>
+            <param name="style">
+		A <see cref="T:System.Web.UI.WebControls.Style"/> that represents the object to be combined.
+
+            </param>
+
+
+        </member>
+        <member name="T:DevExpress.Web.ASPxGridView.Export.GridViewExporterHeaderFooter">
+
+            <summary>
+                <para>Contains settings for page headers and footers.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxGridView.Export.GridViewExporterHeaderFooter.#ctor">
+            <summary>
+                <para>Initializes a new instance of the GridViewExporterHeaderFooter class. 
+</para>
+            </summary>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxGridView.Export.GridViewExporterHeaderFooter.Center">
+            <summary>
+                <para>Gets or sets the text content of a header/footer's center section.
+</para>
+            </summary>
+            <value>A string value specifying the center section's text content.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxGridView.Export.GridViewExporterHeaderFooter.Font">
+            <summary>
+                <para>Gets the font properties associated with the text of a header/footer.
+</para>
+            </summary>
+            <value>A <see cref="T:System.Web.UI.WebControls.FontInfo"/> object containing the font properties of text.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxGridView.Export.GridViewExporterHeaderFooter.Left">
+            <summary>
+                <para>Gets or sets the text content of a header/footer's left section.
+</para>
+            </summary>
+            <value>A string value specifying the left section's text content.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxGridView.Export.GridViewExporterHeaderFooter.Right">
+            <summary>
+                <para>Gets or sets the text content of a header/footer's right section.
+</para>
+            </summary>
+            <value>A string value specifying the right section's text content.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxGridView.Export.GridViewExporterHeaderFooter.VerticalAlignment">
+            <summary>
+                <para>Specifies the vertical alignment of a header/footer within its layout rectangle. 
+</para>
+            </summary>
+            <value>A <see cref="T:DevExpress.XtraPrinting.BrickAlignment"/> enumeration value.
+</value>
+
+
+        </member>
+        <member name="T:DevExpress.Web.ASPxGridView.Export.ASPxGridViewExportRenderingEventHandler">
+
+            <summary>
+                <para>Represents a method that will handle the <see cref="E:DevExpress.Web.ASPxGridView.Export.ASPxGridViewExporter.RenderBrick"/> event.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxGridView.Export.ASPxGridViewExportRenderingEventHandler.Invoke(System.Object,DevExpress.Web.ASPxGridView.Export.ASPxGridViewExportRenderingEventArgs)">
+            <summary>
+                <para>Represents a method that will handle the <see cref="E:DevExpress.Web.ASPxGridView.Export.ASPxGridViewExporter.RenderBrick"/> event.
+</para>
+            </summary>
+            <param name="sender">
+		The event source.
+
+            </param>
+            <param name="e">
+		An <see cref="T:DevExpress.Web.ASPxGridView.Export.ASPxGridViewExportRenderingEventArgs"/> object that contains event data.
+
+            </param>
+
+
+        </member>
+        <member name="T:DevExpress.Web.ASPxGridView.Export.ASPxGridViewExportRenderingEventArgs">
+
+            <summary>
+                <para>Provides data for the <see cref="E:DevExpress.Web.ASPxGridView.Export.ASPxGridViewExporter.RenderBrick"/> event.
+</para>
+            </summary>
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxGridView.Export.ASPxGridViewExportRenderingEventArgs.BrickStyle">
+            <summary>
+                <para>Gets the style settings used to paint report bricks.
+</para>
+            </summary>
+            <value>A <see cref="T:DevExpress.XtraPrinting.BrickStyle"/> object that contains style settings.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxGridView.Export.ASPxGridViewExportRenderingEventArgs.Column">
+            <summary>
+                <para>Gets a data column that corresponds to the processed grid element. 
+</para>
+            </summary>
+            <value>A <see cref="T:DevExpress.Web.ASPxGridView.GridViewDataColumn"/> object that represents the data column. <b>null</b> (<b>Nothing</b> in Visual Basic) if the processed element doesn't belong to a column (e.g. preview, footer). 
+</value>
+
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxGridView.Export.ASPxGridViewExportRenderingEventArgs.GetValue(System.String)">
+            <summary>
+                <para>Returns the value of the specified cell within the processed row.
+</para>
+            </summary>
+            <param name="fieldName">
+		A <see cref="T:System.String"/> value that specifies the name of the data source field.
+
+            </param>
+            <returns>An object that represents the specified cell's value.
+</returns>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxGridView.Export.ASPxGridViewExportRenderingEventArgs.KeyValue">
+            <summary>
+                <para>Gets the processed row's key.
+</para>
+            </summary>
+            <value>An object that represents the processed row's key value.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxGridView.Export.ASPxGridViewExportRenderingEventArgs.RowType">
+            <summary>
+                <para>Gets the processed row's type.
+</para>
+            </summary>
+            <value>A <see cref="T:DevExpress.Web.ASPxGridView.GridViewRowType"/> enumeration value that identifies the processed row's type.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxGridView.Export.ASPxGridViewExportRenderingEventArgs.Text">
+            <summary>
+                <para>Gets or sets the text displayed within the brick currently being rendered.
+</para>
+            </summary>
+            <value>A <see cref="T:System.String"/> value that specifies the text displayed within the processed brick.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxGridView.Export.ASPxGridViewExportRenderingEventArgs.TextValue">
+            <summary>
+                <para>Gets or sets the processed brick's value.
+</para>
+            </summary>
+            <value>An object that represents the processed brick's value.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxGridView.Export.ASPxGridViewExportRenderingEventArgs.TextValueFormatString">
+            <summary>
+                <para>Gets or sets the pattern used to format values.
+</para>
+            </summary>
+            <value>The pattern used to format values.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxGridView.Export.ASPxGridViewExportRenderingEventArgs.Url">
+            <summary>
+                <para>Gets or sets the rendered brick's URL.
+</para>
+            </summary>
+            <value>A <see cref="T:System.String"/> value that specifies the rendered brick's URL.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxGridView.Export.ASPxGridViewExportRenderingEventArgs.Value">
+            <summary>
+                <para>Gets the processed data cell's value.
+</para>
+            </summary>
+            <value>An object that represents the processed cell's value.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxGridView.Export.ASPxGridViewExportRenderingEventArgs.VisibleIndex">
+            <summary>
+                <para>Gets the processed row's visible index.
+</para>
+            </summary>
+            <value>An integer value that specifies the processed row's visible index.
+</value>
+
+
+        </member>
+        <member name="T:DevExpress.Web.ASPxGridView.Export.GridViewExportedRowType">
+
+            <summary>
+                <para>Lists values that specify which rows should be exported. 
+</para>
+            </summary>
+
+        </member>
+        <member name="F:DevExpress.Web.ASPxGridView.Export.GridViewExportedRowType.All">
+            <summary>
+                <para>The <see cref="T:DevExpress.Web.ASPxGridView.Export.ASPxGridViewExporter"/> exports all rows displayed within the ASPxGridView.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.Web.ASPxGridView.Export.GridViewExportedRowType.Selected">
+            <summary>
+                <para>The <see cref="T:DevExpress.Web.ASPxGridView.Export.ASPxGridViewExporter"/> exports only selected rows.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="T:DevExpress.Web.ASPxGridView.Export.GridViewExportStyles">
+
+            <summary>
+                <para>Provides the style settings used to paint the visual elements within the ASPxGridView when it is exported.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxGridView.Export.GridViewExportStyles.#ctor(DevExpress.Web.ASPxClasses.IPropertiesOwner)">
+            <summary>
+                <para>Initializes a new instance of the GridViewExportStyles class.
+</para>
+            </summary>
+            <param name="owner">
+		An object that owns the created object.
+
+            </param>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxGridView.Export.GridViewExportStyles.AlternatingRowCell">
+            <summary>
+                <para>Gets the style settings used to paint Alternating Data Row.
+</para>
+            </summary>
+            <value>A <see cref="T:DevExpress.Web.ASPxGridView.Export.GridViewExportOptionalAppearance"/> object that contains style settings.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxGridView.Export.GridViewExportStyles.Cell">
+            <summary>
+                <para>Gets the appearance settings used to paint data cells when the grid is exported.
+</para>
+            </summary>
+            <value>A <see cref="T:DevExpress.Web.ASPxGridView.Export.GridViewExportAppearance"/> object that contains appearance settings used to paint data cells when the grid is exported.
+</value>
+
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxGridView.Export.GridViewExportStyles.CopyFrom(DevExpress.Web.ASPxGridView.Export.GridViewExportStyles)">
+            <summary>
+                <para>Duplicates the properties of the specified object into the current instance of the GridViewExportStyles class.
+</para>
+            </summary>
+            <param name="styles">
+		A GridViewExportStyles object that represents the object which the settings will be copied from.
+
+            </param>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxGridView.Export.GridViewExportStyles.Default">
+            <summary>
+                <para>Gets the default appearance settings.
+</para>
+            </summary>
+            <value>A <see cref="T:DevExpress.Web.ASPxGridView.Export.GridViewExportAppearance"/> object that contains default appearance settings.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxGridView.Export.GridViewExportStyles.Footer">
+            <summary>
+                <para>Gets the appearance settings used to paint the Footer.
+</para>
+            </summary>
+            <value>A <see cref="T:DevExpress.Web.ASPxGridView.Export.GridViewExportAppearance"/> object that contains appearance settings used to paint the Footer.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxGridView.Export.GridViewExportStyles.GroupFooter">
+            <summary>
+                <para>Gets the appearance settings used to paint group footers.
+</para>
+            </summary>
+            <value>A <see cref="T:DevExpress.Web.ASPxGridView.Export.GridViewExportAppearance"/> object that contains appearance settings used to paint group footers.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxGridView.Export.GridViewExportStyles.GroupRow">
+            <summary>
+                <para>Gets the appearance settings used to paint group rows.
+</para>
+            </summary>
+            <value>A <see cref="T:DevExpress.Web.ASPxGridView.Export.GridViewExportAppearance"/> object that contains appearance settings used to paint group rows.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxGridView.Export.GridViewExportStyles.Header">
+            <summary>
+                <para>Gets the appearance settings used to paint column headers.
+</para>
+            </summary>
+            <value>A <see cref="T:DevExpress.Web.ASPxGridView.Export.GridViewExportAppearance"/> object that contains appearance settings used to paint column headers.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxGridView.Export.GridViewExportStyles.HyperLink">
+            <summary>
+                <para>Gets the appearance settings used to paint hyper links.
+</para>
+            </summary>
+            <value>A <see cref="T:DevExpress.Web.ASPxGridView.Export.GridViewExportAppearance"/> object that contains style settings.
+</value>
+
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxGridView.Export.GridViewExportStyles.MergeWithDefault">
+            <summary>
+                <para>Combines the properties of the current GridViewExportStyles instance with the <see cref="T:DevExpress.Web.ASPxGridView.Export.GridViewExportAppearance"/> object specified by the <see cref="P:DevExpress.Web.ASPxGridView.Export.GridViewExportStyles.Default"/> property.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxGridView.Export.GridViewExportStyles.Preview">
+            <summary>
+                <para>Gets the appearance settings used to paint preview rows.
+</para>
+            </summary>
+            <value>A <see cref="T:DevExpress.Web.ASPxGridView.Export.GridViewExportAppearance"/> object that contains appearance settings used to paint preview rows.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxGridView.Export.GridViewExportStyles.Title">
+            <summary>
+                <para>Gets the appearance settings used to paint the grid's Title Panel.
+</para>
+            </summary>
+            <value> <see cref="T:DevExpress.Web.ASPxGridView.Export.GridViewExportAppearance"/> object that contains appearance settings used to paint the title panel.
+</value>
+
+
+        </member>
+        <member name="T:DevExpress.Web.ASPxGridView.Export.GridViewExportAppearance">
+
+            <summary>
+                <para>Provides the appearance settings used to paint the ASPxGridView's elements when it is exported.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxGridView.Export.GridViewExportAppearance.#ctor">
+            <summary>
+                <para>Initializes a new instance of the GridViewExportAppearance class.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxGridView.Export.GridViewExportAppearance.BackgroundImage">
+            <summary>
+                <para>This property is not in effect.
+</para>
+            </summary>
+            <value> 
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxGridView.Export.GridViewExportAppearance.Border">
+            <summary>
+                <para>This property is not in effect.
+</para>
+            </summary>
+            <value> 
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxGridView.Export.GridViewExportAppearance.BorderBottom">
+            <summary>
+                <para>This property is not in effect.
+</para>
+            </summary>
+            <value> 
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxGridView.Export.GridViewExportAppearance.BorderColor">
+            <summary>
+                <para>Gets or sets the border color.
+</para>
+            </summary>
+            <value>The border color.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxGridView.Export.GridViewExportAppearance.BorderLeft">
+            <summary>
+                <para>This property is not in effect.
+</para>
+            </summary>
+            <value> 
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxGridView.Export.GridViewExportAppearance.BorderRight">
+            <summary>
+                <para>This property is not in effect.
+</para>
+            </summary>
+            <value> 
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxGridView.Export.GridViewExportAppearance.BorderSides">
+            <summary>
+                <para>Gets or sets a value that specifies which border sides are to be drawn.
+</para>
+            </summary>
+            <value>A DevExpress.XtraPrinting.BorderSide enumeration value that specifies which border sides are to be drawn.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxGridView.Export.GridViewExportAppearance.BorderTop">
+            <summary>
+                <para>This property is not in effect.
+</para>
+            </summary>
+            <value> 
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxGridView.Export.GridViewExportAppearance.BorderWidth">
+            <summary>
+                <para>This property is not in effect.
+</para>
+            </summary>
+            <value>An integer value that specifies the border width, in pixels.
+</value>
+
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxGridView.Export.GridViewExportAppearance.CopyFrom(System.Web.UI.WebControls.Style)">
+            <summary>
+                <para>Duplicates the properties of the specified object into the current instance of the GridViewExportAppearance class.
+</para>
+            </summary>
+            <param name="style">
+		A <see cref="T:System.Web.UI.WebControls.Style"/> object that represents the object which the settings will be copied from.
+
+            </param>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxGridView.Export.GridViewExportAppearance.CssClass">
+            <summary>
+                <para>This property is not in effect.
+</para>
+            </summary>
+            <value> 
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxGridView.Export.GridViewExportAppearance.Cursor">
+            <summary>
+                <para>This property is not in effect.
+</para>
+            </summary>
+            <value> 
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxGridView.Export.GridViewExportAppearance.HoverStyle">
+            <summary>
+                <para>This property is not in effect.
+</para>
+            </summary>
+            <value> 
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxGridView.Export.GridViewExportAppearance.ImageSpacing">
+            <summary>
+                <para>This property is not in effect.
+</para>
+            </summary>
+            <value> 
+</value>
+
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxGridView.Export.GridViewExportAppearance.MergeWith(System.Web.UI.WebControls.Style)">
+            <summary>
+                <para>Combines the properties of the specified <see cref="T:System.Web.UI.WebControls.Style"/> with the current instance of the GridViewExportAppearance class. 
+</para>
+            </summary>
+            <param name="style">
+		A <see cref="T:System.Web.UI.WebControls.Style"/> that represents the object to be combined.
+
+            </param>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxGridView.Export.GridViewExportAppearance.Spacing">
+            <summary>
+                <para>This property is not in effect.
+</para>
+            </summary>
+            <value> 
+</value>
+
+
+        </member>
+        <member name="T:DevExpress.Web.ASPxGridView.Export.ASPxGridViewExporter">
+
+            <summary>
+                <para>Represents an ASPxGridViewExporter control used to export the <see cref="T:DevExpress.Web.ASPxGridView.ASPxGridView"/> control's data.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxGridView.Export.ASPxGridViewExporter.#ctor">
+            <summary>
+                <para>Initializes a new instance of the ASPxGridViewExporter class.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxGridView.Export.ASPxGridViewExporter.ApplyStyleSheetSkin(System.Web.UI.Page)">
+            <summary>
+                <para>This method is not in effect.
+</para>
+            </summary>
+            <param name="page">
+		@nbsp;
+
+            </param>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxGridView.Export.ASPxGridViewExporter.BottomMargin">
+            <summary>
+                <para>Gets or sets the target document's bottom margin.
+</para>
+            </summary>
+            <value>An integer value that specifies the target document's bottom margin, in hundredths of an inch.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxGridView.Export.ASPxGridViewExporter.ClientID">
+            <summary>
+                <para>This property is not in effect.
+</para>
+            </summary>
+            <value>@nbsp;
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxGridView.Export.ASPxGridViewExporter.Controls">
+            <summary>
+                <para>This property is not in effect.
+</para>
+            </summary>
+            <value>@nbsp;
+</value>
+
+
+        </member>
+        <member name="F:DevExpress.Web.ASPxGridView.Export.ASPxGridViewExporter.DefaultMaxColumnWidth">
+            <summary>
+                <para>Holds the default value for the column's maximum width, in pixels.
+</para>
+            </summary>
+            <returns> [To be supplied] </returns>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxGridView.Export.ASPxGridViewExporter.DetailHorizontalOffset">
+            <summary>
+                <para>Gets or sets the detail row's horizontal offset.
+</para>
+            </summary>
+            <value>An integer value that specifies the horizontal offset.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxGridView.Export.ASPxGridViewExporter.DetailVerticalOffset">
+            <summary>
+                <para>Gets or sets the detail row's vertical offset.
+</para>
+            </summary>
+            <value>An integer value that specifies the vertical offset.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxGridView.Export.ASPxGridViewExporter.EnableTheming">
+            <summary>
+                <para>This property is not in effect.
+</para>
+            </summary>
+            <value>@nbsp;
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxGridView.Export.ASPxGridViewExporter.ExportedRowType">
+            <summary>
+                <para>Gets or sets which rows should be exported.
+</para>
+            </summary>
+            <value>A <see cref="T:DevExpress.Web.ASPxGridView.Export.GridViewExportedRowType"/> enumeration value that specifies which rows should be exported.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxGridView.Export.ASPxGridViewExporter.ExportEmptyDetailGrid">
+            <summary>
+                <para>Gets or sets a value indicating whether it's necessary to export a detail grid, when it is empty.
+</para>
+            </summary>
+            <value><b>true</b> to export a detail grid, when it is empty; otherwise, <b>false</b>.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxGridView.Export.ASPxGridViewExporter.FileName">
+            <summary>
+                <para>Gets or sets the file name to which the grid's data is exported.
+</para>
+            </summary>
+            <value>A <see cref="T:System.String"/> value that specifies the target file name.
+</value>
+
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxGridView.Export.ASPxGridViewExporter.FindControl(System.String)">
+            <summary>
+                <para>This method is not in effect.
+</para>
+            </summary>
+            <param name="id">
+		 
+
+            </param>
+            <returns> 
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxGridView.Export.ASPxGridViewExporter.Focus">
+            <summary>
+                <para>This method is not in effect.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxGridView.Export.ASPxGridViewExporter.GridView">
+            <summary>
+                <para>Gets the ASPxGridView control to which the ASPxGridViewExporter is assigned.
+</para>
+            </summary>
+            <value>The <see cref="T:DevExpress.Web.ASPxGridView.ASPxGridView"/> control.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxGridView.Export.ASPxGridViewExporter.GridViewID">
+            <summary>
+                <para>Gets or sets the programmatic identifier of the associated ASPxGridView control.
+
+</para>
+            </summary>
+            <value>The programmatic identifier assigned to the ASPxGridView control.
+</value>
+
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxGridView.Export.ASPxGridViewExporter.HasControls">
+            <summary>
+                <para>This method is not in effect.
+</para>
+            </summary>
+            <returns> 
+</returns>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxGridView.Export.ASPxGridViewExporter.Landscape">
+            <summary>
+                <para>Gets or sets whether data is exported to PDF in Landscape.
+</para>
+            </summary>
+            <value><b>true</b> to export data in Landscape; <b>false</b> to export data in Portrait.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxGridView.Export.ASPxGridViewExporter.LeftMargin">
+            <summary>
+                <para>Gets or sets the target document's left margin.
+</para>
+            </summary>
+            <value>An integer value that specifies the target document's left margin, in hundredths of an inch.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxGridView.Export.ASPxGridViewExporter.MaxColumnWidth">
+            <summary>
+                <para>Gets or sets the column's maximum width.
+</para>
+            </summary>
+            <value>An integer value that specifies the column's maximum width, in pixels.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxGridView.Export.ASPxGridViewExporter.PageFooter">
+            <summary>
+                <para>Gets the page footer's settings.
+</para>
+            </summary>
+            <value>A <see cref="T:DevExpress.Web.ASPxGridView.Export.GridViewExporterHeaderFooter"/> object that contains the page footer's settings.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxGridView.Export.ASPxGridViewExporter.PageHeader">
+            <summary>
+                <para>Gets the page header's settings.
+</para>
+            </summary>
+            <value>A <see cref="T:DevExpress.Web.ASPxGridView.Export.GridViewExporterHeaderFooter"/> object that contains the page header's settings.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxGridView.Export.ASPxGridViewExporter.PaperKind">
+            <summary>
+                <para>Gets or sets the type of paper for the exported report.
+</para>
+            </summary>
+            <value>A <see cref="T:System.Drawing.Printing.PaperKind"/> enumeration value.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxGridView.Export.ASPxGridViewExporter.PaperName">
+            <summary>
+                <para>Gets or sets the name of the custom paper which is used for exporting purposes.
+</para>
+            </summary>
+            <value>A <see cref="T:System.String"/> value specifying the name of the paper.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxGridView.Export.ASPxGridViewExporter.PreserveGroupRowStates">
+            <summary>
+                <para>Gets or sets whether the expanded state of group rows is preserved when the ASPxGridView's data is exported.
+</para>
+            </summary>
+            <value><b>true</b> to preserve the expanded state of group rows when the ASPxGridView's data is exported; <b>false</b> to expand all group rows.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxGridView.Export.ASPxGridViewExporter.PrintSelectCheckBox">
+            <summary>
+                <para>Gets or sets whether check boxes (or radio buttons) used to select/deselect data rows, are printed.
+
+</para>
+            </summary>
+            <value><b>true</b> to print check boxes (or radio buttons) used to select/deselect data rows; otherwise, <b>false</b>.
+</value>
+
+
+        </member>
+        <member name="E:DevExpress.Web.ASPxGridView.Export.ASPxGridViewExporter.RenderBrick">
+            <summary>
+                <para>Enables rendering of different content from the default export.
+
+
+</para>
+            </summary>
+
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxGridView.Export.ASPxGridViewExporter.RenderControl(System.Web.UI.HtmlTextWriter)">
+            <summary>
+                <para>This method is not in effect.
+</para>
+            </summary>
+            <param name="writer">
+		 
+
+            </param>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxGridView.Export.ASPxGridViewExporter.ReportFooter">
+            <summary>
+                <para>Gets or sets the text displayed within a report's footer.
+</para>
+            </summary>
+            <value>A string value that specifies the text displayed within the report's footer.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxGridView.Export.ASPxGridViewExporter.ReportHeader">
+            <summary>
+                <para>Gets or sets the text displayed within a report's header.
+</para>
+            </summary>
+            <value>A string value that specifies the text displayed within the report's header.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxGridView.Export.ASPxGridViewExporter.RightMargin">
+            <summary>
+                <para>Gets or sets the target document's right margin.
+</para>
+            </summary>
+            <value>An integer value that specifies the target document's right margin, in hundredths of an inch.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxGridView.Export.ASPxGridViewExporter.SkinID">
+            <summary>
+                <para>This property is not in effect.
+</para>
+            </summary>
+            <value> 
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxGridView.Export.ASPxGridViewExporter.Styles">
+            <summary>
+                <para>Provides access to the properties that specify the appearance of grid elements when the grid is exported.
+</para>
+            </summary>
+            <value>A <see cref="T:DevExpress.Web.ASPxGridView.Export.GridViewExportStyles"/> object that provides style settings used to paint grid elements when the grid is exported.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxGridView.Export.ASPxGridViewExporter.TopMargin">
+            <summary>
+                <para>Gets or sets the target document's top margin.
+
+</para>
+            </summary>
+            <value>An integer value that specifies the target document's top margin, in hundredths of an inch.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxGridView.Export.ASPxGridViewExporter.Visible">
+            <summary>
+                <para>This property is not in effect.
+</para>
+            </summary>
+            <value>@nbsp;
+</value>
+
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxGridView.Export.ASPxGridViewExporter.WriteCsv(System.IO.Stream)">
+            <summary>
+                <para>Exports the grid's data to a stream in CSV format.
+</para>
+            </summary>
+            <param name="stream">
+		A <see cref="T:System.IO.Stream"/> object to which the data is exported.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxGridView.Export.ASPxGridViewExporter.WriteCsv(System.IO.Stream,DevExpress.XtraPrinting.CsvExportOptions)">
+            <summary>
+                <para>Exports the grid's data to a stream in CSV format with the specified export options.
+</para>
+            </summary>
+            <param name="stream">
+		A <see cref="T:System.IO.Stream"/> object to which the data is exported.
+
+            </param>
+            <param name="exportOptions">
+		A <see cref="T:DevExpress.XtraPrinting.CsvExportOptions"/> object that provides export options.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxGridView.Export.ASPxGridViewExporter.WriteCsvToResponse(System.Boolean)">
+            <summary>
+                <para>Exports the grid's data to a file in CSV format and writes it to the Response in the binary format.
+</para>
+            </summary>
+            <param name="saveAsFile">
+		<b>true</b> to display the <b>File Download</b> dialog; <b>false</b> to display the CSV file with exported data within a page.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxGridView.Export.ASPxGridViewExporter.WriteCsvToResponse(System.String,System.Boolean)">
+            <summary>
+                <para>Exports the grid's data to the specified file in CSV format and writes it to the Response in the binary format.
+</para>
+            </summary>
+            <param name="fileName">
+		A <see cref="T:System.String"/> value that specifies the target file name.
+
+            </param>
+            <param name="saveAsFile">
+		<b>true</b> to display the <b>File Download</b> dialog; <b>false</b> to display the CSV file with exported data within a page.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxGridView.Export.ASPxGridViewExporter.WriteCsvToResponse">
+            <summary>
+                <para>Exports the grid's data to a file in CSV format and writes it to the Response in the binary format.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxGridView.Export.ASPxGridViewExporter.WriteCsvToResponse(System.String)">
+            <summary>
+                <para>Exports the grid's data to the specified file in CSV format and writes it to the Response in the binary format.
+</para>
+            </summary>
+            <param name="fileName">
+		A <see cref="T:System.String"/> value that specifies the target file name.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxGridView.Export.ASPxGridViewExporter.WriteCsvToResponse(DevExpress.XtraPrinting.CsvExportOptions)">
+            <summary>
+                <para>Exports the grid's data to a file in CSV format with the specified export options, and writes it to the Response in the binary format.
+
+</para>
+            </summary>
+            <param name="exportOptions">
+		A <see cref="T:DevExpress.XtraPrinting.CsvExportOptions"/> object that provides export options.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxGridView.Export.ASPxGridViewExporter.WriteCsvToResponse(System.String,System.Boolean,DevExpress.XtraPrinting.CsvExportOptions)">
+            <summary>
+                <para>Exports the grid's data to a file in CSV format with the specified export options, and writes it to the Response in the binary format.
+
+</para>
+            </summary>
+            <param name="fileName">
+		A <see cref="T:System.String"/> value that specifies the target file name.
+
+            </param>
+            <param name="saveAsFile">
+		<b>true</b> to display the <b>File Download</b> dialog; <b>false</b> to display the CSV file with exported data within a page.
+
+            </param>
+            <param name="exportOptions">
+		A <see cref="T:DevExpress.XtraPrinting.CsvExportOptions"/> object that provides export options.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxGridView.Export.ASPxGridViewExporter.WriteCsvToResponse(System.Boolean,DevExpress.XtraPrinting.CsvExportOptions)">
+            <summary>
+                <para>Exports the grid's data to a file in CSV format with the specified export options, and writes it to the Response in the binary format.
+
+</para>
+            </summary>
+            <param name="saveAsFile">
+		<b>true</b> to display the <b>File Download</b> dialog; <b>false</b> to display the CSV file with exported data within a page.
+
+            </param>
+            <param name="exportOptions">
+		A <see cref="T:DevExpress.XtraPrinting.CsvExportOptions"/> object that provides export options.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxGridView.Export.ASPxGridViewExporter.WriteCsvToResponse(System.String,DevExpress.XtraPrinting.CsvExportOptions)">
+            <summary>
+                <para>Exports the grid's data to the specified file in CSV format with the specified name and export options, and writes it to the Response in the binary format.
+
+</para>
+            </summary>
+            <param name="fileName">
+		A <see cref="T:System.String"/> value that specifies the target file name.
+
+            </param>
+            <param name="exportOptions">
+		A <see cref="T:DevExpress.XtraPrinting.CsvExportOptions"/> object that provides export options.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxGridView.Export.ASPxGridViewExporter.WritePdf(System.IO.Stream)">
+            <summary>
+                <para>Exports the grid's data to a stream in PDF format.
+</para>
+            </summary>
+            <param name="stream">
+		A <see cref="T:System.IO.Stream"/> object to which the data is exported.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxGridView.Export.ASPxGridViewExporter.WritePdf(System.IO.Stream,DevExpress.XtraPrinting.PdfExportOptions)">
+            <summary>
+                <para>Exports the grid's data to a stream in PDF format with the specified export options.
+</para>
+            </summary>
+            <param name="stream">
+		A <see cref="T:System.IO.Stream"/> object to which the data is exported.
+
+            </param>
+            <param name="exportOptions">
+		A <see cref="T:DevExpress.XtraPrinting.PdfExportOptions"/> object that provides export options.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxGridView.Export.ASPxGridViewExporter.WritePdfToResponse">
+            <summary>
+                <para>Exports the grid's data to a file in PDF format and writes it to the Response in the binary format.
+
+</para>
+            </summary>
+
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxGridView.Export.ASPxGridViewExporter.WritePdfToResponse(System.String)">
+            <summary>
+                <para>Exports the grid's data to the specified file in PDF format and writes it to the Response in the binary format.
+
+</para>
+            </summary>
+            <param name="fileName">
+		A <see cref="T:System.String"/> value that specifies the target file name.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxGridView.Export.ASPxGridViewExporter.WritePdfToResponse(System.String,System.Boolean)">
+            <summary>
+                <para>Exports the grid's data to the specified file in PDF format and writes it to the Response in the binary format.
+
+</para>
+            </summary>
+            <param name="fileName">
+		A <see cref="T:System.String"/> value that specifies the target file name.
+
+            </param>
+            <param name="saveAsFile">
+		<b>true</b> to display the <b>File Download</b> dialog; <b>false</b> to display the PDF file with exported data within a page.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxGridView.Export.ASPxGridViewExporter.WritePdfToResponse(System.Boolean)">
+            <summary>
+                <para>Exports the grid's data to a file in PDF format and writes it to the Response in the binary format.
+
+</para>
+            </summary>
+            <param name="saveAsFile">
+		<b>true</b> to display the <b>File Download</b> dialog; <b>false</b> to display the PDF file with exported data within a page.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxGridView.Export.ASPxGridViewExporter.WritePdfToResponse(DevExpress.XtraPrinting.PdfExportOptions)">
+            <summary>
+                <para>Exports the grid's data to a file in PDF format with the specified export options, and writes it to the Response in the binary format.
+
+</para>
+            </summary>
+            <param name="exportOptions">
+		A <see cref="T:DevExpress.XtraPrinting.PdfExportOptions"/> object that provides export options.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxGridView.Export.ASPxGridViewExporter.WritePdfToResponse(System.String,System.Boolean,DevExpress.XtraPrinting.PdfExportOptions)">
+            <summary>
+                <para>Exports the grid's data to the specified file in PDF format with the specified export options, and writes it to the Response in the binary format.
+
+</para>
+            </summary>
+            <param name="fileName">
+		A <see cref="T:System.String"/> value that specifies the target file name.
+
+            </param>
+            <param name="saveAsFile">
+		<b>true</b> to display the <b>File Download</b> dialog; <b>false</b> to display the PDF file with exported data within a page.
+
+            </param>
+            <param name="exportOptions">
+		A <see cref="T:DevExpress.XtraPrinting.PdfExportOptions"/> object that provides export options.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxGridView.Export.ASPxGridViewExporter.WritePdfToResponse(System.Boolean,DevExpress.XtraPrinting.PdfExportOptions)">
+            <summary>
+                <para>Exports the grid's data to a file in PDF format with the specified export options, and writes it to the Response in the binary format.
+
+</para>
+            </summary>
+            <param name="saveAsFile">
+		<b>true</b> to display the <b>File Download</b> dialog; <b>false</b> to display the PDF file with exported data within a page.
+
+            </param>
+            <param name="exportOptions">
+		A <see cref="T:DevExpress.XtraPrinting.PdfExportOptions"/> object that provides export options.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxGridView.Export.ASPxGridViewExporter.WritePdfToResponse(System.String,DevExpress.XtraPrinting.PdfExportOptions)">
+            <summary>
+                <para>Exports the grid's data to the specified file in PDF format with the specified name and export options, and writes it to the Response in the binary format.
+
+</para>
+            </summary>
+            <param name="fileName">
+		A <see cref="T:System.String"/> value that specifies the target file name.
+
+            </param>
+            <param name="exportOptions">
+		A <see cref="T:DevExpress.XtraPrinting.PdfExportOptions"/> object that provides export options.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxGridView.Export.ASPxGridViewExporter.WriteRtf(System.IO.Stream)">
+            <summary>
+                <para>Exports the grid's data to a stream in RTF format.
+</para>
+            </summary>
+            <param name="stream">
+		A <see cref="T:System.IO.Stream"/> object to which the data is exported.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxGridView.Export.ASPxGridViewExporter.WriteRtf(System.IO.Stream,DevExpress.XtraPrinting.RtfExportOptions)">
+            <summary>
+                <para>Exports the grid's data to a stream in RTF format with the specified export options.
+</para>
+            </summary>
+            <param name="stream">
+		A <see cref="T:System.IO.Stream"/> object to which the data is exported.
+
+            </param>
+            <param name="exportOptions">
+		A <see cref="T:DevExpress.XtraPrinting.RtfExportOptions"/> object that provides export options.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxGridView.Export.ASPxGridViewExporter.WriteRtfToResponse(System.String,System.Boolean)">
+            <summary>
+                <para>Exports the grid's data to the specified file in RTF format and writes it to the Response in the binary format.
+
+</para>
+            </summary>
+            <param name="fileName">
+		A <see cref="T:System.String"/> value that specifies the target file name.
+
+            </param>
+            <param name="saveAsFile">
+		<b>true</b> to display the <b>File Download</b> dialog; <b>false</b> to display the RTF file with exported data within a page.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxGridView.Export.ASPxGridViewExporter.WriteRtfToResponse">
+            <summary>
+                <para>Exports the grid's data to a file in RTF format and writes it to the Response in the binary format.
+
+</para>
+            </summary>
+
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxGridView.Export.ASPxGridViewExporter.WriteRtfToResponse(System.String)">
+            <summary>
+                <para>Exports the grid's data to the specified file in RTF format and writes it to the Response in the binary format.
+
+</para>
+            </summary>
+            <param name="fileName">
+		A <see cref="T:System.String"/> value that specifies the target file name.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxGridView.Export.ASPxGridViewExporter.WriteRtfToResponse(System.Boolean)">
+            <summary>
+                <para>Exports the grid's data to a file in RTF format and writes it to the Response in the binary format.
+
+</para>
+            </summary>
+            <param name="saveAsFile">
+		<b>true</b> to display the <b>File Download</b> dialog; <b>false</b> to display the RTF file with exported data within a page.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxGridView.Export.ASPxGridViewExporter.WriteRtfToResponse(System.String,System.Boolean,DevExpress.XtraPrinting.RtfExportOptions)">
+            <summary>
+                <para>Exports the grid's data to the specified file in RTF format with the specified export options, and writes it to the Response in the binary format.
+
+</para>
+            </summary>
+            <param name="fileName">
+		A <see cref="T:System.String"/> value that specifies the target file name.
+
+            </param>
+            <param name="saveAsFile">
+		<b>true</b> to display the <b>File Download</b> dialog; <b>false</b> to display the RTF file with exported data within a page.
+
+            </param>
+            <param name="exportOptions">
+		A <see cref="T:DevExpress.XtraPrinting.RtfExportOptions"/> object that provides export options.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxGridView.Export.ASPxGridViewExporter.WriteRtfToResponse(System.Boolean,DevExpress.XtraPrinting.RtfExportOptions)">
+            <summary>
+                <para>Exports the grid's data to the specified file in RTF format with the specified export settings, and writes it to the Response in the binary format.
+
+</para>
+            </summary>
+            <param name="saveAsFile">
+		<b>true</b> to display the <b>File Download</b> dialog; <b>false</b> to display the RTF file with exported data within a page.
+
+            </param>
+            <param name="exportOptions">
+		A <see cref="T:DevExpress.XtraPrinting.RtfExportOptions"/> object that provides export options.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxGridView.Export.ASPxGridViewExporter.WriteRtfToResponse(System.String,DevExpress.XtraPrinting.RtfExportOptions)">
+            <summary>
+                <para>Exports the grid's data to the specified file in RTF format with the specified export settings, and writes it to the Response in the binary format.
+
+</para>
+            </summary>
+            <param name="fileName">
+		A <see cref="T:System.String"/> value that specifies the target file name.
+
+            </param>
+            <param name="exportOptions">
+		A <see cref="T:DevExpress.XtraPrinting.RtfExportOptions"/> object that provides export options.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxGridView.Export.ASPxGridViewExporter.WriteRtfToResponse(DevExpress.XtraPrinting.RtfExportOptions)">
+            <summary>
+                <para>Exports the grid's data to a file in RTF format with the specified export settings, and writes it to the Response in the binary format.
+
+</para>
+            </summary>
+            <param name="exportOptions">
+		A <see cref="T:DevExpress.XtraPrinting.RtfExportOptions"/> object that provides export options.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxGridView.Export.ASPxGridViewExporter.WriteXls(System.IO.Stream)">
+            <summary>
+                <para>Exports the grid's data to a stream in XLS format.
+</para>
+            </summary>
+            <param name="stream">
+		A <see cref="T:System.IO.Stream"/> object to which the data is exported.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxGridView.Export.ASPxGridViewExporter.WriteXls(System.IO.Stream,DevExpress.XtraPrinting.XlsExportOptions)">
+            <summary>
+                <para>Exports the grid's data to a stream in XLS format with the specified export settings.
+</para>
+            </summary>
+            <param name="stream">
+		A <see cref="T:System.IO.Stream"/> object to which the data is exported.
+
+            </param>
+            <param name="exportOptions">
+		A <see cref="T:DevExpress.XtraPrinting.XlsExportOptions"/> object that provides export options.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxGridView.Export.ASPxGridViewExporter.WriteXlsToResponse(System.String)">
+            <summary>
+                <para>Exports the grid's data to the specified file in XLS format and writes it to the Response in the binary format. 
+
+</para>
+            </summary>
+            <param name="fileName">
+		A <see cref="T:System.String"/> value that specifies the target file name.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxGridView.Export.ASPxGridViewExporter.WriteXlsToResponse">
+            <summary>
+                <para>Exports the grid's data to a file in XLS format and writes it to the Response in the binary format.
+
+</para>
+            </summary>
+
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxGridView.Export.ASPxGridViewExporter.WriteXlsToResponse(System.String,System.Boolean)">
+            <summary>
+                <para>Exports the grid's data to the specified file in XLS format and writes it to the Response in the binary format.
+
+</para>
+            </summary>
+            <param name="fileName">
+		A <see cref="T:System.String"/> value that specifies the target file name.
+
+            </param>
+            <param name="saveAsFile">
+		<b>true</b> to display the <b>File Download</b> dialog; <b>false</b> to display the XLS file with exported data within a page.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxGridView.Export.ASPxGridViewExporter.WriteXlsToResponse(System.Boolean)">
+            <summary>
+                <para>Exports the grid's data to a file in XLS format and writes it to the Response in the binary format.
+
+</para>
+            </summary>
+            <param name="saveAsFile">
+		<b>true</b> to display the <b>File Download</b> dialog; <b>false</b> to display the XLS file with exported data within a page.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxGridView.Export.ASPxGridViewExporter.WriteXlsToResponse(System.Boolean,DevExpress.XtraPrinting.XlsExportOptions)">
+            <summary>
+                <para>Exports the grid's data to a file in XLS format with the specified export settings, and writes it to the Response in the binary format.
+
+</para>
+            </summary>
+            <param name="saveAsFile">
+		<b>true</b> to display the <b>File Download</b> dialog; <b>false</b> to display the XLS file with exported data within a page.
+
+            </param>
+            <param name="exportOptions">
+		A <see cref="T:DevExpress.XtraPrinting.XlsExportOptions"/> object that provides export options.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxGridView.Export.ASPxGridViewExporter.WriteXlsToResponse(System.String,System.Boolean,DevExpress.XtraPrinting.XlsExportOptions)">
+            <summary>
+                <para>Exports the grid's data to the specified file in XLS format with the specified export settings, and writes it to the Response in the binary format.
+
+</para>
+            </summary>
+            <param name="fileName">
+		A <see cref="T:System.String"/> value that specifies the target file name.
+
+            </param>
+            <param name="saveAsFile">
+		<b>true</b> to display the <b>File Download</b> dialog; <b>false</b> to display the XLS file with exported data within a page.
+
+            </param>
+            <param name="exportOptions">
+		A <see cref="T:DevExpress.XtraPrinting.XlsExportOptions"/> object that provides export options.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxGridView.Export.ASPxGridViewExporter.WriteXlsToResponse(System.String,DevExpress.XtraPrinting.XlsExportOptions)">
+            <summary>
+                <para>Exports the grid's data to the specified file in XLS format, with the specified export settings, and writes it to the Response in the binary format.
+
+</para>
+            </summary>
+            <param name="fileName">
+		A <see cref="T:System.String"/> value that specifies the target file name.
+
+            </param>
+            <param name="exportOptions">
+		A <see cref="T:DevExpress.XtraPrinting.XlsExportOptions"/> object that provides export options.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxGridView.Export.ASPxGridViewExporter.WriteXlsToResponse(DevExpress.XtraPrinting.XlsExportOptions)">
+            <summary>
+                <para>Exports the grid's data to a file in XLS format with the specified export settings, and writes it to the Response in the binary format.
+
+</para>
+            </summary>
+            <param name="exportOptions">
+		A <see cref="T:DevExpress.XtraPrinting.XlsExportOptions"/> object that provides export options.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxGridView.Export.ASPxGridViewExporter.WriteXlsx(System.IO.Stream,DevExpress.XtraPrinting.XlsxExportOptions)">
+            <summary>
+                <para>Exports the grid's data to a stream in XLSX format with the specified export settings. 
+</para>
+            </summary>
+            <param name="stream">
+		A <see cref="T:System.IO.Stream"/> object to which the data is exported. 
+
+            </param>
+            <param name="exportOptions">
+		A <see cref="T:DevExpress.XtraPrinting.XlsxExportOptions"/> object that provides export options. 
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxGridView.Export.ASPxGridViewExporter.WriteXlsx(System.IO.Stream)">
+            <summary>
+                <para>Exports the grid's data to a stream in XLSX format. 
+</para>
+            </summary>
+            <param name="stream">
+		A <see cref="T:System.IO.Stream"/> object to which the data is exported. 
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxGridView.Export.ASPxGridViewExporter.WriteXlsxToResponse(DevExpress.XtraPrinting.XlsxExportOptions)">
+            <summary>
+                <para>Exports the grid's data to a file in XLSX format with the specified export settings, and writes it to the Response in the binary format. 
+</para>
+            </summary>
+            <param name="exportOptions">
+		A <see cref="T:DevExpress.XtraPrinting.XlsxExportOptions"/> object that provides export options. 
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxGridView.Export.ASPxGridViewExporter.WriteXlsxToResponse(System.String,System.Boolean,DevExpress.XtraPrinting.XlsxExportOptions)">
+            <summary>
+                <para>Exports the grid's data to the specified file in XLSX format with the specified export settings, and writes it to the Response in the binary format. 
+</para>
+            </summary>
+            <param name="fileName">
+		A <see cref="T:System.String"/> value that specifies the target file name. 
+
+            </param>
+            <param name="saveAsFile">
+		<b>true</b> to display the File Download dialog; <b>false</b> to display the XLSX file with exported data within a page. 
+
+            </param>
+            <param name="exportOptions">
+		A <see cref="T:DevExpress.XtraPrinting.XlsxExportOptions"/> object that provides export options. 
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxGridView.Export.ASPxGridViewExporter.WriteXlsxToResponse(System.Boolean,DevExpress.XtraPrinting.XlsxExportOptions)">
+            <summary>
+                <para>Exports the grid's data to a file in XLS format with the specified export settings, and writes it to the Response in the binary format. 
+</para>
+            </summary>
+            <param name="saveAsFile">
+		<b>true</b> to display the File Download dialog; <b>false</b> to display the XLSX file with exported data within a page. 
+
+            </param>
+            <param name="exportOptions">
+		A <see cref="T:DevExpress.XtraPrinting.XlsxExportOptions"/> object that provides export options. 
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxGridView.Export.ASPxGridViewExporter.WriteXlsxToResponse(System.String,DevExpress.XtraPrinting.XlsxExportOptions)">
+            <summary>
+                <para>Exports the grid's data to the specified file in XLSX format, with the specified export settings, and writes it to the Response in the binary format. 
+</para>
+            </summary>
+            <param name="fileName">
+		A <see cref="T:System.String"/> value that specifies the target file name. 
+
+            </param>
+            <param name="exportOptions">
+		A <see cref="T:DevExpress.XtraPrinting.XlsxExportOptions"/> object that provides export options. 
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxGridView.Export.ASPxGridViewExporter.WriteXlsxToResponse(System.String)">
+            <summary>
+                <para>Exports the grid's data to the specified file in XLSX format and writes it to the Response in the binary format. 
+</para>
+            </summary>
+            <param name="fileName">
+		A <see cref="T:System.String"/> value that specifies the target file name. 
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxGridView.Export.ASPxGridViewExporter.WriteXlsxToResponse">
+            <summary>
+                <para>Exports the grid's data to a file in XLSX format and writes it to the Response in the binary format. 
+</para>
+            </summary>
+
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxGridView.Export.ASPxGridViewExporter.WriteXlsxToResponse(System.String,System.Boolean)">
+            <summary>
+                <para>Exports the grid's data to the specified file in XLS format and writes it to the Response in the binary format. 
+</para>
+            </summary>
+            <param name="fileName">
+		A <see cref="T:System.String"/> value that specifies the target file name. 
+
+            </param>
+            <param name="saveAsFile">
+		<b>true</b> to display the File Download dialog; <b>false</b> to display the XLSX file with exported data within a page. 
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxGridView.Export.ASPxGridViewExporter.WriteXlsxToResponse(System.Boolean)">
+            <summary>
+                <para>Exports the grid's data to a file in XLSX format and writes it to the Response in the binary format. 
+</para>
+            </summary>
+            <param name="saveAsFile">
+		<b>true</b> to display the File Download dialog; <b>false</b> to display the XLSX file with exported data within a page. 
+
+            </param>
+
+
+        </member>
+    </members>
+</doc>

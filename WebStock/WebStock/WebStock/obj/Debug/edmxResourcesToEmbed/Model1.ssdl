@@ -1,0 +1,1782 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="MWTSModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="MWTSModelStoreContainer">
+    <EntitySet Name="BaseStation" EntityType="MWTSModel.Store.BaseStation" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="BaseStationLog" EntityType="MWTSModel.Store.BaseStationLog" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="BaseStationPathLine" EntityType="MWTSModel.Store.BaseStationPathLine" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="CallHistory" EntityType="MWTSModel.Store.CallHistory" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="CallState" EntityType="MWTSModel.Store.CallState" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Card" EntityType="MWTSModel.Store.Card" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="CardTrack" EntityType="MWTSModel.Store.CardTrack" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="CheckingInLog" EntityType="MWTSModel.Store.CheckingInLog" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="CommandLog" EntityType="MWTSModel.Store.CommandLog" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="DataPacket" EntityType="MWTSModel.Store.DataPacket" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="DataRadio" EntityType="MWTSModel.Store.DataRadio" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="DataRadioLog" EntityType="MWTSModel.Store.DataRadioLog" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Department" EntityType="MWTSModel.Store.Department" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="EventRecord" EntityType="MWTSModel.Store.EventRecord" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="JobShift" EntityType="MWTSModel.Store.JobShift" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="JobTitle" EntityType="MWTSModel.Store.JobTitle" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Manager" EntityType="MWTSModel.Store.Manager" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="OverstaffLog" EntityType="MWTSModel.Store.OverstaffLog" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="PushButtonStateEvent" EntityType="MWTSModel.Store.PushButtonStateEvent" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ReceivedFrame" EntityType="MWTSModel.Store.ReceivedFrame" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ServerInfo" EntityType="MWTSModel.Store.ServerInfo" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="SynchroRemoteDataBase" EntityType="MWTSModel.Store.SynchroRemoteDataBase" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="SysConfig" EntityType="MWTSModel.Store.SysConfig" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="sysdiagrams" EntityType="MWTSModel.Store.sysdiagrams" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="SystemLog" EntityType="MWTSModel.Store.SystemLog" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Team" EntityType="MWTSModel.Store.Team" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="TimeoutLog" EntityType="MWTSModel.Store.TimeoutLog" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="UserOperationLog" EntityType="MWTSModel.Store.UserOperationLog" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Worker" EntityType="MWTSModel.Store.Worker" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Zone" EntityType="MWTSModel.Store.Zone" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ZoneAndBaseStationLink" EntityType="MWTSModel.Store.ZoneAndBaseStationLink" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="View_BaseStationAndZone_ForGis" EntityType="MWTSModel.Store.View_BaseStationAndZone_ForGis" store:Type="Views" store:Schema="dbo" store:Name="View_BaseStationAndZone_ForGis">
+      <DefiningQuery>SELECT 
+      [View_BaseStationAndZone_ForGis].[Id] AS [Id], 
+      [View_BaseStationAndZone_ForGis].[Number] AS [Number], 
+      [View_BaseStationAndZone_ForGis].[Name] AS [Name], 
+      [View_BaseStationAndZone_ForGis].[DataRadioNumber] AS [DataRadioNumber], 
+      [View_BaseStationAndZone_ForGis].[Remark] AS [Remark], 
+      [View_BaseStationAndZone_ForGis].[Direction] AS [Direction], 
+      [View_BaseStationAndZone_ForGis].[IfFeedbackSignal] AS [IfFeedbackSignal], 
+      [View_BaseStationAndZone_ForGis].[ElectricalBoxPositioning] AS [ElectricalBoxPositioning], 
+      [View_BaseStationAndZone_ForGis].[IsWellhead] AS [IsWellhead], 
+      [View_BaseStationAndZone_ForGis].[GasSaturation] AS [GasSaturation], 
+      [View_BaseStationAndZone_ForGis].[Description] AS [Description], 
+      [View_BaseStationAndZone_ForGis].[Status] AS [Status], 
+      [View_BaseStationAndZone_ForGis].[PowerSupplyState] AS [PowerSupplyState], 
+      [View_BaseStationAndZone_ForGis].[Datetime] AS [Datetime], 
+      [View_BaseStationAndZone_ForGis].[X] AS [X], 
+      [View_BaseStationAndZone_ForGis].[Y] AS [Y], 
+      [View_BaseStationAndZone_ForGis].[IsShowing] AS [IsShowing], 
+      [View_BaseStationAndZone_ForGis].[ZoneName] AS [ZoneName], 
+      [View_BaseStationAndZone_ForGis].[ZoneNumber] AS [ZoneNumber], 
+      [View_BaseStationAndZone_ForGis].[ZoneType] AS [ZoneType], 
+      [View_BaseStationAndZone_ForGis].[UpperLimitOfWoringPeple] AS [UpperLimitOfWoringPeple], 
+      [View_BaseStationAndZone_ForGis].[UpperLimitOfWorkingTime] AS [UpperLimitOfWorkingTime], 
+      [View_BaseStationAndZone_ForGis].[ZoneCoverageType] AS [ZoneCoverageType], 
+      [View_BaseStationAndZone_ForGis].[ZoneRemark] AS [ZoneRemark], 
+      [View_BaseStationAndZone_ForGis].[ZoneDescription] AS [ZoneDescription], 
+      [View_BaseStationAndZone_ForGis].[UpperLeft_X] AS [UpperLeft_X], 
+      [View_BaseStationAndZone_ForGis].[UpperRight_X] AS [UpperRight_X], 
+      [View_BaseStationAndZone_ForGis].[LowerRight_X] AS [LowerRight_X], 
+      [View_BaseStationAndZone_ForGis].[LowerLeft_X] AS [LowerLeft_X], 
+      [View_BaseStationAndZone_ForGis].[UpperLeft_Y] AS [UpperLeft_Y], 
+      [View_BaseStationAndZone_ForGis].[UpperRight_Y] AS [UpperRight_Y], 
+      [View_BaseStationAndZone_ForGis].[LowerRight_Y] AS [LowerRight_Y], 
+      [View_BaseStationAndZone_ForGis].[LowerLeft_Y] AS [LowerLeft_Y], 
+      [View_BaseStationAndZone_ForGis].[ZoneIsShowing] AS [ZoneIsShowing], 
+      [View_BaseStationAndZone_ForGis].[Position] AS [Position]
+      FROM [dbo].[View_BaseStationAndZone_ForGis] AS [View_BaseStationAndZone_ForGis]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="View_BaseStationInfo_ForGis" EntityType="MWTSModel.Store.View_BaseStationInfo_ForGis" store:Type="Views" store:Schema="dbo" store:Name="View_BaseStationInfo_ForGis">
+      <DefiningQuery>SELECT 
+      [View_BaseStationInfo_ForGis].[Number] AS [Number], 
+      [View_BaseStationInfo_ForGis].[Name] AS [Name], 
+      [View_BaseStationInfo_ForGis].[PCount] AS [PCount], 
+      [View_BaseStationInfo_ForGis].[X] AS [X], 
+      [View_BaseStationInfo_ForGis].[Y] AS [Y], 
+      [View_BaseStationInfo_ForGis].[IsWellhead] AS [IsWellhead], 
+      [View_BaseStationInfo_ForGis].[IsShowing] AS [IsShowing], 
+      [View_BaseStationInfo_ForGis].[Status] AS [Status]
+      FROM [dbo].[View_BaseStationInfo_ForGis] AS [View_BaseStationInfo_ForGis]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="View_BaseStationInnerjoinZone" EntityType="MWTSModel.Store.View_BaseStationInnerjoinZone" store:Type="Views" store:Schema="dbo" store:Name="View_BaseStationInnerjoinZone">
+      <DefiningQuery>SELECT 
+      [View_BaseStationInnerjoinZone].[Id] AS [Id], 
+      [View_BaseStationInnerjoinZone].[Number] AS [Number], 
+      [View_BaseStationInnerjoinZone].[Name] AS [Name], 
+      [View_BaseStationInnerjoinZone].[DataRadioNumber] AS [DataRadioNumber], 
+      [View_BaseStationInnerjoinZone].[Remark] AS [Remark], 
+      [View_BaseStationInnerjoinZone].[Direction] AS [Direction], 
+      [View_BaseStationInnerjoinZone].[IfFeedbackSignal] AS [IfFeedbackSignal], 
+      [View_BaseStationInnerjoinZone].[ElectricalBoxPositioning] AS [ElectricalBoxPositioning], 
+      [View_BaseStationInnerjoinZone].[IsWellhead] AS [IsWellhead], 
+      [View_BaseStationInnerjoinZone].[GasSaturation] AS [GasSaturation], 
+      [View_BaseStationInnerjoinZone].[Description] AS [Description], 
+      [View_BaseStationInnerjoinZone].[Status] AS [Status], 
+      [View_BaseStationInnerjoinZone].[PowerSupplyState] AS [PowerSupplyState], 
+      [View_BaseStationInnerjoinZone].[Datetime] AS [Datetime], 
+      [View_BaseStationInnerjoinZone].[X] AS [X], 
+      [View_BaseStationInnerjoinZone].[Y] AS [Y], 
+      [View_BaseStationInnerjoinZone].[IsShowing] AS [IsShowing], 
+      [View_BaseStationInnerjoinZone].[RowVersion] AS [RowVersion], 
+      [View_BaseStationInnerjoinZone].[ZoneId] AS [ZoneId], 
+      [View_BaseStationInnerjoinZone].[ZoneNumber] AS [ZoneNumber], 
+      [View_BaseStationInnerjoinZone].[zoneName] AS [zoneName], 
+      [View_BaseStationInnerjoinZone].[Position] AS [Position], 
+      [View_BaseStationInnerjoinZone].[CoverageType] AS [CoverageType], 
+      [View_BaseStationInnerjoinZone].[UpperLimitOfWoringPeple] AS [UpperLimitOfWoringPeple], 
+      [View_BaseStationInnerjoinZone].[UpperLimitOfWorkingTime] AS [UpperLimitOfWorkingTime], 
+      [View_BaseStationInnerjoinZone].[ZoneType] AS [ZoneType]
+      FROM [dbo].[View_BaseStationInnerjoinZone] AS [View_BaseStationInnerjoinZone]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="View_BaseStationLeftjoinZone" EntityType="MWTSModel.Store.View_BaseStationLeftjoinZone" store:Type="Views" store:Schema="dbo" store:Name="View_BaseStationLeftjoinZone">
+      <DefiningQuery>SELECT 
+      [View_BaseStationLeftjoinZone].[Id] AS [Id], 
+      [View_BaseStationLeftjoinZone].[Number] AS [Number], 
+      [View_BaseStationLeftjoinZone].[Name] AS [Name], 
+      [View_BaseStationLeftjoinZone].[DataRadioNumber] AS [DataRadioNumber], 
+      [View_BaseStationLeftjoinZone].[Remark] AS [Remark], 
+      [View_BaseStationLeftjoinZone].[Direction] AS [Direction], 
+      [View_BaseStationLeftjoinZone].[IfFeedbackSignal] AS [IfFeedbackSignal], 
+      [View_BaseStationLeftjoinZone].[ElectricalBoxPositioning] AS [ElectricalBoxPositioning], 
+      [View_BaseStationLeftjoinZone].[IsWellhead] AS [IsWellhead], 
+      [View_BaseStationLeftjoinZone].[GasSaturation] AS [GasSaturation], 
+      [View_BaseStationLeftjoinZone].[Description] AS [Description], 
+      [View_BaseStationLeftjoinZone].[Status] AS [Status], 
+      [View_BaseStationLeftjoinZone].[PowerSupplyState] AS [PowerSupplyState], 
+      [View_BaseStationLeftjoinZone].[Datetime] AS [Datetime], 
+      [View_BaseStationLeftjoinZone].[X] AS [X], 
+      [View_BaseStationLeftjoinZone].[Y] AS [Y], 
+      [View_BaseStationLeftjoinZone].[IsShowing] AS [IsShowing], 
+      [View_BaseStationLeftjoinZone].[RowVersion] AS [RowVersion], 
+      [View_BaseStationLeftjoinZone].[ZoneId] AS [ZoneId], 
+      [View_BaseStationLeftjoinZone].[ZoneNumber] AS [ZoneNumber], 
+      [View_BaseStationLeftjoinZone].[zoneName] AS [zoneName], 
+      [View_BaseStationLeftjoinZone].[Position] AS [Position], 
+      [View_BaseStationLeftjoinZone].[CoverageType] AS [CoverageType], 
+      [View_BaseStationLeftjoinZone].[UpperLimitOfWoringPeple] AS [UpperLimitOfWoringPeple], 
+      [View_BaseStationLeftjoinZone].[UpperLimitOfWorkingTime] AS [UpperLimitOfWorkingTime], 
+      [View_BaseStationLeftjoinZone].[ZoneType] AS [ZoneType]
+      FROM [dbo].[View_BaseStationLeftjoinZone] AS [View_BaseStationLeftjoinZone]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="View_CardAndWorker_ForGis" EntityType="MWTSModel.Store.View_CardAndWorker_ForGis" store:Type="Views" store:Schema="dbo" store:Name="View_CardAndWorker_ForGis">
+      <DefiningQuery>SELECT 
+      [View_CardAndWorker_ForGis].[Card_Id] AS [Card_Id], 
+      [View_CardAndWorker_ForGis].[Card_Number] AS [Card_Number], 
+      [View_CardAndWorker_ForGis].[Card_IsEnable] AS [Card_IsEnable], 
+      [View_CardAndWorker_ForGis].[Card_BatteryLevel] AS [Card_BatteryLevel], 
+      [View_CardAndWorker_ForGis].[Card_Remark] AS [Card_Remark], 
+      [View_CardAndWorker_ForGis].[Card_Description] AS [Card_Description], 
+      [View_CardAndWorker_ForGis].[Card_IsAlive] AS [Card_IsAlive], 
+      [View_CardAndWorker_ForGis].[Card_IsInTheHole] AS [Card_IsInTheHole], 
+      [View_CardAndWorker_ForGis].[Card_BaseStationNumber] AS [Card_BaseStationNumber], 
+      [View_CardAndWorker_ForGis].[Card_PushButtonState] AS [Card_PushButtonState], 
+      [View_CardAndWorker_ForGis].[Card_Position] AS [Card_Position], 
+      [View_CardAndWorker_ForGis].[Card_Datetime] AS [Card_Datetime], 
+      [View_CardAndWorker_ForGis].[Worker_Id] AS [Worker_Id], 
+      [View_CardAndWorker_ForGis].[Worker_CardNumber] AS [Worker_CardNumber], 
+      [View_CardAndWorker_ForGis].[Worker_JobNumber] AS [Worker_JobNumber], 
+      [View_CardAndWorker_ForGis].[Worker_Name] AS [Worker_Name], 
+      [View_CardAndWorker_ForGis].[Worker_Gender] AS [Worker_Gender], 
+      [View_CardAndWorker_ForGis].[Worker_LightId] AS [Worker_LightId], 
+      [View_CardAndWorker_ForGis].[Worker_TimecardCode] AS [Worker_TimecardCode], 
+      [View_CardAndWorker_ForGis].[Worker_WorkPlace] AS [Worker_WorkPlace], 
+      [View_CardAndWorker_ForGis].[Worker_DepartmentId] AS [Worker_DepartmentId], 
+      [View_CardAndWorker_ForGis].[Worker_TeamId] AS [Worker_TeamId], 
+      [View_CardAndWorker_ForGis].[Worker_JobTitleId] AS [Worker_JobTitleId], 
+      [View_CardAndWorker_ForGis].[Worker_Birthday] AS [Worker_Birthday], 
+      [View_CardAndWorker_ForGis].[Worker_ContactNumber] AS [Worker_ContactNumber], 
+      [View_CardAndWorker_ForGis].[Worker_IdentityNumber] AS [Worker_IdentityNumber], 
+      [View_CardAndWorker_ForGis].[Worker_ContactAddress] AS [Worker_ContactAddress], 
+      [View_CardAndWorker_ForGis].[Worker_Photo] AS [Worker_Photo], 
+      [View_CardAndWorker_ForGis].[Worker_WorkerType] AS [Worker_WorkerType], 
+      [View_CardAndWorker_ForGis].[Worker_SpecialType] AS [Worker_SpecialType], 
+      [View_CardAndWorker_ForGis].[Department_Name] AS [Department_Name], 
+      [View_CardAndWorker_ForGis].[JobTitle_Name] AS [JobTitle_Name], 
+      [View_CardAndWorker_ForGis].[Team_Name] AS [Team_Name]
+      FROM [dbo].[View_CardAndWorker_ForGis] AS [View_CardAndWorker_ForGis]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="View_CardInBaseStation_ForGis" EntityType="MWTSModel.Store.View_CardInBaseStation_ForGis" store:Type="Views" store:Schema="dbo" store:Name="View_CardInBaseStation_ForGis">
+      <DefiningQuery>SELECT 
+      [View_CardInBaseStation_ForGis].[Card_Id] AS [Card_Id], 
+      [View_CardInBaseStation_ForGis].[Card_Number] AS [Card_Number], 
+      [View_CardInBaseStation_ForGis].[Card_IsEnable] AS [Card_IsEnable], 
+      [View_CardInBaseStation_ForGis].[Card_BatteryLevel] AS [Card_BatteryLevel], 
+      [View_CardInBaseStation_ForGis].[Card_Remark] AS [Card_Remark], 
+      [View_CardInBaseStation_ForGis].[Card_Description] AS [Card_Description], 
+      [View_CardInBaseStation_ForGis].[Card_IsAlive] AS [Card_IsAlive], 
+      [View_CardInBaseStation_ForGis].[Card_IsInTheHole] AS [Card_IsInTheHole], 
+      [View_CardInBaseStation_ForGis].[Card_BaseStationNumber] AS [Card_BaseStationNumber], 
+      [View_CardInBaseStation_ForGis].[Card_PushButtonState] AS [Card_PushButtonState], 
+      [View_CardInBaseStation_ForGis].[Card_Position] AS [Card_Position], 
+      [View_CardInBaseStation_ForGis].[Card_Datetime] AS [Card_Datetime], 
+      [View_CardInBaseStation_ForGis].[Worker_Id] AS [Worker_Id], 
+      [View_CardInBaseStation_ForGis].[Worker_CardNumber] AS [Worker_CardNumber], 
+      [View_CardInBaseStation_ForGis].[Worker_JobNumber] AS [Worker_JobNumber], 
+      [View_CardInBaseStation_ForGis].[Worker_Name] AS [Worker_Name], 
+      [View_CardInBaseStation_ForGis].[Worker_Gender] AS [Worker_Gender], 
+      [View_CardInBaseStation_ForGis].[Worker_LightId] AS [Worker_LightId], 
+      [View_CardInBaseStation_ForGis].[Worker_TimecardCode] AS [Worker_TimecardCode], 
+      [View_CardInBaseStation_ForGis].[Worker_WorkPlace] AS [Worker_WorkPlace], 
+      [View_CardInBaseStation_ForGis].[Worker_DepartmentId] AS [Worker_DepartmentId], 
+      [View_CardInBaseStation_ForGis].[Worker_TeamId] AS [Worker_TeamId], 
+      [View_CardInBaseStation_ForGis].[Worker_JobTitleId] AS [Worker_JobTitleId], 
+      [View_CardInBaseStation_ForGis].[Worker_Birthday] AS [Worker_Birthday], 
+      [View_CardInBaseStation_ForGis].[Worker_ContactNumber] AS [Worker_ContactNumber], 
+      [View_CardInBaseStation_ForGis].[Worker_IdentityNumber] AS [Worker_IdentityNumber], 
+      [View_CardInBaseStation_ForGis].[Worker_ContactAddress] AS [Worker_ContactAddress], 
+      [View_CardInBaseStation_ForGis].[Worker_Photo] AS [Worker_Photo], 
+      [View_CardInBaseStation_ForGis].[Worker_WorkerType] AS [Worker_WorkerType], 
+      [View_CardInBaseStation_ForGis].[Worker_SpecialType] AS [Worker_SpecialType], 
+      [View_CardInBaseStation_ForGis].[Department_Name] AS [Department_Name], 
+      [View_CardInBaseStation_ForGis].[JobTitle_Name] AS [JobTitle_Name], 
+      [View_CardInBaseStation_ForGis].[Team_Name] AS [Team_Name], 
+      [View_CardInBaseStation_ForGis].[StartTime] AS [StartTime]
+      FROM [dbo].[View_CardInBaseStation_ForGis] AS [View_CardInBaseStation_ForGis]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="View_CardInZone_ForGis" EntityType="MWTSModel.Store.View_CardInZone_ForGis" store:Type="Views" store:Schema="dbo" store:Name="View_CardInZone_ForGis">
+      <DefiningQuery>SELECT 
+      [View_CardInZone_ForGis].[Card_Id] AS [Card_Id], 
+      [View_CardInZone_ForGis].[Card_Number] AS [Card_Number], 
+      [View_CardInZone_ForGis].[Card_IsEnable] AS [Card_IsEnable], 
+      [View_CardInZone_ForGis].[Card_BatteryLevel] AS [Card_BatteryLevel], 
+      [View_CardInZone_ForGis].[Card_Remark] AS [Card_Remark], 
+      [View_CardInZone_ForGis].[Card_Description] AS [Card_Description], 
+      [View_CardInZone_ForGis].[Card_IsAlive] AS [Card_IsAlive], 
+      [View_CardInZone_ForGis].[Card_IsInTheHole] AS [Card_IsInTheHole], 
+      [View_CardInZone_ForGis].[Card_BaseStationNumber] AS [Card_BaseStationNumber], 
+      [View_CardInZone_ForGis].[Card_PushButtonState] AS [Card_PushButtonState], 
+      [View_CardInZone_ForGis].[Card_Position] AS [Card_Position], 
+      [View_CardInZone_ForGis].[Card_Datetime] AS [Card_Datetime], 
+      [View_CardInZone_ForGis].[Worker_Id] AS [Worker_Id], 
+      [View_CardInZone_ForGis].[Worker_CardNumber] AS [Worker_CardNumber], 
+      [View_CardInZone_ForGis].[Worker_JobNumber] AS [Worker_JobNumber], 
+      [View_CardInZone_ForGis].[Worker_Name] AS [Worker_Name], 
+      [View_CardInZone_ForGis].[Worker_Gender] AS [Worker_Gender], 
+      [View_CardInZone_ForGis].[Worker_LightId] AS [Worker_LightId], 
+      [View_CardInZone_ForGis].[Worker_TimecardCode] AS [Worker_TimecardCode], 
+      [View_CardInZone_ForGis].[Worker_WorkPlace] AS [Worker_WorkPlace], 
+      [View_CardInZone_ForGis].[Worker_DepartmentId] AS [Worker_DepartmentId], 
+      [View_CardInZone_ForGis].[Worker_TeamId] AS [Worker_TeamId], 
+      [View_CardInZone_ForGis].[Worker_JobTitleId] AS [Worker_JobTitleId], 
+      [View_CardInZone_ForGis].[Worker_Birthday] AS [Worker_Birthday], 
+      [View_CardInZone_ForGis].[Worker_ContactNumber] AS [Worker_ContactNumber], 
+      [View_CardInZone_ForGis].[Worker_IdentityNumber] AS [Worker_IdentityNumber], 
+      [View_CardInZone_ForGis].[Worker_ContactAddress] AS [Worker_ContactAddress], 
+      [View_CardInZone_ForGis].[Worker_Photo] AS [Worker_Photo], 
+      [View_CardInZone_ForGis].[Worker_WorkerType] AS [Worker_WorkerType], 
+      [View_CardInZone_ForGis].[Worker_SpecialType] AS [Worker_SpecialType], 
+      [View_CardInZone_ForGis].[Department_Name] AS [Department_Name], 
+      [View_CardInZone_ForGis].[JobTitle_Name] AS [JobTitle_Name], 
+      [View_CardInZone_ForGis].[Team_Name] AS [Team_Name], 
+      [View_CardInZone_ForGis].[StartTime] AS [StartTime], 
+      [View_CardInZone_ForGis].[ZoneNumber] AS [ZoneNumber]
+      FROM [dbo].[View_CardInZone_ForGis] AS [View_CardInZone_ForGis]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="View_CardsInZone" EntityType="MWTSModel.Store.View_CardsInZone" store:Type="Views" store:Schema="dbo" store:Name="View_CardsInZone">
+      <DefiningQuery>SELECT 
+      [View_CardsInZone].[Number] AS [Number], 
+      [View_CardsInZone].[DateTime] AS [DateTime], 
+      [View_CardsInZone].[CardNumber] AS [CardNumber], 
+      [View_CardsInZone].[ZoneNumber] AS [ZoneNumber], 
+      [View_CardsInZone].[ZoneId] AS [ZoneId], 
+      [View_CardsInZone].[UpperLimitOfWorkingTime] AS [UpperLimitOfWorkingTime], 
+      [View_CardsInZone].[UpperLimitOfWoringPeple] AS [UpperLimitOfWoringPeple], 
+      [View_CardsInZone].[BaseStationNumber] AS [BaseStationNumber]
+      FROM [dbo].[View_CardsInZone] AS [View_CardsInZone]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="View_CardTrackForZoneByPosition" EntityType="MWTSModel.Store.View_CardTrackForZoneByPosition" store:Type="Views" store:Schema="dbo" store:Name="View_CardTrackForZoneByPosition">
+      <DefiningQuery>SELECT 
+      [View_CardTrackForZoneByPosition].[Id] AS [Id], 
+      [View_CardTrackForZoneByPosition].[CardNumber] AS [CardNumber], 
+      [View_CardTrackForZoneByPosition].[BaseStationNumber] AS [BaseStationNumber], 
+      [View_CardTrackForZoneByPosition].[StartTime] AS [StartTime], 
+      [View_CardTrackForZoneByPosition].[EndTime] AS [EndTime], 
+      [View_CardTrackForZoneByPosition].[LastBaseStationNumber] AS [LastBaseStationNumber], 
+      [View_CardTrackForZoneByPosition].[Description] AS [Description], 
+      [View_CardTrackForZoneByPosition].[IntoPosition] AS [IntoPosition], 
+      [View_CardTrackForZoneByPosition].[LeftPosition] AS [LeftPosition], 
+      [View_CardTrackForZoneByPosition].[RowVersion] AS [RowVersion], 
+      [View_CardTrackForZoneByPosition].[Expr1] AS [Expr1], 
+      [View_CardTrackForZoneByPosition].[Number] AS [Number], 
+      [View_CardTrackForZoneByPosition].[Name] AS [Name], 
+      [View_CardTrackForZoneByPosition].[DataRadioNumber] AS [DataRadioNumber], 
+      [View_CardTrackForZoneByPosition].[Direction] AS [Direction], 
+      [View_CardTrackForZoneByPosition].[IfFeedbackSignal] AS [IfFeedbackSignal], 
+      [View_CardTrackForZoneByPosition].[ElectricalBoxPositioning] AS [ElectricalBoxPositioning], 
+      [View_CardTrackForZoneByPosition].[IsWellhead] AS [IsWellhead], 
+      [View_CardTrackForZoneByPosition].[GasSaturation] AS [GasSaturation], 
+      [View_CardTrackForZoneByPosition].[Expr2] AS [Expr2], 
+      [View_CardTrackForZoneByPosition].[Status] AS [Status], 
+      [View_CardTrackForZoneByPosition].[PowerSupplyState] AS [PowerSupplyState], 
+      [View_CardTrackForZoneByPosition].[Datetime] AS [Datetime], 
+      [View_CardTrackForZoneByPosition].[X] AS [X], 
+      [View_CardTrackForZoneByPosition].[Y] AS [Y], 
+      [View_CardTrackForZoneByPosition].[IsShowing] AS [IsShowing], 
+      [View_CardTrackForZoneByPosition].[Expr3] AS [Expr3], 
+      [View_CardTrackForZoneByPosition].[ZoneId] AS [ZoneId], 
+      [View_CardTrackForZoneByPosition].[Position] AS [Position]
+      FROM [dbo].[View_CardTrackForZoneByPosition] AS [View_CardTrackForZoneByPosition]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="View_CardTrackForZoneNotByPosition" EntityType="MWTSModel.Store.View_CardTrackForZoneNotByPosition" store:Type="Views" store:Schema="dbo" store:Name="View_CardTrackForZoneNotByPosition">
+      <DefiningQuery>SELECT 
+      [View_CardTrackForZoneNotByPosition].[Id] AS [Id], 
+      [View_CardTrackForZoneNotByPosition].[CardNumber] AS [CardNumber], 
+      [View_CardTrackForZoneNotByPosition].[BaseStationNumber] AS [BaseStationNumber], 
+      [View_CardTrackForZoneNotByPosition].[StartTime] AS [StartTime], 
+      [View_CardTrackForZoneNotByPosition].[EndTime] AS [EndTime], 
+      [View_CardTrackForZoneNotByPosition].[LastBaseStationNumber] AS [LastBaseStationNumber], 
+      [View_CardTrackForZoneNotByPosition].[ResidenceTime] AS [ResidenceTime], 
+      [View_CardTrackForZoneNotByPosition].[Description] AS [Description], 
+      [View_CardTrackForZoneNotByPosition].[IntoPosition] AS [IntoPosition], 
+      [View_CardTrackForZoneNotByPosition].[LeftPosition] AS [LeftPosition], 
+      [View_CardTrackForZoneNotByPosition].[RowVersion] AS [RowVersion]
+      FROM [dbo].[View_CardTrackForZoneNotByPosition] AS [View_CardTrackForZoneNotByPosition]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="View_getAllWorkerTrack" EntityType="MWTSModel.Store.View_getAllWorkerTrack" store:Type="Views" store:Schema="dbo" store:Name="View_getAllWorkerTrack">
+      <DefiningQuery>SELECT 
+      [View_getAllWorkerTrack].[Id] AS [Id], 
+      [View_getAllWorkerTrack].[CardNumber] AS [CardNumber], 
+      [View_getAllWorkerTrack].[StartTime] AS [StartTime], 
+      [View_getAllWorkerTrack].[EndTime] AS [EndTime], 
+      [View_getAllWorkerTrack].[BaseStationNumber] AS [BaseStationNumber], 
+      [View_getAllWorkerTrack].[Name] AS [Name], 
+      [View_getAllWorkerTrack].[JobNumber] AS [JobNumber], 
+      [View_getAllWorkerTrack].[BaseStationName] AS [BaseStationName], 
+      [View_getAllWorkerTrack].[Action] AS [Action], 
+      [View_getAllWorkerTrack].[WorkerType] AS [WorkerType], 
+      [View_getAllWorkerTrack].[SpecialType] AS [SpecialType], 
+      [View_getAllWorkerTrack].[departmentName] AS [departmentName], 
+      [View_getAllWorkerTrack].[JobtitleName] AS [JobtitleName], 
+      [View_getAllWorkerTrack].[teamName] AS [teamName], 
+      [View_getAllWorkerTrack].[Description] AS [Description]
+      FROM [dbo].[View_getAllWorkerTrack] AS [View_getAllWorkerTrack]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="View_getCheckingLogs" EntityType="MWTSModel.Store.View_getCheckingLogs" store:Type="Views" store:Schema="dbo" store:Name="View_getCheckingLogs">
+      <DefiningQuery>SELECT 
+      [View_getCheckingLogs].[Id] AS [Id], 
+      [View_getCheckingLogs].[CardNumber] AS [CardNumber], 
+      [View_getCheckingLogs].[DownWellTime] AS [DownWellTime], 
+      [View_getCheckingLogs].[UpWellTime] AS [UpWellTime], 
+      [View_getCheckingLogs].[WorkCount] AS [WorkCount], 
+      [View_getCheckingLogs].[JobShiftName] AS [JobShiftName]
+      FROM [dbo].[View_getCheckingLogs] AS [View_getCheckingLogs]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="View_HelpStas" EntityType="MWTSModel.Store.View_HelpStas" store:Type="Views" store:Schema="dbo" store:Name="View_HelpStas">
+      <DefiningQuery>SELECT 
+      [View_HelpStas].[Id] AS [Id], 
+      [View_HelpStas].[BaseStationNumber] AS [BaseStationNumber], 
+      [View_HelpStas].[CardNumber] AS [CardNumber], 
+      [View_HelpStas].[Name] AS [Name], 
+      [View_HelpStas].[JobNumber] AS [JobNumber], 
+      [View_HelpStas].[LightId] AS [LightId], 
+      [View_HelpStas].[TimecardCode] AS [TimecardCode], 
+      [View_HelpStas].[Gender] AS [Gender], 
+      [View_HelpStas].[WorkerType] AS [WorkerType], 
+      [View_HelpStas].[SpecialType] AS [SpecialType], 
+      [View_HelpStas].[departmentName] AS [departmentName], 
+      [View_HelpStas].[JobtitleName] AS [JobtitleName], 
+      [View_HelpStas].[Datetime] AS [Datetime], 
+      [View_HelpStas].[IsNoticed] AS [IsNoticed], 
+      [View_HelpStas].[NoticedDateTime] AS [NoticedDateTime]
+      FROM [dbo].[View_HelpStas] AS [View_HelpStas]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="View_LastCardTrack" EntityType="MWTSModel.Store.View_LastCardTrack" store:Type="Views" store:Schema="dbo" store:Name="View_LastCardTrack">
+      <DefiningQuery>SELECT 
+      [View_LastCardTrack].[Id] AS [Id], 
+      [View_LastCardTrack].[CardNumber] AS [CardNumber], 
+      [View_LastCardTrack].[BaseStationNumber] AS [BaseStationNumber], 
+      [View_LastCardTrack].[StartTime] AS [StartTime], 
+      [View_LastCardTrack].[EndTime] AS [EndTime], 
+      [View_LastCardTrack].[LastBaseStationNumber] AS [LastBaseStationNumber], 
+      [View_LastCardTrack].[Description] AS [Description], 
+      [View_LastCardTrack].[IntoPosition] AS [IntoPosition], 
+      [View_LastCardTrack].[LeftPosition] AS [LeftPosition], 
+      [View_LastCardTrack].[OverstaffLogIdForZone] AS [OverstaffLogIdForZone], 
+      [View_LastCardTrack].[TimeoutLogIdForZone] AS [TimeoutLogIdForZone], 
+      [View_LastCardTrack].[OverstaffLogIdForHole] AS [OverstaffLogIdForHole], 
+      [View_LastCardTrack].[TimeoutLogIdForHole] AS [TimeoutLogIdForHole], 
+      [View_LastCardTrack].[RowVersion] AS [RowVersion], 
+      [View_LastCardTrack].[Action] AS [Action]
+      FROM [dbo].[View_LastCardTrack] AS [View_LastCardTrack]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="View_WorkerCountInZone" EntityType="MWTSModel.Store.View_WorkerCountInZone" store:Type="Views" store:Schema="dbo" store:Name="View_WorkerCountInZone">
+      <DefiningQuery>SELECT 
+      [View_WorkerCountInZone].[ZoneName] AS [ZoneName], 
+      [View_WorkerCountInZone].[WorkerCount] AS [WorkerCount], 
+      [View_WorkerCountInZone].[RowVersion] AS [RowVersion]
+      FROM [dbo].[View_WorkerCountInZone] AS [View_WorkerCountInZone]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="View_WorkerjoinDepartment" EntityType="MWTSModel.Store.View_WorkerjoinDepartment" store:Type="Views" store:Schema="dbo" store:Name="View_WorkerjoinDepartment">
+      <DefiningQuery>SELECT 
+      [View_WorkerjoinDepartment].[Id] AS [Id], 
+      [View_WorkerjoinDepartment].[CardNumber] AS [CardNumber], 
+      [View_WorkerjoinDepartment].[JobNumber] AS [JobNumber], 
+      [View_WorkerjoinDepartment].[Name] AS [Name], 
+      [View_WorkerjoinDepartment].[Gender] AS [Gender], 
+      [View_WorkerjoinDepartment].[LightId] AS [LightId], 
+      [View_WorkerjoinDepartment].[TimecardCode] AS [TimecardCode], 
+      [View_WorkerjoinDepartment].[WorkPlace] AS [WorkPlace], 
+      [View_WorkerjoinDepartment].[DepartmentId] AS [DepartmentId], 
+      [View_WorkerjoinDepartment].[TeamId] AS [TeamId], 
+      [View_WorkerjoinDepartment].[JobTitleId] AS [JobTitleId], 
+      [View_WorkerjoinDepartment].[Birthday] AS [Birthday], 
+      [View_WorkerjoinDepartment].[ContactNumber] AS [ContactNumber], 
+      [View_WorkerjoinDepartment].[IdentityNumber] AS [IdentityNumber], 
+      [View_WorkerjoinDepartment].[ContactAddress] AS [ContactAddress], 
+      [View_WorkerjoinDepartment].[photo] AS [photo], 
+      [View_WorkerjoinDepartment].[WorkerType] AS [WorkerType], 
+      [View_WorkerjoinDepartment].[SpecialType] AS [SpecialType], 
+      [View_WorkerjoinDepartment].[RowVersion] AS [RowVersion], 
+      [View_WorkerjoinDepartment].[departmentName] AS [departmentName], 
+      [View_WorkerjoinDepartment].[JobtitleName] AS [JobtitleName], 
+      [View_WorkerjoinDepartment].[teamName] AS [teamName]
+      FROM [dbo].[View_WorkerjoinDepartment] AS [View_WorkerjoinDepartment]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="View_WorkersCardTrack" EntityType="MWTSModel.Store.View_WorkersCardTrack" store:Type="Views" store:Schema="dbo" store:Name="View_WorkersCardTrack">
+      <DefiningQuery>SELECT 
+      [View_WorkersCardTrack].[Card_Id] AS [Card_Id], 
+      [View_WorkersCardTrack].[Card_Number] AS [Card_Number], 
+      [View_WorkersCardTrack].[Card_IsEnable] AS [Card_IsEnable], 
+      [View_WorkersCardTrack].[Card_BatteryLevel] AS [Card_BatteryLevel], 
+      [View_WorkersCardTrack].[Card_Remark] AS [Card_Remark], 
+      [View_WorkersCardTrack].[Card_Description] AS [Card_Description], 
+      [View_WorkersCardTrack].[Card_IsAlive] AS [Card_IsAlive], 
+      [View_WorkersCardTrack].[Card_IsInTheHole] AS [Card_IsInTheHole], 
+      [View_WorkersCardTrack].[Card_BaseStationNumber] AS [Card_BaseStationNumber], 
+      [View_WorkersCardTrack].[Card_PushButtonState] AS [Card_PushButtonState], 
+      [View_WorkersCardTrack].[Card_Position] AS [Card_Position], 
+      [View_WorkersCardTrack].[Card_Datetime] AS [Card_Datetime], 
+      [View_WorkersCardTrack].[Worker_Id] AS [Worker_Id], 
+      [View_WorkersCardTrack].[Worker_CardNumber] AS [Worker_CardNumber], 
+      [View_WorkersCardTrack].[Worker_JobNumber] AS [Worker_JobNumber], 
+      [View_WorkersCardTrack].[Worker_Name] AS [Worker_Name], 
+      [View_WorkersCardTrack].[Worker_Gender] AS [Worker_Gender], 
+      [View_WorkersCardTrack].[Worker_LightId] AS [Worker_LightId], 
+      [View_WorkersCardTrack].[Worker_TimecardCode] AS [Worker_TimecardCode], 
+      [View_WorkersCardTrack].[Worker_WorkPlace] AS [Worker_WorkPlace], 
+      [View_WorkersCardTrack].[Worker_DepartmentId] AS [Worker_DepartmentId], 
+      [View_WorkersCardTrack].[Worker_TeamId] AS [Worker_TeamId], 
+      [View_WorkersCardTrack].[Worker_JobTitleId] AS [Worker_JobTitleId], 
+      [View_WorkersCardTrack].[Worker_Birthday] AS [Worker_Birthday], 
+      [View_WorkersCardTrack].[Worker_ContactNumber] AS [Worker_ContactNumber], 
+      [View_WorkersCardTrack].[Worker_IdentityNumber] AS [Worker_IdentityNumber], 
+      [View_WorkersCardTrack].[Worker_ContactAddress] AS [Worker_ContactAddress], 
+      [View_WorkersCardTrack].[Worker_Photo] AS [Worker_Photo], 
+      [View_WorkersCardTrack].[Worker_WorkerType] AS [Worker_WorkerType], 
+      [View_WorkersCardTrack].[Worker_SpecialType] AS [Worker_SpecialType], 
+      [View_WorkersCardTrack].[Department_Name] AS [Department_Name], 
+      [View_WorkersCardTrack].[JobTitle_Name] AS [JobTitle_Name], 
+      [View_WorkersCardTrack].[Team_Name] AS [Team_Name], 
+      [View_WorkersCardTrack].[CardNumber] AS [CardNumber], 
+      [View_WorkersCardTrack].[StartTime] AS [StartTime], 
+      [View_WorkersCardTrack].[EndTime] AS [EndTime]
+      FROM [dbo].[View_WorkersCardTrack] AS [View_WorkersCardTrack]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="View_ZoneAndBaseStation_ForGis" EntityType="MWTSModel.Store.View_ZoneAndBaseStation_ForGis" store:Type="Views" store:Schema="dbo" store:Name="View_ZoneAndBaseStation_ForGis">
+      <DefiningQuery>SELECT 
+      [View_ZoneAndBaseStation_ForGis].[Id] AS [Id], 
+      [View_ZoneAndBaseStation_ForGis].[Number] AS [Number], 
+      [View_ZoneAndBaseStation_ForGis].[Name] AS [Name], 
+      [View_ZoneAndBaseStation_ForGis].[DataRadioNumber] AS [DataRadioNumber], 
+      [View_ZoneAndBaseStation_ForGis].[Remark] AS [Remark], 
+      [View_ZoneAndBaseStation_ForGis].[Direction] AS [Direction], 
+      [View_ZoneAndBaseStation_ForGis].[IfFeedbackSignal] AS [IfFeedbackSignal], 
+      [View_ZoneAndBaseStation_ForGis].[ElectricalBoxPositioning] AS [ElectricalBoxPositioning], 
+      [View_ZoneAndBaseStation_ForGis].[IsWellhead] AS [IsWellhead], 
+      [View_ZoneAndBaseStation_ForGis].[GasSaturation] AS [GasSaturation], 
+      [View_ZoneAndBaseStation_ForGis].[Description] AS [Description], 
+      [View_ZoneAndBaseStation_ForGis].[Status] AS [Status], 
+      [View_ZoneAndBaseStation_ForGis].[PowerSupplyState] AS [PowerSupplyState], 
+      [View_ZoneAndBaseStation_ForGis].[Datetime] AS [Datetime], 
+      [View_ZoneAndBaseStation_ForGis].[X] AS [X], 
+      [View_ZoneAndBaseStation_ForGis].[Y] AS [Y], 
+      [View_ZoneAndBaseStation_ForGis].[IsShowing] AS [IsShowing], 
+      [View_ZoneAndBaseStation_ForGis].[ZoneName] AS [ZoneName], 
+      [View_ZoneAndBaseStation_ForGis].[ZoneNumber] AS [ZoneNumber], 
+      [View_ZoneAndBaseStation_ForGis].[ZoneType] AS [ZoneType], 
+      [View_ZoneAndBaseStation_ForGis].[UpperLimitOfWoringPeple] AS [UpperLimitOfWoringPeple], 
+      [View_ZoneAndBaseStation_ForGis].[UpperLimitOfWorkingTime] AS [UpperLimitOfWorkingTime], 
+      [View_ZoneAndBaseStation_ForGis].[ZoneCoverageType] AS [ZoneCoverageType], 
+      [View_ZoneAndBaseStation_ForGis].[ZoneRemark] AS [ZoneRemark], 
+      [View_ZoneAndBaseStation_ForGis].[ZoneDescription] AS [ZoneDescription], 
+      [View_ZoneAndBaseStation_ForGis].[UpperLeft_X] AS [UpperLeft_X], 
+      [View_ZoneAndBaseStation_ForGis].[UpperRight_X] AS [UpperRight_X], 
+      [View_ZoneAndBaseStation_ForGis].[LowerRight_X] AS [LowerRight_X], 
+      [View_ZoneAndBaseStation_ForGis].[LowerLeft_X] AS [LowerLeft_X], 
+      [View_ZoneAndBaseStation_ForGis].[UpperLeft_Y] AS [UpperLeft_Y], 
+      [View_ZoneAndBaseStation_ForGis].[UpperRight_Y] AS [UpperRight_Y], 
+      [View_ZoneAndBaseStation_ForGis].[LowerRight_Y] AS [LowerRight_Y], 
+      [View_ZoneAndBaseStation_ForGis].[LowerLeft_Y] AS [LowerLeft_Y], 
+      [View_ZoneAndBaseStation_ForGis].[ZoneIsShowing] AS [ZoneIsShowing], 
+      [View_ZoneAndBaseStation_ForGis].[Position] AS [Position]
+      FROM [dbo].[View_ZoneAndBaseStation_ForGis] AS [View_ZoneAndBaseStation_ForGis]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="View_ZoneInfo_ForGis" EntityType="MWTSModel.Store.View_ZoneInfo_ForGis" store:Type="Views" store:Schema="dbo" store:Name="View_ZoneInfo_ForGis">
+      <DefiningQuery>SELECT 
+      [View_ZoneInfo_ForGis].[Number] AS [Number], 
+      [View_ZoneInfo_ForGis].[Name] AS [Name], 
+      [View_ZoneInfo_ForGis].[PCount] AS [PCount], 
+      [View_ZoneInfo_ForGis].[IsShowing] AS [IsShowing], 
+      [View_ZoneInfo_ForGis].[UpperLeft_X] AS [UpperLeft_X], 
+      [View_ZoneInfo_ForGis].[UpperLeft_Y] AS [UpperLeft_Y], 
+      [View_ZoneInfo_ForGis].[UpperRight_X] AS [UpperRight_X], 
+      [View_ZoneInfo_ForGis].[UpperRight_Y] AS [UpperRight_Y], 
+      [View_ZoneInfo_ForGis].[LowerRight_X] AS [LowerRight_X], 
+      [View_ZoneInfo_ForGis].[LowerRight_Y] AS [LowerRight_Y], 
+      [View_ZoneInfo_ForGis].[LowerLeft_X] AS [LowerLeft_X], 
+      [View_ZoneInfo_ForGis].[LowerLeft_Y] AS [LowerLeft_Y]
+      FROM [dbo].[View_ZoneInfo_ForGis] AS [View_ZoneInfo_ForGis]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="View_ZoneOverstaffAndTimeout_ForGis" EntityType="MWTSModel.Store.View_ZoneOverstaffAndTimeout_ForGis" store:Type="Views" store:Schema="dbo" store:Name="View_ZoneOverstaffAndTimeout_ForGis">
+      <DefiningQuery>SELECT 
+      [View_ZoneOverstaffAndTimeout_ForGis].[Number] AS [Number], 
+      [View_ZoneOverstaffAndTimeout_ForGis].[IsOverstaff] AS [IsOverstaff], 
+      [View_ZoneOverstaffAndTimeout_ForGis].[IsTimeout] AS [IsTimeout]
+      FROM [dbo].[View_ZoneOverstaffAndTimeout_ForGis] AS [View_ZoneOverstaffAndTimeout_ForGis]</DefiningQuery>
+    </EntitySet>
+    <AssociationSet Name="FK_EventRecord_ReceivedFrame" Association="MWTSModel.Store.FK_EventRecord_ReceivedFrame">
+      <End Role="ReceivedFrame" EntitySet="ReceivedFrame" />
+      <End Role="EventRecord" EntitySet="EventRecord" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ReceivedFrame_DataPacket" Association="MWTSModel.Store.FK_ReceivedFrame_DataPacket">
+      <End Role="DataPacket" EntitySet="DataPacket" />
+      <End Role="ReceivedFrame" EntitySet="ReceivedFrame" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="BaseStation">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Number" Type="varchar" Nullable="false" MaxLength="10" />
+    <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="DataRadioNumber" Type="varchar" Nullable="false" MaxLength="10" />
+    <Property Name="Remark" Type="nvarchar" MaxLength="50" />
+    <Property Name="Direction" Type="int" />
+    <Property Name="IfFeedbackSignal" Type="bit" />
+    <Property Name="ElectricalBoxPositioning" Type="nvarchar" MaxLength="100" />
+    <Property Name="IsWellhead" Type="int" Nullable="false" />
+    <Property Name="GasSaturation" Type="float" Nullable="false" />
+    <Property Name="Description" Type="nvarchar" MaxLength="50" />
+    <Property Name="Status" Type="int" Nullable="false" />
+    <Property Name="PowerSupplyState" Type="int" />
+    <Property Name="Datetime" Type="datetime" Nullable="false" />
+    <Property Name="X" Type="float" />
+    <Property Name="Y" Type="float" />
+    <Property Name="IsShowing" Type="bit" />
+    <Property Name="RowVersion" Type="timestamp" StoreGeneratedPattern="Computed" />
+  </EntityType>
+  <EntityType Name="BaseStationLog">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Action" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="BaseStationNumber" Type="varchar" Nullable="false" MaxLength="10" />
+    <Property Name="Description" Type="nvarchar" MaxLength="50" />
+    <Property Name="Datetime" Type="datetime" Nullable="false" />
+    <Property Name="RowVersion" Type="timestamp" Nullable="false" StoreGeneratedPattern="Computed" />
+  </EntityType>
+  <EntityType Name="BaseStationPathLine">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="BaseStationNumberI" Type="varchar" MaxLength="10" />
+    <Property Name="BaseStationNumberII" Type="varchar" MaxLength="50" />
+    <Property Name="Longitude" Type="float" />
+    <Property Name="Latitude" Type="float" />
+    <Property Name="RowVersion" Type="timestamp" Nullable="false" StoreGeneratedPattern="Computed" />
+  </EntityType>
+  <EntityType Name="CallHistory">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="CallScope" Type="int" Nullable="false" />
+    <Property Name="CallObjects" Type="text" />
+    <Property Name="CallStartDateTime" Type="datetime" Nullable="false" />
+    <Property Name="CallType" Type="int" Nullable="false" />
+    <Property Name="CallStopDateTime" Type="datetime" Nullable="false" />
+    <Property Name="UserName" Type="nvarchar" Nullable="false" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="CallState">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="CallType" Type="int" Nullable="false" />
+    <Property Name="CallScope" Type="int" Nullable="false" />
+    <Property Name="CallCardList" Type="varchar(max)" />
+    <Property Name="CallBaseStationList" Type="varchar(max)" />
+  </EntityType>
+  <EntityType Name="Card">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Number" Type="varchar" Nullable="false" MaxLength="10" />
+    <Property Name="IsEnable" Type="bit" />
+    <Property Name="BatteryLevel" Type="int" />
+    <Property Name="Remark" Type="nvarchar" MaxLength="50" />
+    <Property Name="Description" Type="nvarchar" MaxLength="50" />
+    <Property Name="IsAlive" Type="bit" Nullable="false" />
+    <Property Name="IsInTheHole" Type="bit" Nullable="false" />
+    <Property Name="BaseStationNumber" Type="varchar" Nullable="false" MaxLength="10" />
+    <Property Name="PushButtonState" Type="int" Nullable="false" />
+    <Property Name="Position" Type="int" Nullable="false" />
+    <Property Name="Datetime" Type="datetime" Nullable="false" />
+    <Property Name="RowVersion" Type="timestamp" Nullable="false" StoreGeneratedPattern="Computed" />
+  </EntityType>
+  <EntityType Name="CardTrack">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="CardNumber" Type="varchar" Nullable="false" MaxLength="10" />
+    <Property Name="BaseStationNumber" Type="varchar" MaxLength="10" />
+    <Property Name="StartTime" Type="datetime" Nullable="false" />
+    <Property Name="EndTime" Type="datetime" Nullable="false" />
+    <Property Name="LastBaseStationNumber" Type="varchar" MaxLength="10" />
+    <Property Name="Description" Type="nvarchar" MaxLength="50" />
+    <Property Name="IntoPosition" Type="int" />
+    <Property Name="LeftPosition" Type="int" />
+    <Property Name="OverstaffLogIdForZone" Type="varchar" MaxLength="50" />
+    <Property Name="TimeoutLogIdForZone" Type="varchar" MaxLength="50" />
+    <Property Name="OverstaffLogIdForHole" Type="varchar" MaxLength="50" />
+    <Property Name="TimeoutLogIdForHole" Type="varchar" MaxLength="50" />
+    <Property Name="RowVersion" Type="timestamp" Nullable="false" StoreGeneratedPattern="Computed" />
+    <Property Name="Action" Type="int" />
+    <Property Name="leaveTime" Type="datetime" />
+  </EntityType>
+  <EntityType Name="CheckingInLog">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="CardNumber" Type="varchar" MaxLength="50" />
+    <Property Name="DownWellTime" Type="datetime" />
+    <Property Name="UpWellTime" Type="datetime" />
+    <Property Name="Description" Type="nvarchar" MaxLength="100" />
+    <Property Name="RowVersion" Type="timestamp" StoreGeneratedPattern="Computed" />
+  </EntityType>
+  <EntityType Name="CommandLog">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Command" Type="nvarchar" MaxLength="50" />
+    <Property Name="Description" Type="varchar" MaxLength="50" />
+    <Property Name="RowVersion" Type="timestamp" StoreGeneratedPattern="Computed" />
+    <Property Name="DateTime" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="DataPacket">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="DataRadioNumber" Type="varchar" MaxLength="10" />
+    <Property Name="StartTime" Type="datetime2" Nullable="false" />
+    <Property Name="EndTime" Type="datetime2" Nullable="false" />
+    <Property Name="Sendtime" Type="datetime2" Nullable="false" />
+    <Property Name="SendData" Type="varchar" MaxLength="100" />
+    <Property Name="ReactionTime" Type="float" Nullable="false" />
+    <Property Name="ReceiveTime" Type="datetime2" Nullable="false" />
+    <Property Name="ReceiveData" Type="ntext" />
+    <Property Name="PlanFrameCount" Type="int" Nullable="false" />
+    <Property Name="ActualFrameCount" Type="int" Nullable="false" />
+    <Property Name="NormalFrameCount" Type="int" Nullable="false" />
+    <Property Name="ErrorFrameCount" Type="int" Nullable="false" />
+    <Property Name="LengthOfData" Type="int" Nullable="false" />
+    <Property Name="LengthOfAcceptedData" Type="int" Nullable="false" />
+    <Property Name="RatioOfAcceptedData" Type="float" Nullable="false" />
+    <Property Name="CostTime" Type="float" Nullable="false" />
+  </EntityType>
+  <EntityType Name="DataRadio">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Number" Type="varchar" Nullable="false" MaxLength="10" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="Status" Type="int" Nullable="false" />
+    <Property Name="Datetime" Type="datetime" Nullable="false" />
+    <Property Name="IsShowing" Type="bit" />
+    <Property Name="UpperLeft_X" Type="float" />
+    <Property Name="UpperRight_X" Type="float" />
+    <Property Name="LowerRight_X" Type="float" />
+    <Property Name="LowerLeft_X" Type="float" />
+    <Property Name="UpperLeft_Y" Type="float" />
+    <Property Name="UpperRight_Y" Type="float" />
+    <Property Name="LowerRight_Y" Type="float" />
+    <Property Name="LowerLeft_Y" Type="float" />
+    <Property Name="RowVersion" Type="timestamp" StoreGeneratedPattern="Computed" />
+  </EntityType>
+  <EntityType Name="DataRadioLog">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="DataRadioNumber" Type="nvarchar" Nullable="false" MaxLength="10" />
+    <Property Name="Action" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="Description" Type="nvarchar" MaxLength="50" />
+    <Property Name="Datetime" Type="datetime" Nullable="false" />
+    <Property Name="RowVersion" Type="timestamp" Nullable="false" StoreGeneratedPattern="Computed" />
+  </EntityType>
+  <EntityType Name="Department">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Name" Type="nvarchar" MaxLength="10" />
+    <Property Name="RowVersion" Type="timestamp" Nullable="false" StoreGeneratedPattern="Computed" />
+  </EntityType>
+  <EntityType Name="EventRecord">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Source" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="RelatedObject" Type="nvarchar" MaxLength="50" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="Parameters" Type="xml" />
+    <Property Name="Description" Type="nvarchar" MaxLength="100" />
+    <Property Name="Datetime" Type="datetime" Nullable="false" />
+    <Property Name="ReceivedFrameId" Type="int" />
+    <Property Name="LocalDatetime" Type="datetime" Nullable="false" />
+    <Property Name="IsTimeout" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="JobShift">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="StartTime" Type="time" Nullable="false" />
+    <Property Name="EndTime" Type="time" Nullable="false" />
+    <Property Name="RuleHours" Type="decimal" Nullable="false" Scale="2" />
+    <Property Name="RuleCount" Type="int" Nullable="false" />
+    <Property Name="RowVersion" Type="timestamp" StoreGeneratedPattern="Computed" />
+  </EntityType>
+  <EntityType Name="JobTitle">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Name" Type="nvarchar" MaxLength="20" />
+    <Property Name="RowVersion" Type="timestamp" Nullable="false" StoreGeneratedPattern="Computed" />
+  </EntityType>
+  <EntityType Name="Manager">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Username" Type="nvarchar" MaxLength="50" />
+    <Property Name="Password" Type="nvarchar" MaxLength="50" />
+    <Property Name="Popedom" Type="int" />
+    <Property Name="RowVersion" Type="timestamp" StoreGeneratedPattern="Computed" />
+  </EntityType>
+  <EntityType Name="OverstaffLog">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="ZoneId" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="StartTime" Type="datetime" Nullable="false" />
+    <Property Name="EndTime" Type="datetime" Nullable="false" />
+    <Property Name="UpperLimitOfWoringPeple" Type="int" Nullable="false" />
+    <Property Name="MaxCountOfCard" Type="int" Nullable="false" />
+    <Property Name="Remark" Type="nvarchar(max)" />
+    <Property Name="Decription" Type="nvarchar" MaxLength="50" />
+    <Property Name="RowVersion" Type="timestamp" StoreGeneratedPattern="Computed" />
+    <Property Name="IsNoticed" Type="bit" />
+    <Property Name="NoticedDateTime" Type="datetime" />
+  </EntityType>
+  <EntityType Name="PushButtonStateEvent">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="CardNumber" Type="nvarchar" Nullable="false" MaxLength="10" />
+    <Property Name="BaseStationNumber" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="Datetime" Type="datetime2" Nullable="false" />
+    <Property Name="IsNoticed" Type="bit" Nullable="false" />
+    <Property Name="NoticedDateTime" Type="datetime2" />
+    <Property Name="RowVersion" Type="timestamp" StoreGeneratedPattern="Computed" />
+  </EntityType>
+  <EntityType Name="ReceivedFrame">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Datetime" Type="datetime2" Nullable="false" />
+    <Property Name="IsValide" Type="bit" />
+    <Property Name="Description" Type="nvarchar" MaxLength="50" />
+    <Property Name="DataPacketId" Type="int" />
+    <Property Name="Frame" Type="nvarchar" MaxLength="200" />
+    <Property Name="FrameDatetime" Type="datetime2" />
+  </EntityType>
+  <EntityType Name="ServerInfo">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Status" Type="int" Nullable="false" />
+    <Property Name="CommandId" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="IsAccept" Type="bit" Nullable="false" />
+    <Property Name="LastRuntime" Type="datetime" Nullable="false" />
+    <Property Name="Interval" Type="int" Nullable="false" />
+    <Property Name="Mode" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SynchroRemoteDataBase">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="LastRowVersion" Type="varbinary" MaxLength="50" />
+    <Property Name="DateTme" Type="datetime" />
+  </EntityType>
+  <EntityType Name="SysConfig">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Key" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="Type" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="Value" Type="nvarchar" Nullable="false" MaxLength="1500" />
+    <Property Name="Description" Type="nvarchar" MaxLength="50" />
+    <Property Name="RowVersion" Type="timestamp" Nullable="false" StoreGeneratedPattern="Computed" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" Nullable="false" MaxLength="128" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="SystemLog">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Type" Type="int" Nullable="false" />
+    <Property Name="Datetime" Type="datetime" Nullable="false" />
+    <Property Name="Message" Type="nvarchar" MaxLength="300" />
+    <Property Name="Description" Type="ntext" />
+    <Property Name="Source" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="User" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="RowVersion" Type="timestamp" Nullable="false" StoreGeneratedPattern="Computed" />
+  </EntityType>
+  <EntityType Name="Team">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="DepartmentId" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="TimeoutLog">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="ZoneId" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="StartTime" Type="datetime" Nullable="false" />
+    <Property Name="EndTime" Type="datetime" Nullable="false" />
+    <Property Name="UpperLimitOfWorkingTime" Type="int" Nullable="false" />
+    <Property Name="MaxCountOfCard" Type="int" Nullable="false" />
+    <Property Name="MaxTimeout" Type="int" Nullable="false" />
+    <Property Name="MaxTimeoutCard" Type="nvarchar" Nullable="false" MaxLength="10" />
+    <Property Name="Remark" Type="nvarchar(max)" />
+    <Property Name="Description" Type="nvarchar" MaxLength="50" />
+    <Property Name="RowVersion" Type="timestamp" Nullable="false" StoreGeneratedPattern="Computed" />
+    <Property Name="IsNoticed" Type="bit" />
+    <Property Name="NoticedDateTime" Type="datetime" />
+  </EntityType>
+  <EntityType Name="UserOperationLog">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Operation" Type="nvarchar" MaxLength="50" />
+    <Property Name="Description" Type="nvarchar" MaxLength="50" />
+    <Property Name="OldObject" Type="xml" />
+    <Property Name="NewObject" Type="xml" />
+    <Property Name="Datetime" Type="datetime" Nullable="false" />
+    <Property Name="Operator" Type="nvarchar" MaxLength="50" />
+    <Property Name="Ip" Type="nvarchar" MaxLength="50" />
+    <Property Name="RowVersion" Type="timestamp" Nullable="false" StoreGeneratedPattern="Computed" />
+  </EntityType>
+  <EntityType Name="Worker">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="CardNumber" Type="varchar" Nullable="false" MaxLength="10" />
+    <Property Name="JobNumber" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="Gender" Type="bit" Nullable="false" />
+    <Property Name="LightId" Type="varchar" MaxLength="50" />
+    <Property Name="TimecardCode" Type="varchar" MaxLength="10" />
+    <Property Name="WorkPlace" Type="nvarchar" MaxLength="50" />
+    <Property Name="DepartmentId" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="TeamId" Type="varchar" MaxLength="50" />
+    <Property Name="JobTitleId" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Birthday" Type="datetime" />
+    <Property Name="ContactNumber" Type="varchar" MaxLength="50" />
+    <Property Name="IdentityNumber" Type="varchar" MaxLength="50" />
+    <Property Name="ContactAddress" Type="nvarchar" MaxLength="100" />
+    <Property Name="Photo" Type="image" />
+    <Property Name="WorkerType" Type="bit" />
+    <Property Name="SpecialType" Type="bit" />
+    <Property Name="RowVersion" Type="timestamp" StoreGeneratedPattern="Computed" />
+  </EntityType>
+  <EntityType Name="Zone">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="Number" Type="varchar" Nullable="false" MaxLength="10" />
+    <Property Name="ZoneType" Type="int" />
+    <Property Name="UpperLimitOfWoringPeple" Type="int" Nullable="false" />
+    <Property Name="UpperLimitOfWorkingTime" Type="int" Nullable="false" />
+    <Property Name="CoverageType" Type="int" />
+    <Property Name="Remark" Type="nvarchar" MaxLength="50" />
+    <Property Name="IsAuthorizedPersonalOnly" Type="bit" Nullable="false" />
+    <Property Name="Description" Type="nvarchar" MaxLength="150" />
+    <Property Name="UpperLeft_X" Type="float" />
+    <Property Name="UpperRight_X" Type="float" />
+    <Property Name="LowerRight_X" Type="float" />
+    <Property Name="LowerLeft_X" Type="float" />
+    <Property Name="UpperLeft_Y" Type="float" />
+    <Property Name="UpperRight_Y" Type="float" />
+    <Property Name="LowerRight_Y" Type="float" />
+    <Property Name="LowerLeft_Y" Type="float" />
+    <Property Name="IsShowing" Type="bit" />
+    <Property Name="RowVersion" Type="timestamp" StoreGeneratedPattern="Computed" />
+    <Property Name="IsInUse" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ZoneAndBaseStationLink">
+    <Key>
+      <PropertyRef Name="ZoneId" />
+      <PropertyRef Name="BaseStationId" />
+      <PropertyRef Name="Position" />
+    </Key>
+    <Property Name="ZoneId" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="BaseStationId" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Position" Type="int" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'MWTS2.3.dbo.View_BaseStationAndZone_ForGis' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="View_BaseStationAndZone_ForGis">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="Number" />
+      <PropertyRef Name="Name" />
+      <PropertyRef Name="DataRadioNumber" />
+    </Key>
+    <Property Name="Id" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Number" Type="varchar" Nullable="false" MaxLength="10" />
+    <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="DataRadioNumber" Type="varchar" Nullable="false" MaxLength="10" />
+    <Property Name="Remark" Type="nvarchar" MaxLength="50" />
+    <Property Name="Direction" Type="int" />
+    <Property Name="IfFeedbackSignal" Type="bit" />
+    <Property Name="ElectricalBoxPositioning" Type="nvarchar" MaxLength="100" />
+    <Property Name="IsWellhead" Type="bit" />
+    <Property Name="GasSaturation" Type="float" />
+    <Property Name="Description" Type="nvarchar" MaxLength="50" />
+    <Property Name="Status" Type="int" />
+    <Property Name="PowerSupplyState" Type="int" />
+    <Property Name="Datetime" Type="datetime" />
+    <Property Name="X" Type="float" />
+    <Property Name="Y" Type="float" />
+    <Property Name="IsShowing" Type="bit" />
+    <Property Name="ZoneName" Type="nvarchar" MaxLength="50" />
+    <Property Name="ZoneNumber" Type="varchar" MaxLength="10" />
+    <Property Name="ZoneType" Type="int" />
+    <Property Name="UpperLimitOfWoringPeple" Type="int" />
+    <Property Name="UpperLimitOfWorkingTime" Type="int" />
+    <Property Name="ZoneCoverageType" Type="int" />
+    <Property Name="ZoneRemark" Type="nvarchar" MaxLength="50" />
+    <Property Name="ZoneDescription" Type="nvarchar" MaxLength="150" />
+    <Property Name="UpperLeft_X" Type="float" />
+    <Property Name="UpperRight_X" Type="float" />
+    <Property Name="LowerRight_X" Type="float" />
+    <Property Name="LowerLeft_X" Type="float" />
+    <Property Name="UpperLeft_Y" Type="float" />
+    <Property Name="UpperRight_Y" Type="float" />
+    <Property Name="LowerRight_Y" Type="float" />
+    <Property Name="LowerLeft_Y" Type="float" />
+    <Property Name="ZoneIsShowing" Type="bit" />
+    <Property Name="Position" Type="int" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'MWTS2.3.dbo.View_BaseStationInfo_ForGis' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="View_BaseStationInfo_ForGis">
+    <Key>
+      <PropertyRef Name="Number" />
+      <PropertyRef Name="Name" />
+      <PropertyRef Name="IsWellhead" />
+      <PropertyRef Name="Status" />
+    </Key>
+    <Property Name="Number" Type="varchar" Nullable="false" MaxLength="10" />
+    <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="PCount" Type="int" />
+    <Property Name="X" Type="float" />
+    <Property Name="Y" Type="float" />
+    <Property Name="IsWellhead" Type="int" Nullable="false" />
+    <Property Name="IsShowing" Type="bit" />
+    <Property Name="Status" Type="int" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'MWTS2.3.dbo.View_BaseStationInnerjoinZone' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="View_BaseStationInnerjoinZone">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="Number" />
+      <PropertyRef Name="Name" />
+      <PropertyRef Name="DataRadioNumber" />
+      <PropertyRef Name="IsWellhead" />
+      <PropertyRef Name="GasSaturation" />
+      <PropertyRef Name="Status" />
+      <PropertyRef Name="Datetime" />
+      <PropertyRef Name="ZoneId" />
+      <PropertyRef Name="ZoneNumber" />
+      <PropertyRef Name="zoneName" />
+      <PropertyRef Name="Position" />
+      <PropertyRef Name="UpperLimitOfWoringPeple" />
+      <PropertyRef Name="UpperLimitOfWorkingTime" />
+    </Key>
+    <Property Name="Id" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Number" Type="varchar" Nullable="false" MaxLength="10" />
+    <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="DataRadioNumber" Type="varchar" Nullable="false" MaxLength="10" />
+    <Property Name="Remark" Type="nvarchar" MaxLength="50" />
+    <Property Name="Direction" Type="int" />
+    <Property Name="IfFeedbackSignal" Type="bit" />
+    <Property Name="ElectricalBoxPositioning" Type="nvarchar" MaxLength="100" />
+    <Property Name="IsWellhead" Type="int" Nullable="false" />
+    <Property Name="GasSaturation" Type="float" Nullable="false" />
+    <Property Name="Description" Type="nvarchar" MaxLength="50" />
+    <Property Name="Status" Type="int" Nullable="false" />
+    <Property Name="PowerSupplyState" Type="int" />
+    <Property Name="Datetime" Type="datetime" Nullable="false" />
+    <Property Name="X" Type="float" />
+    <Property Name="Y" Type="float" />
+    <Property Name="IsShowing" Type="bit" />
+    <Property Name="RowVersion" Type="timestamp" StoreGeneratedPattern="Computed" />
+    <Property Name="ZoneId" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="ZoneNumber" Type="varchar" Nullable="false" MaxLength="10" />
+    <Property Name="zoneName" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="Position" Type="int" Nullable="false" />
+    <Property Name="CoverageType" Type="int" />
+    <Property Name="UpperLimitOfWoringPeple" Type="int" Nullable="false" />
+    <Property Name="UpperLimitOfWorkingTime" Type="int" Nullable="false" />
+    <Property Name="ZoneType" Type="int" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'MWTS2.3.dbo.View_BaseStationLeftjoinZone' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="View_BaseStationLeftjoinZone">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="Number" />
+      <PropertyRef Name="Name" />
+      <PropertyRef Name="DataRadioNumber" />
+    </Key>
+    <Property Name="Id" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Number" Type="varchar" Nullable="false" MaxLength="10" />
+    <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="DataRadioNumber" Type="varchar" Nullable="false" MaxLength="10" />
+    <Property Name="Remark" Type="nvarchar" MaxLength="50" />
+    <Property Name="Direction" Type="int" />
+    <Property Name="IfFeedbackSignal" Type="bit" />
+    <Property Name="ElectricalBoxPositioning" Type="nvarchar" MaxLength="100" />
+    <Property Name="IsWellhead" Type="bit" />
+    <Property Name="GasSaturation" Type="float" />
+    <Property Name="Description" Type="nvarchar" MaxLength="50" />
+    <Property Name="Status" Type="int" />
+    <Property Name="PowerSupplyState" Type="int" />
+    <Property Name="Datetime" Type="datetime" />
+    <Property Name="X" Type="float" />
+    <Property Name="Y" Type="float" />
+    <Property Name="IsShowing" Type="bit" />
+    <Property Name="RowVersion" Type="timestamp" StoreGeneratedPattern="Computed" />
+    <Property Name="ZoneId" Type="varchar" MaxLength="50" />
+    <Property Name="ZoneNumber" Type="varchar" MaxLength="10" />
+    <Property Name="zoneName" Type="nvarchar" MaxLength="50" />
+    <Property Name="Position" Type="int" />
+    <Property Name="CoverageType" Type="int" />
+    <Property Name="UpperLimitOfWoringPeple" Type="int" />
+    <Property Name="UpperLimitOfWorkingTime" Type="int" />
+    <Property Name="ZoneType" Type="int" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'MWTS2.3.dbo.View_CardAndWorker_ForGis' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="View_CardAndWorker_ForGis">
+    <Key>
+      <PropertyRef Name="Card_Id" />
+      <PropertyRef Name="Card_Number" />
+    </Key>
+    <Property Name="Card_Id" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Card_Number" Type="varchar" Nullable="false" MaxLength="10" />
+    <Property Name="Card_IsEnable" Type="bit" />
+    <Property Name="Card_BatteryLevel" Type="int" />
+    <Property Name="Card_Remark" Type="nvarchar" MaxLength="50" />
+    <Property Name="Card_Description" Type="nvarchar" MaxLength="50" />
+    <Property Name="Card_IsAlive" Type="bit" />
+    <Property Name="Card_IsInTheHole" Type="bit" />
+    <Property Name="Card_BaseStationNumber" Type="varchar" MaxLength="10" />
+    <Property Name="Card_PushButtonState" Type="int" />
+    <Property Name="Card_Position" Type="int" />
+    <Property Name="Card_Datetime" Type="datetime" />
+    <Property Name="Worker_Id" Type="varchar" MaxLength="50" />
+    <Property Name="Worker_CardNumber" Type="varchar" MaxLength="10" />
+    <Property Name="Worker_JobNumber" Type="varchar" MaxLength="50" />
+    <Property Name="Worker_Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="Worker_Gender" Type="bit" />
+    <Property Name="Worker_LightId" Type="varchar" MaxLength="50" />
+    <Property Name="Worker_TimecardCode" Type="varchar" MaxLength="10" />
+    <Property Name="Worker_WorkPlace" Type="nvarchar" MaxLength="50" />
+    <Property Name="Worker_DepartmentId" Type="varchar" MaxLength="10" />
+    <Property Name="Worker_TeamId" Type="varchar" MaxLength="10" />
+    <Property Name="Worker_JobTitleId" Type="varchar" MaxLength="10" />
+    <Property Name="Worker_Birthday" Type="datetime" />
+    <Property Name="Worker_ContactNumber" Type="varchar" MaxLength="50" />
+    <Property Name="Worker_IdentityNumber" Type="varchar" MaxLength="50" />
+    <Property Name="Worker_ContactAddress" Type="nvarchar" MaxLength="100" />
+    <Property Name="Worker_Photo" Type="image" />
+    <Property Name="Worker_WorkerType" Type="bit" />
+    <Property Name="Worker_SpecialType" Type="bit" />
+    <Property Name="Department_Name" Type="nvarchar" MaxLength="10" />
+    <Property Name="JobTitle_Name" Type="nvarchar" MaxLength="20" />
+    <Property Name="Team_Name" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'MWTS2.3.dbo.View_CardInBaseStation_ForGis' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="View_CardInBaseStation_ForGis">
+    <Key>
+      <PropertyRef Name="Card_Id" />
+      <PropertyRef Name="Card_Number" />
+    </Key>
+    <Property Name="Card_Id" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Card_Number" Type="varchar" Nullable="false" MaxLength="10" />
+    <Property Name="Card_IsEnable" Type="bit" />
+    <Property Name="Card_BatteryLevel" Type="int" />
+    <Property Name="Card_Remark" Type="nvarchar" MaxLength="50" />
+    <Property Name="Card_Description" Type="nvarchar" MaxLength="50" />
+    <Property Name="Card_IsAlive" Type="bit" />
+    <Property Name="Card_IsInTheHole" Type="bit" />
+    <Property Name="Card_BaseStationNumber" Type="varchar" MaxLength="10" />
+    <Property Name="Card_PushButtonState" Type="int" />
+    <Property Name="Card_Position" Type="int" />
+    <Property Name="Card_Datetime" Type="datetime" />
+    <Property Name="Worker_Id" Type="varchar" MaxLength="50" />
+    <Property Name="Worker_CardNumber" Type="varchar" MaxLength="10" />
+    <Property Name="Worker_JobNumber" Type="varchar" MaxLength="50" />
+    <Property Name="Worker_Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="Worker_Gender" Type="bit" />
+    <Property Name="Worker_LightId" Type="varchar" MaxLength="50" />
+    <Property Name="Worker_TimecardCode" Type="varchar" MaxLength="10" />
+    <Property Name="Worker_WorkPlace" Type="nvarchar" MaxLength="50" />
+    <Property Name="Worker_DepartmentId" Type="varchar" MaxLength="10" />
+    <Property Name="Worker_TeamId" Type="varchar" MaxLength="10" />
+    <Property Name="Worker_JobTitleId" Type="varchar" MaxLength="10" />
+    <Property Name="Worker_Birthday" Type="datetime" />
+    <Property Name="Worker_ContactNumber" Type="varchar" MaxLength="50" />
+    <Property Name="Worker_IdentityNumber" Type="varchar" MaxLength="50" />
+    <Property Name="Worker_ContactAddress" Type="nvarchar" MaxLength="100" />
+    <Property Name="Worker_Photo" Type="image" />
+    <Property Name="Worker_WorkerType" Type="bit" />
+    <Property Name="Worker_SpecialType" Type="bit" />
+    <Property Name="Department_Name" Type="nvarchar" MaxLength="10" />
+    <Property Name="JobTitle_Name" Type="nvarchar" MaxLength="20" />
+    <Property Name="Team_Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="StartTime" Type="datetime" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'MWTS2.3.dbo.View_CardInZone_ForGis' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="View_CardInZone_ForGis">
+    <Key>
+      <PropertyRef Name="Card_Id" />
+      <PropertyRef Name="Card_Number" />
+      <PropertyRef Name="ZoneNumber" />
+    </Key>
+    <Property Name="Card_Id" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Card_Number" Type="varchar" Nullable="false" MaxLength="10" />
+    <Property Name="Card_IsEnable" Type="bit" />
+    <Property Name="Card_BatteryLevel" Type="int" />
+    <Property Name="Card_Remark" Type="nvarchar" MaxLength="50" />
+    <Property Name="Card_Description" Type="nvarchar" MaxLength="50" />
+    <Property Name="Card_IsAlive" Type="bit" />
+    <Property Name="Card_IsInTheHole" Type="bit" />
+    <Property Name="Card_BaseStationNumber" Type="varchar" MaxLength="10" />
+    <Property Name="Card_PushButtonState" Type="int" />
+    <Property Name="Card_Position" Type="int" />
+    <Property Name="Card_Datetime" Type="datetime" />
+    <Property Name="Worker_Id" Type="varchar" MaxLength="50" />
+    <Property Name="Worker_CardNumber" Type="varchar" MaxLength="10" />
+    <Property Name="Worker_JobNumber" Type="varchar" MaxLength="50" />
+    <Property Name="Worker_Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="Worker_Gender" Type="bit" />
+    <Property Name="Worker_LightId" Type="varchar" MaxLength="50" />
+    <Property Name="Worker_TimecardCode" Type="varchar" MaxLength="10" />
+    <Property Name="Worker_WorkPlace" Type="nvarchar" MaxLength="50" />
+    <Property Name="Worker_DepartmentId" Type="varchar" MaxLength="10" />
+    <Property Name="Worker_TeamId" Type="varchar" MaxLength="10" />
+    <Property Name="Worker_JobTitleId" Type="varchar" MaxLength="10" />
+    <Property Name="Worker_Birthday" Type="datetime" />
+    <Property Name="Worker_ContactNumber" Type="varchar" MaxLength="50" />
+    <Property Name="Worker_IdentityNumber" Type="varchar" MaxLength="50" />
+    <Property Name="Worker_ContactAddress" Type="nvarchar" MaxLength="100" />
+    <Property Name="Worker_Photo" Type="image" />
+    <Property Name="Worker_WorkerType" Type="bit" />
+    <Property Name="Worker_SpecialType" Type="bit" />
+    <Property Name="Department_Name" Type="nvarchar" MaxLength="10" />
+    <Property Name="JobTitle_Name" Type="nvarchar" MaxLength="20" />
+    <Property Name="Team_Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="StartTime" Type="datetime" />
+    <Property Name="ZoneNumber" Type="varchar" Nullable="false" MaxLength="10" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'MWTS2.3.dbo.View_CardsInZone' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="View_CardsInZone">
+    <Key>
+      <PropertyRef Name="Number" />
+      <PropertyRef Name="DateTime" />
+      <PropertyRef Name="CardNumber" />
+      <PropertyRef Name="ZoneNumber" />
+      <PropertyRef Name="ZoneId" />
+      <PropertyRef Name="UpperLimitOfWorkingTime" />
+      <PropertyRef Name="UpperLimitOfWoringPeple" />
+      <PropertyRef Name="BaseStationNumber" />
+    </Key>
+    <Property Name="Number" Type="varchar" Nullable="false" MaxLength="10" />
+    <Property Name="DateTime" Type="datetime" Nullable="false" />
+    <Property Name="CardNumber" Type="varchar" Nullable="false" MaxLength="10" />
+    <Property Name="ZoneNumber" Type="varchar" Nullable="false" MaxLength="10" />
+    <Property Name="ZoneId" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="UpperLimitOfWorkingTime" Type="int" Nullable="false" />
+    <Property Name="UpperLimitOfWoringPeple" Type="int" Nullable="false" />
+    <Property Name="BaseStationNumber" Type="varchar" Nullable="false" MaxLength="10" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'MWTS2.3.dbo.View_CardTrackForZoneByPosition' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="View_CardTrackForZoneByPosition">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="RowVersion" />
+      <PropertyRef Name="Expr1" />
+      <PropertyRef Name="Number" />
+      <PropertyRef Name="Name" />
+      <PropertyRef Name="DataRadioNumber" />
+      <PropertyRef Name="IsWellhead" />
+      <PropertyRef Name="GasSaturation" />
+      <PropertyRef Name="Status" />
+      <PropertyRef Name="Datetime" />
+      <PropertyRef Name="ZoneId" />
+      <PropertyRef Name="Position" />
+    </Key>
+    <Property Name="Id" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="CardNumber" Type="varchar" MaxLength="10" />
+    <Property Name="BaseStationNumber" Type="varchar" MaxLength="10" />
+    <Property Name="StartTime" Type="datetime" />
+    <Property Name="EndTime" Type="datetime" />
+    <Property Name="LastBaseStationNumber" Type="varchar" MaxLength="10" />
+    <Property Name="Description" Type="nvarchar" MaxLength="50" />
+    <Property Name="IntoPosition" Type="int" />
+    <Property Name="LeftPosition" Type="int" />
+    <Property Name="RowVersion" Type="timestamp" Nullable="false" StoreGeneratedPattern="Computed" />
+    <Property Name="Expr1" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Number" Type="varchar" Nullable="false" MaxLength="10" />
+    <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="DataRadioNumber" Type="varchar" Nullable="false" MaxLength="10" />
+    <Property Name="Direction" Type="int" />
+    <Property Name="IfFeedbackSignal" Type="bit" />
+    <Property Name="ElectricalBoxPositioning" Type="nvarchar" MaxLength="100" />
+    <Property Name="IsWellhead" Type="bit" Nullable="false" />
+    <Property Name="GasSaturation" Type="float" Nullable="false" />
+    <Property Name="Expr2" Type="nvarchar" MaxLength="50" />
+    <Property Name="Status" Type="int" Nullable="false" />
+    <Property Name="PowerSupplyState" Type="int" />
+    <Property Name="Datetime" Type="datetime" Nullable="false" />
+    <Property Name="X" Type="float" />
+    <Property Name="Y" Type="float" />
+    <Property Name="IsShowing" Type="bit" />
+    <Property Name="Expr3" Type="timestamp" StoreGeneratedPattern="Computed" />
+    <Property Name="ZoneId" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Position" Type="int" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'MWTS2.3.dbo.View_CardTrackForZoneNotByPosition' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="View_CardTrackForZoneNotByPosition">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="RowVersion" />
+    </Key>
+    <Property Name="Id" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="CardNumber" Type="varchar" MaxLength="10" />
+    <Property Name="BaseStationNumber" Type="varchar" MaxLength="10" />
+    <Property Name="StartTime" Type="datetime" />
+    <Property Name="EndTime" Type="datetime" />
+    <Property Name="LastBaseStationNumber" Type="varchar" MaxLength="10" />
+    <Property Name="ResidenceTime" Type="int" />
+    <Property Name="Description" Type="nvarchar" MaxLength="50" />
+    <Property Name="IntoPosition" Type="int" />
+    <Property Name="LeftPosition" Type="int" />
+    <Property Name="RowVersion" Type="timestamp" Nullable="false" StoreGeneratedPattern="Computed" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'MWTS2.3.dbo.View_getAllWorkerTrack' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="View_getAllWorkerTrack">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="CardNumber" />
+      <PropertyRef Name="StartTime" />
+      <PropertyRef Name="Name" />
+      <PropertyRef Name="JobNumber" />
+      <PropertyRef Name="BaseStationName" />
+      <PropertyRef Name="WorkerType" />
+      <PropertyRef Name="SpecialType" />
+      <PropertyRef Name="EndTime" />
+    </Key>
+    <Property Name="Id" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="CardNumber" Type="varchar" Nullable="false" MaxLength="10" />
+    <Property Name="StartTime" Type="datetime" Nullable="false" />
+    <Property Name="EndTime" Type="datetime" Nullable="false" />
+    <Property Name="BaseStationNumber" Type="varchar" MaxLength="10" />
+    <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="JobNumber" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="BaseStationName" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="Action" Type="varchar" MaxLength="4" />
+    <Property Name="WorkerType" Type="varchar" Nullable="false" MaxLength="4" />
+    <Property Name="SpecialType" Type="varchar" Nullable="false" MaxLength="2" />
+    <Property Name="departmentName" Type="nvarchar" MaxLength="10" />
+    <Property Name="JobtitleName" Type="nvarchar" MaxLength="20" />
+    <Property Name="teamName" Type="nvarchar" MaxLength="50" />
+    <Property Name="Description" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'MWTS2.3.dbo.View_getCheckingLogs' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="View_getCheckingLogs">
+    <Key>
+      <PropertyRef Name="CardNumber" />
+      <PropertyRef Name="WorkCount" />
+      <PropertyRef Name="JobShiftName" />
+    </Key>
+    <Property Name="Id" Type="varchar" MaxLength="50" />
+    <Property Name="CardNumber" Type="varchar" Nullable="false" MaxLength="10" />
+    <Property Name="DownWellTime" Type="datetime" />
+    <Property Name="UpWellTime" Type="datetime" />
+    <Property Name="WorkCount" Type="int" Nullable="false" />
+    <Property Name="JobShiftName" Type="nvarchar" Nullable="false" MaxLength="50" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'MWTS2.3.dbo.View_HelpStas' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="View_HelpStas">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="BaseStationNumber" />
+      <PropertyRef Name="CardNumber" />
+      <PropertyRef Name="SpecialType" />
+      <PropertyRef Name="Datetime" />
+    </Key>
+    <Property Name="Id" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="BaseStationNumber" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="CardNumber" Type="nvarchar" Nullable="false" MaxLength="10" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="JobNumber" Type="varchar" MaxLength="50" />
+    <Property Name="LightId" Type="varchar" MaxLength="50" />
+    <Property Name="TimecardCode" Type="varchar" MaxLength="10" />
+    <Property Name="Gender" Type="varchar" MaxLength="2" />
+    <Property Name="WorkerType" Type="varchar" MaxLength="4" />
+    <Property Name="SpecialType" Type="varchar" Nullable="false" MaxLength="2" />
+    <Property Name="departmentName" Type="nvarchar" MaxLength="10" />
+    <Property Name="JobtitleName" Type="nvarchar" MaxLength="20" />
+    <Property Name="Datetime" Type="datetime2" Nullable="false" />
+    <Property Name="IsNoticed" Type="varchar" MaxLength="2" />
+    <Property Name="NoticedDateTime" Type="datetime2" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'MWTS2.3.dbo.View_LastCardTrack' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="View_LastCardTrack">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="RowVersion" />
+    </Key>
+    <Property Name="Id" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="CardNumber" Type="varchar" MaxLength="10" />
+    <Property Name="BaseStationNumber" Type="varchar" MaxLength="10" />
+    <Property Name="StartTime" Type="datetime" />
+    <Property Name="EndTime" Type="datetime" />
+    <Property Name="LastBaseStationNumber" Type="varchar" MaxLength="10" />
+    <Property Name="Description" Type="nvarchar" MaxLength="50" />
+    <Property Name="IntoPosition" Type="int" />
+    <Property Name="LeftPosition" Type="int" />
+    <Property Name="OverstaffLogIdForZone" Type="varchar" MaxLength="50" />
+    <Property Name="TimeoutLogIdForZone" Type="varchar" MaxLength="50" />
+    <Property Name="OverstaffLogIdForHole" Type="varchar" MaxLength="50" />
+    <Property Name="TimeoutLogIdForHole" Type="varchar" MaxLength="50" />
+    <Property Name="RowVersion" Type="timestamp" Nullable="false" StoreGeneratedPattern="Computed" />
+    <Property Name="Action" Type="int" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'MWTS2.3.dbo.View_WorkerCountInZone' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="View_WorkerCountInZone">
+    <Key>
+      <PropertyRef Name="ZoneName" />
+    </Key>
+    <Property Name="ZoneName" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="WorkerCount" Type="int" />
+    <Property Name="RowVersion" Type="timestamp" StoreGeneratedPattern="Computed" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'MWTS2.3.dbo.View_WorkerjoinDepartment' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="View_WorkerjoinDepartment">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="CardNumber" />
+      <PropertyRef Name="JobNumber" />
+      <PropertyRef Name="Name" />
+      <PropertyRef Name="Gender" />
+      <PropertyRef Name="DepartmentId" />
+      <PropertyRef Name="JobTitleId" />
+    </Key>
+    <Property Name="Id" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="CardNumber" Type="varchar" Nullable="false" MaxLength="10" />
+    <Property Name="JobNumber" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="Gender" Type="bit" Nullable="false" />
+    <Property Name="LightId" Type="varchar" MaxLength="50" />
+    <Property Name="TimecardCode" Type="varchar" MaxLength="10" />
+    <Property Name="WorkPlace" Type="nvarchar" MaxLength="50" />
+    <Property Name="DepartmentId" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="TeamId" Type="varchar" MaxLength="50" />
+    <Property Name="JobTitleId" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Birthday" Type="datetime" />
+    <Property Name="ContactNumber" Type="varchar" MaxLength="50" />
+    <Property Name="IdentityNumber" Type="varchar" MaxLength="50" />
+    <Property Name="ContactAddress" Type="nvarchar" MaxLength="100" />
+    <Property Name="photo" Type="int" />
+    <Property Name="WorkerType" Type="bit" />
+    <Property Name="SpecialType" Type="bit" />
+    <Property Name="RowVersion" Type="timestamp" StoreGeneratedPattern="Computed" />
+    <Property Name="departmentName" Type="nvarchar" MaxLength="10" />
+    <Property Name="JobtitleName" Type="nvarchar" MaxLength="20" />
+    <Property Name="teamName" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'MWTS2.3.dbo.View_WorkersCardTrack' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="View_WorkersCardTrack">
+    <Key>
+      <PropertyRef Name="CardNumber" />
+      <PropertyRef Name="StartTime" />
+      <PropertyRef Name="EndTime" />
+    </Key>
+    <Property Name="Card_Id" Type="varchar" MaxLength="50" />
+    <Property Name="Card_Number" Type="varchar" MaxLength="10" />
+    <Property Name="Card_IsEnable" Type="bit" />
+    <Property Name="Card_BatteryLevel" Type="int" />
+    <Property Name="Card_Remark" Type="nvarchar" MaxLength="50" />
+    <Property Name="Card_Description" Type="nvarchar" MaxLength="50" />
+    <Property Name="Card_IsAlive" Type="bit" />
+    <Property Name="Card_IsInTheHole" Type="bit" />
+    <Property Name="Card_BaseStationNumber" Type="varchar" MaxLength="10" />
+    <Property Name="Card_PushButtonState" Type="int" />
+    <Property Name="Card_Position" Type="int" />
+    <Property Name="Card_Datetime" Type="datetime" />
+    <Property Name="Worker_Id" Type="varchar" MaxLength="50" />
+    <Property Name="Worker_CardNumber" Type="varchar" MaxLength="10" />
+    <Property Name="Worker_JobNumber" Type="varchar" MaxLength="50" />
+    <Property Name="Worker_Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="Worker_Gender" Type="bit" />
+    <Property Name="Worker_LightId" Type="varchar" MaxLength="50" />
+    <Property Name="Worker_TimecardCode" Type="varchar" MaxLength="10" />
+    <Property Name="Worker_WorkPlace" Type="nvarchar" MaxLength="50" />
+    <Property Name="Worker_DepartmentId" Type="varchar" MaxLength="50" />
+    <Property Name="Worker_TeamId" Type="varchar" MaxLength="50" />
+    <Property Name="Worker_JobTitleId" Type="varchar" MaxLength="50" />
+    <Property Name="Worker_Birthday" Type="datetime" />
+    <Property Name="Worker_ContactNumber" Type="varchar" MaxLength="50" />
+    <Property Name="Worker_IdentityNumber" Type="varchar" MaxLength="50" />
+    <Property Name="Worker_ContactAddress" Type="nvarchar" MaxLength="100" />
+    <Property Name="Worker_Photo" Type="image" />
+    <Property Name="Worker_WorkerType" Type="bit" />
+    <Property Name="Worker_SpecialType" Type="bit" />
+    <Property Name="Department_Name" Type="nvarchar" MaxLength="10" />
+    <Property Name="JobTitle_Name" Type="nvarchar" MaxLength="20" />
+    <Property Name="Team_Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="CardNumber" Type="varchar" Nullable="false" MaxLength="10" />
+    <Property Name="StartTime" Type="datetime" Nullable="false" />
+    <Property Name="EndTime" Type="datetime" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'MWTS2.3.dbo.View_ZoneAndBaseStation_ForGis' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="View_ZoneAndBaseStation_ForGis">
+    <Key>
+      <PropertyRef Name="ZoneName" />
+      <PropertyRef Name="ZoneNumber" />
+      <PropertyRef Name="UpperLimitOfWoringPeple" />
+      <PropertyRef Name="UpperLimitOfWorkingTime" />
+    </Key>
+    <Property Name="Id" Type="varchar" MaxLength="50" />
+    <Property Name="Number" Type="varchar" MaxLength="10" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="DataRadioNumber" Type="varchar" MaxLength="10" />
+    <Property Name="Remark" Type="nvarchar" MaxLength="50" />
+    <Property Name="Direction" Type="int" />
+    <Property Name="IfFeedbackSignal" Type="bit" />
+    <Property Name="ElectricalBoxPositioning" Type="nvarchar" MaxLength="100" />
+    <Property Name="IsWellhead" Type="bit" />
+    <Property Name="GasSaturation" Type="float" />
+    <Property Name="Description" Type="nvarchar" MaxLength="50" />
+    <Property Name="Status" Type="int" />
+    <Property Name="PowerSupplyState" Type="int" />
+    <Property Name="Datetime" Type="datetime" />
+    <Property Name="X" Type="float" />
+    <Property Name="Y" Type="float" />
+    <Property Name="IsShowing" Type="bit" />
+    <Property Name="ZoneName" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="ZoneNumber" Type="varchar" Nullable="false" MaxLength="10" />
+    <Property Name="ZoneType" Type="int" />
+    <Property Name="UpperLimitOfWoringPeple" Type="int" Nullable="false" />
+    <Property Name="UpperLimitOfWorkingTime" Type="int" Nullable="false" />
+    <Property Name="ZoneCoverageType" Type="int" />
+    <Property Name="ZoneRemark" Type="nvarchar" MaxLength="50" />
+    <Property Name="ZoneDescription" Type="nvarchar" MaxLength="150" />
+    <Property Name="UpperLeft_X" Type="float" />
+    <Property Name="UpperRight_X" Type="float" />
+    <Property Name="LowerRight_X" Type="float" />
+    <Property Name="LowerLeft_X" Type="float" />
+    <Property Name="UpperLeft_Y" Type="float" />
+    <Property Name="UpperRight_Y" Type="float" />
+    <Property Name="LowerRight_Y" Type="float" />
+    <Property Name="LowerLeft_Y" Type="float" />
+    <Property Name="ZoneIsShowing" Type="bit" />
+    <Property Name="Position" Type="int" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'MWTS2.3.dbo.View_ZoneInfo_ForGis' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="View_ZoneInfo_ForGis">
+    <Key>
+      <PropertyRef Name="Number" />
+      <PropertyRef Name="Name" />
+    </Key>
+    <Property Name="Number" Type="varchar" Nullable="false" MaxLength="10" />
+    <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="PCount" Type="int" />
+    <Property Name="IsShowing" Type="bit" />
+    <Property Name="UpperLeft_X" Type="float" />
+    <Property Name="UpperLeft_Y" Type="float" />
+    <Property Name="UpperRight_X" Type="float" />
+    <Property Name="UpperRight_Y" Type="float" />
+    <Property Name="LowerRight_X" Type="float" />
+    <Property Name="LowerRight_Y" Type="float" />
+    <Property Name="LowerLeft_X" Type="float" />
+    <Property Name="LowerLeft_Y" Type="float" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'MWTS2.3.dbo.View_ZoneOverstaffAndTimeout_ForGis' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="View_ZoneOverstaffAndTimeout_ForGis">
+    <Key>
+      <PropertyRef Name="Number" />
+      <PropertyRef Name="IsOverstaff" />
+      <PropertyRef Name="IsTimeout" />
+    </Key>
+    <Property Name="Number" Type="varchar" Nullable="false" MaxLength="10" />
+    <Property Name="IsOverstaff" Type="int" Nullable="false" />
+    <Property Name="IsTimeout" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_EventRecord_ReceivedFrame">
+    <End Role="ReceivedFrame" Type="MWTSModel.Store.ReceivedFrame" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="EventRecord" Type="MWTSModel.Store.EventRecord" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ReceivedFrame">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="EventRecord">
+        <PropertyRef Name="ReceivedFrameId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ReceivedFrame_DataPacket">
+    <End Role="DataPacket" Type="MWTSModel.Store.DataPacket" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="ReceivedFrame" Type="MWTSModel.Store.ReceivedFrame" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DataPacket">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ReceivedFrame">
+        <PropertyRef Name="DataPacketId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="CheckIfCommandAccepted" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="serverSub" Type="varchar" Mode="In" />
+    <Parameter Name="CommandId" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="ConfigServer" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ServerMain" Type="varchar" Mode="In" />
+    <Parameter Name="ServerSub" Type="varchar" Mode="In" />
+    <Parameter Name="ServerRemote" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="CreateLinkServer" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="linkserver" Type="nvarchar" Mode="In" />
+    <Parameter Name="username" Type="nvarchar" Mode="In" />
+    <Parameter Name="userpassword" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="DoSynchroRemoteDataBase" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="RemoteServer" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="fn_diagramobjects" ReturnType="int" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="FUN_GetCardTrackName" ReturnType="nvarchar" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="DateTime" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="FUN_YYC_BANCI" ReturnType="int" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="StartTime" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="FUN_YYC_TIANS" ReturnType="int" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="StartTime" Type="datetime" Mode="In" />
+    <Parameter Name="EndTime" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="FUN_YYC_TIMEFORMART" ReturnType="char" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="DateTime" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="getAllInandOuntHoleStats" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="pageIndex" Type="int" Mode="In" />
+    <Parameter Name="pageSize" Type="int" Mode="In" />
+  </Function>
+  <Function Name="getAllInandOuntHoleStatsNoPage" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="GetAllWorkers" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="getAllWorkertrack" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="getBaseationLogs" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="getBasesationStats" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="BastionNumber" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="getBaseStationRealData" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="getCardsRealData" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="getCheckInLogs" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="starttime" Type="nvarchar" Mode="In" />
+    <Parameter Name="endtime" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="getCheckInLogsStas" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="starttime" Type="nvarchar" Mode="In" />
+    <Parameter Name="endtime" Type="nvarchar" Mode="In" />
+    <Parameter Name="CardNumber" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="getCurrentCardNunmberCardTrack_ForGis" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CardNumber" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="getDataRadioLogs" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="GetHelpStas" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="getInandOuntHoleCount" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="tableName" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="getInandOuntHoleStats" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="tableName" Type="nvarchar" Mode="In" />
+    <Parameter Name="cardnumber" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="GetScreenPrainterInfo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="BaseStationNumber" Type="nvarchar" Mode="In" />
+    <Parameter Name="DelaySecontd" Type="int" Mode="In" />
+  </Function>
+  <Function Name="GetServerMainInfo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ServerMain" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="GetServerSubInfo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="serverSub" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="getThisMonthLastUpandDownHoleStats" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="getWorkersStas" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="getWorkertrack" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="cardNumber" Type="nvarchar" Mode="In" />
+    <Parameter Name="tableName" Type="nvarchar" Mode="In" />
+    <Parameter Name="StartTime" Type="datetime" Mode="In" />
+    <Parameter Name="EndTime" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="getWorkerTracker_ForGis" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CardNumber" Type="nvarchar" Mode="In" />
+    <Parameter Name="StartTime" Type="datetime" Mode="In" />
+    <Parameter Name="EndTime" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="getWorkTimePerDay" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="startime" Type="varchar" Mode="In" />
+    <Parameter Name="endtime" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="getWorkTimePerDaybyCardNumber" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="startime" Type="varchar" Mode="In" />
+    <Parameter Name="endtime" Type="varchar" Mode="In" />
+    <Parameter Name="cardnumber" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="getZoneRealData" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="getZoneStas" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="tableName" Type="nvarchar" Mode="In" />
+    <Parameter Name="ZoneNumber" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="MergeDataFromServerMain" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="MergeDataFromServerSub" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="MergeTable" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="LinkeServer" Type="nvarchar" Mode="In" />
+    <Parameter Name="DataBaseName" Type="nvarchar" Mode="In" />
+    <Parameter Name="TableName" Type="nvarchar" Mode="In" />
+    <Parameter Name="ColumnNames" Type="nvarchar" Mode="In" />
+    <Parameter Name="SplitChar" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="proc_insert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="tablename" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="PROC_YYC_MergeYyc" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Year" Type="varchar" Mode="In" />
+    <Parameter Name="Month" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="SendCommandToServerSub" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="serverSub" Type="varchar" Mode="In" />
+    <Parameter Name="Id" Type="varchar" Mode="In" />
+    <Parameter Name="Command" Type="varchar" Mode="In" />
+    <Parameter Name="Description" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="ShrinkDatabase" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="sp_alterdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="version" Type="int" Mode="In" />
+    <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+  </Function>
+  <Function Name="sp_creatediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="version" Type="int" Mode="In" />
+    <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+  </Function>
+  <Function Name="sp_dropdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_helpdiagramdefinition" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_helpdiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_renamediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="new_diagramname" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="sp_upgraddiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+</Schema>

@@ -1,0 +1,96 @@
+/* -- ASPxNavBar -- */
+.dxnbControl_PlasticBlueNavigation
+{
+	font: 9pt Tahoma;
+	color: Black;
+	background-color: #96B3EE;
+	padding: 3px 0px;
+}
+.dxnbControl_PlasticBlueNavigation a
+{
+	color: Black; 
+	text-decoration: none;
+}
+.dxnbGroupHeaderCollapsed_PlasticBlueNavigation
+{
+    font: 11px Tahoma;
+	color: Black;
+
+	font-weight: normal;
+    					
+	border: 0px;
+	
+	padding: 4px 7px 5px 7px;
+}
+.dxnbGroupHeaderCollapsed_PlasticBlueNavigation table
+{
+    font: 11px Tahoma;
+	color: Black;
+}
+.dxnbGroupHeaderCollapsed_PlasticBlueNavigation table td
+{
+	white-space: nowrap;
+}
+.dxnbGroupHeaderCollapsedHover_PlasticBlueNavigation
+{
+	background-image: url('nbHeaderGroupHover.gif');
+    background-repeat: repeat-x;
+    background-color: #9EB9F3;
+    border: Solid 1px #B0C6F8;
+	padding: 3px 6px 4px 6px;
+}
+.dxnbGroupHeader_PlasticBlueNavigation
+{
+    font: 11px Tahoma;
+	color: #405497;
+
+	background-color: #405497;
+	font-weight: bold;
+
+	background-image: url('nbHeaderGroup.gif');
+    background-repeat: repeat-x;	
+	
+	border: Solid 1px #2C4182;
+	
+	padding: 3px 6px 3px 6px;
+}
+.dxnbGroupHeader_PlasticBlueNavigation table
+{
+    font: 11px Tahoma;
+	color: White;
+	font-weight: bold;
+}
+.dxnbGroupHeader_PlasticBlueNavigation table td
+{
+	white-space: nowrap;
+	font-weight: bold;
+}
+.dxnbGroupContent_PlasticBlueNavigation
+{
+    font: 11px Tahoma;
+	background-color: #F5F5F5;
+	border: 0px;
+	border-bottom: Solid 1px #829CD9;
+	
+	padding: 7px 0px 7px 0px;
+}
+.dxnbItem_PlasticBlueNavigation
+{
+    font: 11px Tahoma;
+
+    border: 0px;
+    padding: 1px 30px 3px;
+}
+.dxnbItemSelected_PlasticBlueNavigation
+{
+    color: Black;
+    font-weight: bold;
+	background-image: url('nbBullet.gif');
+	background-repeat: no-repeat;
+	background-position: 15px 4px;
+    padding: 1px 30px 3px 29px;
+}
+.dxnbItemHover_PlasticBlueNavigation
+{
+	background-color: #C9D6F7;
+}

@@ -1,0 +1,141 @@
+﻿@model WHMange.Models.VEntity.VProductBill
+
+@{
+    ViewBag.Title = "采购单编辑";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section navigation{
+    @Html.ActionLink("首页", "Index", "Main", new { }, new { @class="house"}) > @Html.ActionLink("采购单管理", "Index", "BuyBill", new { }, new { @class="house"}) > 采购单编辑
+}
+<div id="rightnow">
+    <h3 class="reallynow">
+        <span class="app_add">采购单编辑  </span>
+        <br />
+    </h3>
+
+    <table width="100%" cellspacing="1" cellpadding="0" border="0"> 
+    <tbody>
+    <tr style="height:10px">
+        <td></td>
+    </tr>
+    <tr>
+    <td valign="top" align="center">
+        <table style="text-align:center; width:97%; font-size:12px;">
+        <tbody><tr>
+            <td class="style8">
+                <div>
+                    <table style="width:100%;border-width:1px; border-style:solid; border-color:#2280DD">
+                        <tbody>
+                        <tr>
+                            <td align="right" style="font-size:12px">
+                                单号</td>
+                            <td>
+                                <div style="text-align:left;padding-left: 30px;">
+                                @Html.TextBox("BuyNO", null, new { style = "height:24px;width:310px;margin-right: 0px;ime-mode:inactive;" })
+                                </div>
+                            </td>
+                            <td align="right" style="font-size:12px">批号</td>
+                                <td style="text-align:left">
+                                <div style="text-align:left;padding-left: 30px;">
+                                @Html.TextBox("BatchNO", null, new { style = "height:24px;width:310px;margin-right: 0px;ime-mode:inactive;" })
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="right" style="font-size:12px">供应商</td>
+                            <td >
+                                <div style="text-align:left;padding-left: 30px;">
+                                @Html.DropDownList("SupplyID",null,new{style="height:24px;width:310px;margin-right: 0px;"})
+                                </div>
+                            </td>
+                            <td align="right" style="font-size:12px">日期</td>
+                            <td style="text-align:left">
+                                <div style="text-align:left;padding-left: 30px;">
+                                @Html.TextBox("BuyDate", null, new { style = "height:24px;width:310px;margin-right: 0px;ime-mode:inactive;" })
+                                </div>
+                            </td>
+                        </tr>
+                
+                        <tr>
+                        
+                            <td align="right" style="font-size:12px">店铺</td>
+                            <td>
+                                <div style="text-align:left;padding-left: 30px;">
+                                @Html.DropDownList("WareHouseID", null, new { style = "height:24px;width:310px;margin-right: 0px;" })
+                                </div>
+                            </td>
+                            <td class="style3"></td>
+                            <td class="style1" style="text-align:right;"> 
+                                <input type="submit" class="button4" value="添加商品" />
+                                <input type="submit" class="button4" value="审核" />
+                                <input type="submit" class="button4" value="保存" />
+                                <input type="submit" class="button4" value="取消" />
+                            </td>
+                        </tr>
+                    </tbody>
+                  </table>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td align="center">
+                <br />
+                <div style=" text-align:center;">
+                    <span style="color:Red;" id="ContentPlaceHolder1_lblSelectValue"></span>
+                </div>
+                <div>
+	                <table cellspacing="0" border="1" style="width:100%;border-collapse:collapse;word-break:break-all;word-wrap:break-word" id="ContentPlaceHolder1_dgvItem" rules="all" class="gridview_m">
+		                <tbody>
+                            <tr>
+			                    <th style="background-color:#66CFBB;border-color:#2280DD;width:5%;" scope="col">NO</th>
+                                <th style="background-color:#66CFBB;border-color:#2280DD;width:10%;" scope="col">商品编号</th>
+                                <th style="background-color:#66CFBB;border-color:#2280DD;width:10%;" scope="col">商品名称</th>
+                                <th style="background-color:#66CFBB;border-color:#2280DD;width:10%;" scope="col">分类</th>
+                                <th style="background-color:#66CFBB;border-color:#2280DD;width:10%;" scope="col">型号</th>
+                                <th style="background-color:#66CFBB;border-color:#2280DD;width:10%;" scope="col">颜色</th>
+                                <th style="background-color:#66CFBB;border-color:#2280DD;width:10%;" scope="col">价格</th>
+                                <th style="background-color:#66CFBB;border-color:#2280DD;width:10%;" scope="col">售价</th>
+                                <th style="background-color:#66CFBB;border-color:#2280DD;width:10%;" scope="col">数量</th>
+                                <th style="background-color:#66CFBB;border-color:#2280DD;width:10%;" scope="col">总价</th>
+                                <th style="background-color:#66CFBB;border-color:#2280DD;width:5%;" scope="col">&nbsp;</th>
+		                    </tr>
+                            <tr onmouseout="this.style.backgroundColor=color;" onmouseover="color=this.style.backgroundColor;this.style.backgroundColor='#CCCCCC';this.style.cursor='pointer';" style="cursor: pointer;">
+			                     <td align="right" class="lacuna">1</td>
+                                 <td align="left" class="tline_lev1">0001</td>
+                                 <td align="right" class="lacuna">abc</td>
+                                 <td align="left" class="tline_lev1">上衣</td>
+                                 <td align="left" class="tline_lev3">M</td>
+                                 <td align="right" class="tline_lev1">红</td>
+                                 <td align="right" class="tline_lev1">100</td>
+                                 <td align="left" class="tline_lev1">200</td>
+                                 <td align="right" class="tline_lev1">6</td>
+                                 <td align="right" class="tline_lev1">600</td>
+                                 <td align="center" class="lacuna"><a href="" class="regul">删除</a></td>
+		                    </tr>
+                            <tr onmouseout="this.style.backgroundColor=color;" onmouseover="color=this.style.backgroundColor;this.style.backgroundColor='#CCCCCC';this.style.cursor='pointer';" style="cursor: pointer;">
+			                     <td align="right" class="lacuna">1</td>
+                                 <td align="left" class="tline_lev1">0001</td>
+                                 <td align="right" class="lacuna">abc</td>
+                                 <td align="left" class="tline_lev1">上衣</td>
+                                 <td align="left" class="tline_lev3">M</td>
+                                 <td align="right" class="tline_lev1">红</td>
+                                 <td align="right" class="tline_lev1">100</td>
+                                 <td align="left" class="tline_lev1">200</td>
+                                 <td align="right" class="tline_lev1">6</td>
+                                 <td align="right" class="tline_lev1">600</td>
+                                 <td align="center" class="lacuna"><a href="" class="regul">删除</a></td>
+		                    </tr>
+	                    </tbody>
+                    </table>
+                </div>
+            </td>
+        </tr>
+        </tbody>
+        </table>
+    </td>
+    </tr>
+    </tbody>
+    </table>
+    <p></p>
+</div>
+

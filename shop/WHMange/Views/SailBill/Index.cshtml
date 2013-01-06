@@ -1,0 +1,173 @@
+﻿@{
+    ViewBag.Title = "销售单管理";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section navigation{
+    @Html.ActionLink("首页", "Index", "Main", new { }, new { @class="house"}) > 销售单管理
+}
+<div id="rightnow">
+    <h3 class="reallynow">
+        <span class="app_add">销售单列表  </span>
+        <br />
+    </h3>
+
+    <table width="100%" cellspacing="1" cellpadding="0" border="0"> 
+    <tbody>
+    <tr style="height:10px">
+        <td></td>
+    </tr>
+    <tr>
+    <td valign="top" align="center">
+        <table style="text-align:center; width:97%; font-size:12px;">
+        <tbody>
+        <tr>
+            <td class="style8">
+            <div>
+            <table style="width:100%;border-width:1px; border-style:solid; border-color:#2280DD">
+                <tbody><tr>
+                    <td align="right" style="font-size:12px">单号</td>
+                    <td>
+                        <div style="text-align:left;padding-left: 30px;">
+                        @Html.TextBox("SailNO", null, new { style = "height:24px;width:310px;margin-right: 0px;ime-mode:inactive;" })
+                        </div>
+                    </td>
+                    <td align="right" style="font-size:12px">店铺</td>
+                        <td style="text-align:left">
+                        <div style="text-align:left;padding-left: 30px;">
+                        @Html.DropDownList("WareHouseID", null, new { style = "height:24px;width:310px;margin-right: 0px;" })
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="right" style="font-size:12px">销售员</td>
+                    <td >
+                        <div style="text-align:left;padding-left: 30px;">
+                         @Html.DropDownList("StuffID", null, new { style = "height:24px;width:310px;margin-right: 0px;" })
+                        </div>
+                    </td>
+                    <td align="right" style="font-size:12px">是否审核</td>
+                    <td style="text-align:left">
+                        <div style="text-align:left;padding-left: 30px;">
+                        @Html.DropDownList("IsReview", null, new { style = "height:24px;width:310px;margin-right: 0px;" })
+                        </div>
+                    </td>
+                </tr>
+                
+                <tr>
+                        
+                    <td align="right" style="font-size:12px">日期</td>
+                    <td>
+                        <div style="text-align:left;padding-left: 30px;">
+                        @Html.TextBox("fromSailDate", null, new { style = "height:24px;width:150px;margin-right: 0px;ime-mode:inactive;" })~@Html.TextBox("toSailDate", null, new { style = "height:24px;width:150px;margin-right: 0px;ime-mode:inactive;" })
+                        </div>
+                    </td>
+                    <td class="style3"></td>
+                    <td class="style1" style="text-align:right;"> 
+                        <input type="submit" class="button4" id="ContentPlaceHolder1_btnSearch" value="検索" name="ctl00$ContentPlaceHolder1$btnSearch" />
+                    </td>
+                </tr>
+            </tbody></table>
+            </div>
+            </td>
+        </tr>
+        <tr>
+            <td align="center">
+            <br />
+            <div style=" text-align:center;">
+                <span style="color:Red;" id="ContentPlaceHolder1_lblSelectValue"></span>
+            </div>
+            <div>
+	            <table cellspacing="0" border="1" style="width:100%;border-collapse:collapse;word-break:break-all;word-wrap:break-word" id="ContentPlaceHolder1_dgvItem" rules="all" class="gridview_m">
+		            <tbody>
+                        <tr>
+			                <th style="background-color:#66CFBB;border-color:#2280DD;width:5%;" scope="col">NO</th>
+                            <th style="background-color:#66CFBB;border-color:#2280DD;width:15%;" scope="col">单号</th>
+                            <th style="background-color:#66CFBB;border-color:#2280DD;width:15%;" scope="col">店铺</th>
+                            <th style="background-color:#66CFBB;border-color:#2280DD;width:15%;" scope="col">销售员</th>
+                            <th style="background-color:#66CFBB;border-color:#2280DD;width:10%;" scope="col">日期</th>
+                            <th style="background-color:#66CFBB;border-color:#2280DD;width:10%;" scope="col">是否审核</th>
+                            <th style="background-color:#66CFBB;border-color:#2280DD;width:10%;" scope="col">审核者</th>
+                            <th style="background-color:#66CFBB;border-color:#2280DD;width:10%;" scope="col">备注</th>
+                            <th style="background-color:#66CFBB;border-color:#2280DD;width:10%;" scope="col">&nbsp;</th>
+		                </tr>
+                        <tr onmouseout="this.style.backgroundColor=color;" onmouseover="color=this.style.backgroundColor;this.style.backgroundColor='#CCCCCC';this.style.cursor='pointer';" style="cursor: pointer;">
+			                <td align="right" class="lacuna">1</td>
+                             <td align="left" class="tline_lev1">0001</td>
+                             <td align="left" class="tline_lev1">烟大</td>
+                             <td align="left" class="tline_lev3">C</td>
+                             <td align="left" class="tline_lev1">2012-09-01</td>
+                             <td align="right" class="tline_lev1">是</td>
+                             <td align="right" class="tline_lev1">A</td>
+                             <td align="left" class="tline_lev1">AAA</td>
+                             <td align="center" class="lacuna">
+                             <a href="" class="regul">編集</a>
+                             <a href="" class="regul">删除</a>
+                             </td>
+		                </tr>
+                        <tr onmouseout="this.style.backgroundColor=color;" onmouseover="color=this.style.backgroundColor;this.style.backgroundColor='#CCCCCC';this.style.cursor='pointer';" style="cursor: pointer;">
+			                <td align="right" class="lacuna">1</td>
+                             <td align="left" class="tline_lev1">0001</td>
+                             <td align="left" class="tline_lev1">烟大</td>
+                             <td align="left" class="tline_lev3">D</td>
+                             <td align="left" class="tline_lev1">2012-09-01</td>
+                             <td align="right" class="tline_lev1">是</td>
+                             <td align="right" class="tline_lev1">A</td>
+                             <td align="left" class="tline_lev1">AAA</td>
+                             <td align="center" class="lacuna">
+                             <a href="" class="regul">編集</a>
+                             <a href="" class="regul">删除</a>
+                             </td>
+		                </tr>
+	                </tbody>
+                </table>
+            </div>
+           </td>
+       </tr>
+        <tr>
+            <td class="style2">
+                <div style="margin:0 auto; width:100%;" class="pagination">
+                    <div class="divnum">
+                        <table style="width:100%;">
+                            <tbody>
+                                <tr>
+                                    <td style="text-align:left;">
+                                        <a class="number current">1</a>
+                                        <a href="" class="number">2</a>
+                                        <a href="" class="number">3</a>
+                                        <a href="" class="number">4</a>
+                                        <a href="" class="number">5</a>
+                                        <a href="" class="number">6</a>
+                                        <a href="" class="number">7</a>
+                                        <a href="" class="number">8</a>
+                                        <a href="" class="number">9</a>
+                                        <a href="" class="number">10</a>
+                                        <a href="">&gt;&gt;</a>
+                                        <a href="">&gt;&gt;|</a>
+                                    </td>
+                                 </tr>
+                                </tbody>
+                            </table>
+                    </div>
+                </div>
+            </td>
+        </tr>
+        </tbody>
+        </table>
+    </td>
+ 
+    </tr>
+    </tbody>
+    </table>
+
+    <table style="margin-top:30px;width:100%;">
+        <tbody>
+            <tr>
+		        <td class="bc" style="text-align:right; border:0px; background-color:#FFFFFF">
+			        <a href="./ChangeStock/Add"><input type="submit" class="button1" value="追加" /></a>
+                </td>
+		    </tr>
+        </tbody>
+    </table>
+    <p></p>
+</div>

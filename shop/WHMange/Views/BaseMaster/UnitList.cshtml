@@ -1,0 +1,100 @@
+﻿@{
+    ViewBag.Title = "单位管理";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section navigation{
+    @Html.ActionLink("首页", "Index", "Main", new { }, new { @class="house"}) > 单位管理
+}
+<div id="rightnow">
+    <h3 class="reallynow">
+        <span class="app_add">单位列表  </span>
+        <br />
+    </h3>
+	<table width="100%" cellspacing="1" cellpadding="0" border="0"> 
+        <tbody>
+            <tr style="height:10px">
+                <td></td>
+            </tr>
+            <tr>
+            <td valign="top" align="center">
+                <table style="text-align:center; width:97%; font-size:12px;">
+                    <tbody>
+                        <tr>
+                            <td align="center">
+                                <br />
+                                <div style=" text-align:center;">
+                                    <span style="color:Red;" id="ContentPlaceHolder1_lblSelectValue"></span>
+                                </div>
+                                <div>
+	                                <table cellspacing="0" border="1" style="width:100%;border-collapse:collapse;word-break:break-all;word-wrap:break-word" id="ContentPlaceHolder1_dgvItem" rules="all" class="gridview_m">
+	                                    <tbody>
+                                            <tr>
+			                                    <th style="background-color:#66CFBB;border-color:#2280DD;width:5%;" scope="col">NO</th>
+                                                <th style="background-color:#66CFBB;border-color:#2280DD;width:25%;" scope="col">编号</th>
+                                                <th style="background-color:#66CFBB;border-color:#2280DD;width:25%;" scope="col">单位名</th>
+                                                <th style="background-color:#66CFBB;border-color:#2280DD;width:40%;" scope="col">备注</th>
+                                                <th style="background-color:#66CFBB;border-color:#2280DD;width:5%;" scope="col">&nbsp;</th>
+		                                    </tr>
+                                            <tr onmouseout="this.style.backgroundColor=color;" onmouseover="color=this.style.backgroundColor;this.style.backgroundColor='#CCCCCC';this.style.cursor='pointer';" style="cursor: pointer;">
+			                                     <td align="right" class="lacuna">1</td>
+                                                 <td align="left" class="tline_lev1">0001</td>
+                                                 <td align="left" class="tline_lev1">雪会席</td>
+                                                 <td align="left" class="tline_lev3">TOP/夜会席/会席/四季会席</td>
+                                                 <td align="center" class="lacuna"><a href="VItemEdit.aspx?id=3&amp;currentPage=1&amp;ItemCD=&amp;ItemName=&amp;JANCD=&amp;SellingPreiodFrom=&amp;SellingPreiodTo=&amp;CategoryCD=0&amp;PriceFrom=-1&amp;PriceTo=-1&amp;AllergyCD=0&amp;SearchScope=&amp;datasort=" class="regul">編集</a></td>
+             
+		                                    </tr>
+                                            <tr onmouseout="this.style.backgroundColor=color;" onmouseover="color=this.style.backgroundColor;this.style.backgroundColor='#CCCCCC';this.style.cursor='pointer';" style="cursor: pointer;">
+			                                     <td align="right" class="lacuna">2</td>
+                                                 <td align="left" class="tline_lev1">0001</td>
+                                                 <td align="left" class="tline_lev1">雪会席</td>
+                                                 <td align="left" class="tline_lev3">TOP/夜会席/会席/四季会席</td>
+                                                 <td align="center" class="lacuna"><a href="VItemEdit.aspx?id=3&amp;currentPage=1&amp;ItemCD=&amp;ItemName=&amp;JANCD=&amp;SellingPreiodFrom=&amp;SellingPreiodTo=&amp;CategoryCD=0&amp;PriceFrom=-1&amp;PriceTo=-1&amp;AllergyCD=0&amp;SearchScope=&amp;datasort=" class="regul">編集</a></td>
+             
+		                                    </tr>
+	                                    </tbody>
+                                    </table>
+                                </div>
+                           </td>
+                        </tr>
+                        <tr>
+                            <td class="style2">
+                                <div style="margin:0 auto; width:100%;" class="pagination">
+                                    <div class="divnum">
+                                        <table style="width:100%;">
+                                            <tbody>
+                                                <tr>
+                                                    <td style="text-align:left;">
+                                                        <a class="number current">1</a><a href="VItemView.aspx?currentPage=2&amp;ItemCD=&amp;ItemName=&amp;JANCD=&amp;SellingPreiodFrom=&amp;SellingPreiodTo=&amp;CategoryCD=0&amp;PriceFrom=-1&amp;PriceTo=-1&amp;AllergyCD=0&amp;SearchScope=&amp;datasort=" class="number">2</a><a href="VItemView.aspx?currentPage=3&amp;ItemCD=&amp;ItemName=&amp;JANCD=&amp;SellingPreiodFrom=&amp;SellingPreiodTo=&amp;CategoryCD=0&amp;PriceFrom=-1&amp;PriceTo=-1&amp;AllergyCD=0&amp;SearchScope=&amp;datasort=" class="number">3</a><a href="VItemView.aspx?currentPage=4&amp;ItemCD=&amp;ItemName=&amp;JANCD=&amp;SellingPreiodFrom=&amp;SellingPreiodTo=&amp;CategoryCD=0&amp;PriceFrom=-1&amp;PriceTo=-1&amp;AllergyCD=0&amp;SearchScope=&amp;datasort=" class="number">4</a><a href="VItemView.aspx?currentPage=5&amp;ItemCD=&amp;ItemName=&amp;JANCD=&amp;SellingPreiodFrom=&amp;SellingPreiodTo=&amp;CategoryCD=0&amp;PriceFrom=-1&amp;PriceTo=-1&amp;AllergyCD=0&amp;SearchScope=&amp;datasort=" class="number">5</a><a href="VItemView.aspx?currentPage=6&amp;ItemCD=&amp;ItemName=&amp;JANCD=&amp;SellingPreiodFrom=&amp;SellingPreiodTo=&amp;CategoryCD=0&amp;PriceFrom=-1&amp;PriceTo=-1&amp;AllergyCD=0&amp;SearchScope=&amp;datasort=" class="number">6</a><a href="VItemView.aspx?currentPage=7&amp;ItemCD=&amp;ItemName=&amp;JANCD=&amp;SellingPreiodFrom=&amp;SellingPreiodTo=&amp;CategoryCD=0&amp;PriceFrom=-1&amp;PriceTo=-1&amp;AllergyCD=0&amp;SearchScope=&amp;datasort=" class="number">7</a><a href="VItemView.aspx?currentPage=8&amp;ItemCD=&amp;ItemName=&amp;JANCD=&amp;SellingPreiodFrom=&amp;SellingPreiodTo=&amp;CategoryCD=0&amp;PriceFrom=-1&amp;PriceTo=-1&amp;AllergyCD=0&amp;SearchScope=&amp;datasort=" class="number">8</a><a href="VItemView.aspx?currentPage=9&amp;ItemCD=&amp;ItemName=&amp;JANCD=&amp;SellingPreiodFrom=&amp;SellingPreiodTo=&amp;CategoryCD=0&amp;PriceFrom=-1&amp;PriceTo=-1&amp;AllergyCD=0&amp;SearchScope=&amp;datasort=" class="number">9</a><a href="VItemView.aspx?currentPage=10&amp;ItemCD=&amp;ItemName=&amp;JANCD=&amp;SellingPreiodFrom=&amp;SellingPreiodTo=&amp;CategoryCD=0&amp;PriceFrom=-1&amp;PriceTo=-1&amp;AllergyCD=0&amp;SearchScope=&amp;datasort=" class="number">10</a><a href="VItemView.aspx?currentPage=2&amp;ItemCD=&amp;ItemName=&amp;JANCD=&amp;SellingPreiodFrom=&amp;SellingPreiodTo=&amp;CategoryCD=0&amp;PriceFrom=-1&amp;PriceTo=-1&amp;AllergyCD=0&amp;SearchScope=&amp;datasort=">&gt;&gt;</a><a href="VItemView.aspx?currentPage=50&amp;ItemCD=&amp;ItemName=&amp;JANCD=&amp;SellingPreiodFrom=&amp;SellingPreiodTo=&amp;CategoryCD=0&amp;PriceFrom=-1&amp;PriceTo=-1&amp;AllergyCD=0&amp;SearchScope=&amp;datasort=">&gt;&gt;|</a>
+                                                    </td>
+                                                    <td style="text-align:right">
+                                                        &nbsp;&nbsp;
+                                                        <input type="text" style="ime-mode:inactive;width:40px;" onblur="HalfNumber(this);" class="textgo" tabindex="13" id="ContentPlaceHolder1_txtPageTo" maxlength="5" name="ctl00$ContentPlaceHolder1$txtPageTo">
+                                                        <input type="submit" style="width:101px;" onfocus="flg=true;" class="button3" tabindex="14" id="ContentPlaceHolder1_btnLink" value="ページへ移動" name="ctl00$ContentPlaceHolder1$btnLink">
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                  </table>
+            </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <table style="margin-top:30px;width:100%;">
+        <tbody>
+            <tr>
+			    <td class="bc" style="text-align:right; border:0px; background-color:#FFFFFF">
+				    <input type="submit" class="button1" tabindex="16" id="ContentPlaceHolder1_Button2" value="追加" name="ctl00$ContentPlaceHolder1$Button2">
+                </td>
+			</tr>
+        </tbody>
+     </table>
+    <p></p>
+</div>
+

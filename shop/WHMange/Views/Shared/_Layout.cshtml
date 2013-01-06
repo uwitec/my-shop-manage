@@ -1,0 +1,91 @@
+﻿<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+<title>库存管理系统</title>
+<link href="../../Content/css/style.css" type="text/css" rel="stylesheet" />
+<link href="../../Content/css/theme1.css" type="text/css" rel="stylesheet" />
+
+<style type="text/css">
+    table.rl_zwm td
+    {
+        padding:10px;height:100px;
+        font-size:34px;
+        font-weight:bold;
+        font-family:'微软雅黑','Arial','Tahoma','Verdana';
+        text-align:center;
+    }
+    table.rl_zwm
+    {
+        border-collapse:collapse;
+    }
+    table.rl_zwm th
+    {
+        padding:10px;
+        height:20px;
+        background-color:#e4e9ff;
+        color:#1e1776;
+     }
+    table.rl_zwm td.xz
+    {
+        border-top:2px solid #edd08e;
+        border-left:2px solid #edd08e;
+        border-right:2px solid #edd08e;
+        border-bottom:2px solid #edd08e;
+        background-color:#fff7d8;
+    }
+    table.rl_zwm td.xxr_zwm
+    {
+        background-color:#fec7e4;
+    }
+</style>
+
+</head>
+
+<body>
+	<div id="container">
+    	<div id="header">
+        	<div style="width:auto;float:left;padding-bottom:20px;"><h2>库存管理系统</h2></div>
+            <div class="user" style="width:auto;float:right;padding-left:20px;margin-top:5px;color:#ffffff;"> 欢迎：201010001&nbsp;&nbsp;<a href="#">退出</a></div>
+      </div>
+      <div style="float:left;width:100%;margin:0px;padding:0px;">
+      <div style="width:95%;margin:20px auto !important;
+margin:22px auto;">
+       
+       <div id="yui-main">
+       <div class="bgc-3">
+        <div id="top-panel">
+            <div id="panel">
+                <ul>
+                    <li>
+                    @RenderSection("navigation")
+                    
+                    </li>
+                </ul>
+            </div>
+      </div>
+        <div id="wrapper">
+            <div id="content">
+       			@RenderBody()
+            </div>
+        </div>
+        </div>
+       </div>
+       <div class="bgc-4" id="top-menu">
+        <div class="menu1">
+         <div class="bt"><img alt="" src="../../Content/img/jj2_07.gif" /></div>
+         <div style="width:163px;height:auto;" class="menunr">
+           @Html.Action("LeftMenu", "Main")
+
+         </div>
+          
+        </div>
+         <div style="width:182px;height:7px;margin:0px auto;">
+           <img alt="" src="../../Content/img/jj2_03.gif" />
+           </div>
+      </div>
+
+       </div>
+      </div>
+</div>
+
+
+</body></html>

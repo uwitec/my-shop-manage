@@ -1,0 +1,14 @@
+E:\项目管理\服装库存管理\WHMange\DALFactory\obj\Debug\ResolveAssemblyReference.cache
+E:\项目管理\服装库存管理\WHMange\DALFactory\bin\Debug\DALFactory.dll
+E:\项目管理\服装库存管理\WHMange\DALFactory\bin\Debug\DALFactory.pdb
+E:\项目管理\服装库存管理\WHMange\DALFactory\bin\Debug\IDAL.dll
+E:\项目管理\服装库存管理\WHMange\DALFactory\bin\Debug\IDAL.pdb
+E:\项目管理\服装库存管理\WHMange\DALFactory\obj\Debug\DALFactory.dll
+E:\项目管理\服装库存管理\WHMange\DALFactory\obj\Debug\DALFactory.pdb
+D:\shr\workspace\服装库存管理\WHMange\DALFactory\bin\Debug\DALFactory.dll
+D:\shr\workspace\服装库存管理\WHMange\DALFactory\bin\Debug\DALFactory.pdb
+D:\shr\workspace\服装库存管理\WHMange\DALFactory\bin\Debug\IDAL.dll
+D:\shr\workspace\服装库存管理\WHMange\DALFactory\bin\Debug\IDAL.pdb
+D:\shr\workspace\服装库存管理\WHMange\DALFactory\obj\Debug\ResolveAssemblyReference.cache
+D:\shr\workspace\服装库存管理\WHMange\DALFactory\obj\Debug\DALFactory.dll
+D:\shr\workspace\服装库存管理\WHMange\DALFactory\obj\Debug\DALFactory.pdb

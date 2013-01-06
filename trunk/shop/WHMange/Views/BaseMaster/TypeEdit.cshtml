@@ -1,0 +1,80 @@
+﻿@model WHMange.Models.VEntity.VType
+@{
+    ViewBag.Title = "型号编辑";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section navigation{
+    @Html.ActionLink("首页", "Index", "Main", new { }, new { @class="house"}) > @Html.ActionLink("型号管理", "TypeList", "BaseMaster", new { }, new { @class = "house" }) > 型号编辑
+}
+<div id="rightnow">
+                <h3 class="reallynow">
+                    <span class="add">型号</span>
+                    <br />
+                </h3>
+			      <p class="youhave">&nbsp;</p>
+
+
+@using(Html.BeginForm("TypeAdd","BaseMaster",FormMethod.Post)){
+           <table cellspacing="0" cellpadding="0" border="0" class="sqf" style="width: 900px; font-size:12px;">
+			<tbody>
+			<tr>
+				<td width="180" bgcolor="#f3f9ff">
+					<div align="right" style="padding-right:20px;"><span class="STYLE1 ">编码</span></div>
+                 </td>
+				 <td height="22" bgcolor="#FFFFFF">
+                 <div align="left" style="padding-left:50px;"><span class="STYLE3">
+                    <input type="text" name="" maxlength="18" id="ContentPlaceHolder1_txtItemCD" style="width: 251px;" />
+                    </span>
+                 </div>
+				</td>
+			</tr>
+			
+			<tr>
+				<td width="180" bgcolor="#f3f9ff">
+					<div align="right" style="padding-right:20px;"><span class="STYLE1 ">
+					名称</span></div></td>
+				 <td height="22" bgcolor="#FFFFFF"><div align="left" style="padding-left:50px;"><span class="STYLE3">
+                 <input type="text" name="" maxlength="64" id="ContentPlaceHolder1_txtItemName" style="width: 251px;" />
+                 </span>
+                 </div>
+				</td>
+			</tr>
+			
+			<tr>
+				<td width="180" bgcolor="#f3f9ff">
+					<div align="right" style="padding-right:20px;">
+                        <span class="STYLE1 ">备注</span>
+                     </div>
+                 </td>
+				 <td height="22" bgcolor="#FFFFFF">
+                 <div align="left" style="padding-left:50px;">
+                 <span class="STYLE3">
+					<input type="text" name="ctl00$ContentPlaceHolder1$txtOrderStock" maxlength="4" id="ContentPlaceHolder1_txtOrderStock" style="width: 563px;" />
+                 </span>
+                 </div>
+				</td>
+			</tr>	
+		</tbody>
+        </table>
+        <table style="margin-top:80px;width:100%;">
+            <tbody>
+            <tr>
+			<td bgcolor="#ffffff" class="bc" style="text-align:center;border:0px;">
+            <label>
+            <span style="text-align:center;border:0px;" class="bc"><span style="text-align:center;border:0px;" class="bc">
+            <span style="text-align:center;border:0px;" class="bc">
+			<input type="submit" value="保存" class="button2" name="button" />
+            <input type="button" value="删除" class="button2" name="button" />
+            <input type="button" value="取消" class="button2" name="button" />
+			</span>
+            </span>
+            </span>
+            </label>
+            </td>
+		</tr>
+        </tbody>
+    </table>
+    }
+    <p></p>
+</div>

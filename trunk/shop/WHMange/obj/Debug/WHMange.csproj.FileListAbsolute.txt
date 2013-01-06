@@ -1,0 +1,14 @@
+E:\项目管理\服装库存管理\WHMange\WHMange\bin\WHMange.dll
+E:\项目管理\服装库存管理\WHMange\WHMange\bin\WHMange.pdb
+E:\项目管理\服装库存管理\WHMange\WHMange\bin\EntityFramework.dll
+E:\项目管理\服装库存管理\WHMange\WHMange\bin\EntityFramework.xml
+E:\项目管理\服装库存管理\WHMange\WHMange\obj\Debug\ResolveAssemblyReference.cache
+E:\项目管理\服装库存管理\WHMange\WHMange\obj\Debug\WHMange.dll
+E:\项目管理\服装库存管理\WHMange\WHMange\obj\Debug\WHMange.pdb
+D:\shr\workspace\服装库存管理\WHMange\WHMange\bin\WHMange.dll
+D:\shr\workspace\服装库存管理\WHMange\WHMange\bin\WHMange.pdb
+D:\shr\workspace\服装库存管理\WHMange\WHMange\bin\EntityFramework.dll
+D:\shr\workspace\服装库存管理\WHMange\WHMange\bin\EntityFramework.xml
+D:\shr\workspace\服装库存管理\WHMange\WHMange\obj\Debug\ResolveAssemblyReference.cache
+D:\shr\workspace\服装库存管理\WHMange\WHMange\obj\Debug\WHMange.dll
+D:\shr\workspace\服装库存管理\WHMange\WHMange\obj\Debug\WHMange.pdb

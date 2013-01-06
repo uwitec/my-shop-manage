@@ -1,0 +1,7 @@
+E:\项目管理\服装库存管理\WHMange\MvcApplication1\bin\MvcApplication1.dll
+E:\项目管理\服装库存管理\WHMange\MvcApplication1\bin\MvcApplication1.pdb
+E:\项目管理\服装库存管理\WHMange\MvcApplication1\bin\EntityFramework.dll
+E:\项目管理\服装库存管理\WHMange\MvcApplication1\bin\EntityFramework.xml
+E:\项目管理\服装库存管理\WHMange\MvcApplication1\obj\Debug\ResolveAssemblyReference.cache
+E:\项目管理\服装库存管理\WHMange\MvcApplication1\obj\Debug\MvcApplication1.dll
+E:\项目管理\服装库存管理\WHMange\MvcApplication1\obj\Debug\MvcApplication1.pdb

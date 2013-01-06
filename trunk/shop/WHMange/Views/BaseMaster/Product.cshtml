@@ -1,0 +1,178 @@
+﻿@model WHMange.Models.VEntity.VProductSearch
+@{
+    ViewBag.Title = "商品管理";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section navigation{
+    @Html.ActionLink("首页", "Index", "Main", new { }, new { @class="house"}) > 商品管理
+}
+<div id="rightnow">
+    <h3 class="reallynow">
+        <span class="app_add">商品列表  </span>
+        <br />
+    </h3>
+
+    <table width="100%" cellspacing="1" cellpadding="0" border="0"> 
+    <tbody><tr style="height:10px">
+        <td>
+        </td>
+    </tr>
+    <tr>
+    <td valign="top" align="center">
+        <table style="text-align:center; width:97%; font-size:12px;">
+        <tbody><tr>
+            <td class="style8">
+            <div>
+            <table style="width:100%;border-width:1px; border-style:solid; border-color:#2280DD">
+                <tbody><tr>
+                    <td align="right" style="font-size:12px">
+                        商品分类</td>
+                    <td>
+                        <div style="text-align:left;padding-left: 30px;">
+                        
+                        <select style="height: 24px; width: 310px; border-color: rgb(102, 102, 102);" tabindex="2" id="ContentPlaceHolder1_ddlCategoryCD" name="ctl00$ContentPlaceHolder1$ddlCategoryCD">
+	                            <option value="">選択してください</option>
+	                            <option value="52">TOP/お土産・たばこ/土産・煙草/土産・煙草</option>
+	                            <option value="53">TOP/食事/ランチ/単品</option>
+                            </select>
+                            
+                        </div>
+                    </td>
+                    <td align="right" style="font-size:12px">商品名</td>
+                        <td style="text-align:left">
+                        <div style="text-align:left;padding-left: 30px;">
+                            <input type="text" style="height:24px;width:310px;margin-right: 0px;ime-mode:active;" tabindex="3" id="ContentPlaceHolder1_txtItemName" maxlength="40" name="ctl00$ContentPlaceHolder1$txtItemName">
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="right" style="font-size:12px">
+                        商品编码</td>
+                    <td >
+                        <div style="text-align:left;padding-left: 30px;">
+                        <input type="text" style="height:24px;width:310px;margin-right: 0px;ime-mode:active;" tabindex="3" id="ContentPlaceHolder1_txtItemName" maxlength="40" name="ctl00$ContentPlaceHolder1$txtItemName">
+                        </div>
+                    </td>
+                    <td align="right">
+                        </td>
+                    <td style="text-align:left">
+                        <div style="text-align:left;padding-left: 30px;">
+                        
+                            
+                        </div>
+                    </td>
+                </tr>
+                
+                <tr>
+                        
+                    <td align="right" class="style4">
+                        </td>
+                    <td class="style1">
+                        <div style="text-align:left;padding-left: 30px;">
+                        
+                        </div>
+                    </td>
+                    <td class="style3">
+                        </td>
+                    <td class="style1" style="text-align:right;">                    
+                        <input type="submit" style="border-style:None;height:0px;width:0px;left: -9px; position: relative; top: -1px; width: 0px;" id="ContentPlaceHolder1_Button1" value="" name="ctl00$ContentPlaceHolder1$Button1" />
+                        <input type="submit" onfocus="flg=true;" class="button4" tabindex="11" id="ContentPlaceHolder1_btnClear" value="クリア" name="ctl00$ContentPlaceHolder1$btnClear" />&nbsp;&nbsp;
+                        <input type="submit" class="button4" tabindex="12" id="ContentPlaceHolder1_btnSearch" value="検索" name="ctl00$ContentPlaceHolder1$btnSearch" />
+                    </td>
+                </tr>
+            </tbody></table>
+            </div>
+            </td>
+        </tr>
+        <tr>
+        <td align="center">
+        <br />
+        <div style=" text-align:center;">
+            <span style="color:Red;" id="ContentPlaceHolder1_lblSelectValue"></span>
+        </div>
+        <div>
+	<table cellspacing="0" border="1" style="width:100%;border-collapse:collapse;word-break:break-all;word-wrap:break-word" id="ContentPlaceHolder1_dgvItem" rules="all" class="gridview_m">
+		<tbody>
+        <tr>
+			<th style="background-color:#66CFBB;border-color:#2280DD;width:5%;" scope="col">NO</th>
+            <th style="background-color:#66CFBB;border-color:#2280DD;width:15%;" scope="col">编号</th>
+            <th style="background-color:#66CFBB;border-color:#2280DD;width:15%;" scope="col">商品名</th>
+            <th style="background-color:#66CFBB;border-color:#2280DD;width:20%;" scope="col">分类</th>
+            <th style="background-color:#66CFBB;border-color:#2280DD;width:10%;" scope="col">型号</th>
+            <th style="background-color:#66CFBB;border-color:#2280DD;width:10%;" scope="col">价格</th>
+            <th style="background-color:#66CFBB;border-color:#2280DD;width:10%;" scope="col">售价</th>
+            <th style="background-color:#66CFBB;border-color:#2280DD;width:10%;" scope="col">颜色</th>
+            <th style="background-color:#66CFBB;border-color:#2280DD;width:5%;" scope="col">&nbsp;</th>
+		</tr>
+        <tr onmouseout="this.style.backgroundColor=color;" onmouseover="color=this.style.backgroundColor;this.style.backgroundColor='#CCCCCC';this.style.cursor='pointer';" style="cursor: pointer;">
+			<td align="right" class="lacuna">1</td>
+             <td align="left" class="tline_lev1">0001</td>
+             <td align="left" class="tline_lev1">雪会席</td>
+             <td align="left" class="tline_lev3">TOP/夜会席/会席/四季会席</td>
+             <td align="left" class="tline_lev1">M</td>
+             <td align="right" class="tline_lev1">800</td>
+             <td align="right" class="tline_lev1">900</td>
+             <td align="left" class="tline_lev1">红</td>
+             <td align="center" class="lacuna"><a href="VItemEdit.aspx?id=3&amp;currentPage=1&amp;ItemCD=&amp;ItemName=&amp;JANCD=&amp;SellingPreiodFrom=&amp;SellingPreiodTo=&amp;CategoryCD=0&amp;PriceFrom=-1&amp;PriceTo=-1&amp;AllergyCD=0&amp;SearchScope=&amp;datasort=" class="regul">編集</a></td>
+             
+		</tr>
+        <tr onmouseout="this.style.backgroundColor=color;" onmouseover="color=this.style.backgroundColor;this.style.backgroundColor='#CCCCCC';this.style.cursor='pointer';" style="cursor: pointer;">
+			<td align="right" class="lacuna">2</td>
+             <td align="left" class="tline_lev1">0001</td>
+             <td align="left" class="tline_lev1">雪会席</td>
+             <td align="left" class="tline_lev3">TOP/夜会席/会席/四季会席</td>
+             <td align="left" class="tline_lev1">M</td>
+             <td align="right" class="tline_lev1">800</td>
+             <td align="right" class="tline_lev1">900</td>
+             <td align="left" class="tline_lev1">红</td>
+             <td align="center" class="lacuna"><a href="VItemEdit.aspx?id=3&amp;currentPage=1&amp;ItemCD=&amp;ItemName=&amp;JANCD=&amp;SellingPreiodFrom=&amp;SellingPreiodTo=&amp;CategoryCD=0&amp;PriceFrom=-1&amp;PriceTo=-1&amp;AllergyCD=0&amp;SearchScope=&amp;datasort=" class="regul">編集</a></td>
+             
+		</tr>
+	</tbody></table>
+</div>
+       </td>
+            
+        </tr>
+        <tr>
+            <td class="style2">
+                <div style="margin:0 auto; width:100%;" class="pagination">
+                <div class="divnum">
+            
+        <table style="width:100%;">
+        <tbody><tr>
+        <td style="text-align:left;">
+        <a class="number current">1</a><a href="VItemView.aspx?currentPage=2&amp;ItemCD=&amp;ItemName=&amp;JANCD=&amp;SellingPreiodFrom=&amp;SellingPreiodTo=&amp;CategoryCD=0&amp;PriceFrom=-1&amp;PriceTo=-1&amp;AllergyCD=0&amp;SearchScope=&amp;datasort=" class="number">2</a><a href="VItemView.aspx?currentPage=3&amp;ItemCD=&amp;ItemName=&amp;JANCD=&amp;SellingPreiodFrom=&amp;SellingPreiodTo=&amp;CategoryCD=0&amp;PriceFrom=-1&amp;PriceTo=-1&amp;AllergyCD=0&amp;SearchScope=&amp;datasort=" class="number">3</a><a href="VItemView.aspx?currentPage=4&amp;ItemCD=&amp;ItemName=&amp;JANCD=&amp;SellingPreiodFrom=&amp;SellingPreiodTo=&amp;CategoryCD=0&amp;PriceFrom=-1&amp;PriceTo=-1&amp;AllergyCD=0&amp;SearchScope=&amp;datasort=" class="number">4</a><a href="VItemView.aspx?currentPage=5&amp;ItemCD=&amp;ItemName=&amp;JANCD=&amp;SellingPreiodFrom=&amp;SellingPreiodTo=&amp;CategoryCD=0&amp;PriceFrom=-1&amp;PriceTo=-1&amp;AllergyCD=0&amp;SearchScope=&amp;datasort=" class="number">5</a><a href="VItemView.aspx?currentPage=6&amp;ItemCD=&amp;ItemName=&amp;JANCD=&amp;SellingPreiodFrom=&amp;SellingPreiodTo=&amp;CategoryCD=0&amp;PriceFrom=-1&amp;PriceTo=-1&amp;AllergyCD=0&amp;SearchScope=&amp;datasort=" class="number">6</a><a href="VItemView.aspx?currentPage=7&amp;ItemCD=&amp;ItemName=&amp;JANCD=&amp;SellingPreiodFrom=&amp;SellingPreiodTo=&amp;CategoryCD=0&amp;PriceFrom=-1&amp;PriceTo=-1&amp;AllergyCD=0&amp;SearchScope=&amp;datasort=" class="number">7</a><a href="VItemView.aspx?currentPage=8&amp;ItemCD=&amp;ItemName=&amp;JANCD=&amp;SellingPreiodFrom=&amp;SellingPreiodTo=&amp;CategoryCD=0&amp;PriceFrom=-1&amp;PriceTo=-1&amp;AllergyCD=0&amp;SearchScope=&amp;datasort=" class="number">8</a><a href="VItemView.aspx?currentPage=9&amp;ItemCD=&amp;ItemName=&amp;JANCD=&amp;SellingPreiodFrom=&amp;SellingPreiodTo=&amp;CategoryCD=0&amp;PriceFrom=-1&amp;PriceTo=-1&amp;AllergyCD=0&amp;SearchScope=&amp;datasort=" class="number">9</a><a href="VItemView.aspx?currentPage=10&amp;ItemCD=&amp;ItemName=&amp;JANCD=&amp;SellingPreiodFrom=&amp;SellingPreiodTo=&amp;CategoryCD=0&amp;PriceFrom=-1&amp;PriceTo=-1&amp;AllergyCD=0&amp;SearchScope=&amp;datasort=" class="number">10</a><a href="VItemView.aspx?currentPage=2&amp;ItemCD=&amp;ItemName=&amp;JANCD=&amp;SellingPreiodFrom=&amp;SellingPreiodTo=&amp;CategoryCD=0&amp;PriceFrom=-1&amp;PriceTo=-1&amp;AllergyCD=0&amp;SearchScope=&amp;datasort=">&gt;&gt;</a><a href="VItemView.aspx?currentPage=50&amp;ItemCD=&amp;ItemName=&amp;JANCD=&amp;SellingPreiodFrom=&amp;SellingPreiodTo=&amp;CategoryCD=0&amp;PriceFrom=-1&amp;PriceTo=-1&amp;AllergyCD=0&amp;SearchScope=&amp;datasort=">&gt;&gt;|</a>
+                    </td>
+        <td style="text-align:right">
+                    &nbsp;&nbsp;
+                    <input type="text" style="ime-mode:inactive;width:40px;" onblur="HalfNumber(this);" class="textgo" tabindex="13" id="ContentPlaceHolder1_txtPageTo" maxlength="5" name="ctl00$ContentPlaceHolder1$txtPageTo">
+                    <input type="submit" style="width:101px;" onfocus="flg=true;" class="button3" tabindex="14" id="ContentPlaceHolder1_btnLink" value="ページへ移動" name="ctl00$ContentPlaceHolder1$btnLink">
+                        </td>
+                        </tr>
+                        </tbody></table>
+                    
+                </div></div>
+            </td>
+        </tr>
+       
+        </tbody></table>
+    </td>
+ 
+    </tr>
+    </tbody></table>
+
+    <table style="margin-top:30px;width:100%;">
+            <tbody><tr>
+			<td class="bc" style="text-align:right; border:0px; background-color:#FFFFFF"><label>
+                <span style="text-align:center; border:0px;" class="bc">
+                <span style="border:0px;" class="bc">
+				<a href="ProductAdd"><input type="submit" class="button1" value="追加" /></a>
+				</span></span></label></td>
+			</tr>
+   
+        </tbody></table>
+
+    <p></p>
+</div>
+

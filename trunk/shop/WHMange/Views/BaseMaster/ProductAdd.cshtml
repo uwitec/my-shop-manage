@@ -1,0 +1,185 @@
+﻿@model WHMange.Models.VEntity.VProduct
+
+@{
+    ViewBag.Title = "商品追加";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section navigation{
+    @Html.ActionLink("首页", "Index", "Main", new { }, new { @class="house"}) > @Html.ActionLink("商品管理", "Product", "BaseMaster", new { }, new { @class=""}) > 商品追加
+}
+<div id="rightnow">
+    <h3 class="reallynow">
+        <span class="add">商品追加</span>
+        <br />
+    </h3>
+	<p class="youhave">&nbsp;</p>
+    @using(Html.BeginForm("ProductAdd","BaseMaster",FormMethod.Post)){
+        <table cellspacing="0" cellpadding="0" border="0" class="sqf" style="width: 900px; font-size:12px;">
+		    <tbody>
+		    <tr>
+			    <td width="180" bgcolor="#f3f9ff">
+				    <div align="right" style="padding-right:20px;"><span class="STYLE1 ">分类</span></div>
+                </td>
+				<td height="22" bgcolor="#FFFFFF">
+                    <div align="left" style="padding-left:50px;">
+                    <span class="STYLE3">
+                    @Html.DropDownList("CategoryID", null, new { style = "width:251px" })
+                    </span>
+                    </div>
+			    </td>
+		    </tr>
+			
+		    <tr>
+			    <td width="180" bgcolor="#f3f9ff">
+				    <div align="right" style="padding-right:20px;">
+                        <span class="STYLE1 ">编码</span>
+                    </div>
+                </td>
+				<td height="22" bgcolor="#FFFFFF">
+                    <div align="left" style="padding-left:50px;">
+                        <span class="STYLE3">
+                            @Html.TextBox("ProductNO", null, new { style = "width: 251px;" })
+                        </span>
+                    </div>
+			    </td>
+		    </tr>
+		    <tr>
+			    <td width="180" bgcolor="#f3f9ff">
+				    <div align="right" style="padding-right:20px;"><span class="STYLE1 ">
+					    名称</span></div></td>
+				    <td height="22" bgcolor="#FFFFFF"><div align="left" style="padding-left:50px;"><span class="STYLE3">
+                    @Html.TextBox("ProductName", null, new { style = "width: 251px;" })
+                    </span></div>
+			    </td>
+		    </tr>
+			
+		    <tr>
+			    <td width="180" bgcolor="#f3f9ff">
+				    <div align="right" style="padding-right:20px;"><span class="STYLE1 ">
+				    尺码</span></div></td>
+				    <td height="22" bgcolor="#FFFFFF"><div align="left" style="padding-left:50px;">
+                    <span class="STYLE3">
+                    @Html.DropDownList("TypeID", null, new { style = "width:251px" })
+                    </span></div>
+			    </td>
+		    </tr>
+		    	
+            <tr>
+			    <td width="180" bgcolor="#f3f9ff">
+				    <div align="right" style="padding-right:20px;"><span class="STYLE1 ">SKU</span></div>
+                 </td>
+				 <td height="22" bgcolor="#FFFFFF">
+                    <div align="left" style="padding-left:50px;">
+                    <span class="STYLE3">
+                    @Html.TextBox("ProductSKU", null, new { style = "width: 251px;" })
+                    </span>
+                    </div>
+			    </td>
+		    </tr>
+
+            <tr>
+			    <td width="180" bgcolor="#f3f9ff">
+				    <div align="right" style="padding-right:20px;"><span class="STYLE1 ">
+				    单位类别</span></div></td>
+				    <td height="22" bgcolor="#FFFFFF">
+                    <div align="left" style="padding-left:50px;">
+                    <span class="STYLE3">
+                    @Html.DropDownList("UnitID", null, new { style = "width:251px" })
+                    </span>
+                    </div>
+			    </td>
+		    </tr>
+
+            <tr>
+			    <td width="180" bgcolor="#f3f9ff">
+				    <div align="right" style="padding-right:20px;"><span class="STYLE1 ">单价</span></div>
+                 </td>
+				 <td height="22" bgcolor="#FFFFFF">
+                    <div align="left" style="padding-left:50px;">
+                    <span class="STYLE3">
+                    @Html.TextBox("Price", null, new { style = "width: 251px;" })
+                    </span>
+                    </div>
+			    </td>
+		    </tr>
+
+            <tr>
+			    <td width="180" bgcolor="#f3f9ff">
+				    <div align="right" style="padding-right:20px;"><span class="STYLE1 ">售价</span></div>
+                 </td>
+				 <td height="22" bgcolor="#FFFFFF">
+                    <div align="left" style="padding-left:50px;">
+                    <span class="STYLE3">
+                    @Html.TextBox("SailPrice", null, new { style = "width: 251px;" })
+                    </span>
+                    </div>
+			    </td>
+		    </tr>
+
+            <tr>
+			    <td width="180" bgcolor="#f3f9ff">
+				    <div align="right" style="padding-right:20px;"><span class="STYLE1 ">
+				    颜色</span></div></td>
+				    <td height="22" bgcolor="#FFFFFF">
+                    <div align="left" style="padding-left:50px;">
+                    <span class="STYLE3">
+                    @Html.DropDownList("ColorID", null, new { style = "width:251px" })
+                    </span>
+                    </div>
+			    </td>
+		    </tr>
+            
+
+            <tr>
+			    <td width="180" bgcolor="#f3f9ff">
+				    <div align="right" style="padding-right:20px;"><span class="STYLE1 ">产地</span></div>
+                 </td>
+				 <td height="22" bgcolor="#FFFFFF">
+                    <div align="left" style="padding-left:50px;">
+                    <span class="STYLE3">
+                    @Html.TextBox("Place", null, new { style = "width: 251px;" })
+                    </span>
+                    </div>
+			    </td>
+		    </tr>
+
+            <tr>
+			    <td width="180" bgcolor="#f3f9ff">
+				    <div align="right" style="padding-right:20px;"><span class="STYLE1 ">其它</span></div>
+                 </td>
+				 <td height="22" bgcolor="#FFFFFF">
+                    <div align="left" style="padding-left:50px;">
+                    <span class="STYLE3">
+                    @Html.TextBox("ProductDetail", null, new { style = "width: 251px;" })
+                    </span>
+                    </div>
+			    </td>
+		    </tr>
+
+	    </tbody>
+    </table>
+            <table style="margin-top:80px;width:100%;">
+                <tbody>
+                <tr>
+			    <td bgcolor="#ffffff" class="bc" style="text-align:center;border:0px;">
+                <label>
+                <span style="text-align:center;border:0px;" class="bc"><span style="text-align:center;border:0px;" class="bc">
+                <span style="text-align:center;border:0px;" class="bc">
+			    <input type="submit" value="追加" class="button2" name="button" />
+                <input type="button" value="取消" class="button2" name="button" />
+			    </span>
+                </span>
+                </span>
+                </label>
+                </td>
+		    </tr>
+            </tbody>
+        </table>
+
+        }
+
+
+
+
+                    <p></p>
+			  </div>

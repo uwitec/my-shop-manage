@@ -1,0 +1,70 @@
+﻿@{
+    ViewBag.Title = "调货方式管理";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section navigation{
+    @Html.ActionLink("首页", "Index", "Main", new { }, new { @class="house"}) > 调货方式管理
+}
+<div id="rightnow">
+    <h3 class="reallynow">
+        <span class="app_add">调货方式列表  </span>
+        <br />
+    </h3>
+	<p class="youhave">&nbsp;</p>
+    <table width="100%" cellspacing="1" cellpadding="0" border="0" bgcolor="#c9c9c9" class="bg" style="font-size:12px;">
+      <tbody>
+      <tr>
+        <td height="22" bgcolor="#FFFFFF"><div align="center"><strong><span class="STYLE1">NO</span></strong></div></td>
+        <td height="22" bgcolor="#FFFFFF"><div align="center"><strong><span class="STYLE1">编号</span></strong></div></td>
+        <td height="22" bgcolor="#FFFFFF"><div align="center"><strong><span class="STYLE1">名称</span></strong></div></td>
+        <td height="22" bgcolor="#FFFFFF"><div align="center"><strong><span class="STYLE1">备注</span></strong></div></td>
+        <td height="22" bgcolor="#FFFFFF"><div align="center"><strong><span class="STYLE1">操作 </span></strong></div></td>  
+      </tr>
+      <tr>
+        <td height="22" bgcolor="#FFFFFF"><div align="center">1</div></td>
+        <td height="22" bgcolor="#FFFFFF"><div align="center"><span class="STYLE3">1001</span></div></td>
+        <td height="22" bgcolor="#FFFFFF"><div align="center">2010/10/13 0:00:00 ~ 2010/10/20 0:00:00 </div></td>
+        <td height="22" bgcolor="#FFFFFF"><div align="center"><span class="STYLE3">一般 </span></div></td>
+        <td height="22" bgcolor="#FFFFFF"><div align="center">
+        <span class="STYLE3">
+        <a href="">編集</a></span></div>
+        </td>
+      </tr>
+     
+     
+    </tbody></table>
+    <div class="pagination">
+    <div style="height:20px;width:50px;float:right;margin-right:30px;"> 
+    </div>
+    <div style="height:20px;width:300px;float:right;padding-top: 3px;">
+    <a href="#" title="Previous Page">&lt;&lt;</a> 
+    <a href="#" class="number" title="1">1</a> 
+    <a href="#" class="number" title="2">2</a> 
+    <a href="#" class="number current" title="3">3</a> 
+    <a href="#" class="number" title="4">4</a> 
+    <a href="#" title="Next Page">&gt;&gt;</a>
+    </div>
+    </div>
+    <table style="margin-top:30px;width:100%;">
+        <tbody>
+        <tr>
+	    <td bgcolor="#ffffff" class="bc" style="text-align:center;border:0px;">
+            <label>
+                <span style="text-align:center;border:0px;" class="bc">
+                <span style="border:0px;" class="bc">
+                    <span style="text-align:center;border:0px;" class="bc">
+	                    <a href="ChangeTypeAdd">
+                            <input type="button" value="追加" id="button1" name="button" />
+                        </a>
+	                </span>
+                </span>
+                </span>
+            </label>
+        </td>
+	    </tr>
+        </tbody>
+    </table>
+    <p></p>
+</div>
+

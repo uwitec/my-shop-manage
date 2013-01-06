@@ -1,0 +1,10 @@
+E:\项目管理\服装库存管理\WHMange\Common\bin\Debug\Common.dll
+E:\项目管理\服装库存管理\WHMange\Common\bin\Debug\Common.pdb
+E:\项目管理\服装库存管理\WHMange\Common\obj\Debug\ResolveAssemblyReference.cache
+E:\项目管理\服装库存管理\WHMange\Common\obj\Debug\Common.dll
+E:\项目管理\服装库存管理\WHMange\Common\obj\Debug\Common.pdb
+D:\shr\workspace\服装库存管理\WHMange\Common\bin\Debug\Common.dll
+D:\shr\workspace\服装库存管理\WHMange\Common\bin\Debug\Common.pdb
+D:\shr\workspace\服装库存管理\WHMange\Common\obj\Debug\ResolveAssemblyReference.cache
+D:\shr\workspace\服装库存管理\WHMange\Common\obj\Debug\Common.dll
+D:\shr\workspace\服装库存管理\WHMange\Common\obj\Debug\Common.pdb

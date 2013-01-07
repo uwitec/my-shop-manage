@@ -7,18 +7,9 @@ namespace Model
 {
     public class StockInfo:CommonInfo
     {
-        public int id{get;set;}
-        public int Warehouse{get;set;}
-        public int ProductID{get;set;}
-        public string ProductName{get;set;}
-        public int CategoryID{get;set;}
-        public string ProductDetail{get;set;}
-        public int UnitID{get;set;}
-        public string UnitName{get;set;}
-        public decimal Price{get;set;}
-        public int ColorID{get;set;}
-        public string Place{get;set;}
-        public DateTime SaveTime{get;set;}
+        public Guid id{get;set;}
+        public Guid Warehouse{get;set;}
+        public Guid ProductID{get;set;}
         public string StockInTP{get;set;}
         public DateTime StockInDate{get;set;}
         public string StockInReason{get;set;}
@@ -26,5 +17,7 @@ namespace Model
         public DateTime StockOutDate{get;set;}
         public string StockOutReason{get;set;}
         public int Num{get;set;}
+        public ProductInfo product { get; set; }
+        public WareHouseInfo warehouse { get; set; }
     }
 }

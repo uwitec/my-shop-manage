@@ -7,8 +7,8 @@ namespace Model
 {
     public class StuffInfo:CommonInfo
     {
-        public int id{get;set;}
-        public int WareHouse{get;set;}
+        public Guid id{get;set;}
+        public Guid WareHouse{get;set;}
         public string StuffNO{get;set;}
         public string Name{get;set;}
         public char Sex{get;set;}
@@ -18,5 +18,6 @@ namespace Model
         public string address{get;set;}
         public char IsOn{get;set;}
         public string detail { get; set; }
+        public WareHouseInfo whinfo { get;set;};
     }
 }

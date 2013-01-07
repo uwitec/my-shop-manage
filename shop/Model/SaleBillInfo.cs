@@ -7,16 +7,17 @@ namespace Model
 {
     public class SaleBillInfo:CommonInfo
     {
-        public int id{get;set;}
-        public int WareHouseID { get; set; }
+        public Guid id{get;set;}
+        public Guid WareHouseID { get; set; }
         public string SailNO{get;set;}
         public DateTime SailDate{get;set;}
         public char IsReview{get;set;}
         public string ReviewUser{get;set;}
-        public int StuffID{get;set;}
+        public Guid StuffID{get;set;}
         public string Detail{get;set;}
         public string Define1{get;set;}
         public string Define2{get;set;}
         public string Define3 { get; set; }
+        public IEnumerable<SailBillBody> SaleBillDetail { get; set; }
     }
 }

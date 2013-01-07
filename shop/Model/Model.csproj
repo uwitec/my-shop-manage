@@ -43,12 +43,10 @@
     <Compile Include="CategoryInfo.cs" />
     <Compile Include="ChangeStockBody.cs" />
     <Compile Include="ChangeStockInfo.cs" />
-    <Compile Include="ChangeTypeInfo.cs" />
     <Compile Include="CheckBillBody.cs" />
     <Compile Include="CheckBillInfo.cs" />
-    <Compile Include="ColorsInfo.cs" />
     <Compile Include="CommonInfo.cs" />
-    <Compile Include="Product.cs" />
+    <Compile Include="ProductInfo.cs" />
     <Compile Include="ProductBillBody.cs" />
     <Compile Include="ProductBillInfo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -62,8 +60,6 @@
     <Compile Include="StockOutInfo.cs" />
     <Compile Include="StuffInfo.cs" />
     <Compile Include="SupplierInfo.cs" />
-    <Compile Include="TypesInfo.cs" />
-    <Compile Include="UnitsInfo.cs" />
     <Compile Include="UserInfo.cs" />
     <Compile Include="WareHouseInfo.cs" />
   </ItemGroup>

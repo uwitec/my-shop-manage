@@ -7,7 +7,7 @@ namespace Model
 {
     class SupplierInfo : CommonInfo
     {
-        public int id{get;set;}
+        public Guid id{get;set;}
         public string SupplierNO{get;set;}
         public string Name{get;set;}
         public string ZipCode{get;set;}

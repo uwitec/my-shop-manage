@@ -7,9 +7,9 @@ namespace Model
 {
     public class ChangeStockBody
     {
-        public int  HeadId{get;set;}
-        public int ProductID{get;set;}
+        public Guid  HeadId{get;set;}
+        public Guid ProductID { get; set; }
         public int Num { get; set; }
-        public Product product { get; set; }
+        public ProductInfo product { get; set; }
     }
 }

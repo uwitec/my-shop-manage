@@ -7,7 +7,7 @@ namespace Model
 {
     public class WareHouseInfo:CommonInfo
     {
-        public int id{get;set;}
+        public Guid id{get;set;}
         public string Name{get;set;}
         public string No{get;set;}
         public string Address{get;set;}

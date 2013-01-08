@@ -1,0 +1,48 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/_ViewStart.cshtml";
+}
+<div class="tabtitle" style=" width:100%;">
+	    <ul id="mytab1">
+		    <li class="active">调货方式管理</li>
+		    <li class="normal" onclick="javascript:window.location.href = '../Account/TrainList.aspx?action=add&hp_id=0';">培训系列图片列表添加</li>
+	    </ul>
+    </div>
+<div>
+<table>
+    <tr>
+        <td>商品</td>
+        <td><input name="CategoryID"/></td>
+        <td>名称</td>
+        <td><input name="ProductName"/></td>
+    </tr>
+    <tr>
+        <td>编码</td>
+        <td><input name="ProductNO"/></td>
+        <td colspan="2"><input id="btnSearch" value="检索"/></td>
+    </tr>
+</table>
+</div>
+    <div class="config" style=" width:100%;">
+    <table class="ta" style=" text-align:center;">
+      <tr>
+        <th colspan="7" style="background: none repeat scroll 0% 0% rgb(102, 187, 255);"></th>
+      </tr>
+      <tr style=" height:20px;background: #eeeeff;"><td colspan="7"></td></tr>
+      <tr style="background: #8899cc; font-size:13px; font-weight:bold; height:40px;"> 
+        <td style="background: #eeeeff; width:5%"></td>
+  	    <td width="8%">No</td>
+        <td width="10%">编号</td>
+        <td width="10%">名称</td>
+        <td width="10%">分类</td>
+        <td width="10%">型号</td>
+        <td width="10%">价格</td>
+        <td width="10%">售价</td>
+        <td width="10%">颜色</td>
+        <td width="10%">&nbsp;</td>
+        <td style="background: #eeeeff; width:5%"></td>
+      </tr>
+    </table>
+    </div>
+
+

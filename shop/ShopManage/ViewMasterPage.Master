@@ -2,12 +2,16 @@
 
 <%@ Register assembly="DevExpress.Web.v10.2, Version=10.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" namespace="DevExpress.Web.ASPxNavBar" tagprefix="dx" %>
 
+<%@ Register assembly="DevExpress.Web.v10.2" namespace="DevExpress.Web.ASPxNavBar" tagprefix="dx" %>
+
 <!DOCTYPE html>
 
 <html>
 <head runat="server">
     <title><asp:ContentPlaceHolder ID="TitleContent" runat="server" /></title>
 </head>
+<link media="screen" type="text/css" href="../../Content/css/style1.css" rel="stylesheet" />
+
 <body>
 
     <form id="form1" runat="server">

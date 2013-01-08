@@ -1,0 +1,55 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>库存管理系统</title>
+<!--                       CSS                       -->
+<!-- Reset Stylesheet -->
+<!-- Main Stylesheet -->
+</head>
+<body id="login">
+<div class="png_bg" id="gz">
+  <div id="login-top">
+    <h1></h1>
+<img alt="Logo" src="../../Content/img/logo.png" id="logo" /></div>
+
+  <div id="login-content">
+  @using(@Html.BeginForm("LogOn","Login")){
+  
+        <p>&nbsp;</p>
+          <label>用户编码</label><input type="text" class="text-input" /><div class="clear"></div><p>
+            <label>密码 </label>
+            <input type="password" class="text-input" />
+          </p><div class="clear"></div><div class="clear"></div><p>
+          </p><table>
+          <tbody>
+          <tr>
+        
+          </tr>
+          </tbody>
+          </table>
+          <table align="center" style="width:auto;margin:5px auto;">
+          <tbody>
+          <tr>
+          <td style="padding:10px;"> 
+      
+          <input type="submit" style="width:80px;" value="登陆" class="button" />
+      
+          </td>
+            <td style="padding:10px;"> <input type="reset" style="width:80px;" value="取消" class="button" /></td>
+            </tr>
+            </tbody></table>
+          <p></p>
+    
+  }
+
+    
+  </div>
+  <!-- End #login-content -->
+</div>
+<!-- End #login-wrapper -->
+
+
+</body></html>

@@ -8,3 +8,6 @@ D:\shr\workspace\服装库存管理\WHMange\Model\bin\Debug\Model.pdb
 D:\shr\workspace\服装库存管理\WHMange\Model\obj\Debug\ResolveAssemblyReference.cache
 D:\shr\workspace\服装库存管理\WHMange\Model\obj\Debug\Model.dll
 D:\shr\workspace\服装库存管理\WHMange\Model\obj\Debug\Model.pdb
+D:\shr\workspace\shop\shop\Model\obj\Debug\ResolveAssemblyReference.cache
+D:\shr\workspace\shop\shop\Model\obj\Debug\Model.dll
+D:\shr\workspace\shop\shop\Model\obj\Debug\Model.pdb

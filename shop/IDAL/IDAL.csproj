@@ -47,7 +47,6 @@
     <Compile Include="IProductBill.cs" />
     <Compile Include="ISailBill.cs" />
     <Compile Include="IStock.cs" />
-    <Compile Include="IStockBackUp.cs" />
     <Compile Include="IStockIn.cs" />
     <Compile Include="IStockOut.cs" />
     <Compile Include="IStuff.cs" />

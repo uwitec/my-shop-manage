@@ -19,19 +19,19 @@ namespace IDAL
         /// <param name="changeStock"></param>
         /// <param name="conn"></param>
         /// <returns></returns>
-        int InsertChangeStock(ChangeStockInfo changeStock,SqlConnection conn);
+        int InsertChangeStock(ChangeStockInfo changeStock,SqlTransaction trans);
         /// <summary>
         /// 更新调拨单
         /// </summary>
         /// <param name="category"></param>
         /// <returns></returns>
-        int UpdateChangeStock(ChangeStockInfo changeStock, SqlConnection conn);
+        int UpdateChangeStock(ChangeStockInfo changeStock, SqlTransaction trans);
         /// <summary>
         /// 根据分类id删除调拨单
         /// </summary>
         /// <param name="category"></param>
         /// <returns></returns>
-        int DeleteChangeStock(Guid changeStockId, SqlConnection conn);
+        int DeleteChangeStock(Guid changeStockId, SqlTransaction trans);
         /// <summary>
         /// 根据条件获取调拨单
         /// </summary>

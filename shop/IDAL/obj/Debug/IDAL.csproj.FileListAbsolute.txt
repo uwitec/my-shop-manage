@@ -12,3 +12,12 @@ D:\shr\workspace\服装库存管理\WHMange\IDAL\bin\Debug\Model.pdb
 D:\shr\workspace\服装库存管理\WHMange\IDAL\obj\Debug\ResolveAssemblyReference.cache
 D:\shr\workspace\服装库存管理\WHMange\IDAL\obj\Debug\IDAL.dll
 D:\shr\workspace\服装库存管理\WHMange\IDAL\obj\Debug\IDAL.pdb
+D:\shr\workspace\shop\shop\IDAL\bin\Debug\IDAL.dll
+D:\shr\workspace\shop\shop\IDAL\bin\Debug\IDAL.pdb
+D:\shr\workspace\shop\shop\IDAL\bin\Debug\Common.dll
+D:\shr\workspace\shop\shop\IDAL\bin\Debug\Model.dll
+D:\shr\workspace\shop\shop\IDAL\bin\Debug\Common.pdb
+D:\shr\workspace\shop\shop\IDAL\bin\Debug\Model.pdb
+D:\shr\workspace\shop\shop\IDAL\obj\Debug\ResolveAssemblyReference.cache
+D:\shr\workspace\shop\shop\IDAL\obj\Debug\IDAL.dll
+D:\shr\workspace\shop\shop\IDAL\obj\Debug\IDAL.pdb

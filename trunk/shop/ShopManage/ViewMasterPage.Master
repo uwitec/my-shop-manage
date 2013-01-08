@@ -1,0 +1,95 @@
+﻿<%@ Master Language="C#" Inherits="System.Web.Mvc.ViewMasterPage" %>
+
+<%@ Register assembly="DevExpress.Web.v10.2, Version=10.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" namespace="DevExpress.Web.ASPxNavBar" tagprefix="dx" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title><asp:ContentPlaceHolder ID="TitleContent" runat="server" /></title>
+</head>
+<body>
+
+    <form id="form1" runat="server">
+
+    <div>
+        <table width="100%">
+            <tr>
+                <td colspan="2">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder3" runat="server">
+                        <div style="width: 100%; height: 60px;">
+                            <img src="images/logo.png" height="60" style="margin: 10px 50px;" alt="库存管理系统" /></div>
+                    </asp:ContentPlaceHolder>
+                </td>
+            </tr>
+            <tr>
+                <td class="style1" valign="top">
+                    <dx:ASPxNavBar ID="ASPxNavBar2" runat="server" Width="120px">
+                        <Groups>
+                            <dx:navbargroup Text="基础档案">
+                                <Items>
+                                    <dx:navbaritem Text="店铺管理" NavigateUrl="SysInfo.aspx">
+                                    </dx:navbaritem>
+                                    <dx:navbaritem Text="商品分类管理" NavigateUrl="~/Login.aspx?type=exit">
+                                    </dx:navbaritem>
+                                    <dx:navbaritem Text="商品管理" NavigateUrl="~/Login.aspx?type=exit">
+                                    </dx:navbaritem>
+                                </Items>
+                            </dx:navbargroup>
+                            <dx:navbargroup Text="单据管理">
+                                <Items>
+                                    <dx:navbaritem Text="采购单" NavigateUrl="SysInfo.aspx">
+                                    </dx:navbaritem>
+                                    <dx:navbaritem Text="调拨单" NavigateUrl="~/Login.aspx?type=exit">
+                                    </dx:navbaritem>
+                                    <dx:navbaritem Text="销售单" NavigateUrl="~/Login.aspx?type=exit">
+                                    </dx:navbaritem>
+                                    <dx:navbaritem Text="盘点单" NavigateUrl="~/Login.aspx?type=exit">
+                                    </dx:navbaritem>
+                                    <dx:navbaritem Text="入库单" NavigateUrl="~/Login.aspx?type=exit">
+                                    </dx:navbaritem>
+                                    <dx:navbaritem Text="出库单" NavigateUrl="~/Login.aspx?type=exit">
+                                    </dx:navbaritem>
+                                </Items>
+                            </dx:navbargroup>
+                            <dx:navbargroup Text="数据分析">
+                                <Items>
+                                    <dx:navbaritem Text="库存" NavigateUrl="SysInfo.aspx">
+                                    </dx:navbaritem>
+                                    <dx:navbaritem Text="商品销售记录" NavigateUrl="~/Login.aspx?type=exit">
+                                    </dx:navbaritem>
+                                    <dx:navbaritem Text="商品调拨记录" NavigateUrl="~/Login.aspx?type=exit">
+                                    </dx:navbaritem>
+                                    <dx:navbaritem Text="商品采购记录" NavigateUrl="~/Login.aspx?type=exit">
+                                    </dx:navbaritem>
+                                </Items>
+                            </dx:navbargroup>
+                            <dx:navbargroup Text="员工管理">
+                                <Items>
+                                    <dx:navbaritem Text="员工档案" NavigateUrl="SysInfo.aspx">
+                                    </dx:navbaritem>
+                                </Items>
+                            </dx:navbargroup>
+                            <dx:navbargroup Text="用户管理">
+                                <Items>
+                                    <dx:navbaritem Text="用户档案" NavigateUrl="SysInfo.aspx">
+                                    </dx:navbaritem>
+                                </Items>
+                            </dx:navbargroup>
+                        </Groups>
+                    </dx:ASPxNavBar>
+                </td>
+                <td valign="top" style="height:620px; background-color:#F5F5F5;">
+                   <asp:ContentPlaceHolder ID="MainContent" runat="server">
+        
+                    </asp:ContentPlaceHolder>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div>
+        
+    </div>
+    </form>
+</body>
+</html>

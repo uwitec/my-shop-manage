@@ -12,3 +12,10 @@ D:\shr\workspace\服装库存管理\WHMange\WHMange\bin\EntityFramework.xml
 D:\shr\workspace\服装库存管理\WHMange\WHMange\obj\Debug\ResolveAssemblyReference.cache
 D:\shr\workspace\服装库存管理\WHMange\WHMange\obj\Debug\WHMange.dll
 D:\shr\workspace\服装库存管理\WHMange\WHMange\obj\Debug\WHMange.pdb
+D:\shr\workspace\shop\shop\WHMange\bin\WHMange.dll
+D:\shr\workspace\shop\shop\WHMange\bin\WHMange.pdb
+D:\shr\workspace\shop\shop\WHMange\bin\EntityFramework.dll
+D:\shr\workspace\shop\shop\WHMange\bin\EntityFramework.xml
+D:\shr\workspace\shop\shop\WHMange\obj\Debug\ResolveAssemblyReference.cache
+D:\shr\workspace\shop\shop\WHMange\obj\Debug\WHMange.dll
+D:\shr\workspace\shop\shop\WHMange\obj\Debug\WHMange.pdb

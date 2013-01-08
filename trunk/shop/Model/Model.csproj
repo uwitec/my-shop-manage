@@ -52,7 +52,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SailBillBody.cs" />
     <Compile Include="SaleBillInfo.cs" />
-    <Compile Include="StockBackUpInfo.cs" />
     <Compile Include="StockInBody.cs" />
     <Compile Include="StockInfo.cs" />
     <Compile Include="StockInInfo.cs" />

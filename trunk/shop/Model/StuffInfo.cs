@@ -18,6 +18,6 @@ namespace Model
         public string address{get;set;}
         public char IsOn{get;set;}
         public string detail { get; set; }
-        public WareHouseInfo whinfo { get;set;};
+        public WareHouseInfo whinfo { get;set;}
     }
 }

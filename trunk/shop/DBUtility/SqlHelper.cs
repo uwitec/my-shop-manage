@@ -136,6 +136,77 @@ namespace DBUtility
                 throw;
             }
         }
+
+        public static SqlDataReader ExecuteReader(SqlConnection connection, CommandType cmdType, string cmdText, params SqlParameter[] commandParameters)
+        {
+            SqlCommand cmd = new SqlCommand();
+            PrepareCommand(cmd, connection, null, cmdType, cmdText, commandParameters);
+            SqlDataReader reader= cmd.ExecuteReader();
+            cmd.Parameters.Clear();
+            return reader;
+        }
+
+
+        /// <summary>
+        /// 执行检索语句
+        /// </summary>
+        /// <param name="sconn">数据库连接</param>
+        /// <param name="sql">要执行的sql语句</param>
+        /// <returns></returns>
+        public DataTable Squery(string sql, SqlConnection sconn)
+        {
+            try
+            {
+                DataTable dt = new DataTable();
+                SqlDataAdapter sda = new SqlDataAdapter(sql, sconn);
+                sda.Fill(dt);
+                return dt;
+            }
+            catch (Exception e)
+            {
+                //this.lw.error(e.Message, "database->Squery");
+                throw e;
+            }
+        }
+        /// <summary>
+        /// 执行检索语句
+        /// </summary>
+        /// <param name="sql">sql语句</param>
+        /// <param name="sconn">数据库连接</param>
+        /// <param name="values">需要传入的参数</param>
+        /// <returns>datatable</returns>
+        public static DataTable Squery(string sql, SqlConnection sconn, params SqlParameter[] values)
+        {
+
+            DataTable dt = new DataTable();
+            SqlCommand scmd = new SqlCommand(sql, sconn);
+            scmd.Parameters.AddRange(values);
+            SqlDataAdapter sda = new SqlDataAdapter(scmd);
+            sda.Fill(dt);
+            return dt;
+
+        }
+        /// <summary>
+        /// 执行检索语句
+        /// </summary>
+        /// <param name="sql">sql语句</param>
+        /// <param name="sconn">数据库连接</param>
+        /// <param name="values">需要传入的参数</param>
+        /// <returns>datatable</returns>
+        public static DataTable Squery(string sql, SqlConnection sconn, SqlTransaction trans, params SqlParameter[] values)
+        {
+
+            DataTable dt = new DataTable();
+            SqlCommand scmd = new SqlCommand(sql, sconn);
+            scmd.Transaction = trans;
+            scmd.Parameters.AddRange(values);
+            SqlDataAdapter sda = new SqlDataAdapter(scmd);
+            sda.Fill(dt);
+            return dt;
+
+        }
+
+
         /// <summary>
         /// 用指定的数据库连接字符串执行一个命令并返回一个数据集的第一列
         /// </summary>

@@ -30,15 +30,6 @@ namespace DALFactory
             return (IDAL.IChangeStock)Assembly.Load(DALPath).CreateInstance(className);
         }
         /// <summary>
-        /// 调拨类型
-        /// </summary>
-        /// <returns></returns>
-        public static IDAL.IChangeType CreateChangeType()
-        {
-            string className = DALPath + ".ChangeType";
-            return (IDAL.IChangeType)Assembly.Load(DALPath).CreateInstance(className);
-        }
-        /// <summary>
         /// 盘点单
         /// </summary>
         /// <returns></returns>
@@ -46,15 +37,6 @@ namespace DALFactory
         {
             string className = DALPath + ".CheckBill";
             return (IDAL.ICheckBill)Assembly.Load(DALPath).CreateInstance(className);
-        }
-        /// <summary>
-        /// 颜色
-        /// </summary>
-        /// <returns></returns>
-        public static IDAL.IColors CreateColors()
-        {
-            string className = DALPath + ".Colors";
-            return (IDAL.IColors)Assembly.Load(DALPath).CreateInstance(className);
         }
         /// <summary>
         /// 商品
@@ -93,15 +75,6 @@ namespace DALFactory
             return (IDAL.IStock)Assembly.Load(DALPath).CreateInstance(className);
         }
         /// <summary>
-        /// 库存备份
-        /// </summary>
-        /// <returns></returns>
-        public static IDAL.IStockBackUp CreateStockBackUp()
-        {
-            string className = DALPath + ".StockBackUp";
-            return (IDAL.IStockBackUp)Assembly.Load(DALPath).CreateInstance(className);
-        }
-        /// <summary>
         /// 入库
         /// </summary>
         /// <returns></returns>
@@ -136,24 +109,6 @@ namespace DALFactory
         {
             string className = DALPath + ".Supplier";
             return (IDAL.ISupplier)Assembly.Load(DALPath).CreateInstance(className);
-        }
-        /// <summary>
-        /// 型号
-        /// </summary>
-        /// <returns></returns>
-        public static IDAL.ITypes CreateTypes()
-        {
-            string className = DALPath + ".Types";
-            return (IDAL.ITypes)Assembly.Load(DALPath).CreateInstance(className);
-        }
-        /// <summary>
-        /// 单位
-        /// </summary>
-        /// <returns></returns>
-        public static IDAL.IUnits CreateUnits()
-        {
-            string className = DALPath + ".Units";
-            return (IDAL.IUnits)Assembly.Load(DALPath).CreateInstance(className);
         }
         /// <summary>
         /// 用户

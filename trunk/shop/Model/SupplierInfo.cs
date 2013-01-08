@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Model
 {
-    class SupplierInfo : CommonInfo
+    public class SupplierInfo : CommonInfo
     {
         public Guid id{get;set;}
         public string SupplierNO{get;set;}

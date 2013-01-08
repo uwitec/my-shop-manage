@@ -12,3 +12,6 @@ D:\shr\workspace\服装库存管理\WHMange\SQLServerDAL\bin\Debug\IDAL.pdb
 D:\shr\workspace\服装库存管理\WHMange\SQLServerDAL\obj\Debug\ResolveAssemblyReference.cache
 D:\shr\workspace\服装库存管理\WHMange\SQLServerDAL\obj\Debug\SQLServerDAL.dll
 D:\shr\workspace\服装库存管理\WHMange\SQLServerDAL\obj\Debug\SQLServerDAL.pdb
+D:\shr\workspace\shop\shop\SQLServerDAL\obj\Debug\ResolveAssemblyReference.cache
+D:\shr\workspace\shop\shop\SQLServerDAL\obj\Debug\SQLServerDAL.dll
+D:\shr\workspace\shop\shop\SQLServerDAL\obj\Debug\SQLServerDAL.pdb

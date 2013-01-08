@@ -25,7 +25,7 @@ namespace IDAL
         /// </summary>
         /// <param name="category"></param>
         /// <returns></returns>
-        int UpdateChangeStock(ChangeStockInfo changeStock, SqlTransaction trans);
+        int UpdateChangeStock(ChangeStockInfo changeStock,bool changebody, SqlTransaction trans);
         /// <summary>
         /// 根据分类id删除调拨单
         /// </summary>

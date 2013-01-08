@@ -12,3 +12,6 @@ D:\shr\workspace\服装库存管理\WHMange\MySqlDAL\bin\Debug\IDAL.pdb
 D:\shr\workspace\服装库存管理\WHMange\MySqlDAL\obj\Debug\ResolveAssemblyReference.cache
 D:\shr\workspace\服装库存管理\WHMange\MySqlDAL\obj\Debug\MySqlDAL.dll
 D:\shr\workspace\服装库存管理\WHMange\MySqlDAL\obj\Debug\MySqlDAL.pdb
+D:\shr\workspace\shop\shop\MySqlDAL\obj\Debug\ResolveAssemblyReference.cache
+D:\shr\workspace\shop\shop\MySqlDAL\obj\Debug\MySqlDAL.dll
+D:\shr\workspace\shop\shop\MySqlDAL\obj\Debug\MySqlDAL.pdb

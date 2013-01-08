@@ -42,25 +42,24 @@
   <ItemGroup>
     <Compile Include="Category.cs" />
     <Compile Include="ChangeStock.cs" />
-    <Compile Include="ChangeType.cs" />
     <Compile Include="CheckBill.cs" />
-    <Compile Include="Colors.cs" />
     <Compile Include="Product.cs" />
     <Compile Include="ProductBill.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SailBill.cs" />
     <Compile Include="Stock.cs" />
-    <Compile Include="StockBackUp.cs" />
     <Compile Include="StockIn.cs" />
     <Compile Include="StockOut.cs" />
     <Compile Include="Stuff.cs" />
     <Compile Include="Supplier.cs" />
-    <Compile Include="Types.cs" />
-    <Compile Include="Units.cs" />
     <Compile Include="User.cs" />
     <Compile Include="WareHouse.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Common\Common.csproj">
+      <Project>{5BC13829-19A0-417D-805C-7D101375A3A8}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
     <ProjectReference Include="..\DBUtility\DBUtility.csproj">
       <Project>{0DD11735-DE2B-440C-83F8-278F617D2B2D}</Project>
       <Name>DBUtility</Name>

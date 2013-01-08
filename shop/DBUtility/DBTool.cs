@@ -5,6 +5,7 @@ using System.Web;
 using System.Data.SqlClient;
 using System.Reflection;
 using System.Data;
+using Common;
 
 namespace DBUtility
 {
@@ -69,5 +70,53 @@ namespace DBUtility
                 return DBNull.Value;
             return obj;
         }
+
+
+        /// <summary>
+        /// 获取sql条件字符串
+        /// </summary>
+        /// <param name="lcon">条件列表</param>
+        /// <returns>sql条件字符串</returns>
+        public static string GetSqlcon(IEnumerable<SearchCondition> lcon)
+        {
+            try
+            {
+                string sqlcon = "";
+                foreach (SearchCondition sc in lcon)
+                {
+                    sqlcon += " " + sc.con;
+                }
+                return sqlcon;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+        /// <summary>
+        /// 获取参数
+        /// </summary>
+        /// <param name="?"></param>
+        /// <returns></returns>
+        public static SqlParameter[] GetSqlParam(IEnumerable<SearchCondition> lcon)
+        {
+            try
+            {
+                SqlParameter[] sqlarr = new SqlParameter[lcon.ToArray().Length];
+                int i = 0;
+                foreach (SearchCondition sc in lcon)
+                {
+                    sqlarr[i] = new SqlParameter(sc.param, SqlNull(sc.value));
+                    i++;
+                }
+                return sqlarr;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+
     }
 }

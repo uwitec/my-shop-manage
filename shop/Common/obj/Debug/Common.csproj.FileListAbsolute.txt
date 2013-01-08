@@ -8,3 +8,8 @@ D:\shr\workspace\服装库存管理\WHMange\Common\bin\Debug\Common.pdb
 D:\shr\workspace\服装库存管理\WHMange\Common\obj\Debug\ResolveAssemblyReference.cache
 D:\shr\workspace\服装库存管理\WHMange\Common\obj\Debug\Common.dll
 D:\shr\workspace\服装库存管理\WHMange\Common\obj\Debug\Common.pdb
+D:\shr\workspace\shop\shop\Common\bin\Debug\Common.dll
+D:\shr\workspace\shop\shop\Common\bin\Debug\Common.pdb
+D:\shr\workspace\shop\shop\Common\obj\Debug\ResolveAssemblyReference.cache
+D:\shr\workspace\shop\shop\Common\obj\Debug\Common.dll
+D:\shr\workspace\shop\shop\Common\obj\Debug\Common.pdb

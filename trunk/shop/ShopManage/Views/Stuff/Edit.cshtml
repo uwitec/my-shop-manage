@@ -1,0 +1,92 @@
+﻿@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Views/_ViewStart.cshtml";
+}
+
+
+<div class="tabtitle" style=" width:100%;">
+	    <ul id="mytab1">
+		    <li class="active">员工管理</li>
+		    <li class="normal" onclick="javascript:window.location.href = '../Account/TrainList.aspx?action=add&hp_id=0';">培训系列图片列表添加</li>
+	    </ul>
+    </div>
+<div>
+
+
+ <div style="margin:0 auto; width:100% ;text-align:center;"> 
+        <table width ="90%" style=" height:100%;">
+            <tr>
+                <td>店铺</td>
+                <td style="text-align:left">
+                    <select name="WareHouseID"></select>
+                </td>
+            </tr>
+            <tr>
+                <td>编码</td>
+                <td style="text-align:left">
+                    <input type="text" name="StuffNO" />
+                </td>
+            </tr>
+            <tr>
+                <td>姓名</td>
+                <td style="text-align:left">
+                    <input type="text" name="Name" />
+                </td>
+            </tr>	
+            <tr>
+                <td>性别</td>
+                <td style="text-align:left">
+                    <input type="radio" value="1" name="Sex"/>男
+                    <input type="radio" value="2" name="Sex"/>女
+                </td>
+            </tr>
+            <tr>
+                <td>电话</td>
+                <td style="text-align:left">
+                    <input type="text" name="Tel" />
+                </td>
+            </tr>
+            <tr>
+                <td>邮箱</td>
+                <td style="text-align:left">
+                    <input type="text" name="Email" />
+                </td>
+            </tr>
+            <tr>
+                <td>出生日期</td>
+                <td style="text-align:left">
+                    <input type="text" name="Birthday" />
+                </td>
+            </tr>
+            <tr>
+                <td>住址</td>
+                <td style="text-align:left">
+                    <input type="text" name="address" />
+                </td>
+            </tr>
+            <tr>
+                <td>是否在岗</td>
+                <td style="text-align:left">
+                    <select name="IsOn">
+                    <option value="1">在职</option>
+                    <option value="0">离职</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>备注</td>
+                <td style="text-align:left">
+                    <input type="text" name="detail" />
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                <input type="submit" id="btnSave" value="确定" />
+                <input type="button" id="btnCancel" value="取消" />
+                </td>
+            </tr>
+        </table>
+    </div>														
+
+

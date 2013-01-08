@@ -1,0 +1,89 @@
+﻿@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Views/_ViewStart.cshtml";
+}
+
+<div class="tabtitle" style=" width:100%;">
+	    <ul id="mytab1">
+		    <li class="active">商品编辑</li>
+		    <li class="normal" onclick="javascript:window.location.href = '../Account/TrainList.aspx?action=add&hp_id=0';">培训系列图片列表添加</li>
+	    </ul>
+    </div>
+
+ <div style="margin:0 auto; width:100% ;text-align:center;"> 
+        <table width ="90%" style=" height:100%;">
+            <tr>
+                <td>分类</td>
+                <td style="text-align:left">
+                    <select name="CategoryID"></select>
+                </td>
+            </tr>
+            <tr>
+                <td>编码</td>
+                <td style="text-align:left">
+                    <input type="text" name="ProductNO" />
+                </td>
+            </tr>
+            <tr>
+                <td>名称</td>
+                <td style="text-align:left">
+                    <input type="text" name="ProductName" />
+                </td>
+            </tr>
+            <tr>
+                <td>型号</td>
+                <td style="text-align:left">
+                    <input type="text" name="ProductDetail" />
+                </td>
+            </tr>
+            <tr>
+                <td>SKU</td>
+                <td style="text-align:left">
+                    <input type="text" name="ProductSKU" />
+                </td>
+            </tr>
+            <tr>
+                <td>单位类别</td>
+                <td style="text-align:left">
+                    <input type="text" name="UnitID" />
+                </td>
+            </tr>
+            <tr>
+                <td>单价</td>
+                <td style="text-align:left">
+                    <input type="text" name="Price" />
+                </td>
+            </tr>
+            <tr>
+                <td>售价</td>
+                <td style="text-align:left">
+                    <input type="text" name="SailPrice" />
+                </td>
+            </tr>
+            <tr>
+                <td>颜色</td>
+                <td style="text-align:left">
+                    <input type="text" />
+                </td>
+            </tr>
+            <tr>
+                <td>产地</td>
+                <td style="text-align:left">
+                    <input type="text" name="Place" />
+                </td>
+            </tr>
+            <tr>
+                <td>其它</td>
+                <td style="text-align:left">
+                    <input type="text" name="Define1" />
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                <input type="submit" id="btnSave" value="确定" />
+                <input type="button" id="btnCancel" value="取消" />
+                </td>
+            </tr>
+        </table>
+    </div>

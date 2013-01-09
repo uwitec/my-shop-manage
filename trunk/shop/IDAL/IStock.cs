@@ -37,13 +37,13 @@ namespace IDAL
         /// </summary>
         /// <param name="conditon"></param>
         /// <returns></returns>
-        IList<StockInfo> GetStock(SearchCondition conditon, SqlConnection conn);
+        IList<StockInfo> GetStock(IEnumerable<SearchCondition> conditon, SqlConnection conn);
         /// <summary>
         /// 获取满足条件的库存
         /// </summary>
         /// <param name="conditon"></param>
         /// <returns></returns>
-        int GetStockCount(SearchCondition conditon, SqlConnection conn);
+        int GetStockCount(IEnumerable<SearchCondition> conditon, SqlConnection conn);
         /// <summary>
         /// 获取指定页的库存
         /// </summary>
@@ -52,6 +52,6 @@ namespace IDAL
         /// <param name="pagesize">每页数量</param>
         /// <param name="conn"></param>
         /// <returns></returns>
-        IList<StockInfo> GetPageStock(SearchCondition conditon, int page, int pagesize, SqlConnection conn);
+        IList<StockInfo> GetPageStock(IEnumerable<SearchCondition> conditon, int page, int pagesize, SqlConnection conn);
     }
 }

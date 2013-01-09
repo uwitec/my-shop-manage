@@ -37,13 +37,13 @@ namespace IDAL
         /// </summary>
         /// <param name="conditon"></param>
         /// <returns></returns>
-        IList<ChangeStockInfo> GetChangeStock(SearchCondition conditon, SqlConnection conn);
+        IList<ChangeStockInfo> GetChangeStock(IEnumerable<SearchCondition> conditon, SqlConnection conn);
         /// <summary>
         /// 获取满足条件的调拨单数量
         /// </summary>
         /// <param name="conditon"></param>
         /// <returns></returns>
-        int GetChangeStockCount(SearchCondition conditon, SqlConnection conn);
+        int GetChangeStockCount(IEnumerable<SearchCondition> conditon, SqlConnection conn);
         /// <summary>
         /// 获取指定页的调拨单
         /// </summary>
@@ -52,6 +52,6 @@ namespace IDAL
         /// <param name="pagesize">每页数量</param>
         /// <param name="conn"></param>
         /// <returns></returns>
-        IList<ChangeStockInfo> GetPageChangeStock(SearchCondition conditon, int page, int pagesize, SqlConnection conn);
+        IList<ChangeStockInfo> GetPageChangeStock(IEnumerable<SearchCondition> conditon, int page, int pagesize, SqlConnection conn);
     }
 }

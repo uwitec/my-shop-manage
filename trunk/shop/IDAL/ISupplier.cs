@@ -37,13 +37,13 @@ namespace IDAL
         /// </summary>
         /// <param name="conditon"></param>
         /// <returns></returns>
-        IList<SupplierInfo> GetSupplier(SearchCondition conditon, SqlConnection conn);
+        IList<SupplierInfo> GetSupplier(IEnumerable<SearchCondition> conditon, SqlConnection conn);
         /// <summary>
         /// 获取满足条件的供应商
         /// </summary>
         /// <param name="conditon"></param>
         /// <returns></returns>
-        int GetSupplierCount(SearchCondition conditon, SqlConnection conn);
+        int GetSupplierCount(IEnumerable<SearchCondition> conditon, SqlConnection conn);
         /// <summary>
         /// 获取指定页的供应商
         /// </summary>
@@ -52,6 +52,6 @@ namespace IDAL
         /// <param name="pagesize">每页数量</param>
         /// <param name="conn"></param>
         /// <returns></returns>
-        IList<SupplierInfo> GetPageSupplier(SearchCondition conditon, int page, int pagesize, SqlConnection conn);
+        IList<SupplierInfo> GetPageSupplier(IEnumerable<SearchCondition> conditon, int page, int pagesize, SqlConnection conn);
     }
 }

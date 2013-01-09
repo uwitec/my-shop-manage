@@ -101,7 +101,131 @@ namespace SQLServerDAL
                               ,[UpdateDateTime] = @UpdateDateTime
                               ,[UpdateUser] = @UpdateUser
                          WHERE id=@id";
-            return 0;
+            SqlParameter[] spvalues = DBTool.GetSqlPm(changeStock);
+            int res= SqlHelper.ExecuteNonQuery(trans, CommandType.Text, sql, spvalues);
+            if (changebody)
+            {
+                DeleteChangeStockDetail(changeStock.id, trans);
+                foreach (ChangeStockBody ckb in changeStock.changeStockDetail)
+                {
+                    insertChangeStockDetail(ckb, trans);
+                }
+            }
+            return res;
+        }
+        /// <summary>
+        /// 删除调拨单对应的表体
+        /// </summary>
+        /// <param name="headId"></param>
+        private void DeleteChangeStockDetail(Guid headId,SqlTransaction trans)
+        {
+            string sql = @"DELETE FROM [ChangeStockBody] WHERE HeadId=@HeadId";
+            SqlParameter sp = new SqlParameter("@HeadId",headId);
+            SqlHelper.ExecuteNonQuery(trans, CommandType.Text, sql, sp);
+        }
+
+        public int DeleteChangeStock(Guid changeStockId, SqlTransaction trans)
+        {
+            DeleteChangeStockDetail(changeStockId, trans);
+            string sql = @"DELETE FROM [ChangeStockHead] WHERE id=@id";
+            SqlParameter sp = new SqlParameter("@id",changeStockId);
+            return SqlHelper.ExecuteNonQuery(trans, CommandType.Text, sql, sp);
+        }
+
+        public IList<ChangeStockInfo> GetChangeStock(IEnumerable<SearchCondition> conditon, SqlConnection conn)
+        {
+            IList<ChangeStockInfo> lchangestock = new List<ChangeStockInfo>();
+            string sql = @"SELECT [id]
+                                  ,[ChangeNO]
+                                  ,[ChangeDate]
+                                  ,[ChangeUser]
+                                  ,[OutWareHouse]
+                                  ,[InWareHouse]
+                                  ,[IsReview]
+                                  ,[ReviewUser]
+                                  ,[Detail]
+                                  ,[Define1]
+                                  ,[Define2]
+                                  ,[Define3]
+                                  ,[InsertDateTime]
+                                  ,[InsertUser]
+                                  ,[UpdateDateTime]
+                                  ,[UpdateUser]
+                              FROM [ChangeStockHead]";
+            if (conditon.Count() > 0)
+            {
+                string con = DBTool.GetSqlcon(conditon);
+                sql += " where " + con;
+            }
+            SqlParameter[] spvalues = DBTool.GetSqlParam(conditon);
+            DataTable dt = SqlHelper.Squery(sql, conn, spvalues);
+            lchangestock = DBTool.GetListFromDatatable<ChangeStockInfo>(dt);
+            foreach (ChangeStockInfo csi in lchangestock)
+            {
+                csi.changeStockDetail = GetChangeStockDetail(csi.id, conn);
+            }
+            return lchangestock;
+        }
+        private IEnumerable<ChangeStockBody> GetChangeStockDetail(Guid headId,SqlConnection conn)
+        {
+            IList<ChangeStockBody> lckbody=new List<ChangeStockBody>();
+            string sql = @"SELECT [HeadId]
+                                  ,[ProductID]
+                                  ,[Num]
+                              FROM [ChangeStockBody] where HeadId=@HeadId";
+            SqlParameter sp = new SqlParameter("@HeadId",headId);
+            DataTable dt = SqlHelper.Squery(sql, conn, sp);
+            lckbody = DBTool.GetListFromDatatable<ChangeStockBody>(dt);
+            return lckbody;
+        }
+        public IList<ChangeStockInfo> GetPageChangeStock(IEnumerable<SearchCondition> conditon, int page, int pagesize, SqlConnection conn)
+        {
+            IList<ChangeStockInfo> lchangestock = new List<ChangeStockInfo>();
+            string sql = @"SELECT [id]
+                                  ,[ChangeNO]
+                                  ,[ChangeDate]
+                                  ,[ChangeUser]
+                                  ,[OutWareHouse]
+                                  ,[InWareHouse]
+                                  ,[IsReview]
+                                  ,[ReviewUser]
+                                  ,[Detail]
+                                  ,[Define1]
+                                  ,[Define2]
+                                  ,[Define3]
+                                  ,[InsertDateTime]
+                                  ,[InsertUser]
+                                  ,[UpdateDateTime]
+                                  ,[UpdateUser]
+                              ,ROW_NUMBER() over(order by InsertDateTime) as row
+                          FROM [ChangeStockHead] ";
+            if (conditon.Count() > 0)
+            {
+                string con = DBTool.GetSqlcon(conditon);
+                sql += " where " + con;
+            }
+            sql = "select * from (" + sql + ") as a where row>" + (page - 1) * pagesize + " and row<=" + page * pagesize;
+            SqlParameter[] spvalues = DBTool.GetSqlParam(conditon);
+            DataTable dt = SqlHelper.Squery(sql, conn, spvalues);
+            lchangestock = DBTool.GetListFromDatatable<ChangeStockInfo>(dt);
+            foreach (ChangeStockInfo csi in lchangestock)
+            {
+                csi.changeStockDetail = GetChangeStockDetail(csi.id, conn);
+            }
+            return lchangestock;
+        }
+
+        public int GetChangeStockCount(IEnumerable<SearchCondition> conditon, SqlConnection conn)
+        {
+            string sql = @"SELECT count(*) as count FROM [ChangeStockHead]";
+            if (conditon.Count() > 0)
+            {
+                string con = DBTool.GetSqlcon(conditon);
+                sql += " where " + con;
+            }
+            SqlParameter[] spvalues = DBTool.GetSqlParam(conditon);
+            int count = (int)SqlHelper.ExecuteScalar(conn, CommandType.Text, sql, spvalues);
+            return count;
         }
 
     }

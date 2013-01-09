@@ -25,7 +25,7 @@ namespace IDAL
         /// </summary>
         /// <param name="category"></param>
         /// <returns></returns>
-        int UpdateProductBill(ProductBillInfo productBill, SqlTransaction trans);
+        int UpdateProductBill(ProductBillInfo productBill,bool changebody, SqlTransaction trans);
         /// <summary>
         /// 根据分类id删除采购单
         /// </summary>
@@ -37,13 +37,13 @@ namespace IDAL
         /// </summary>
         /// <param name="conditon"></param>
         /// <returns></returns>
-        IList<ProductBillInfo> GetProductBill(SearchCondition conditon, SqlConnection conn);
+        IList<ProductBillInfo> GetProductBill(IEnumerable<SearchCondition> conditon, SqlConnection conn);
         /// <summary>
         /// 获取满足条件的采购单数量
         /// </summary>
         /// <param name="conditon"></param>
         /// <returns></returns>
-        int GetProductBillCount(SearchCondition conditon, SqlConnection conn);
+        int GetProductBillCount(IEnumerable<SearchCondition> conditon, SqlConnection conn);
         /// <summary>
         /// 获取指定页的采购单
         /// </summary>
@@ -52,6 +52,6 @@ namespace IDAL
         /// <param name="pagesize">每页数量</param>
         /// <param name="conn"></param>
         /// <returns></returns>
-        IList<ProductBillInfo> GetPageProductBill(SearchCondition conditon, int page, int pagesize, SqlConnection conn);
+        IList<ProductBillInfo> GetPageProductBill(IEnumerable<SearchCondition> conditon, int page, int pagesize, SqlConnection conn);
     }
 }

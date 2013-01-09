@@ -4,7 +4,6 @@ using System.Linq;
 using System.Text;
 using Model;
 using System.Data.SqlClient;
-using Model;
 using Common;
 
 namespace IDAL
@@ -38,13 +37,13 @@ namespace IDAL
         /// </summary>
         /// <param name="conditon"></param>
         /// <returns></returns>
-        IList<UserInfo> GetUser(SearchCondition conditon, SqlConnection conn);
+        IList<UserInfo> GetUser(IEnumerable<SearchCondition> conditon, SqlConnection conn);
         /// <summary>
         /// 获取满足条件的用户
         /// </summary>
         /// <param name="conditon"></param>
         /// <returns></returns>
-        int GetUserCount(SearchCondition conditon, SqlConnection conn);
+        int GetUserCount(IEnumerable<SearchCondition> conditon, SqlConnection conn);
         /// <summary>
         /// 获取指定页的用户
         /// </summary>
@@ -53,6 +52,6 @@ namespace IDAL
         /// <param name="pagesize">每页数量</param>
         /// <param name="conn"></param>
         /// <returns></returns>
-        IList<UserInfo> GetPageUser(SearchCondition conditon, int page, int pagesize, SqlConnection conn);
+        IList<UserInfo> GetPageUser(IEnumerable<SearchCondition> conditon, int page, int pagesize, SqlConnection conn);
     }
 }

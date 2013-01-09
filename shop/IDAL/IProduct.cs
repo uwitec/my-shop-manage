@@ -36,13 +36,13 @@ namespace IDAL
         /// </summary>
         /// <param name="conditon"></param>
         /// <returns></returns>
-        IList<ProductInfo> GetProduct(SearchCondition conditon, SqlConnection conn);
+        IList<ProductInfo> GetProduct(IEnumerable<SearchCondition> conditon, SqlConnection conn);
         /// <summary>
         /// 获取满足条件的盘点单数量
         /// </summary>
         /// <param name="conditon"></param>
         /// <returns></returns>
-        int GetProductCount(SearchCondition conditon, SqlConnection conn);
+        int GetProductCount(IEnumerable<SearchCondition> conditon, SqlConnection conn);
         /// <summary>
         /// 获取指定页的盘点单
         /// </summary>
@@ -51,6 +51,6 @@ namespace IDAL
         /// <param name="pagesize">每页数量</param>
         /// <param name="conn"></param>
         /// <returns></returns>
-        IList<ProductInfo> GetPageProduct(SearchCondition conditon, int page, int pagesize, SqlConnection conn);
+        IList<ProductInfo> GetPageProduct(IEnumerable<SearchCondition> conditon, int page, int pagesize, SqlConnection conn);
     }
 }

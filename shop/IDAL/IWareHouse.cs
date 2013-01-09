@@ -37,13 +37,13 @@ namespace IDAL
         /// </summary>
         /// <param name="conditon"></param>
         /// <returns></returns>
-        IList<WareHouseInfo> GetWareHouse(SearchCondition conditon, SqlConnection conn);
+        IList<WareHouseInfo> GetWareHouse(IEnumerable<SearchCondition> conditon, SqlConnection conn);
         /// <summary>
         /// 获取满足条件的仓库
         /// </summary>
         /// <param name="conditon"></param>
         /// <returns></returns>
-        int GetWareHouseCount(SearchCondition conditon, SqlConnection conn);
+        int GetWareHouseCount(IEnumerable<SearchCondition> conditon, SqlConnection conn);
         /// <summary>
         /// 获取指定页的仓库
         /// </summary>
@@ -52,6 +52,6 @@ namespace IDAL
         /// <param name="pagesize">每页数量</param>
         /// <param name="conn"></param>
         /// <returns></returns>
-        IList<WareHouseInfo> GetWareHouse(SearchCondition conditon, int page, int pagesize, SqlConnection conn);
+        IList<WareHouseInfo> GetWareHouse(IEnumerable<SearchCondition> conditon, int page, int pagesize, SqlConnection conn);
     }
 }

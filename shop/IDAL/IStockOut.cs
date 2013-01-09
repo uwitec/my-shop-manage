@@ -25,7 +25,7 @@ namespace IDAL
         /// </summary>
         /// <param name="category"></param>
         /// <returns></returns>
-        int UpdateStockOut(StockOutInfo stockOut, SqlTransaction trans);
+        int UpdateStockOut(StockOutInfo stockOut, bool changebody, SqlTransaction trans);
         /// <summary>
         /// 根据分类id删除出库
         /// </summary>
@@ -37,13 +37,13 @@ namespace IDAL
         /// </summary>
         /// <param name="conditon"></param>
         /// <returns></returns>
-        IList<StockOutInfo> GetStockOut(SearchCondition conditon, SqlConnection conn);
+        IList<StockOutInfo> GetStockOut(IEnumerable<SearchCondition> conditon, SqlConnection conn);
         /// <summary>
         /// 获取满足条件的出库
         /// </summary>
         /// <param name="conditon"></param>
         /// <returns></returns>
-        int GetStockOutCount(SearchCondition conditon, SqlConnection conn);
+        int GetStockOutCount(IEnumerable<SearchCondition> conditon, SqlConnection conn);
         /// <summary>
         /// 获取指定页的出库
         /// </summary>
@@ -52,6 +52,6 @@ namespace IDAL
         /// <param name="pagesize">每页数量</param>
         /// <param name="conn"></param>
         /// <returns></returns>
-        IList<StockOutInfo> GetPageStockOut(SearchCondition conditon, int page, int pagesize, SqlConnection conn);
+        IList<StockOutInfo> GetPageStockOut(IEnumerable<SearchCondition> conditon, int page, int pagesize, SqlConnection conn);
     }
 }

@@ -19,6 +19,6 @@ namespace Model
         public string Define1{get;set;}
         public string Define2{get;set;}
         public string Define3{get;set;}
-        public IList<ProductBillBody> BillDetail { get; set; }
+        public IEnumerable<ProductBillBody> BillDetail { get; set; }
     }
 }

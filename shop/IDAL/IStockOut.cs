@@ -27,7 +27,7 @@ namespace IDAL
         /// <returns></returns>
         int UpdateStockOut(StockOutInfo stockOut, bool changebody, SqlTransaction trans);
         /// <summary>
-        /// 根据分类id删除出库
+        /// 根据id删除出库
         /// </summary>
         /// <param name="category"></param>
         /// <returns></returns>

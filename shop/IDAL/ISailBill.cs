@@ -19,13 +19,13 @@ namespace IDAL
         /// <param name="changeStock"></param>
         /// <param name="conn"></param>
         /// <returns></returns>
-        int InsertSailBill(SaleBillInfo saleBill, SqlTransaction trans);
+        int InsertSailBill(SailBillInfo saleBill, SqlTransaction trans);
         /// <summary>
         /// 更新销售单
         /// </summary>
         /// <param name="category"></param>
         /// <returns></returns>
-        int UpdateSailBill(SaleBillInfo saleBill,bool changebody, SqlTransaction trans);
+        int UpdateSailBill(SailBillInfo saleBill,bool changebody, SqlTransaction trans);
         /// <summary>
         /// 根据分类id删除销售单
         /// </summary>
@@ -37,7 +37,7 @@ namespace IDAL
         /// </summary>
         /// <param name="conditon"></param>
         /// <returns></returns>
-        IList<SaleBillInfo> GetSailBill(IEnumerable<SearchCondition> conditon, SqlConnection conn);
+        IList<SailBillInfo> GetSailBill(IEnumerable<SearchCondition> conditon, SqlConnection conn);
         /// <summary>
         /// 获取满足条件的销售单数量
         /// </summary>
@@ -52,6 +52,6 @@ namespace IDAL
         /// <param name="pagesize">每页数量</param>
         /// <param name="conn"></param>
         /// <returns></returns>
-        IList<SaleBillInfo> GetPageSailBill(IEnumerable<SearchCondition> conditon, int page, int pagesize, SqlConnection conn);
+        IList<SailBillInfo> GetPageSailBill(IEnumerable<SearchCondition> conditon, int page, int pagesize, SqlConnection conn);
     }
 }

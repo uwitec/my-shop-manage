@@ -40,8 +40,34 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="CategoryService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Common\Common.csproj">
+      <Project>{5BC13829-19A0-417D-805C-7D101375A3A8}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DALFactory\DALFactory.csproj">
+      <Project>{70AE6A70-CE23-4550-9FFE-E56DA98ACD97}</Project>
+      <Name>DALFactory</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DBUtility\DBUtility.csproj">
+      <Project>{0DD11735-DE2B-440C-83F8-278F617D2B2D}</Project>
+      <Name>DBUtility</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\IBLL\IBLL.csproj">
+      <Project>{88A165A2-7DF2-486C-ADC5-F2117087CABE}</Project>
+      <Name>IBLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\IDAL\IDAL.csproj">
+      <Project>{E7DA2AFB-DF58-420C-9B89-4126CEEBBCF7}</Project>
+      <Name>IDAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Model\Model.csproj">
+      <Project>{F086B2F7-C749-4B51-B1B0-6DE359604379}</Project>
+      <Name>Model</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

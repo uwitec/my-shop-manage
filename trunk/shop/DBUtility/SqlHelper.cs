@@ -12,6 +12,10 @@ namespace DBUtility
     {
         //数据库连接字符串
         public static readonly string connectString = System.Configuration.ConfigurationManager.AppSettings["connectionstring"];
+        public static SqlConnection CreateConntion()
+        {
+            return new SqlConnection(connectString);
+        }
 
         private static Hashtable parmCache = Hashtable.Synchronized(new Hashtable());
         /// <summary>

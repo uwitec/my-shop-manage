@@ -26,7 +26,7 @@ namespace IBLL
         /// </summary>
         /// <param name="category"></param>
         /// <returns></returns>
-        int updateStockIn(StockInInfo stockIn);
+        int UpdateStockIn(StockInInfo stockIn,bool body);
         /// <summary>
         /// 根据ID获取
         /// </summary>

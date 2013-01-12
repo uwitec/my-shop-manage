@@ -26,7 +26,7 @@ namespace IBLL
         /// </summary>
         /// <param name="category"></param>
         /// <returns></returns>
-        int updateWareHouse(WareHouseInfo wareHouse);
+        int UpdateWareHouse(WareHouseInfo wareHouse);
         /// <summary>
         /// 根据ID获取
         /// </summary>

@@ -26,13 +26,13 @@ namespace IBLL
         /// </summary>
         /// <param name="category"></param>
         /// <returns></returns>
-        int updateStuff(StuffInfo stuff);
+        int UpdateStuff(StuffInfo stuff);
         /// <summary>
         /// 根据ID获取
         /// </summary>
         /// <param name="categoryId"></param>
         /// <returns></returns>
-        StockInInfo GetStuffById(Guid stuffId);
+        StuffInfo GetStuffById(Guid stuffId);
         /// <summary>
         /// 根据条件获取
         /// </summary>

@@ -5,32 +5,33 @@
 
 <div class="tabtitle" style=" width:100%;">
 	    <ul id="mytab1">
-		    <li class="active">入库单</li>
+		    <li class="active">库存盘点单</li>
 		    <li class="normal" onclick="javascript:window.location.href = '../Account/TrainList.aspx?action=add&hp_id=0';">培训系列图片列表添加</li>
 	    </ul>
     </div>
-<div>
+<div>																	
+ 
 <table>
     <tr>
         <td>单号</td>
-        <td><input type="text" name="StockInNO" /></td>
+        <td><input type="text" name="CheckNO"/></td>
         <td>仓库</td>
         <td><select name="WarehouseID"></select></td>
     </tr>
     <tr>
-        <td>日期</td>
-        <td colspan="2">
-        <input name="begintime"/>~<input name="endtime"/>
-        </td>
-        <td>入库类型</td>
-        <td><select name="StockInTP"></select></td>
+        <td>负责人</td>
+        <td><select name="Cuser"></select></td>
+        <td>是否审核</td>
+        <td><select name="IsReview"></select></td>
     </tr>
     <tr>
+        <td>日期</td>
         <td colspan="2">
+        <input type="text" name="begintime"/>~<input type="text" name="endtime"/>
         </td>
-        <td colspan="2">
-            <input id="btnSearch" value="检索"/>
-            <input id="btnAdd" value="追加"/>
+        <td>
+            <input type="button" id="btnSearch" value="检索"/>
+            <input type="button" id="btnAdd" value="追加"/>
         </td>
     </tr>
 </table>
@@ -42,18 +43,17 @@
       </tr>
       <tr style=" height:20px;background: #eeeeff;"><td colspan="7"></td></tr>
       <tr style="background: #8899cc; font-size:13px; font-weight:bold; height:40px;"> 
-     @* 单号 	店铺  	入库类型    	日期   	备注 *@
         <td style="background: #eeeeff; width:5%"></td>
   	    <td width="8%">No</td>
         <td width="10%">单号</td>
-        <td width="10%">店铺</td>
-        <td width="10%">入库类型</td>
-        <td width="10%">日期</td>
+        <td width="10%">仓库</td>
+        <td width="10%">负责人</td>
         <td width="10%">是否审核</td>
+        <td width="10%">日期</td>
+        <td width="10%">审核者</td>
         <td width="10%">备注</td>
         <td width="10%">&nbsp;</td>
         <td style="background: #eeeeff; width:5%"></td>
       </tr>
     </table>
     </div>
-

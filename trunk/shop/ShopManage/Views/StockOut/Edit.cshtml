@@ -2,22 +2,20 @@
     ViewBag.Title = "Edit";
     Layout = "~/Views/_ViewStart.cshtml";
 }
-
-
-
+		
 <div class="tabtitle" style=" width:100%;">
 	    <ul id="mytab1">
-		    <li class="active">入库单编辑</li>
+		    <li class="active">出库单编辑</li>
 		    <li class="normal" onclick="javascript:window.location.href = '../Account/TrainList.aspx?action=add&hp_id=0';">培训系列图片列表添加</li>
 	    </ul>
-</div>					
+</div>		
  <div style="margin:0 auto; width:100% ;text-align:center;"> 
         <table width ="90%" style=" height:100%;">
            <tr>
                 <td>单号</td>
                 <td><input type="text" name="StockInNO"/></td>
-        <td>仓库</td>
-        <td><select name="WarehouseID"></select></td>
+                <td>仓库</td>
+                <td><select name="WarehouseID"></select></td>
             </tr>
             <tr>
                 <td>入库类型</td>
@@ -68,5 +66,3 @@
       </tr>
     </table>
     </div>
-
-

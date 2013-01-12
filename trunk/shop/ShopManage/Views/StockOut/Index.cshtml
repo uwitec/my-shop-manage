@@ -4,31 +4,31 @@
 }
 
 <div class="tabtitle" style=" width:100%;">
-	    <ul id="mytab1">
-		    <li class="active">入库单</li>
-		    <li class="normal" onclick="javascript:window.location.href = '../Account/TrainList.aspx?action=add&hp_id=0';">培训系列图片列表添加</li>
-	    </ul>
-    </div>
+	<ul id="mytab1">
+		<li class="active">出库单</li>
+		<li class="normal" onclick="javascript:window.location.href = '../Account/TrainList.aspx?action=add&hp_id=0';">培训系列图片列表添加</li>
+	</ul>
+</div>
 <div>
 <table>
     <tr>
         <td>单号</td>
-        <td><input type="text" name="StockInNO" /></td>
+        <td><input type="text" name="StockOutNO" /></td>
         <td>仓库</td>
         <td><select name="WarehouseID"></select></td>
     </tr>
     <tr>
         <td>日期</td>
-        <td colspan="2">
+        <td>
         <input name="begintime"/>~<input name="endtime"/>
         </td>
-        <td>入库类型</td>
-        <td><select name="StockInTP"></select></td>
+        <td>出库类型</td>
+        <td><select name="StockOutTP"></select></td>
     </tr>
     <tr>
         <td colspan="2">
         </td>
-        <td colspan="2">
+        <td  colspan="2">
             <input id="btnSearch" value="检索"/>
             <input id="btnAdd" value="追加"/>
         </td>
@@ -47,7 +47,7 @@
   	    <td width="8%">No</td>
         <td width="10%">单号</td>
         <td width="10%">店铺</td>
-        <td width="10%">入库类型</td>
+        <td width="10%">出库类型</td>
         <td width="10%">日期</td>
         <td width="10%">是否审核</td>
         <td width="10%">备注</td>
@@ -56,4 +56,3 @@
       </tr>
     </table>
     </div>
-

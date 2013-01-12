@@ -1,0 +1,77 @@
+﻿@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Views/_ViewStart.cshtml";
+}
+
+
+<div class="tabtitle" style=" width:100%;">
+     <ul id="mytab1">
+      <li class="active">库存盘点单编辑</li>
+      <li class="normal" onclick="javascript:window.location.href = '../Account/TrainList.aspx?action=add&hp_id=0';">培训系列图片列表添加</li>
+     </ul>
+    </div>
+<div>
+                               
+@*  单号               店铺         ▽    
+  负责人         ▽      日期        
+  备注                 导入     审核     保存     返回  
+ *@
+<table>
+    <tr>
+        <td>单号</td>
+        <td><input type="text" name="CheckNO"/></td>
+        <td>仓库</td>
+        <td><select name="WarehouseID"></select></td>
+    </tr>
+    <tr>
+        <td>负责人</td>
+        <td><select name="Cuser"></select></td>
+        <td>日期</td>
+        <td>
+        <input type="text" name="Cdate"/>
+        </td>
+    </tr>
+    <tr>
+        <td>商品导入</td>
+        <td><img src="" alt="商品导入" /></td>
+        <td>备注</td>
+        <td>
+            <input type="text" name="detail"/>
+        </td>
+    </tr>
+    <tr>
+        <td></td>
+        <td colspan="3">
+            <input id="btnSearch" value="检索"/>
+            <input id="btnCheck" value="审核"/>
+            <input id="btnAdd" value="保存"/>
+            <input id="btnCancel" value="取消"/>
+        </td>
+    </tr>
+</table>
+</div>
+    <div class="config" style=" width:100%;">
+    <table class="ta" style=" text-align:center;">
+      <tr>
+        <th colspan="7" style="background: none repeat scroll 0% 0% rgb(102, 187, 255);"></th>
+      </tr>
+      <tr style=" height:20px;background: #eeeeff;"><td colspan="7"></td></tr>
+    @*   NO  编号   名称   分类   型号   价格   售价   颜色   库存数量     实际数量*@
+      <tr style="background: #8899cc; font-size:13px; font-weight:bold; height:40px;"> 
+        <td style="background: #eeeeff; width:5%"></td>
+       <td width="8%">No</td>
+       <td width="10%">编号</td>
+        <td width="10%">名称</td>
+        <td width="10%">分类</td>
+        <td width="10%">型号</td>
+        <td width="10%">价格</td>
+        <td width="10%">售价</td>
+        <td width="10%">颜色</td>
+        <td width="10%">库存数量</td>
+        <td width="10%">实际数量</td>
+        <td width="10%">&nbsp;</td>
+        <td style="background: #eeeeff; width:5%"></td>
+      </tr>
+    </table>
+    </div>
+

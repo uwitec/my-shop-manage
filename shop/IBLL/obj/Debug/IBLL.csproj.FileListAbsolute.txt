@@ -1,0 +1,9 @@
+D:\shr\workspace\shop\shop\IBLL\bin\Debug\IBLL.dll
+D:\shr\workspace\shop\shop\IBLL\bin\Debug\IBLL.pdb
+D:\shr\workspace\shop\shop\IBLL\bin\Debug\Common.dll
+D:\shr\workspace\shop\shop\IBLL\bin\Debug\Model.dll
+D:\shr\workspace\shop\shop\IBLL\bin\Debug\Common.pdb
+D:\shr\workspace\shop\shop\IBLL\bin\Debug\Model.pdb
+D:\shr\workspace\shop\shop\IBLL\obj\Debug\ResolveAssemblyReference.cache
+D:\shr\workspace\shop\shop\IBLL\obj\Debug\IBLL.dll
+D:\shr\workspace\shop\shop\IBLL\obj\Debug\IBLL.pdb

@@ -48,7 +48,7 @@ namespace BLL
             return count;
         }
 
-        public int UpdateCheckBill(check changeStock, bool changebody)
+        public int UpdateCheckBill(CheckBillInfo checkbill, bool changebody)
         {
             SqlConnection conn;
             int count = 0;
@@ -58,7 +58,7 @@ namespace BLL
                 SqlTransaction trans = conn.BeginTransaction();
                 try
                 {
-                    count = DAL.UpdateChangeStock(changeStock,changebody,trans);
+                    count = DAL.UpdateCheckBill(checkbill, changebody, trans);
                     trans.Commit();
                 }
                 catch (Exception)
@@ -92,15 +92,15 @@ namespace BLL
             return count;
         }
 
-        public ChangeStockInfo GetChangeStockById(Guid id)
+        public CheckBillInfo GetCheckBillById(Guid id)
         {
             SqlConnection conn;
-            IList<ChangeStockInfo> l;
+            IList<CheckBillInfo> l;
             SearchCondition[] condition = new SearchCondition[] { new SearchCondition{con="id=@id",param="@id",value=categoryId.ToString()}};
             using (conn = SqlHelper.CreateConntion())
             {
                 conn.Open();
-                l = DAL.GetChangeStock(condition, conn);
+                l = DAL.GetCheckBill(condition, conn);
                 if(l.Count>0)
                 {
                     return l[0];
@@ -110,14 +110,14 @@ namespace BLL
             }
         }
 
-        public IList<ChangeStockInfo> GetPageChangeStock(IEnumerable<SearchCondition> condition, int page, int pagesize)
+        public IList<CheckBillInfo> GetPageCheckBill(IEnumerable<SearchCondition> condition, int page, int pagesize)
         {
             SqlConnection conn;
-            IList<ChangeStockInfo> l;
+            IList<CheckBillInfo> l;
             using (conn = SqlHelper.CreateConntion())
             {
                 conn.Open();
-                l = DAL.GetPageChangeStock(condition,page,pagesize,conn);
+                l = DAL.GetPageCheckBill(condition,page,pagesize,conn);
                 conn.Close();
                 return l ;
             }

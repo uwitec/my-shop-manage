@@ -52,6 +52,6 @@ namespace IDAL
         /// <param name="pagesize">每页数量</param>
         /// <param name="conn"></param>
         /// <returns></returns>
-        IList<WareHouseInfo> GetWareHouse(IEnumerable<SearchCondition> conditon, int page, int pagesize, SqlConnection conn);
+        IList<WareHouseInfo> GetPageWareHouse(IEnumerable<SearchCondition> conditon, int page, int pagesize, SqlConnection conn);
     }
 }

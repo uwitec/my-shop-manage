@@ -26,7 +26,7 @@ namespace IBLL
         /// </summary>
         /// <param name="category"></param>
         /// <returns></returns>
-        int updateSailBill(SailBillInfo sailBill);
+        int UpdateSailBill(SailBillInfo sailBill);
         /// <summary>
         /// 根据ID获取
         /// </summary>
